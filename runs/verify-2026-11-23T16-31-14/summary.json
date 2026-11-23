@@ -1,0 +1,126 @@
+{
+  "runId": "verify-2026-11-23T16-31-14",
+  "kind": "verify",
+  "mode": "replay",
+  "commit": "ba338ec",
+  "label": null,
+  "serverOff": {
+    "checkedAt": "2026-11-23T16:31:14.316Z",
+    "port": 3456,
+    "portOpen": false,
+    "vikunjaProcesses": [],
+    "off": true
+  },
+  "spend": {
+    "started": "2026-11-23T16:31:16.103Z",
+    "ended": "2026-11-23T16:37:19.510Z",
+    "what": "verify replay j01-sign-in,j02-projects,j03-list-view,j04-task-detail,j05-table-view,j06-kanban,j07-upcoming,j08-search,j09-add-task,j11-rename",
+    "estimate": 75,
+    "balanceBefore": 8947.3702,
+    "balanceAfter": 8928.0646,
+    "spent": 19.31,
+    "runId": "verify-2026-11-23T16-31-14"
+  },
+  "results": [
+    {
+      "id": "j01-sign-in",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j02-projects",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j03-list-view",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j04-task-detail",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j05-table-view",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j06-kanban",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j07-upcoming",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j08-search",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j09-add-task",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j11-rename",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    }
+  ]
+}
