@@ -27,7 +27,7 @@ Open **http://127.0.0.1:4790/amber/** (the amber block; press *Replay the run*, 
 | **7 repairs, one commit each, each proven by a Kane run with the server off** | `git log --grep='^capsule:'`, [`docs/LOOP.md`](docs/LOOP.md) |
 | **15 of 15 pass**, server off, no request reached any server | [`verify-…17-14-48/summary.json`](runs/verify-2026-11-23T17-14-48/summary.json) |
 | Fresh proof: Kane **re-authored** every journey from its plain English on the capsule, no recorded steps: **15 of 15** | [`verify-…17-34-53/summary.json`](runs/verify-2026-11-23T17-34-53/summary.json) |
-| The Stop hook blocked the agent on a real regression, then let it go once Kane proved the fix | HOOK_DEMO_PENDING |
+| **The Stop hook blocked the coding agent** on a deliberate regression (Kane was fooled by it; AMBER was not), then let it stop once Kane proved the fix | [`runs/gate.ndjson`](runs/gate.ndjson) (`via: "hook"`: blocked, then allowed), [`docs/LOOP.md` § Stop-hook demonstration](docs/LOOP.md#stop-hook-demonstration-deliberate-regression) |
 | Credits: every batch measured from the Kane balance | [`runs/credits.ndjson`](runs/credits.ndjson) (cap 2,500 in [`amber.config.json`](amber.config.json)) |
 
 ## How it works
@@ -60,7 +60,7 @@ Open **http://127.0.0.1:4790/amber/** (the amber block; press *Replay the run*, 
 
 - **A wrong journey** (j14): caught on the real server, before the capsule existed.
 - **Seven broken interactions** on the replay-only capsule: add, mark done, rename, describe, delete, create a project, comment, each with Kane's own diagnosis ("Task creation rejected with 501 error").
-- **A Kane false pass** (j15): Kane's recorded check is a text locator, and Vikunja restores an unsent comment draft into the editor after a reload, so the text was on screen although the comment was never saved. AMBER's wire rule disputed it.
+- **A Kane false pass** (j15): Kane's recorded check is a text locator, and Vikunja restores an unsent comment draft into the editor after a reload, so the text was on screen although the comment was never saved. AMBER's wire rule disputed it. **It happened twice:** in the Stop-hook demonstration Kane passed the deliberately broken j15 again, and it was AMBER's dispute that made the hook block the agent.
 - **A saved flow Kane cannot replay** (j10): Kane's replay cannot click Vikunja's custom checkbox through the recorded selector, even against the real server. j10 is verified by a fresh authored run each time instead (marked in the lock file, with the evidence).
 - From the spike ([`docs/SPIKE.md`](docs/SPIKE.md)): Kane writes variable values, including the test password, into a saved flow's frontmatter, and frontmatter wins on replay; saved recordings are bound to the author's TestMu org.
 

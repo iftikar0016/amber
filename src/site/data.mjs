@@ -35,7 +35,15 @@ export function siteData(o = {}) {
     const timeline = readNdjson(path.join(RUNS_DIR, runId, 'timeline.ndjson'));
     const start = timeline.find((e) => e.type === 'run_start');
     events.push({ t: start?.t ?? 0, kind: 'run', runId, target: summary.kind === 'capture' ? 'real server' : 'capsule, server off', mode: summary.mode ?? 'author', label: summary.label ?? null, commit: summary.commit ?? null });
-    for (const d of timeline.filter((e) => e.type === 'flow_done' && e.verdict !== 'INCONCLUSIVE')) {
+    // A re-judged verdict (adjudicated: true, appended later) replaces Kane's raw one for the same flow and attempt,
+    // at the time the run happened; it carries Kane's own status (kaneStatus) with it.
+    const done = new Map();
+    for (const e of timeline.filter((x) => x.type === 'flow_done' && x.verdict !== 'INCONCLUSIVE')) {
+      const key = `${e.flow}#${e.attempt}`;
+      const first = done.get(key);
+      done.set(key, first ? { ...e, t: first.t } : e);
+    }
+    for (const d of done.values()) {
       const rec = path.join(RUNS_DIR, runId, d.flow, `a${d.attempt}`, 'result.json');
       const r = fs.existsSync(rec) ? JSON.parse(fs.readFileSync(rec, 'utf8')) : {};
       const shotSrc = r.evidence?.finalShot ? path.join(RUNS_DIR, runId, d.flow, `a${d.attempt}`, r.evidence.finalShot) : null;
@@ -50,6 +58,7 @@ export function siteData(o = {}) {
         bug: r.bug?.title ?? null,
         tag: r.tag ?? null,
         adjudicated: Boolean(d.adjudicated),
+        disputed: Boolean(d.adjudicated || r.disputed),
         kaneStatus: d.kaneStatus ?? r.kaneStatus ?? null,
         reasons: d.reasons ?? [],
         record: path.relative(ROOT, path.dirname(rec)).split(path.sep).join('/'),
@@ -57,7 +66,12 @@ export function siteData(o = {}) {
       });
     }
   }
-  for (const c of fixCommits()) events.push({ t: c.t, kind: 'fix', sha: c.sha, subject: c.subject });
+  // A repair is committed after the Kane run that proved it; it plays just before that run.
+  for (const c of fixCommits()) {
+    const proved = /Kane run (\S+?)\)/.exec(c.subject)?.[1];
+    const run = proved && events.find((e) => e.kind === 'run' && e.runId === proved);
+    events.push({ t: run ? run.t - 1 : c.t, kind: 'fix', sha: c.sha, subject: c.subject });
+  }
   events.sort((a, b) => a.t - b.t);
   return {
     app: spec.app,

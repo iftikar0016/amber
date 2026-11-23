@@ -173,11 +173,13 @@ function render(index, animate) {
 
 function describe(e) {
   if (!e) return 'Vikunja v2.8.0 with its server switched off. Every gold seam is a Kane CLI run.';
+  if (e.kind === 'run' && e.label === 'stop-hook regression check') return `The agent tries to stop: the Stop hook has Kane re-check every journey first (run ${e.runId})`;
+  if (e.kind === 'run' && /^final proof/.test(e.label || '')) return `Final proof: Kane re-authors every journey on the capsule, no recorded steps (run ${e.runId})`;
   if (e.kind === 'run') return e.target === 'real server' ? `Kane walks the journeys on the real server (run ${e.runId})` : `Kane checks the capsule with the server off (run ${e.runId})`;
   if (e.kind === 'fix') return `The coding agent repairs the capsule: ${e.subject.replace(/^capsule:\s*/, '')} (${e.sha})`;
   const j = journeys.find((x) => x.id === e.flow);
   const where = e.target === 'capsule' ? 'on the capsule, server off' : 'on the real server';
-  if (e.adjudicated) return `Kane said “${j?.title}” passed, but the capsule had refused the change: AMBER disputes it`;
+  if (e.disputed) return `Kane said “${j?.title}” passed, but the capsule had refused the change: AMBER disputes it`;
   return e.verdict === 'PASS' ? `Kane proves “${j?.title}” ${where}` : `Kane catches “${j?.title}” failing ${where}: ${e.oneLiner ?? ''}`;
 }
 
@@ -251,13 +253,13 @@ function openDrawer(id) {
   const firstT = mine.find((e) => e.kind === 'verdict')?.t ?? 0;
   const lastT = mine.filter((e) => e.kind === 'verdict').at(-1)?.t ?? 0;
   for (const e of mine) {
-    if (e.kind === 'fix' && (e.t < firstT || e.t > lastT)) continue;
+    if (e.kind === 'fix' && (e.t < firstT || e.t > lastT || !e.subject.includes(id))) continue;
     const li = document.createElement('li');
     const chip = document.createElement('span');
     chip.className = `chip ${e.kind === 'fix' ? 'FIX' : e.verdict}`;
     chip.textContent = e.kind === 'fix' ? 'FIX' : e.verdict;
     li.append(chip, document.createTextNode(e.kind === 'fix' ? `${e.sha} ${e.subject}` : `${e.target === 'capsule' ? 'capsule, server off' : 'real server'} · run ${e.runId}`));
-    if (e.adjudicated) {
+    if (e.disputed) {
       const d = document.createElement('div');
       d.textContent = `Kane said ${e.kaneStatus ?? 'passed'}; AMBER disputes it: ${(e.reasons || [])[0] ?? 'the capsule refused the change'}`;
       li.append(d);
