@@ -45,3 +45,11 @@ Development aid used before spending credits: `node scripts/store-check.mjs pris
 - **Repair:** the model keeps each task's comments when the capture shows the complete list (or the task counts none). `GET /tasks/:id/comments` is answered from the store (order, pagination) and `POST /tasks/:id/comments` adds Vikunja's comment (next global comment id, the user as author) and raises the task's `comment_count`. A task whose comments the store cannot list does not get new ones (501).
 - **Checked first (zero credits):** the store's answers to all six pristine comment lists equal the server's; in the captured journey the create and the reads after it equal the server's.
 - **Proof:** `verify-2026-11-23T16-59-33`, PASS, 9.15 credits. This time the capsule log shows the comment accepted (201) and the list after the reload answered by the store, and the final screenshot shows "Third quote iuhsvb" as a posted comment ("just now") with the editor empty.
+
+## j10-mark-done: mark a task done (done last: verified by a fresh authored Kane run)
+
+- **Failure** (`verify-2026-11-23T15-56-36`, authored run with the server off; its recording cannot replay anywhere, so the lock verifies it by authoring): Kane ticked the checkbox four times and each `PATCH /api/v2/tasks/7` with `done: true` was refused with 501, so the task stayed open after the reload. After the j11 repair the update route existed but still refused a change of `done` on purpose, leaving this interaction to its own repair.
+- **Repair:** the task update now carries out `done`: it sets `done_at` to now (back to Vikunja's zero date when undone); the list view's own filter (`done = false`, from the store) then leaves the task out. Closing a repeating task is still refused (501), since Vikunja reschedules it instead.
+- **Checked first (zero credits):** in the captured journey the update and the list read after it equal the real server's; in headless Chrome the tick was accepted and the task was gone after a reload.
+- **Proof:** `verify-2026-11-23T17-12-04`, PASS (authored), 31.29 credits.
+- **Known gap, not invented:** Vikunja also moves a task that is marked done into the Kanban view's Done bucket. The capture never shows a read after that, so the store does not move it yet; the Kanban board (still a replay) and the task page's bucket label do not reflect it.

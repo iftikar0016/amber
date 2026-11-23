@@ -244,9 +244,9 @@
   }
 
   /**
-   * PATCH /tasks/:id: Vikunja's task update (the task page sends every field on each save).
-   * A change the capsule cannot carry out yet (marking done, moving to another project or bucket, an unknown field)
-   * is not answered here, so the Service Worker refuses it with a 501.
+   * PATCH /tasks/:id: Vikunja's task update (the task page and the list's checkbox send every field on each save).
+   * A change the capsule cannot carry out yet (closing a repeating task, moving to another project or bucket,
+   * an unknown field) is not answered here, so the Service Worker refuses it with a 501.
    */
   async function updateTask({ params, body, url, store }) {
     const m = store.model;
@@ -258,7 +258,14 @@
     for (const [k, v] of Object.entries(fields)) {
       if (IGNORED_ON_UPDATE.has(k)) continue;
       if (k === 'done') {
-        if (Boolean(v) !== Boolean(t.done)) return null;
+        const done = Boolean(v);
+        if (done === Boolean(t.done)) continue;
+        // Vikunja reschedules a repeating task instead of closing it; the store cannot do that yet.
+        const repeatAfter = 'repeat_after' in fields ? Number(fields.repeat_after) : t.repeat_after;
+        const repeatMode = 'repeat_mode' in fields ? Number(fields.repeat_mode) : t.repeat_mode;
+        if (done && (repeatAfter > 0 || repeatMode === 1)) return null;
+        next.done = done;
+        next.done_at = done ? nowIso() : ZERO;
         continue;
       }
       if (k === 'project_id') {

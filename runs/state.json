@@ -642,9 +642,9 @@
       "needsHuman": false
     },
     "j10-mark-done": {
-      "verdict": "FAIL",
-      "everPassed": false,
-      "failStreak": 2,
+      "verdict": "PASS",
+      "everPassed": true,
+      "failStreak": 0,
       "history": [
         {
           "runId": "verify-2026-11-23T15-33-57",
@@ -667,6 +667,15 @@
           "record": "runs/verify-2026-11-23T15-56-36/j10-mark-done/a1",
           "commit": "6708bf3",
           "at": "2026-11-23T15:59:42.093Z"
+        },
+        {
+          "runId": "verify-2026-11-23T17-12-04",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-23T17-12-04/j10-mark-done/a1",
+          "commit": "1ec391b",
+          "at": "2026-11-23T17:14:03.268Z"
         }
       ],
       "needsHuman": false

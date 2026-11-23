@@ -1,0 +1,16 @@
+{"t":1795453926845,"type":"run_start","runId":"verify-2026-11-23T17-12-04","kind":"verify","mode":"replay","target":"capsule-server-off","commit":"1ec391b","label":null,"flows":["j10-mark-done"],"serverOff":{"checkedAt":"2026-11-23T17:12:04.931Z","port":3456,"portOpen":false,"vikunjaProcesses":[],"off":true}}
+{"t":1795453927212,"type":"flow_start","flow":"j10-mark-done","attempt":1,"mode":"author","tag":"dbbxhb"}
+{"t":1795453946879,"type":"flow_step","flow":"j10-mark-done","attempt":1,"n":2,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795453962741,"type":"flow_step","flow":"j10-mark-done","attempt":1,"n":3,"status":"done","remark":"wait: queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click "}
+{"t":1795453963699,"type":"flow_step","flow":"j10-mark-done","attempt":1,"n":4,"status":"done","remark":"type: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795453964589,"type":"flow_step","flow":"j10-mark-done","attempt":1,"n":5,"status":"done","remark":"type: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795453965944,"type":"flow_step","flow":"j10-mark-done","attempt":1,"n":6,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795453967301,"type":"flow_step","flow":"j10-mark-done","attempt":1,"n":7,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795453978246,"type":"flow_step","flow":"j10-mark-done","attempt":1,"n":8,"status":"done","remark":"analyze: the home page greets Amber Demo"}
+{"t":1795453978976,"type":"flow_step","flow":"j10-mark-done","attempt":1,"n":9,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795453986273,"type":"flow_step","flow":"j10-mark-done","attempt":1,"n":10,"status":"done","remark":"click: Clicking Kitchen renovation in the Projects sidebar"}
+{"t":1795453998137,"type":"flow_step","flow":"j10-mark-done","attempt":1,"n":11,"status":"done","remark":"click: Marking Choose worktop as done by clicking its checkbox"}
+{"t":1795454020196,"type":"flow_step","flow":"j10-mark-done","attempt":1,"n":12,"status":"done","remark":"analyze: Order tiles still is in the list of open tasks"}
+{"t":1795454020865,"type":"flow_step","flow":"j10-mark-done","attempt":1,"n":13,"status":"done","remark":"assert: Choose worktop is no longer in the list of open tasks and Order tiles still is"}
+{"t":1795454043222,"type":"flow_done","flow":"j10-mark-done","attempt":1,"mode":"author","verdict":"PASS","basis":"kane","reasons":[],"credits":28.9529925,"ms":115532,"shot":"verify-2026-11-23T17-12-04/j10-mark-done/a1/shots/12.jpg"}
+{"t":1795454045125,"type":"run_done","runId":"verify-2026-11-23T17-12-04","spent":31.29,"tally":{"PASS":1},"regressions":[]}
