@@ -13,6 +13,15 @@
           "record": "runs/verify-2026-11-23T15-33-57/j01-sign-in/a1",
           "commit": "0c3b711",
           "at": "2026-11-23T15:34:33.160Z"
+        },
+        {
+          "runId": "verify-2026-11-23T16-15-41",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-23T16-15-41/j01-sign-in/a1",
+          "commit": "b15cb87",
+          "at": "2026-11-23T16:16:15.278Z"
         }
       ],
       "needsHuman": false
@@ -30,6 +39,15 @@
           "record": "runs/verify-2026-11-23T15-33-57/j02-projects/a1",
           "commit": "0c3b711",
           "at": "2026-11-23T15:35:09.177Z"
+        },
+        {
+          "runId": "verify-2026-11-23T16-15-41",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-23T16-15-41/j02-projects/a1",
+          "commit": "b15cb87",
+          "at": "2026-11-23T16:16:50.987Z"
         }
       ],
       "needsHuman": false
@@ -47,6 +65,15 @@
           "record": "runs/verify-2026-11-23T15-33-57/j03-list-view/a1",
           "commit": "0c3b711",
           "at": "2026-11-23T15:35:48.406Z"
+        },
+        {
+          "runId": "verify-2026-11-23T16-15-41",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-23T16-15-41/j03-list-view/a1",
+          "commit": "b15cb87",
+          "at": "2026-11-23T16:17:32.768Z"
         }
       ],
       "needsHuman": false
@@ -64,6 +91,15 @@
           "record": "runs/verify-2026-11-23T15-33-57/j04-task-detail/a1",
           "commit": "0c3b711",
           "at": "2026-11-23T15:36:19.728Z"
+        },
+        {
+          "runId": "verify-2026-11-23T16-15-41",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-23T16-15-41/j04-task-detail/a1",
+          "commit": "b15cb87",
+          "at": "2026-11-23T16:18:08.209Z"
         }
       ],
       "needsHuman": false
@@ -81,6 +117,15 @@
           "record": "runs/verify-2026-11-23T15-33-57/j05-table-view/a1",
           "commit": "0c3b711",
           "at": "2026-11-23T15:36:54.360Z"
+        },
+        {
+          "runId": "verify-2026-11-23T16-15-41",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-23T16-15-41/j05-table-view/a1",
+          "commit": "b15cb87",
+          "at": "2026-11-23T16:18:43.414Z"
         }
       ],
       "needsHuman": false
@@ -98,6 +143,15 @@
           "record": "runs/verify-2026-11-23T15-33-57/j06-kanban/a1",
           "commit": "0c3b711",
           "at": "2026-11-23T15:37:25.238Z"
+        },
+        {
+          "runId": "verify-2026-11-23T16-15-41",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-23T16-15-41/j06-kanban/a1",
+          "commit": "b15cb87",
+          "at": "2026-11-23T16:19:16.435Z"
         }
       ],
       "needsHuman": false
@@ -115,6 +169,15 @@
           "record": "runs/verify-2026-11-23T15-33-57/j07-upcoming/a1",
           "commit": "0c3b711",
           "at": "2026-11-23T15:37:59.566Z"
+        },
+        {
+          "runId": "verify-2026-11-23T16-15-41",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-23T16-15-41/j07-upcoming/a1",
+          "commit": "b15cb87",
+          "at": "2026-11-23T16:19:55.527Z"
         }
       ],
       "needsHuman": false
@@ -132,6 +195,15 @@
           "record": "runs/verify-2026-11-23T15-33-57/j08-search/a1",
           "commit": "0c3b711",
           "at": "2026-11-23T15:38:34.712Z"
+        },
+        {
+          "runId": "verify-2026-11-23T16-15-41",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-23T16-15-41/j08-search/a1",
+          "commit": "b15cb87",
+          "at": "2026-11-23T16:20:35.040Z"
         }
       ],
       "needsHuman": false

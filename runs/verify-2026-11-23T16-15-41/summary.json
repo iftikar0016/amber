@@ -1,0 +1,106 @@
+{
+  "runId": "verify-2026-11-23T16-15-41",
+  "kind": "verify",
+  "mode": "replay",
+  "commit": "b15cb87",
+  "label": null,
+  "serverOff": {
+    "checkedAt": "2026-11-23T16:15:41.026Z",
+    "port": 3456,
+    "portOpen": false,
+    "vikunjaProcesses": [],
+    "off": true
+  },
+  "spend": {
+    "started": "2026-11-23T16:15:43.072Z",
+    "ended": "2026-11-23T16:20:36.978Z",
+    "what": "verify replay j01-sign-in,j02-projects,j03-list-view,j04-task-detail,j05-table-view,j06-kanban,j07-upcoming,j08-search",
+    "estimate": 60,
+    "balanceBefore": 8977.4737,
+    "balanceAfter": 8973.917,
+    "spent": 3.56,
+    "runId": "verify-2026-11-23T16-15-41"
+  },
+  "results": [
+    {
+      "id": "j01-sign-in",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j02-projects",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j03-list-view",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j04-task-detail",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j05-table-view",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j06-kanban",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j07-upcoming",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j08-search",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    }
+  ]
+}
