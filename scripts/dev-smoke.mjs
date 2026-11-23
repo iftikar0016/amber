@@ -66,22 +66,31 @@ try {
   await connect();
   await send('Runtime.enable');
   await send('Page.enable');
-  await send('Page.navigate', { url: ORIGIN + '/login' });
-  await waitText(/Login|Username|Password/i);
-  if (process.env.AMBER_SMOKE_DEBUG) console.log(await evaluate('document.querySelector("form") ? document.querySelector("form").outerHTML.slice(0, 3000) : "no form"'));
-  // Sign in through the page, as a user would (any password works in the capsule).
-  await evaluate(`(async () => {
-    const set = (el, v) => { el.value = v; el.dispatchEvent(new Event('input', { bubbles: true })); };
-    set(document.querySelector('input#username, input[name=username]'), 'amber');
-    set(document.querySelector('input[type=password]'), ${JSON.stringify(process.env.AMBER_SMOKE_PASSWORD || 'anything')});
-    const stay = document.querySelector('#loginform input[type=checkbox]');
-    if (stay && !stay.checked) stay.click();
-    document.querySelector('#loginform button.is-primary').click();
-  })()`);
-  await sleep(2500);
-  console.log('== after sign-in:', await evaluate('location.pathname'), 'token stored:', await evaluate('Boolean(localStorage.getItem("token"))'));
-  if (process.env.AMBER_SMOKE_PROBE) console.log('   probe after sign-in:', await evaluate(fs.readFileSync(process.env.AMBER_SMOKE_PROBE, 'utf8')));
-  console.log((await waitText(/Amber|Current tasks|Good/i)).slice(0, 600));
+  if (process.env.AMBER_SMOKE_NO_LOGIN) {
+    // Visitor mode: open the capsule's front page with no session, as a judge would.
+    await send('Page.navigate', { url: ORIGIN + '/' });
+    await sleep(4000);
+    console.log('== visitor lands on:', await evaluate('location.pathname'));
+    console.log(String(await evaluate('document.body.innerText')).slice(0, 500));
+  }
+  if (!process.env.AMBER_SMOKE_NO_LOGIN) {
+    await send('Page.navigate', { url: ORIGIN + '/login' });
+    await waitText(/Login|Username|Password/i);
+    if (process.env.AMBER_SMOKE_DEBUG) console.log(await evaluate('document.querySelector("form") ? document.querySelector("form").outerHTML.slice(0, 3000) : "no form"'));
+    // Sign in through the page, as a user would (any password works in the capsule).
+    await evaluate(`(async () => {
+      const set = (el, v) => { el.value = v; el.dispatchEvent(new Event('input', { bubbles: true })); };
+      set(document.querySelector('input#username, input[name=username]'), 'amber');
+      set(document.querySelector('input[type=password]'), ${JSON.stringify(process.env.AMBER_SMOKE_PASSWORD || 'anything')});
+      const stay = document.querySelector('#loginform input[type=checkbox]');
+      if (stay && !stay.checked) stay.click();
+      document.querySelector('#loginform button.is-primary').click();
+    })()`);
+    await sleep(2500);
+    console.log('== after sign-in:', await evaluate('location.pathname'), 'token stored:', await evaluate('Boolean(localStorage.getItem("token"))'));
+    if (process.env.AMBER_SMOKE_PROBE) console.log('   probe after sign-in:', await evaluate(fs.readFileSync(process.env.AMBER_SMOKE_PROBE, 'utf8')));
+    console.log((await waitText(/Amber|Current tasks|Good/i)).slice(0, 600));
+  }
   for (const p of paths) {
     await send('Page.navigate', { url: ORIGIN + p });
     for (let i = 0; i < (process.env.AMBER_SMOKE_DEBUG ? 35 : 7); i++) {

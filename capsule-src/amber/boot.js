@@ -50,9 +50,28 @@
   Object.assign(window.WebSocket, { CONNECTING: 0, OPEN: 1, CLOSING: 2, CLOSED: 3 });
   window.WebSocket.prototype = RealWebSocket.prototype;
 
-  function startApp() {
+  /**
+   * A visitor who opens the capsule anywhere except /login starts signed in as the demo user, the way a demo should.
+   * The token is JWT-shaped because Vikunja reads its claims; nothing checks a signature, because there is no server.
+   * Kane's journeys start at /login and sign in through the form, so they are unaffected.
+   */
+  async function autoSignIn() {
+    try {
+      if (localStorage.getItem('token') || location.pathname.replace(/\/+$/, '') === '/login') return;
+      const u = await (await fetch('/amber/demo-user.json', { cache: 'no-store' })).json();
+      const b64 = (o) => btoa(JSON.stringify(o)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+      const now = Math.floor(Date.now() / 1000);
+      const claims = { exp: now + 3600, iat: now, id: u.id, is_admin: false, jti: crypto.randomUUID(), sid: crypto.randomUUID(), type: 1, username: u.username };
+      localStorage.setItem('token', b64({ alg: 'HS256', typ: 'JWT' }) + '.' + b64(claims) + '.amber-capsule-unsigned');
+    } catch {
+      /* storage blocked: the visitor signs in on the login page with any password */
+    }
+  }
+
+  async function startApp() {
     if (window.__amberStarted) return;
     window.__amberStarted = true;
+    await autoSignIn();
     for (const s of document.querySelectorAll('script[type="amber/deferred-module"]')) {
       const el = document.createElement('script');
       el.type = 'module';
