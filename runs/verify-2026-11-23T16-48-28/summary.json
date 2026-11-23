@@ -1,0 +1,36 @@
+{
+  "runId": "verify-2026-11-23T16-48-28",
+  "kind": "verify",
+  "mode": "replay",
+  "commit": "3758bd4",
+  "label": null,
+  "serverOff": {
+    "checkedAt": "2026-11-23T16:48:28.253Z",
+    "port": 3456,
+    "portOpen": false,
+    "vikunjaProcesses": [],
+    "off": true
+  },
+  "spend": {
+    "started": "2026-11-23T16:48:29.956Z",
+    "ended": "2026-11-23T16:49:25.036Z",
+    "what": "verify replay j14-new-project",
+    "estimate": 7.5,
+    "balanceBefore": 8897.2178,
+    "balanceAfter": 8887.8248,
+    "spent": 9.39,
+    "runId": "verify-2026-11-23T16-48-28"
+  },
+  "results": [
+    {
+      "id": "j14-new-project",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    }
+  ]
+}

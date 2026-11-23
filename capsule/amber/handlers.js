@@ -51,11 +51,11 @@
     return o;
   }
 
-  /** Vikunja's paginated body: { items, total, page, per_page, total_pages }. */
-  function paginated(url, query, items, schemaName) {
+  /** Vikunja's paginated body: { items, total, page, per_page, total_pages }. `total` may count fewer than the items. */
+  function paginated(url, query, items, schemaName, counted) {
     const page = Math.max(1, parseInt(query.get('page') || '1', 10) || 1);
     const perPage = Math.min(MAX_PER_PAGE, Math.max(1, parseInt(query.get('per_page') || String(MAX_PER_PAGE), 10) || MAX_PER_PAGE));
-    const total = items.length;
+    const total = counted === undefined ? items.length : counted;
     return json(200, {
       $schema: schema(url, schemaName),
       items: items.slice((page - 1) * perPage, page * perPage),
@@ -314,7 +314,119 @@
     return new Response(null, { status: 204, headers: { 'cache-control': 'no-store' } });
   }
 
+  /** A project as Vikunja serialises it (list item and ProjectReadBody). */
+  function projectJson(p) {
+    const o = {};
+    for (const k of ['id', 'title', 'description', 'identifier', 'hex_color', 'parent_project_id', 'owner', 'is_archived', 'background_information', 'background_blur_hash', 'is_favorite', 'position', 'views', 'max_permission', 'created', 'updated']) {
+      o[k] = p[k] === undefined ? null : p[k];
+    }
+    return o;
+  }
+
+  /**
+   * GET /projects: every project the user can see, ordered by position, then the saved-filter pseudo projects
+   * (negative ids), as Vikunja lists them. Answered for the request the front end makes (expand=permissions).
+   */
+  function listProjects({ query, url, store }) {
+    const m = store.model;
+    if (!m.projects || !query.getAll('expand').includes('permissions') || (query.get('s') || '').trim()) return null;
+    const all = Object.values(m.projects).filter((p) => query.get('is_archived') === 'true' || !p.is_archived);
+    const real = all.filter((p) => p.id > 0).sort((a, b) => a.position - b.position || a.id - b.id);
+    const pseudo = all.filter((p) => p.id < 0);
+    // Vikunja lists the saved filters but counts only real projects in `total`.
+    return paginated(url, query, [...real, ...pseudo].map(projectJson), 'PaginatedProject', real.length);
+  }
+
+  /** GET /projects/:id for a real project, from the store. */
+  function readProject({ params, url, store }) {
+    const p = store.model.projects && store.model.projects[params.project];
+    if (!p || p.id <= 0) return null;
+    return json(200, { $schema: schema(url, 'ProjectReadBody'), ...projectJson(p) });
+  }
+
+  /**
+   * POST /projects: Vikunja's project creation. A new project gets the four default views (List with "done = false",
+   * Gantt, Table, Kanban with its To-Do / Doing / Done buckets) and the position id × 2^16.
+   */
+  async function createProject({ body, url, store }) {
+    const m = store.model;
+    if (!body || typeof body !== 'object' || Array.isArray(body)) return problem(400, 'Invalid model provided.');
+    const title = String(body.title || '').trim();
+    if (!title) return problem(400, 'The project title cannot be empty.');
+    // Favourites (a pseudo project) and sub-projects are not in the store yet.
+    if (body.is_favorite || (body.parent_project_id && Number(body.parent_project_id) !== 0)) return null;
+    const now = nowIso();
+    const id = m.next.project++;
+    const view = (title2, kind, position, extra) => ({
+      id: m.next.view++,
+      title: title2,
+      project_id: id,
+      view_kind: kind,
+      filter: null,
+      position,
+      bucket_configuration_mode: 'none',
+      bucket_configuration: null,
+      default_bucket_id: 0,
+      done_bucket_id: 0,
+      updated: now,
+      created: now,
+      ...extra,
+    });
+    const views = [
+      view('List', 'list', 100, { filter: { s: '', sort_by: null, order_by: null, filter: 'done = false', filter_include_nulls: false } }),
+      view('Gantt', 'gantt', 200),
+      view('Table', 'table', 300),
+    ];
+    const toDo = m.next.bucket++;
+    m.next.bucket++; // Doing
+    const done = m.next.bucket++;
+    views.push(view('Kanban', 'kanban', 400, { bucket_configuration_mode: 'manual', default_bucket_id: toDo, done_bucket_id: done }));
+    const owner = { id: m.user.id, name: m.user.name, username: m.user.username, created: m.user.created, updated: m.user.updated };
+    const project = {
+      id,
+      title,
+      description: String(body.description || ''),
+      identifier: String(body.identifier || ''),
+      hex_color: String(body.hex_color || ''),
+      parent_project_id: 0,
+      owner,
+      is_archived: Boolean(body.is_archived),
+      background_information: null,
+      background_blur_hash: '',
+      is_favorite: false,
+      position: Number(body.position) || id * 65536,
+      views,
+      max_permission: 2, // the owner
+      created: now,
+      updated: now,
+    };
+    m.projects[id] = project;
+    for (const v of views) if (v.view_kind === 'list' || v.view_kind === 'table') m.positions[v.id] = {}; // empty, and known to be
+    await store.save();
+    // The create response carries the owner without profile details and no permission, as Vikunja's does.
+    const out = projectJson({ ...project, owner: { id: owner.id, name: '', username: owner.username, created: ZERO, updated: ZERO }, max_permission: null });
+    return json(201, { $schema: schema(url, 'Project'), ...out });
+  }
+
   const routes = [
+    {
+      name: 'project-list',
+      method: 'GET',
+      path: /^\/api\/v2\/projects$/,
+      handle: listProjects,
+    },
+    {
+      name: 'project-read',
+      method: 'GET',
+      path: /^\/api\/v2\/projects\/(?<project>-?\d+)$/,
+      handle: readProject,
+    },
+    {
+      name: 'project-create',
+      method: 'POST',
+      path: /^\/api\/v2\/projects$/,
+      handle: createProject,
+    },
     {
       name: 'task-delete',
       method: 'DELETE',

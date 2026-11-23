@@ -72,12 +72,25 @@ export function liftModel(pristine) {
     if (isTask(b)) addTask(b);
   }
 
-  const ids = Object.keys(tasks).map(Number);
+  // Next ids, as the server's sequences would give them. Kanban views name their default and done buckets,
+  // and bucket lists name the rest, so the highest bucket id seen is the last one the server handed out.
+  const maxOf = (xs) => xs.reduce((m, x) => (typeof x === 'number' && x > m ? x : m), 0);
+  const realProjects = Object.values(projects).filter((p) => p.id > 0);
+  const views = realProjects.flatMap((p) => p.views || []);
+  const bucketIds = views.flatMap((v) => [v.default_bucket_id, v.done_bucket_id]);
+  for (const x of pristine) {
+    if (/^\/api\/v2\/projects\/\d+\/views\/\d+\/buckets$/.test(x.path) && Array.isArray(x.resBody?.items)) bucketIds.push(...x.resBody.items.map((b) => b.id));
+  }
   return {
     user,
     tasks,
     projects,
     positions,
-    next: { task: (ids.length ? Math.max(...ids) : 0) + 1 },
+    next: {
+      task: maxOf(Object.keys(tasks).map(Number)) + 1,
+      project: maxOf(realProjects.map((p) => p.id)) + 1,
+      view: maxOf(Object.values(projects).flatMap((p) => (p.views || []).map((v) => v.id))) + 1,
+      bucket: maxOf(bucketIds) + 1,
+    },
   };
 }

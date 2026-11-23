@@ -31,3 +31,10 @@ Development aid used before spending credits: `node scripts/store-check.mjs pris
 - **Repair:** `DELETE /tasks/:id` removes the task from the store and from every view's order and answers 204 as Vikunja does; the list view (from the store) no longer shows it. The id is remembered as deleted, so the task's own read answers 404 rather than falling back to the captured task.
 - **Checked first (zero credits):** in the captured journey, the delete and both list reads after it equal the real server's.
 - **Proof:** `verify-2026-11-23T16-38-00`, PASS, 4.26 credits.
+
+## j14-new-project: create a project
+
+- **Failure** (baseline `verify-2026-11-23T15-33-57`): `POST /api/v2/projects` refused with 501; the dialog stayed open and Kane could not reach the Projects page.
+- **Repair:** `POST /projects` creates the project as Vikunja does: the next project id, position id × 2^16, the four default views (List with `done = false`, Gantt, Table, Kanban with its To-Do / Doing / Done bucket ids) from the next view and bucket ids, and Vikunja's create body (owner without profile details, no permission). `GET /projects` (the sidebar and Projects page) and `GET /projects/:id` are answered from the store; the list counts only real projects in `total`, as Vikunja does, while still listing the "My Open Tasks" saved filter. The new project's list and table views are known to be empty, so its list view answers from the store. Favourites and sub-projects are still refused (501).
+- **Checked first (zero credits):** the store's answers to every journey's pristine projects list and project reads equal the server's; in the captured journey the create and all three reads after it equal the server's.
+- **Proof:** `verify-2026-11-23T16-48-28`, PASS, 9.39 credits.

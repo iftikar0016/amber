@@ -1,0 +1,27 @@
+{"t":1795452510006,"type":"run_start","runId":"verify-2026-11-23T16-48-28","kind":"verify","mode":"replay","target":"capsule-server-off","commit":"3758bd4","label":null,"flows":["j14-new-project"],"serverOff":{"checkedAt":"2026-11-23T16:48:28.253Z","port":3456,"portOpen":false,"vikunjaProcesses":[],"off":true}}
+{"t":1795452510373,"type":"flow_start","flow":"j14-new-project","attempt":1,"mode":"replay","tag":"nmvxli"}
+{"t":1795452523699,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795452525231,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":2,"status":"done","remark":"wait: Waiting for the login form to load"}
+{"t":1795452525596,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":3,"status":"done","remark":"fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795452525969,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":4,"status":"done","remark":"fill: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795452526738,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":5,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795452527557,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":6,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795452532519,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":7,"status":"done","remark":"wait: Waiting for the home page heading Still at it, Amber Demo to appear"}
+{"t":1795452532710,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":8,"status":"done","remark":"analyze: Reading the home page greeting"}
+{"t":1795452532840,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":9,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795452533675,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":10,"status":"done","remark":"click: Clicking Projects page link"}
+{"t":1795452534434,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":11,"status":"done","remark":"click: Clicking NEW PROJECT in the top-right Projects page"}
+{"t":1795452535557,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":12,"status":"done","remark":"wait: Waiting for the queued steps to run"}
+{"t":1795452535852,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":13,"status":"done","remark":"fill: Type \"Garden {{global.amber_tag}}\" into \"Title\""}
+{"t":1795452536661,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":14,"status":"done","remark":"click: Clicking the Create button in the New project dialog"}
+{"t":1795452536876,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":15,"status":"done","remark":"wait: Waiting for the newly created project to be available"}
+{"t":1795452537680,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":16,"status":"done","remark":"click: Clicking Projects in the main navigation"}
+{"t":1795452544902,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":17,"status":"done","remark":"analyze: Checking whether the Garden {{global.amber_tag}} project is present"}
+{"t":1795452545661,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":18,"status":"done","remark":"assert: Garden {{global.amber_tag}} is listed on the Projects page."}
+{"t":1795452546035,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":19,"status":"done","remark":"refresh: Navigate refresh"}
+{"t":1795452546361,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":20,"status":"done","remark":"wait: Waiting for the Projects page to finish reloading and confirm it is updated"}
+{"t":1795452552457,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":21,"status":"done","remark":"analyze: Checking whether the Garden project is listed"}
+{"t":1795452552589,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":22,"status":"done","remark":"analyze: Checking whether Kitchen renovation is listed"}
+{"t":1795452552686,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":23,"status":"done","remark":"assert: The Projects page still lists Garden {{global.amber_tag}} as well as Kitchen ren"}
+{"t":1795452563322,"type":"flow_done","flow":"j14-new-project","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":52480,"shot":"verify-2026-11-23T16-48-28/j14-new-project/a1/shots/23.jpg"}
+{"t":1795452565036,"type":"run_done","runId":"verify-2026-11-23T16-48-28","spent":9.39,"tally":{"PASS":1},"regressions":[]}
