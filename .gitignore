@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Local working state: the Vikunja binary and its databases, test credentials,
+# Kane's working folder and raw evidence packs (packs carry account details)
+.amber/
+*.exe
+*.db
+*.db-shm
+*.db-wal
+test-credentials.json
+credentials.json
+kane-vars*.json
+*.evidence
+.testmuai/evidence/
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+.vscode/
