@@ -6,6 +6,7 @@ import path from 'node:path';
 import { CAPSULE_DIR, CAPTURE_DIR, FLOWS_DIR, ROOT } from '../config.mjs';
 import { assertClean } from '../capture/scrub.mjs';
 import { liftModel } from './model.mjs';
+import { buildSite } from '../site/build-site.mjs';
 
 const SRC = path.join(ROOT, 'capsule-src');
 /** Requests that are part of signing in, not changes to the user's data. */
@@ -117,7 +118,8 @@ export function build(o = {}) {
   for (const f of fs.readdirSync(path.join(SRC, 'amber'))) fs.copyFileSync(path.join(SRC, 'amber', f), path.join(outDir, 'amber', f));
   assertClean(fs.readFileSync(path.join(outDir, 'index.html'), 'utf8'), o.secrets ?? [], 'in index.html');
 
-  const info = { builtAt: new Date().toISOString(), seedId, journeys: used, staticFiles: files, replayEntries: Object.keys(replay).length, modelKeys: Object.keys(model) };
+  const site = buildSite(outDir);
+  const info = { site, builtAt: new Date().toISOString(), seedId, journeys: used, staticFiles: files, replayEntries: Object.keys(replay).length, modelKeys: Object.keys(model) };
   fs.writeFileSync(path.join(outDir, 'amber', 'build.json'), JSON.stringify(info, null, 2));
   return info;
 }

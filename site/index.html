@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AMBER</title>
+  <meta name="description" content="Vikunja with its server switched off: every interaction proven by Kane CLI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="amber.css">
+</head>
+<body>
+  <main class="stage">
+    <p class="counter" id="counter" aria-live="polite"><span class="n" id="proven">0</span> of <span id="total">15</span> interactions proven with the server off</p>
+
+    <div class="scene">
+      <div class="block" id="block">
+        <section class="face front" id="front" aria-label="The amber block: one wireframe per journey">
+          <svg class="fossil" id="fossil" viewBox="0 0 1000 520" role="group" aria-label="Journeys">
+            <defs>
+              <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#fff1b8"/>
+                <stop offset=".45" stop-color="#ffd36b"/>
+                <stop offset="1" stop-color="#f2a900"/>
+              </linearGradient>
+              <filter id="glowGold" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="1.6" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="glowRed" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="2.2" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="sunk"><feGaussianBlur stdDeviation=".25"/></filter>
+            </defs>
+          </svg>
+        </section>
+        <section class="face back" aria-label="The live capsule">
+          <iframe id="live" title="Vikunja running with no server"></iframe>
+          <div class="bar">
+            <span>Vikunja v2.8.0 · no backend · changes stay in this browser</span>
+            <span><button id="reset" type="button">Reset demo</button> <button id="unflip" type="button">Back to the block</button></span>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <p class="caption" id="caption">Vikunja v2.8.0 with its server switched off. Every gold seam is a Kane CLI run.</p>
+
+    <nav class="controls" aria-label="Controls">
+      <button id="flip" type="button">Open the live app</button>
+      <button id="replay" type="button">Replay the run</button>
+      <input type="range" id="scrub" min="0" max="0" value="0" aria-label="Position in the recorded run">
+    </nav>
+  </main>
+
+  <aside class="drawer" id="drawer" hidden aria-labelledby="drawer-title">
+    <button class="close" id="close" type="button">Close</button>
+    <p class="muted" id="drawer-id"></p>
+    <h2 id="drawer-title"></h2>
+    <p id="drawer-outcome"></p>
+    <img id="drawer-shot" alt="">
+    <p id="drawer-say"></p>
+    <ol id="drawer-history"></ol>
+  </aside>
+
+  <script type="module" src="amber.js"></script>
+</body>
+</html>

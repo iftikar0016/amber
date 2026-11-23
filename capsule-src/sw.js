@@ -47,7 +47,7 @@ self.addEventListener('fetch', (e) => {
     return;
   }
   // Client-side routes (/projects/2/9, /tasks/3 …) get the app shell.
-  if (e.request.mode === 'navigate' && !/\.[a-z0-9]+$/i.test(url.pathname) && !url.pathname.startsWith('/amber/')) {
+  if (e.request.mode === 'navigate' && !/\.[a-z0-9]+$/i.test(url.pathname) && !/^\/amber(\/|$)/.test(url.pathname)) {
     e.respondWith(fetch('/index.html', { cache: 'no-store' }));
   }
 });

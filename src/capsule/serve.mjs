@@ -71,6 +71,12 @@ export function createCapsuleServer(o = {}) {
       return;
     }
     let rel = decodeURIComponent(u.pathname);
+    // A folder without its trailing slash (/amber) redirects, as static hosts do.
+    const asDir = path.join(dir, ...rel.split('/').filter(Boolean));
+    if (!rel.endsWith('/') && asDir.startsWith(dir) && fs.existsSync(path.join(asDir, 'index.html'))) {
+      res.writeHead(301, { location: rel + '/' + u.search }).end();
+      return;
+    }
     if (rel.endsWith('/')) rel += 'index.html';
     let file = path.join(dir, ...rel.split('/').filter(Boolean));
     if (!file.startsWith(dir)) {
