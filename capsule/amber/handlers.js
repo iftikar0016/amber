@@ -408,7 +408,54 @@
     return json(201, { $schema: schema(url, 'Project'), ...out });
   }
 
+  /** A task's comments when the store knows all of them: captured, or none counted on the task. */
+  function knownComments(m, t) {
+    if (m.comments && m.comments[t.id]) return m.comments[t.id];
+    return t.comment_count === 0 ? [] : null;
+  }
+
+  /** GET /tasks/:id/comments, from the store. */
+  function listComments({ params, query, url, store }) {
+    const m = store.model;
+    const t = m.tasks && m.tasks[params.id];
+    if (!t) return m.deleted && m.deleted[params.id] ? problem(404, 'This task does not exist.') : null;
+    const list = knownComments(m, t);
+    if (!list) return null;
+    const desc = String(query.get('order_by') || 'asc').toLowerCase() === 'desc';
+    const items = [...list].sort((a, b) => (Date.parse(a.created) - Date.parse(b.created) || a.id - b.id) * (desc ? -1 : 1));
+    return paginated(url, query, items, 'PaginatedTaskComment');
+  }
+
+  /** POST /tasks/:id/comments: Vikunja's new comment, by the signed-in user. */
+  async function createComment({ params, body, store }) {
+    const m = store.model;
+    const t = m.tasks && m.tasks[params.id];
+    if (!t) return m.deleted && m.deleted[params.id] ? problem(404, 'This task does not exist.') : null;
+    const list = knownComments(m, t);
+    if (!list) return null; // the store cannot list this task's comments, so it does not add to them
+    const text = body && typeof body === 'object' ? String(body.comment || '') : '';
+    if (!text.trim()) return problem(400, 'The comment cannot be empty.');
+    const now = nowIso();
+    const comment = { id: m.next.comment++, comment: text, author: m.user, reactions: null, created: now, updated: now };
+    (m.comments ||= {})[t.id] = [...list, comment];
+    t.comment_count = (t.comment_count || 0) + 1;
+    await store.save();
+    return json(201, comment);
+  }
+
   const routes = [
+    {
+      name: 'task-comments',
+      method: 'GET',
+      path: /^\/api\/v2\/tasks\/(?<id>\d+)\/comments$/,
+      handle: listComments,
+    },
+    {
+      name: 'comment-create',
+      method: 'POST',
+      path: /^\/api\/v2\/tasks\/(?<id>\d+)\/comments$/,
+      handle: createComment,
+    },
     {
       name: 'project-list',
       method: 'GET',

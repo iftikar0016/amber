@@ -32,6 +32,8 @@ export function liftModel(pristine) {
   const projects = {};
   /** @type {Record<string, Record<string, number>>} view id -> task id -> position in that view */
   const positions = {};
+  /** @type {Record<string, any[]>} task id -> all its comments (only when the captured list was complete) */
+  const comments = {};
   /** @type {any} */
   let user = null;
 
@@ -50,6 +52,11 @@ export function liftModel(pristine) {
     if (!b || typeof b !== 'object') continue;
     if (x.path === '/api/v2/projects' && Array.isArray(b.items)) {
       for (const p of b.items) if (!projects[p.id]) projects[p.id] = withoutSchema(p);
+      continue;
+    }
+    const cm = /^\/api\/v2\/tasks\/(\d+)\/comments$/.exec(x.path);
+    if (cm && Array.isArray(b.items)) {
+      if (!comments[cm[1]] && b.items.length === b.total) comments[cm[1]] = b.items.map(withoutSchema);
       continue;
     }
     const pm = /^\/api\/v2\/projects\/(\d+)$/.exec(x.path);
@@ -81,12 +88,17 @@ export function liftModel(pristine) {
   for (const x of pristine) {
     if (/^\/api\/v2\/projects\/\d+\/views\/\d+\/buckets$/.test(x.path) && Array.isArray(x.resBody?.items)) bucketIds.push(...x.resBody.items.map((b) => b.id));
   }
+  // Comment ids are global: at least every comment counted on a task has used one.
+  const commentIds = Object.values(comments).flatMap((cs) => cs.map((c) => c.id));
+  const counted = Object.values(tasks).reduce((n, t) => n + (t.comment_count || 0), 0);
   return {
     user,
     tasks,
     projects,
     positions,
+    comments,
     next: {
+      comment: Math.max(maxOf(commentIds), counted) + 1,
       task: maxOf(Object.keys(tasks).map(Number)) + 1,
       project: maxOf(realProjects.map((p) => p.id)) + 1,
       view: maxOf(Object.values(projects).flatMap((p) => (p.views || []).map((v) => v.id))) + 1,

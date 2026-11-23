@@ -757,9 +757,9 @@
       "needsHuman": false
     },
     "j15-comment": {
-      "verdict": "FAIL",
-      "everPassed": false,
-      "failStreak": 1,
+      "verdict": "PASS",
+      "everPassed": true,
+      "failStreak": 0,
       "history": [
         {
           "runId": "verify-2026-11-23T15-33-57",
@@ -772,6 +772,15 @@
           "commit": "0c3b711",
           "at": "2026-11-23T15:46:09.496Z",
           "adjudicated": true
+        },
+        {
+          "runId": "verify-2026-11-23T16-59-33",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-23T16-59-33/j15-comment/a1",
+          "commit": "dc7c420",
+          "at": "2026-11-23T17:00:24.684Z"
         }
       ],
       "needsHuman": false
