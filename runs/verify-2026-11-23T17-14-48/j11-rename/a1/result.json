@@ -1,0 +1,89 @@
+{
+  "flow": "j11-rename",
+  "attempt": 1,
+  "mode": "replay",
+  "tag": "fhblol",
+  "args": [
+    "testmd",
+    "run",
+    "~\\hackathons\\kane\\amber\\.amber\\kane\\runs\\j11-rename\\j11-rename_test.md",
+    "--agent",
+    "--headless",
+    "--no-adaptive-heal"
+  ],
+  "startedAt": "2026-11-23T17:22:37.889Z",
+  "ms": 47828,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": null,
+  "summary": null,
+  "reason": null,
+  "resultCode": null,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": null,
+  "credits": 0,
+  "steps": 19,
+  "failedSteps": [],
+  "testmdSummary": {
+    "type": "test_md_summary",
+    "overall_status": "passed",
+    "duration_s": 32,
+    "steps": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "replay_decisions": 1,
+      "author_decisions": 0
+    },
+    "adaptive_heal": {
+      "triggered": false
+    },
+    "commit": {
+      "committed": false,
+      "reason": "readonly_fallback"
+    },
+    "artifacts": {
+      "replaced": false
+    },
+    "upload": {
+      "performed": true,
+      "succeeded": true
+    },
+    "cancelled": false,
+    "v": 1,
+    "ts": "2026-11-23T17:23:23.614Z",
+    "kind": "typed",
+    "_rt": 1795454603613
+  },
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-23T17:22:37.889Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-23T17:23:26.063Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 19,
+    "finalShot": "shots/19.jpg",
+    "failures": []
+  }
+}

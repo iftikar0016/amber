@@ -53,3 +53,14 @@ Development aid used before spending credits: `node scripts/store-check.mjs pris
 - **Checked first (zero credits):** in the captured journey the update and the list read after it equal the real server's; in headless Chrome the tick was accepted and the task was gone after a reload.
 - **Proof:** `verify-2026-11-23T17-12-04`, PASS (authored), 31.29 credits.
 - **Known gap, not invented:** Vikunja also moves a task that is marked done into the Kanban view's Done bucket. The capture never shows a read after that, so the store does not move it yet; the Kanban board (still a replay) and the task page's bucket label do not reflect it.
+
+## Final check: all 15 journeys with the server off
+
+- `verify-2026-11-23T17-14-48` (AMBER's gate, `node bin/amber.mjs gate`, the same check the Stop hook runs): **15 of 15 PASS** in one run, Vikunja stopped, no refused changes, no leaks; j10 by a fresh authored run, the rest as replays. 80.16 credits.
+- The loop spent 284.59 credits (AMBER total 724.84 → 1,009.43 of the 2,500 cap): repairs 79.74, regression replays 124.69, final check 80.16. No flow needed a second attempt, and none is marked as needing a human.
+
+## Known gaps (reads no journey checks yet)
+
+- Reads still replayed, so they do not show store changes: the home page and Upcoming task lists (`GET /tasks?…`), search, the Kanban board (`…/buckets/tasks`), and Gantt views.
+- A task created in the capsule has no kanban buckets in the store, so its own read with `expand=buckets` falls through (404, never captured).
+- Marking a task done does not move it into the Kanban Done bucket (see j10).
