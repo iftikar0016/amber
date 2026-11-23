@@ -26,7 +26,7 @@ Open **http://127.0.0.1:4790/amber/** (the amber block; press *Replay the run*, 
 | **Kane was fooled once, and AMBER caught it**: Kane passed j15 (comment), but the capsule had refused the comment; Vikunja had restored the unsent draft into the editor | [`j15 result`](runs/verify-2026-11-23T15-33-57/j15-comment/a1/result.json) (`kaneStatus: passed`, verdict FAIL disputed), [screenshot](runs/verify-2026-11-23T15-33-57/j15-comment/a1/shots/19.jpg) |
 | **7 repairs, one commit each, each proven by a Kane run with the server off** | `git log --grep='^capsule:'`, [`docs/LOOP.md`](docs/LOOP.md) |
 | **15 of 15 pass**, server off, no request reached any server | [`verify-…17-14-48/summary.json`](runs/verify-2026-11-23T17-14-48/summary.json) |
-| Fresh proof: Kane **re-authored** every journey from its plain English on the capsule, no recorded steps | PROOF_RUN_PENDING |
+| Fresh proof: Kane **re-authored** every journey from its plain English on the capsule, no recorded steps: **15 of 15** | [`verify-…17-34-53/summary.json`](runs/verify-2026-11-23T17-34-53/summary.json) |
 | The Stop hook blocked the agent on a real regression, then let it go once Kane proved the fix | HOOK_DEMO_PENDING |
 | Credits: every batch measured from the Kane balance | [`runs/credits.ndjson`](runs/credits.ndjson) (cap 2,500 in [`amber.config.json`](amber.config.json)) |
 
@@ -54,7 +54,7 @@ Open **http://127.0.0.1:4790/amber/** (the amber block; press *Replay the run*, 
 1. **The user, on the real server.** Kane authored all 15 journeys from plain English through the recording proxy; its saved flows are the frozen definition of "works".
 2. **The judge, with the server off.** Every verdict on the capsule is a Kane run: the baseline, each repair, the final 15/15, and a fresh authored pass of every journey.
 3. **The gate on the coding agent.** [`.claude/settings.json`](.claude/settings.json) runs `amber gate --hook` when the agent tries to stop: if the capsule changed, Kane replays every journey that passed before, and a regression blocks the turn with the brief to read (at most 3 times; it fails open on infrastructure errors and says why). Every decision is logged in `runs/gate.ndjson`.
-4. **A tester of AMBER's own page.** SUITE_PENDING
+4. **A tester of AMBER's own page.** Four saved Kane tests in [`tests/amber-page/`](tests/amber-page) check the amber block: the 15/15 counter, a tile's evidence drawer (j15's FAIL and PASS), the flip into the live app (Kane sees Vikunja signed in, inside the block), and the replay counting from 0 to 15. Authored in [`page-author-…18-05-42`](runs/page-author-2026-11-23T18-05-42/summary.json), replayed in [`page-replay-…18-10-56`](runs/page-replay-2026-11-23T18-10-56/summary.json): 4/4 each. Run them with `node bin/amber.mjs page-suite`.
 
 ## What Kane caught (including in Kane)
 
