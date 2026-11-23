@@ -6,7 +6,7 @@
           {
             "type": "command",
             "command": "node \"${CLAUDE_PROJECT_DIR}/bin/amber.mjs\" gate --hook",
-            "timeout": 600
+            "timeout": 1800
           }
         ]
       }
