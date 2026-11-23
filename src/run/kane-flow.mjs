@@ -40,6 +40,31 @@ export function scrubTree(dir) {
   }
 }
 
+/**
+ * Six random letters, fresh for every Kane run. Write journeys type values containing {{amber_tag}}, so a capsule that
+ * replays a recorded write shows the recording's tag, not this run's, and the journey fails.
+ */
+export function newTag() {
+  const a = 'abcdefghijklmnopqrstuvwxyz';
+  return Array.from(crypto.getRandomValues(new Uint8Array(6)), (b) => a[b % 26]).join('');
+}
+
+/**
+ * Variables for one run: the account (from .amber/kane-vars.json) plus this run's tag.
+ * Authored runs read them from --variables-file; saved-flow replays (testmd has no variables flag) from the
+ * variable pool in Kane's working folder, .testmuai/variables/ (gitignored).
+ */
+function runVariables(cwd, tag) {
+  const base = JSON.parse(fs.readFileSync(KANE_VARS, 'utf8'));
+  const vars = { ...base, amber_tag: { value: tag, secret: false } };
+  const file = path.join(path.dirname(KANE_VARS), 'kane-vars-run.json');
+  fs.writeFileSync(file, JSON.stringify(vars, null, 2));
+  const poolDir = path.join(cwd, '.testmuai', 'variables');
+  fs.mkdirSync(poolDir, { recursive: true });
+  fs.writeFileSync(path.join(poolDir, 'amber.json'), JSON.stringify(vars, null, 2));
+  return file;
+}
+
 export function timelineWriter(runId) {
   const dir = path.join(RUNS_DIR, runId);
   fs.mkdirSync(dir, { recursive: true });
@@ -57,14 +82,16 @@ export async function runFlow(o) {
   const outDir = path.join(RUNS_DIR, o.runId, o.flow, `a${o.attempt}`);
   fs.mkdirSync(outDir, { recursive: true });
   const cwd = o.cwd ?? KANE_CWD;
+  const tag = newTag();
+  const varsFile = runVariables(cwd, tag);
   const args =
     o.mode === 'author'
-      ? ['run', /** @type {string} */ (o.objective), '--agent', '--headless', '--timeout', String(TIMEOUT_SEC), '--max-steps', String(MAX_STEPS), '--variables-file', KANE_VARS, ...(o.name ? ['--name', o.name] : [])]
+      ? ['run', /** @type {string} */ (o.objective), '--agent', '--headless', '--timeout', String(TIMEOUT_SEC), '--max-steps', String(MAX_STEPS), '--variables-file', varsFile, ...(o.name ? ['--name', o.name] : [])]
       : ['testmd', 'run', /** @type {string} */ (o.file), '--agent', '--headless', '--no-adaptive-heal'];
   args.push(...(o.extraArgs ?? []));
 
   const serverOffBefore = o.serverOff ? await o.serverOff() : null;
-  emit({ type: 'flow_start', flow: o.flow, attempt: o.attempt, mode: o.mode });
+  emit({ type: 'flow_start', flow: o.flow, attempt: o.attempt, mode: o.mode, tag });
   const started = Date.now();
   const res = await runKane({
     args,
@@ -99,7 +126,8 @@ export async function runFlow(o) {
     flow: o.flow,
     attempt: o.attempt,
     mode: o.mode,
-    args: args.map((a) => (a === KANE_VARS ? '.amber/kane-vars.json' : a)),
+    tag,
+    args: args.map((a) => (a === varsFile ? '.amber/kane-vars-run.json' : a)),
     startedAt: new Date(started).toISOString(),
     ms,
     exitCode: res.exitCode,
