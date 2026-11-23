@@ -1,0 +1,21 @@
+{
+  "$comment": "Kane's tests of AMBER's own page (the amber block at /amber/). Authored once with kane-cli run --name, saved here, then replayed. Plain English, visible outcomes only.",
+  "tests": [
+    {
+      "id": "page-counter",
+      "objective": "Go to http://127.0.0.1:4790/amber/. Verify the line above the amber block reads 15 of 15 interactions proven with the server off, and verify the caption below the block mentions Kane CLI."
+    },
+    {
+      "id": "page-evidence",
+      "objective": "Go to http://127.0.0.1:4790/amber/. Click the tile labelled J15 · Comment on a task inside the amber block. Verify a side panel opens with the heading Comment on a task, and verify its history lists both a FAIL and a PASS for the capsule."
+    },
+    {
+      "id": "page-flip",
+      "objective": "Go to http://127.0.0.1:4790/amber/. Click the Open the live app button. Verify the block now shows the Vikunja app signed in as Amber Demo, with the projects Website relaunch and Kitchen renovation in its menu."
+    },
+    {
+      "id": "page-replay",
+      "objective": "Go to http://127.0.0.1:4790/amber/?t=start&speed=10. Verify the line above the block reads 0 of 15 interactions proven with the server off. Click the Replay the run button and wait until that line reads 15 of 15 interactions proven with the server off, then verify it does."
+    }
+  ]
+}

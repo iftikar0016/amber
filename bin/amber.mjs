@@ -13,6 +13,7 @@ import { verify } from '../src/verify/verify.mjs';
 import { readState, regressions } from '../src/verify/state.mjs';
 import { freeze, check as frozenCheck } from '../src/flows/freeze.mjs';
 import { gate } from '../src/verify/gate.mjs';
+import { pageSuite } from '../src/site/suite.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT } from '../src/config.mjs';
@@ -76,6 +77,13 @@ const commands = {
     out({ ok: true, serving: await srv.listen(), serverOff: await vikunja.serverOffProof() });
   },
   /** Stage 3: Kane runs the frozen flows against the capsule with the server off (--mode replay|author). Spends credits. */
+  /** Kane's tests of AMBER's own page: --author once (saves them in tests/amber-page/), then --replay. Spends credits. */
+  async 'page-suite'() {
+    const mode = rest.includes('--author') ? 'author' : 'replay';
+    const r = await pageSuite({ mode, only: flag('--only')?.split(',').filter(Boolean), log: (l) => console.error(l) });
+    out({ ok: true, ...r });
+    if (r.results.some((x) => x.verdict !== 'PASS')) process.exitCode = 1;
+  },
   async verify() {
     const only = flag('--only')?.split(',').filter(Boolean);
     const mode = /** @type {'replay'|'author'} */ (flag('--mode') ?? 'replay');
