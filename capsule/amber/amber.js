@@ -177,6 +177,7 @@ function describe(e) {
   if (e.kind === 'fix') return `The coding agent repairs the capsule: ${e.subject.replace(/^capsule:\s*/, '')} (${e.sha})`;
   const j = journeys.find((x) => x.id === e.flow);
   const where = e.target === 'capsule' ? 'on the capsule, server off' : 'on the real server';
+  if (e.adjudicated) return `Kane said “${j?.title}” passed, but the capsule had refused the change: AMBER disputes it`;
   return e.verdict === 'PASS' ? `Kane proves “${j?.title}” ${where}` : `Kane catches “${j?.title}” failing ${where}: ${e.oneLiner ?? ''}`;
 }
 
@@ -256,6 +257,15 @@ function openDrawer(id) {
     chip.className = `chip ${e.kind === 'fix' ? 'FIX' : e.verdict}`;
     chip.textContent = e.kind === 'fix' ? 'FIX' : e.verdict;
     li.append(chip, document.createTextNode(e.kind === 'fix' ? `${e.sha} ${e.subject}` : `${e.target === 'capsule' ? 'capsule, server off' : 'real server'} · run ${e.runId}`));
+    if (e.adjudicated) {
+      const d = document.createElement('div');
+      d.textContent = `Kane said ${e.kaneStatus ?? 'passed'}; AMBER disputes it: ${(e.reasons || [])[0] ?? 'the capsule refused the change'}`;
+      li.append(d);
+    } else if (e.kind === 'verdict' && e.verdict === 'FAIL' && e.oneLiner) {
+      const d = document.createElement('div');
+      d.textContent = `Kane: ${e.oneLiner}`;
+      li.append(d);
+    }
     if (e.record) {
       const c = document.createElement('div');
       c.className = 'muted';
