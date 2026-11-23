@@ -24,3 +24,6 @@ kane-vars*.json
 .DS_Store
 Thumbs.db
 .vscode/
+
+# Kane variable pools (hold the test password)
+.testmuai/variables/

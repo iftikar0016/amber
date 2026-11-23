@@ -1,0 +1,113 @@
+{
+  "$comment": "The plain-English journeys Kane walks. Each is captured against the real Vikunja and then frozen as flows/<id>_test.md. Objectives: one line, no double quotes, visible-page checks only, ending on an outcome.",
+  "app": "Vikunja v2.8.0",
+  "origin": "http://127.0.0.1:4790",
+  "signIn": "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}}, then verify the home page greets Amber Demo.",
+  "journeys": [
+    {
+      "id": "j01-sign-in",
+      "title": "Sign in",
+      "kind": "read",
+      "steps": "Verify the home page lists the task Order tiles among the current tasks.",
+      "outcome": "Home greets Amber Demo and lists current tasks"
+    },
+    {
+      "id": "j02-projects",
+      "title": "Projects page",
+      "kind": "read",
+      "steps": "Open the Projects page from the main menu, then verify the projects Website relaunch, Kitchen renovation and Reading list are all shown.",
+      "outcome": "The three projects are listed"
+    },
+    {
+      "id": "j03-list-view",
+      "title": "Project list view",
+      "kind": "read",
+      "steps": "Open the project Website relaunch, then verify its task list shows Write homepage copy, Set up analytics and Launch checklist.",
+      "outcome": "Website relaunch lists its tasks"
+    },
+    {
+      "id": "j04-task-detail",
+      "title": "Task detail",
+      "kind": "read",
+      "steps": "Open the project Website relaunch and open the task Set up analytics, then verify the task heading reads Set up analytics and the description mentions a privacy-friendly tool.",
+      "outcome": "Task title and description shown"
+    },
+    {
+      "id": "j05-table-view",
+      "title": "Table view",
+      "kind": "read",
+      "steps": "Open the project Kitchen renovation and switch to its Table view, then verify a table lists Get three quotes, Order tiles and Book electrician.",
+      "outcome": "Kitchen renovation tasks in table rows"
+    },
+    {
+      "id": "j06-kanban",
+      "title": "Kanban view",
+      "kind": "read",
+      "steps": "Open the project Kitchen renovation and switch to its Kanban view, then verify a board column is shown containing a card titled Choose worktop.",
+      "outcome": "Kanban columns with task cards"
+    },
+    {
+      "id": "j07-upcoming",
+      "title": "Upcoming",
+      "kind": "read",
+      "steps": "Open Upcoming from the main menu, then verify the tasks Order tiles and Review pricing page are listed.",
+      "outcome": "Tasks due this week are listed"
+    },
+    {
+      "id": "j08-search",
+      "title": "Search",
+      "kind": "read",
+      "steps": "Use the search in the top bar to search for tiles, open the result Order tiles, then verify the task heading reads Order tiles.",
+      "outcome": "Search finds and opens Order tiles"
+    },
+    {
+      "id": "j09-add-task",
+      "title": "Add a task",
+      "kind": "write",
+      "steps": "Open the project Kitchen renovation, add a new task titled Buy paint samples, then verify Buy paint samples appears in the project task list.",
+      "outcome": "The new task appears in the list"
+    },
+    {
+      "id": "j10-mark-done",
+      "title": "Mark a task done",
+      "kind": "write",
+      "steps": "Open the project Kitchen renovation and mark the task Choose worktop as done with its checkbox. Reload the page, then verify Choose worktop is no longer in the list of open tasks and Order tiles still is.",
+      "outcome": "The done task leaves the open list, after a reload"
+    },
+    {
+      "id": "j11-rename",
+      "title": "Rename a task",
+      "kind": "write",
+      "steps": "Open the project Website relaunch and open the task Write homepage copy. Change its title to Write homepage copy v2. Go back to the Website relaunch list, then verify Write homepage copy v2 is listed.",
+      "outcome": "The new title shows in the list"
+    },
+    {
+      "id": "j12-description",
+      "title": "Edit a description",
+      "kind": "write",
+      "steps": "Open the project Kitchen renovation and open the task Choose worktop. Set its description to Oak or quartz and save it. Reload the page, then verify the description Oak or quartz is shown.",
+      "outcome": "The description is still there after a reload"
+    },
+    {
+      "id": "j13-delete",
+      "title": "Delete a task",
+      "kind": "write",
+      "steps": "Open the project Website relaunch and open the task Pick a colour palette. Delete the task and confirm. Then verify the Website relaunch list no longer shows Pick a colour palette but still shows Set up analytics.",
+      "outcome": "The task is gone from the list"
+    },
+    {
+      "id": "j14-new-project",
+      "title": "Create a project",
+      "kind": "write",
+      "steps": "Create a new project named Garden. Then open the Projects page from the main menu and verify Garden is listed next to Kitchen renovation.",
+      "outcome": "The new project exists and is listed"
+    },
+    {
+      "id": "j15-comment",
+      "title": "Comment on a task",
+      "kind": "write",
+      "steps": "Open the project Kitchen renovation and open the task Get three quotes. Add the comment Third quote arrived, then verify the comments show both Third quote arrived and Two quotes in so far.",
+      "outcome": "The new comment shows beside the existing one"
+    }
+  ]
+}
