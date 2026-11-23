@@ -1,6 +1,6 @@
-// Spike (2026-11-23): replay a frozen flow with a fresh {{amber_tag}}, against the real server (through the
-// recorder, to see what Kane typed) or against the capsule with the server off. Kept as a record of how the
-// spike was run; the loop uses `amber verify`.
+// Replay frozen flows with a fresh {{amber_tag}}, against the real server (through the recorder, to see what Kane
+// typed; the database is restored before each flow) or against the capsule with the server off. Used for the spike
+// and to check that frozen flows replay at all on the real server. The loop itself uses `amber verify`.
 //   node scripts/spike-replay.mjs real <flow>
 //   node scripts/spike-replay.mjs capsule <flow> [<flow> ...]
 import fs from 'node:fs';
@@ -20,11 +20,11 @@ const batch = openBatch(`spike: replay ${flows.join(',')} against the ${target}`
 const out = [];
 try {
   if (target === 'real') {
-    await vikunja.resetToPristine();
-    await alignDueDates();
     const rec = createRecorder({ secrets: [readCredentials().password] });
     await rec.listen();
     for (const id of flows) {
+      await vikunja.resetToPristine();
+      await alignDueDates();
       const label = `spike-replay-${id}`;
       fs.rmSync(path.join(CAPTURE_DIR, 'journeys', `${label}.ndjson`), { force: true });
       rec.setJourney(label);

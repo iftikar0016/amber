@@ -1,0 +1,84 @@
+{
+  "flow": "j10-mark-done",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "tqtlzp",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Kitchen renovation and mark the task Choose worktop as done with its checkbox. Reload the page, then verify Choose worktop is no longer in the list of open tasks and Order tiles still is.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json"
+  ],
+  "startedAt": "2026-11-23T15:56:39.057Z",
+  "ms": 182506,
+  "exitCode": 1,
+  "killed": false,
+  "status": "failed",
+  "oneLiner": "Marking “Choose worktop” complete is rejected, so it remains an open task after reload.",
+  "summary": "The server rejects the request used to mark the task as done, stating that this change is not supported by the capsule.\nEnable task-status updates in the AMBER capsule, then rerun the task-completion flow.\nevidence: http_error_response: PATCH http://127.0.0.1:4790/api/v2/tasks/7 -> 501 body: {\"status\":501,\"title\":\"AMBER capsule: this change is not support\nevidence: console_error: Failed to load resource: the server responded with a status of 501 ()",
+  "reason": "The task remains unchecked and the page reports that this change is not supported by the capsule.",
+  "resultCode": 740,
+  "bug": {
+    "confirmed": true,
+    "title": "Task completion update rejected with 501",
+    "oneLiner": "Marking “Choose worktop” complete is rejected, so it remains an open task after reload.",
+    "category": "api_error",
+    "severity": "major",
+    "confidence": 0.99
+  },
+  "failedAssertions": [],
+  "finalState": {},
+  "credits": 33.4465225,
+  "steps": 17,
+  "failedSteps": [
+    {
+      "n": 10,
+      "remark": "wait: Waiting after attempting to mark Choose worktop done"
+    }
+  ],
+  "testmdSummary": null,
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-23T15:56:39.057Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-23T15:59:41.913Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 4,
+  "kaneStatus": "failed",
+  "verdict": "FAIL",
+  "basis": "kane",
+  "reasons": [
+    "Marking “Choose worktop” complete is rejected, so it remains an open task after reload."
+  ],
+  "evidence": {
+    "steps": 17,
+    "finalShot": "shots/17.jpg",
+    "failures": [
+      {
+        "ordinal": 10,
+        "message": "The task remains unchecked and the page reports that this change is not supported by the capsule.",
+        "url": "http://127.0.0.1:4790/projects/3/13",
+        "rootCause": "The server rejects the request used to mark the task as done, stating that this change is not supported by the capsule.",
+        "suggestedFix": "Enable task-status updates in the AMBER capsule, then rerun the task-completion flow."
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "runId": "verify-2026-11-23T15-56-36",
+  "kind": "verify",
+  "mode": "replay",
+  "commit": "6708bf3",
+  "label": "baseline: j10 authored (its recording does not replay)",
+  "serverOff": {
+    "checkedAt": "2026-11-23T15:56:36.938Z",
+    "port": 3456,
+    "portOpen": false,
+    "vikunjaProcesses": [],
+    "off": true
+  },
+  "spend": {
+    "started": "2026-11-23T15:56:38.670Z",
+    "ended": "2026-11-23T15:59:44.041Z",
+    "what": "verify replay j10-mark-done",
+    "estimate": 7.5,
+    "balanceBefore": 9025.8424,
+    "balanceAfter": 8986.5718,
+    "spent": 39.27,
+    "runId": "verify-2026-11-23T15-56-36"
+  },
+  "results": [
+    {
+      "id": "j10-mark-done",
+      "verdict": "FAIL",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [
+        "Marking “Choose worktop” complete is rejected, so it remains an open task after reload."
+      ],
+      "unanswered": 4,
+      "leaks": 0,
+      "brief": "runs/verify-2026-11-23T15-56-36/j10-mark-done/brief.md"
+    }
+  ]
+}

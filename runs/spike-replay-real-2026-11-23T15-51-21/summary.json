@@ -1,0 +1,352 @@
+{
+  "runId": "spike-replay-real-2026-11-23T15-51-21",
+  "kind": "spike",
+  "target": "real",
+  "spend": {
+    "started": "2026-11-23T15:51:23.750Z",
+    "ended": "2026-11-23T15:56:26.512Z",
+    "what": "spike: replay j11-rename,j12-description,j13-delete,j14-new-project,j15-comment against the real",
+    "estimate": 75,
+    "balanceBefore": 9064.7179,
+    "balanceAfter": 9025.8424,
+    "spent": 38.88,
+    "runId": "spike-replay-real-2026-11-23T15-51-21"
+  },
+  "results": [
+    {
+      "id": "j11-rename",
+      "tag": "faptcq",
+      "verdict": "PASS",
+      "status": "passed",
+      "credits": 0,
+      "ms": 53645,
+      "reasons": [],
+      "writes": [
+        {
+          "m": "POST",
+          "p": "/api/v2/login",
+          "s": 200,
+          "body": "{\"username\":\"amber\",\"password\":\"[scrubbed]\",\"long_token\":true}"
+        },
+        {
+          "m": "POST",
+          "p": "/api/v2/user/token/refresh",
+          "s": 200,
+          "body": "null"
+        },
+        {
+          "m": "PATCH",
+          "p": "/api/v2/tasks/1",
+          "s": 200,
+          "body": "[{\"op\":\"add\",\"path\":\"/title\",\"value\":\"Homepage copy faptcq\"},{\"op\":\"add\",\"path\":\"/description\",\"value\":\"\"},{\"op\":\"add\",\""
+        },
+        {
+          "m": "POST",
+          "p": "/api/v2/user/token/refresh",
+          "s": 200,
+          "body": "null"
+        }
+      ],
+      "summary": {
+        "type": "test_md_summary",
+        "overall_status": "passed",
+        "duration_s": 37,
+        "steps": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0,
+          "replay_decisions": 1,
+          "author_decisions": 0
+        },
+        "adaptive_heal": {
+          "triggered": false
+        },
+        "commit": {
+          "committed": false,
+          "reason": "readonly_fallback"
+        },
+        "artifacts": {
+          "replaced": false
+        },
+        "upload": {
+          "performed": true,
+          "succeeded": true
+        },
+        "cancelled": false,
+        "v": 1,
+        "ts": "2026-11-23T15:52:16.443Z",
+        "kind": "typed",
+        "_rt": 1795449136449
+      }
+    },
+    {
+      "id": "j12-description",
+      "tag": "eibscc",
+      "verdict": "PASS",
+      "status": "passed",
+      "credits": 0,
+      "ms": 84773,
+      "reasons": [],
+      "writes": [
+        {
+          "m": "POST",
+          "p": "/api/v2/login",
+          "s": 200,
+          "body": "{\"username\":\"amber\",\"password\":\"[scrubbed]\",\"long_token\":true}"
+        },
+        {
+          "m": "POST",
+          "p": "/api/v2/user/token/refresh",
+          "s": 200,
+          "body": "null"
+        },
+        {
+          "m": "PATCH",
+          "p": "/api/v2/tasks/7",
+          "s": 200,
+          "body": "[{\"op\":\"add\",\"path\":\"/title\",\"value\":\"Choose worktop\"},{\"op\":\"add\",\"path\":\"/description\",\"value\":\"<p>Oak or quartz eibsc"
+        },
+        {
+          "m": "POST",
+          "p": "/api/v2/user/token/refresh",
+          "s": 200,
+          "body": "null"
+        }
+      ],
+      "summary": {
+        "type": "test_md_summary",
+        "overall_status": "passed",
+        "duration_s": 67,
+        "steps": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0,
+          "replay_decisions": 1,
+          "author_decisions": 0
+        },
+        "adaptive_heal": {
+          "triggered": false
+        },
+        "commit": {
+          "committed": false,
+          "reason": "readonly_fallback"
+        },
+        "artifacts": {
+          "replaced": false
+        },
+        "upload": {
+          "performed": true,
+          "succeeded": true
+        },
+        "cancelled": false,
+        "v": 1,
+        "ts": "2026-11-23T15:53:43.066Z",
+        "kind": "typed",
+        "_rt": 1795449223067
+      }
+    },
+    {
+      "id": "j13-delete",
+      "tag": "tdxjuq",
+      "verdict": "PASS",
+      "status": "passed",
+      "credits": 0,
+      "ms": 56274,
+      "reasons": [],
+      "writes": [
+        {
+          "m": "POST",
+          "p": "/api/v2/login",
+          "s": 200,
+          "body": "{\"username\":\"amber\",\"password\":\"[scrubbed]\",\"long_token\":true}"
+        },
+        {
+          "m": "POST",
+          "p": "/api/v2/user/token/refresh",
+          "s": 200,
+          "body": "null"
+        },
+        {
+          "m": "DELETE",
+          "p": "/api/v2/tasks/2",
+          "s": 204,
+          "body": "null"
+        },
+        {
+          "m": "POST",
+          "p": "/api/v2/user/token/refresh",
+          "s": 200,
+          "body": "null"
+        }
+      ],
+      "summary": {
+        "type": "test_md_summary",
+        "overall_status": "passed",
+        "duration_s": 39,
+        "steps": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0,
+          "replay_decisions": 1,
+          "author_decisions": 0
+        },
+        "adaptive_heal": {
+          "triggered": false
+        },
+        "commit": {
+          "committed": false,
+          "reason": "readonly_fallback"
+        },
+        "artifacts": {
+          "replaced": false
+        },
+        "upload": {
+          "performed": true,
+          "succeeded": true
+        },
+        "cancelled": false,
+        "v": 1,
+        "ts": "2026-11-23T15:54:41.832Z",
+        "kind": "typed",
+        "_rt": 1795449281832
+      }
+    },
+    {
+      "id": "j14-new-project",
+      "tag": "ulvhcc",
+      "verdict": "PASS",
+      "status": "passed",
+      "credits": 0,
+      "ms": 53412,
+      "reasons": [],
+      "writes": [
+        {
+          "m": "POST",
+          "p": "/api/v2/login",
+          "s": 200,
+          "body": "{\"username\":\"amber\",\"password\":\"[scrubbed]\",\"long_token\":true}"
+        },
+        {
+          "m": "POST",
+          "p": "/api/v2/user/token/refresh",
+          "s": 200,
+          "body": "null"
+        },
+        {
+          "m": "POST",
+          "p": "/api/v2/projects",
+          "s": 201,
+          "body": "{\"title\":\"Garden ulvhcc\",\"description\":\"\",\"hex_color\":\"\",\"identifier\":\"\",\"is_archived\":false,\"is_favorite\":false,\"parent"
+        },
+        {
+          "m": "POST",
+          "p": "/api/v2/user/token/refresh",
+          "s": 200,
+          "body": "null"
+        }
+      ],
+      "summary": {
+        "type": "test_md_summary",
+        "overall_status": "passed",
+        "duration_s": 35,
+        "steps": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0,
+          "replay_decisions": 1,
+          "author_decisions": 0
+        },
+        "adaptive_heal": {
+          "triggered": false
+        },
+        "commit": {
+          "committed": false,
+          "reason": "readonly_fallback"
+        },
+        "artifacts": {
+          "replaced": false
+        },
+        "upload": {
+          "performed": true,
+          "succeeded": true
+        },
+        "cancelled": false,
+        "v": 1,
+        "ts": "2026-11-23T15:55:37.414Z",
+        "kind": "typed",
+        "_rt": 1795449337414
+      }
+    },
+    {
+      "id": "j15-comment",
+      "tag": "zhotab",
+      "verdict": "PASS",
+      "status": "passed",
+      "credits": 0,
+      "ms": 43034,
+      "reasons": [],
+      "writes": [
+        {
+          "m": "POST",
+          "p": "/api/v2/login",
+          "s": 200,
+          "body": "{\"username\":\"amber\",\"password\":\"[scrubbed]\",\"long_token\":true}"
+        },
+        {
+          "m": "POST",
+          "p": "/api/v2/user/token/refresh",
+          "s": 200,
+          "body": "null"
+        },
+        {
+          "m": "POST",
+          "p": "/api/v2/tasks/6/comments",
+          "s": 201,
+          "body": "{\"comment\":\"<p>Third quote zhotab</p>\"}"
+        },
+        {
+          "m": "POST",
+          "p": "/api/v2/user/token/refresh",
+          "s": 200,
+          "body": "null"
+        }
+      ],
+      "summary": {
+        "type": "test_md_summary",
+        "overall_status": "passed",
+        "duration_s": 27,
+        "steps": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0,
+          "replay_decisions": 1,
+          "author_decisions": 0
+        },
+        "adaptive_heal": {
+          "triggered": false
+        },
+        "commit": {
+          "committed": false,
+          "reason": "readonly_fallback"
+        },
+        "artifacts": {
+          "replaced": false
+        },
+        "upload": {
+          "performed": true,
+          "succeeded": true
+        },
+        "cancelled": false,
+        "v": 1,
+        "ts": "2026-11-23T15:56:22.455Z",
+        "kind": "typed",
+        "_rt": 1795449382454
+      }
+    }
+  ]
+}

@@ -158,7 +158,7 @@
     "j10-mark-done": {
       "verdict": "FAIL",
       "everPassed": false,
-      "failStreak": 1,
+      "failStreak": 2,
       "history": [
         {
           "runId": "verify-2026-11-23T15-33-57",
@@ -170,6 +170,17 @@
           "record": "runs/verify-2026-11-23T15-33-57/j10-mark-done/a1",
           "commit": "0c3b711",
           "at": "2026-11-23T15:40:24.113Z"
+        },
+        {
+          "runId": "verify-2026-11-23T15-56-36",
+          "mode": "replay",
+          "verdict": "FAIL",
+          "reasons": [
+            "Marking “Choose worktop” complete is rejected, so it remains an open task after reload."
+          ],
+          "record": "runs/verify-2026-11-23T15-56-36/j10-mark-done/a1",
+          "commit": "6708bf3",
+          "at": "2026-11-23T15:59:42.093Z"
         }
       ],
       "needsHuman": false

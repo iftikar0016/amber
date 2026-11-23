@@ -1,0 +1,36 @@
+{"t":1795449417149,"flow":"j10-mark-done","method":"GET","url":"/api/v2/info","outcome":"replay","how":"exact","status":200}
+{"t":1795449435371,"flow":"j10-mark-done","method":"POST","url":"/api/v2/login","outcome":"store","handler":"login","status":200}
+{"t":1795449435387,"flow":"j10-mark-done","method":"GET","url":"/api/v2/user","outcome":"replay","how":"exact","status":200}
+{"t":1795449435445,"flow":"j10-mark-done","method":"GET","url":"/api/v2/avatar/amber?size=40","outcome":"replay","how":"exact","status":200}
+{"t":1795449435446,"flow":"j10-mark-done","method":"GET","url":"/api/v2/projects?is_archived=true&expand=permissions&page=1","outcome":"replay","how":"exact","status":200}
+{"t":1795449435447,"flow":"j10-mark-done","method":"GET","url":"/api/v2/labels?page=1","outcome":"replay","how":"exact","status":200}
+{"t":1795449435454,"flow":"j10-mark-done","method":"POST","url":"/api/v2/user/token/refresh","outcome":"store","handler":"token-refresh","status":200}
+{"t":1795449435475,"flow":"j10-mark-done","method":"GET","url":"/api/v2/tasks?sort_by=due_date&sort_by=id&order_by=asc&order_by=desc&filter=done%20%3D%20false&filter_include_nulls=false&q=&expand=comment_count&expand=is_unread&filter_timezone=GMT&page=1","outcome":"replay","how":"exact","status":200}
+{"t":1795449435532,"flow":"j10-mark-done","method":"GET","url":"/api/v2/tasks?per_page=1&page=1","outcome":"replay","how":"exact","status":200}
+{"t":1795449440433,"flow":"j10-mark-done","method":"GET","url":"/api/v2/notifications?page=1&per_page=20","outcome":"replay","how":"exact","status":200}
+{"t":1795449450441,"flow":"j10-mark-done","method":"GET","url":"/api/v2/notifications?page=1&per_page=20","outcome":"replay","how":"exact","status":200}
+{"t":1795449460447,"flow":"j10-mark-done","method":"GET","url":"/api/v2/notifications?page=1&per_page=20","outcome":"replay","how":"exact","status":200}
+{"t":1795449464683,"flow":"j10-mark-done","method":"GET","url":"/api/v2/projects/3","outcome":"replay","how":"exact","status":200}
+{"t":1795449464715,"flow":"j10-mark-done","method":"GET","url":"/api/v2/projects/3/views/13/tasks?sort_by=position&order_by=asc&filter=&filter_include_nulls=false&filter_timezone=GMT&q=&expand=subtasks&expand=comment_count&expand=is_unread&page=1","outcome":"replay","how":"exact","status":200}
+{"t":1795449470451,"flow":"j10-mark-done","method":"GET","url":"/api/v2/notifications?page=1&per_page=20","outcome":"replay","how":"exact","status":200}
+{"t":1795449477947,"flow":"j10-mark-done","method":"PATCH","url":"/api/v2/tasks/7","outcome":"unanswered-write","status":501,"body":"[{\"op\":\"add\",\"path\":\"/title\",\"value\":\"Choose worktop\"},{\"op\":\"add\",\"path\":\"/description\",\"value\":\"\"},{\"op\":\"add\",\"path\":\"/done\",\"value\":true},{\"op\":\"add\",\"path\":\"/due_date\",\"value\":\"0001-01-01T00:00:00Z\"},{\"op\":\"add\",\"path\":\"/start_date\",\"value\":\"0001-01-01T00:00:00Z\"},{\"op\":\"add\",\"path\":\"/end_date\""}
+{"t":1795449480456,"flow":"j10-mark-done","method":"GET","url":"/api/v2/notifications?page=1&per_page=20","outcome":"replay","how":"exact","status":200}
+{"t":1795449485113,"flow":"j10-mark-done","method":"GET","url":"/api/v2/info","outcome":"replay","how":"exact","status":200}
+{"t":1795449485114,"flow":"j10-mark-done","method":"GET","url":"/api/v2/user","outcome":"replay","how":"exact","status":200}
+{"t":1795449485199,"flow":"j10-mark-done","method":"GET","url":"/api/v2/avatar/amber?size=40","outcome":"replay","how":"exact","status":200}
+{"t":1795449485200,"flow":"j10-mark-done","method":"GET","url":"/api/v2/projects?is_archived=true&expand=permissions&page=1","outcome":"replay","how":"exact","status":200}
+{"t":1795449485200,"flow":"j10-mark-done","method":"GET","url":"/api/v2/labels?page=1","outcome":"replay","how":"exact","status":200}
+{"t":1795449485201,"flow":"j10-mark-done","method":"GET","url":"/api/v2/projects/3","outcome":"replay","how":"exact","status":200}
+{"t":1795449485210,"flow":"j10-mark-done","method":"POST","url":"/api/v2/user/token/refresh","outcome":"store","handler":"token-refresh","status":200}
+{"t":1795449485256,"flow":"j10-mark-done","method":"GET","url":"/api/v2/projects/3/views/13/tasks?sort_by=position&order_by=asc&filter=&filter_include_nulls=false&filter_timezone=GMT&q=&expand=subtasks&expand=comment_count&expand=is_unread&page=1","outcome":"replay","how":"exact","status":200}
+{"t":1795449490185,"flow":"j10-mark-done","method":"GET","url":"/api/v2/notifications?page=1&per_page=20","outcome":"replay","how":"exact","status":200}
+{"t":1795449498929,"flow":"j10-mark-done","method":"PATCH","url":"/api/v2/tasks/7","outcome":"unanswered-write","status":501,"body":"[{\"op\":\"add\",\"path\":\"/title\",\"value\":\"Choose worktop\"},{\"op\":\"add\",\"path\":\"/description\",\"value\":\"\"},{\"op\":\"add\",\"path\":\"/done\",\"value\":true},{\"op\":\"add\",\"path\":\"/due_date\",\"value\":\"0001-01-01T00:00:00Z\"},{\"op\":\"add\",\"path\":\"/start_date\",\"value\":\"0001-01-01T00:00:00Z\"},{\"op\":\"add\",\"path\":\"/end_date\""}
+{"t":1795449500194,"flow":"j10-mark-done","method":"GET","url":"/api/v2/notifications?page=1&per_page=20","outcome":"replay","how":"exact","status":200}
+{"t":1795449505902,"flow":"j10-mark-done","method":"PATCH","url":"/api/v2/tasks/7","outcome":"unanswered-write","status":501,"body":"[{\"op\":\"add\",\"path\":\"/title\",\"value\":\"Choose worktop\"},{\"op\":\"add\",\"path\":\"/description\",\"value\":\"\"},{\"op\":\"add\",\"path\":\"/done\",\"value\":true},{\"op\":\"add\",\"path\":\"/due_date\",\"value\":\"0001-01-01T00:00:00Z\"},{\"op\":\"add\",\"path\":\"/start_date\",\"value\":\"0001-01-01T00:00:00Z\"},{\"op\":\"add\",\"path\":\"/end_date\""}
+{"t":1795449510201,"flow":"j10-mark-done","method":"GET","url":"/api/v2/notifications?page=1&per_page=20","outcome":"replay","how":"exact","status":200}
+{"t":1795449520219,"flow":"j10-mark-done","method":"GET","url":"/api/v2/notifications?page=1&per_page=20","outcome":"replay","how":"exact","status":200}
+{"t":1795449527576,"flow":"j10-mark-done","method":"PATCH","url":"/api/v2/tasks/7","outcome":"unanswered-write","status":501,"body":"[{\"op\":\"add\",\"path\":\"/title\",\"value\":\"Choose worktop\"},{\"op\":\"add\",\"path\":\"/description\",\"value\":\"\"},{\"op\":\"add\",\"path\":\"/done\",\"value\":true},{\"op\":\"add\",\"path\":\"/due_date\",\"value\":\"0001-01-01T00:00:00Z\"},{\"op\":\"add\",\"path\":\"/start_date\",\"value\":\"0001-01-01T00:00:00Z\"},{\"op\":\"add\",\"path\":\"/end_date\""}
+{"t":1795449530224,"flow":"j10-mark-done","method":"GET","url":"/api/v2/notifications?page=1&per_page=20","outcome":"replay","how":"exact","status":200}
+{"t":1795449540227,"flow":"j10-mark-done","method":"GET","url":"/api/v2/notifications?page=1&per_page=20","outcome":"replay","how":"exact","status":200}
+{"t":1795449550232,"flow":"j10-mark-done","method":"GET","url":"/api/v2/notifications?page=1&per_page=20","outcome":"replay","how":"exact","status":200}
+{"t":1795449560249,"flow":"j10-mark-done","method":"GET","url":"/api/v2/notifications?page=1&per_page=20","outcome":"replay","how":"exact","status":200}

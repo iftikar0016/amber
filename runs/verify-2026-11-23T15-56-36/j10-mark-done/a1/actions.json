@@ -1,0 +1,86 @@
+[
+  {
+    "step": 1,
+    "type": "navigate",
+    "intent": "Navigate to http://127.0.0.1:4790/login",
+    "instruction": "Navigate to http://127.0.0.1:4790/login"
+  },
+  {
+    "step": 2,
+    "type": "wait",
+    "intent": "queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click \"Stay logged in\"; click \"LOGIN\"",
+    "instruction": "Waiting for the login form steps to complete"
+  },
+  {
+    "step": 3,
+    "type": "fill",
+    "intent": "PRIMARY: Sign in with username {{global.amber_user}}; role=textbox; text=\"Username Or Email Address\" | HINTS: container=Login form",
+    "instruction": "Type \"{{global.amber_user}}\" into \"Username Or Email Address\""
+  },
+  {
+    "step": 4,
+    "type": "fill",
+    "intent": "PRIMARY: Sign in with password {{secrets.user.amber_password}}; role=textbox; text=\"Password\" | HINTS: container=Login form",
+    "instruction": "Type \"{{secrets.user.amber_password}}\" into \"Password\""
+  },
+  {
+    "step": 5,
+    "type": "click",
+    "intent": "PRIMARY: Stay logged in ticked; role=checkbox; text=\"Stay logged in\" | HINTS: container=Login form",
+    "instruction": "Click \"Stay logged in\""
+  },
+  {
+    "step": 6,
+    "type": "click",
+    "intent": "PRIMARY: Sign in; role=button; text=\"LOGIN\" | HINTS: container=Login form",
+    "instruction": "Click \"LOGIN\""
+  },
+  {
+    "step": 7,
+    "type": "analyze",
+    "intent": "whether a home page greeting for Amber Demo is present in the main content heading",
+    "instruction": "Checking whether the home page greeting is present"
+  },
+  {
+    "step": 8,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  },
+  {
+    "step": 1,
+    "type": "click",
+    "intent": "PRIMARY: Open the project Kitchen renovation; role=link; text=\"Kitchen renovation\" | HINTS: container=Projects navigation list",
+    "instruction": "Clicking Kitchen renovation in the Projects navigation list"
+  },
+  {
+    "step": 2,
+    "type": "click",
+    "intent": "PRIMARY: Mark the task Choose worktop as done with its checkbox; role=checkbox; text=\"Mark 'Choose worktop' as done\" | HINTS: container=Kitchen renovation task list",
+    "instruction": "Clicking the checkbox for Choose worktop as done"
+  },
+  {
+    "step": 3,
+    "type": "navigate",
+    "intent": "PRIMARY: Reload the page",
+    "instruction": "Reloading the page"
+  },
+  {
+    "step": 4,
+    "type": "click",
+    "intent": "PRIMARY: Mark the task Choose worktop as done with its checkbox; role=checkbox; text=\"Mark 'Choose worktop' as done\" | HINTS: container=Kitchen renovation task list",
+    "instruction": "Checking Choose worktop as done checkbox"
+  },
+  {
+    "step": 5,
+    "type": "press_key",
+    "intent": "PRIMARY: Mark the task Choose worktop as done with its checkbox",
+    "instruction": "Pressing Space on the task checkbox"
+  },
+  {
+    "step": 6,
+    "type": "click",
+    "intent": "PRIMARY: Mark the task Choose worktop as done with its checkbox; role=checkbox; text=\"Mark 'Choose worktop' as done\" | HINTS: checkbox icon immediately left of Choose worktop in the Kitchen renovation task list",
+    "instruction": "Clicking the Choose worktop checkbox to mark the task as done"
+  }
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "ordinal": 10,
+    "message": "The task remains unchecked and the page reports that this change is not supported by the capsule.",
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "rootCause": "The server rejects the request used to mark the task as done, stating that this change is not supported by the capsule.",
+    "suggestedFix": "Enable task-status updates in the AMBER capsule, then rerun the task-completion flow."
+  }
+]
