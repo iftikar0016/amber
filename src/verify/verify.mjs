@@ -10,6 +10,7 @@ import { runFlow, timelineWriter } from '../run/kane-flow.mjs';
 import { loadJourneys, objectiveFor, EST_CREDITS_PER_AUTHORED_RUN } from '../capture/capture.mjs';
 import { recordVerdict, readState, gitHead } from './state.mjs';
 import { writeBrief } from './brief.mjs';
+import { acquire } from './lock.mjs';
 
 /** Estimated credits for a saved-flow replay; corrected once the spike measures it. */
 export const EST_CREDITS_PER_REPLAY = 5;
@@ -24,6 +25,16 @@ export function lockedFlows() {
  * @param {{only?: string[], mode?: 'replay'|'author', runId?: string, label?: string, log?: (s:string)=>void}} o
  */
 export async function verify(o = {}) {
+  // One Kane check at a time: a second run would fight over the app's port, and the Stop hook rebuilds the capsule.
+  const release = acquire(`verify${o.label ? ` (${o.label})` : ''}`);
+  try {
+    return await verifyLocked(o);
+  } finally {
+    release();
+  }
+}
+
+async function verifyLocked(o) {
   const log = o.log ?? (() => {});
   const mode = o.mode ?? 'replay';
   const off = await serverOffProof();
@@ -37,12 +48,12 @@ export async function verify(o = {}) {
   const batch = openBatch(`verify ${mode} ${flows.join(',')}`, est);
   const emit = timelineWriter(runId);
   const srv = createCapsuleServer({ logDir: path.join(runDir, 'capsule-log') });
-  await srv.listen();
   const spec = loadJourneys();
   const before = readState();
   emit({ type: 'run_start', runId, kind: 'verify', mode, target: 'capsule-server-off', commit: gitHead(), label: o.label ?? null, flows, serverOff: off });
   const results = [];
   try {
+    await srv.listen();
     for (const id of flows) {
       srv.setFlow(id);
       let r;

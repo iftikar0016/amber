@@ -123,7 +123,7 @@ const commands = {
         input = {};
       }
     }
-    const answer = await gate({ stopHookActive: Boolean(input.stop_hook_active), rebuild: () => build({ secrets: secretsToScrub() }) });
+    const answer = await gate({ via: rest.includes('--hook') ? 'hook' : 'cli', stopHookActive: Boolean(input.stop_hook_active), rebuild: () => build({ secrets: secretsToScrub() }) });
     if (rest.includes('--hook')) console.log(JSON.stringify(answer));
     else out({ ok: true, ...answer });
   },

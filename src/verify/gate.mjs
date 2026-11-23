@@ -6,13 +6,15 @@
 import { createHash } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
-import { ROOT, STATE } from '../config.mjs';
+import { ROOT, RUNS_DIR, STATE } from '../config.mjs';
 import { check as frozenCheck } from '../flows/freeze.mjs';
 import { readState, regressions } from './state.mjs';
 import { verify } from './verify.mjs';
+import { acquire, heldByOther } from './lock.mjs';
 
 const GATE_FILE = path.join(STATE, 'gate.json');
 const MAX_BLOCKS = 3;
+const GATE_LOG = path.join(RUNS_DIR, 'gate.ndjson');
 
 /** A hash of everything that decides what the capsule answers. */
 export function capsuleSourceHash() {
@@ -36,10 +38,23 @@ const writeGate = (g) => {
 };
 
 /**
- * @param {{stopHookActive?: boolean, rebuild?: () => any}} o
+ * Every gate decision, appended to runs/gate.ndjson (committed): when the Stop hook fired, what it checked, and
+ * whether it blocked the agent or let it stop, and why.
+ * @param {{stopHookActive?: boolean, rebuild?: () => any, via?: 'hook'|'cli'}} o
  * @returns {Promise<{decision?:'block', reason?:string, systemMessage?:string}>}
  */
 export async function gate(o = {}) {
+  const started = Date.now();
+  const entry = { at: new Date(started).toISOString(), via: o.via ?? 'cli', stopHookActive: Boolean(o.stopHookActive), capsuleHash: capsuleSourceHash(), checked: /** @type {any} */ (null) };
+  const answer = await decide(o, entry);
+  fs.mkdirSync(RUNS_DIR, { recursive: true });
+  const outcome = answer.decision === 'block' ? 'blocked' : answer.systemMessage ? 'allowed, with a message' : 'allowed';
+  fs.appendFileSync(GATE_LOG, JSON.stringify({ ...entry, ms: Date.now() - started, outcome, regressions: regressions(), message: answer.reason ?? answer.systemMessage ?? null }) + '\n');
+  return answer;
+}
+
+/** @returns {Promise<{decision?:'block', reason?:string, systemMessage?:string}>} */
+async function decide(o, entry) {
   // 1. Frozen flows must be untouched: that is never an infrastructure question.
   const frozen = frozenCheck();
   if (frozen.changed.length) {
@@ -54,11 +69,19 @@ export async function gate(o = {}) {
       .filter(([, f]) => f.everPassed)
       .map(([id]) => id);
     if (passing.length) {
+      // Never rebuild the capsule or start Kane while another check is running (it serves the capsule on the port).
+      const other = heldByOther();
+      if (other) return { systemMessage: `AMBER gate: a Kane check is already running (pid ${other.pid}, ${other.what}); not starting a second one. Its result will be checked the next time a turn ends.` };
+      let release = () => {};
       try {
+        release = acquire('stop-hook regression check');
         o.rebuild?.();
-        await verify({ only: passing, mode: 'replay', label: 'stop-hook regression check' });
+        const r = await verify({ only: passing, mode: 'replay', label: 'stop-hook regression check' });
+        entry.checked = { runId: r.runId, flows: passing.length };
       } catch (e) {
         return { systemMessage: `AMBER gate skipped (failing open): could not run the regression check: ${String(e?.message ?? e).slice(0, 300)}` };
+      } finally {
+        release();
       }
     }
     g.verifiedHash = hash;
