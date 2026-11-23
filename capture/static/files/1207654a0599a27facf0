@@ -1,0 +1,1 @@
+.simple-button[data-v-a02339d2]{color:var(--text);text-align:start;border-radius:4px;inline-size:100%;margin:.1rem 0;padding:.25rem .5rem;transition:background-color .15s;display:block}.simple-button[data-v-a02339d2]:hover{background:var(--white)}

@@ -1,0 +1,84 @@
+{
+  "runId": "spike-replay-real-2026-11-23T14-46-54",
+  "kind": "spike",
+  "target": "real",
+  "spend": {
+    "started": "2026-11-23T14:46:56.918Z",
+    "ended": "2026-11-23T14:47:41.836Z",
+    "what": "spike: replay j09-add-task against the real",
+    "estimate": 15,
+    "balanceBefore": 9639.5922,
+    "balanceAfter": 9630.5476,
+    "spent": 9.04,
+    "runId": "spike-replay-real-2026-11-23T14-46-54"
+  },
+  "results": [
+    {
+      "id": "j09-add-task",
+      "tag": "mztekg",
+      "verdict": "PASS",
+      "status": "passed",
+      "credits": 0,
+      "ms": 41237,
+      "reasons": [],
+      "writes": [
+        {
+          "m": "POST",
+          "p": "/api/v2/login",
+          "s": 200,
+          "body": "{\"username\":\"amber\",\"password\":\"[scrubbed]\",\"long_token\":true}"
+        },
+        {
+          "m": "POST",
+          "p": "/api/v2/user/token/refresh",
+          "s": 200,
+          "body": "null"
+        },
+        {
+          "m": "POST",
+          "p": "/api/v2/projects/3/tasks/bulk",
+          "s": 201,
+          "body": "{\"tasks\":[{\"title\":\"Paint samples mztekg\",\"description\":\"\",\"done\":false,\"priority\":0,\"hex_color\":\"\",\"percent_done\":0,\"re"
+        },
+        {
+          "m": "POST",
+          "p": "/api/v2/user/token/refresh",
+          "s": 200,
+          "body": "null"
+        }
+      ],
+      "summary": {
+        "type": "test_md_summary",
+        "overall_status": "passed",
+        "duration_s": 26,
+        "steps": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0,
+          "replay_decisions": 1,
+          "author_decisions": 0
+        },
+        "adaptive_heal": {
+          "triggered": false
+        },
+        "commit": {
+          "committed": false,
+          "reason": "readonly_fallback"
+        },
+        "artifacts": {
+          "replaced": false
+        },
+        "upload": {
+          "performed": true,
+          "succeeded": true
+        },
+        "cancelled": false,
+        "v": 1,
+        "ts": "2026-11-23T14:47:37.967Z",
+        "kind": "typed",
+        "_rt": 1795445257968
+      }
+    }
+  ]
+}

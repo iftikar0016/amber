@@ -1,0 +1,109 @@
+{
+  "runId": "spike-replay-capsule-2026-11-23T14-49-35",
+  "kind": "spike",
+  "target": "capsule",
+  "spend": {
+    "started": "2026-11-23T14:49:37.134Z",
+    "ended": "2026-11-23T14:51:18.712Z",
+    "what": "spike: replay j03-list-view,j09-add-task against the capsule",
+    "estimate": 30,
+    "balanceBefore": 9630.5476,
+    "balanceAfter": 9619.985,
+    "spent": 10.56,
+    "runId": "spike-replay-capsule-2026-11-23T14-49-35"
+  },
+  "results": [
+    {
+      "id": "j03-list-view",
+      "tag": "yuufzj",
+      "verdict": "PASS",
+      "status": "passed",
+      "credits": 0,
+      "ms": 39776,
+      "reasons": [],
+      "counts": {
+        "leaks": 0,
+        "unanswered": 0
+      },
+      "summary": {
+        "type": "test_md_summary",
+        "overall_status": "passed",
+        "duration_s": 23,
+        "steps": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0,
+          "replay_decisions": 1,
+          "author_decisions": 0
+        },
+        "adaptive_heal": {
+          "triggered": false
+        },
+        "commit": {
+          "committed": false,
+          "reason": "readonly_fallback"
+        },
+        "artifacts": {
+          "replaced": false
+        },
+        "upload": {
+          "performed": true,
+          "succeeded": true
+        },
+        "cancelled": false,
+        "v": 1,
+        "ts": "2026-11-23T14:50:15.492Z",
+        "kind": "typed",
+        "_rt": 1795445415492
+      }
+    },
+    {
+      "id": "j09-add-task",
+      "tag": "mipcxs",
+      "verdict": "FAIL",
+      "status": "failed",
+      "credits": 0,
+      "ms": 58215,
+      "reasons": [
+        "Kane reported the flow failed"
+      ],
+      "counts": {
+        "leaks": 0,
+        "unanswered": 1
+      },
+      "summary": {
+        "type": "test_md_summary",
+        "overall_status": "failed",
+        "duration_s": 42,
+        "steps": {
+          "total": 1,
+          "passed": 0,
+          "failed": 1,
+          "skipped": 0,
+          "replay_decisions": 1,
+          "author_decisions": 0
+        },
+        "adaptive_heal": {
+          "triggered": false
+        },
+        "commit": {
+          "committed": false,
+          "reason": "run_failed"
+        },
+        "artifacts": {
+          "replaced": false
+        },
+        "upload": {
+          "performed": true,
+          "succeeded": true
+        },
+        "cancelled": false,
+        "v": 1,
+        "ts": "2026-11-23T14:51:14.008Z",
+        "kind": "typed",
+        "_rt": 1795445474008
+      }
+    }
+  ]
+}

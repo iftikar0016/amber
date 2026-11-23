@@ -1,0 +1,9 @@
+[
+  {
+    "ordinal": 14,
+    "message": "assertion_failed: @ step 6",
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "rootCause": "The server refuses the request to add the task and reports that this change is not supported.",
+    "suggestedFix": "Restore support for the task-creation request, then rerun the add-task and reload checks."
+  }
+]

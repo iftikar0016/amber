@@ -1,0 +1,1 @@
+var e=[`userPasswordReset`,`userEmailConfirm`,`accountDeletionConfirm`];function t(e,t){let n=e.query[t],r=Array.isArray(n)?n[0]:n;return typeof r==`string`&&r!==``?r:new URLSearchParams(e.hash.slice(1)).get(t)||void 0}export{t as n,e as t};

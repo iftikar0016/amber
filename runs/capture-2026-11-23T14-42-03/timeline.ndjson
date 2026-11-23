@@ -1,0 +1,35 @@
+{"t":1795444925777,"type":"run_start","runId":"capture-2026-11-23T14-42-03","kind":"capture","target":"real-server","flows":["j03-list-view","j09-add-task"]}
+{"t":1795444927439,"type":"flow_start","flow":"j03-list-view","attempt":1,"mode":"author","tag":"yezakt"}
+{"t":1795444962287,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":2,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795444974109,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":3,"status":"done","remark":"wait: queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click "}
+{"t":1795444975012,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":4,"status":"done","remark":"type: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795444975873,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":5,"status":"done","remark":"type: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795444977239,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":6,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795444978607,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":7,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795444987155,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":8,"status":"done","remark":"wait: PRIMARY: wait for the home page greeting after signing in"}
+{"t":1795444994784,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":9,"status":"done","remark":"analyze: the home page greets Amber Demo"}
+{"t":1795444995601,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":10,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795445002277,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":11,"status":"done","remark":"click: Clicking Website relaunch link in Projects navigation sidebar"}
+{"t":1795445011114,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":12,"status":"done","remark":"wait: PRIMARY: wait for the Website relaunch project task list to load"}
+{"t":1795445023841,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":13,"status":"done","remark":"analyze: the task list shows Launch checklist"}
+{"t":1795445024642,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":14,"status":"done","remark":"assert: its task list shows Write homepage copy, Set up analytics and Launch checklist"}
+{"t":1795445049329,"type":"flow_done","flow":"j03-list-view","attempt":1,"mode":"author","verdict":"PASS","basis":"kane","reasons":[],"credits":25.691110000000002,"ms":121785,"shot":"capture-2026-11-23T14-42-03/j03-list-view/a1/shots/13.jpg"}
+{"t":1795445051064,"type":"flow_start","flow":"j09-add-task","attempt":1,"mode":"author","tag":"gwndho"}
+{"t":1795445070826,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":2,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795445082064,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":3,"status":"done","remark":"wait: queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click "}
+{"t":1795445082975,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":4,"status":"done","remark":"type: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795445083841,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":5,"status":"done","remark":"type: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795445085210,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":6,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795445086567,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":7,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795445099321,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":8,"status":"done","remark":"analyze: the home page greets Amber Demo"}
+{"t":1795445100050,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":9,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795445112303,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":2,"status":"done","remark":"click: Clicking Kitchen renovation in the left projects navigation"}
+{"t":1795445122896,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":3,"status":"done","remark":"wait: queued plan (2 steps): type \"Add a task…\"; click \"Add\""}
+{"t":1795445123783,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":4,"status":"done","remark":"type: Type \"Paint samples {{global.amber_tag}}\" into \"Add a task…\""}
+{"t":1795445125142,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":5,"status":"done","remark":"click: Click \"Add\""}
+{"t":1795445135841,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":6,"status":"done","remark":"analyze: ANALYZE(textual_visual, 'Paint samples {{global.amber_tag}} appears in the proje"}
+{"t":1795445136706,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":7,"status":"done","remark":"assert: Paint samples {{global.amber_tag}} appears in the project task list."}
+{"t":1795445151456,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":8,"status":"done","remark":"analyze: Paint samples {{global.amber_tag}} is still listed."}
+{"t":1795445152170,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":9,"status":"done","remark":"assert: Paint samples {{global.amber_tag}} is still listed."}
+{"t":1795445181417,"type":"flow_done","flow":"j09-add-task","attempt":1,"mode":"author","verdict":"PASS","basis":"kane","reasons":[],"credits":37.8412225,"ms":130272,"shot":"capture-2026-11-23T14-42-03/j09-add-task/a1/shots/16.jpg"}
+{"t":1795445183240,"type":"run_done","runId":"capture-2026-11-23T14-42-03","spent":71.82,"tally":{"PASS":2}}

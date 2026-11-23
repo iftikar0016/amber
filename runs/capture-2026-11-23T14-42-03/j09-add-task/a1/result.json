@@ -1,0 +1,49 @@
+{
+  "flow": "j09-add-task",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "gwndho",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Kitchen renovation, add a new task titled Paint samples {{amber_tag}}, then verify Paint samples {{amber_tag}} appears in the project task list. Reload the page, then verify Paint samples {{amber_tag}} is still listed.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json",
+    "--name",
+    "j09-add-task"
+  ],
+  "startedAt": "2026-11-23T14:44:11.064Z",
+  "ms": 130272,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "added a task to the Kitchen renovation project on the project page",
+  "summary": "Opened the Kitchen renovation project.\nAdded a new task named “Paint samples gwndho.”\nReloaded the project page and confirmed that “Paint samples gwndho” remained in the task list.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "finalState": {
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "task_title": "Paint samples gwndho",
+    "task_listed_after_reload": "true"
+  },
+  "credits": 37.8412225,
+  "steps": 16,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": null,
+  "leaks": 0,
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 16,
+    "finalShot": "shots/16.jpg",
+    "failures": []
+  }
+}

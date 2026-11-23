@@ -1,0 +1,4 @@
+{"t":1795445377916,"type":"flow_start","flow":"j03-list-view","attempt":1,"mode":"replay","tag":"yuufzj"}
+{"t":1795445418053,"type":"flow_done","flow":"j03-list-view","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":39776,"shot":null}
+{"t":1795445418492,"type":"flow_start","flow":"j09-add-task","attempt":1,"mode":"replay","tag":"mipcxs"}
+{"t":1795445477045,"type":"flow_done","flow":"j09-add-task","attempt":1,"mode":"replay","verdict":"FAIL","basis":"kane","reasons":["Kane reported the flow failed"],"credits":0,"ms":58215,"shot":null}

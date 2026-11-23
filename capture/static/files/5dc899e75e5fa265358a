@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Vikunja</title>
+	<meta name="description" content="Vikunja (/vɪˈkuːnjə/) - The to-do app to organize your life.">
+	<meta name="theme-color" content="#1973ff"/>
+
+	<link rel="icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" href="/images/icons/apple-touch-icon-180x180.png"/>
+	<!--__vite-plugin-inject-preload__-->
+  <script type="module" crossorigin src="/assets/index-DHtQJ0wK.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-BWaJ3C7D.js">
+  <link rel="modulepreload" crossorigin href="/assets/preload-helper-DjzSQ1t3.js">
+  <link rel="modulepreload" crossorigin href="/assets/vue.runtime.esm-bundler-DUf7TSaf.js">
+  <link rel="modulepreload" crossorigin href="/assets/useMutation-BoQdv4Sp.js">
+  <link rel="modulepreload" crossorigin href="/assets/generated-Bd-euk4C.js">
+  <link rel="modulepreload" crossorigin href="/assets/problem-BSsrUu2e.js">
+  <link rel="modulepreload" crossorigin href="/assets/requestContext-DaLyFbxH.js">
+  <link rel="modulepreload" crossorigin href="/assets/vue-i18n.runtime-BoGaVm48.js">
+  <link rel="modulepreload" crossorigin href="/assets/virtual_intlify-i18n-13-DtJLHe_B.js">
+  <link rel="modulepreload" crossorigin href="/assets/dayjs.min-TpdQFcR3.js">
+  <link rel="modulepreload" crossorigin href="/assets/message-DVNPk08I.js">
+  <link rel="modulepreload" crossorigin href="/assets/fetchAllPages-CJgMiSy0.js">
+  <link rel="modulepreload" crossorigin href="/assets/useQuery-CfIcy9X7.js">
+  <link rel="modulepreload" crossorigin href="/assets/contextMutation-B8AkQ8Zn.js">
+  <link rel="modulepreload" crossorigin href="/assets/dist-C-dLLG1a.js">
+  <link rel="modulepreload" crossorigin href="/assets/dist-D51COhv8.js">
+  <link rel="modulepreload" crossorigin href="/assets/projects-DnzuaWKI.js">
+  <link rel="modulepreload" crossorigin href="/assets/useBlurHashUrl-0IRTyqe9.js">
+  <link rel="modulepreload" crossorigin href="/assets/config-DQpOgepz.js">
+  <link rel="modulepreload" crossorigin href="/assets/useApi-BPuI6ZR9-B9dIbFoP.js">
+  <link rel="modulepreload" crossorigin href="/assets/sensitiveQueryParams-DatD1YTJ.js">
+  <link rel="modulepreload" crossorigin href="/assets/proFeatures-5sxnJ_d9.js">
+  <link rel="modulepreload" crossorigin href="/assets/useDelayedLoading-DirwaSKV.js">
+  <link rel="modulepreload" crossorigin href="/assets/randomId-DHkpih5Z.js">
+  <link rel="modulepreload" crossorigin href="/assets/_plugin-vue_export-helper-BDNMzG2s.js">
+  <link rel="modulepreload" crossorigin href="/assets/Message-igREtUfO.js">
+  <link rel="modulepreload" crossorigin href="/assets/BaseButton-LP6-AE4f.js">
+  <link rel="modulepreload" crossorigin href="/assets/Password-DDcXXi-3.js">
+  <link rel="modulepreload" crossorigin href="/assets/FormField-Cu5c_QTF.js">
+  <link rel="modulepreload" crossorigin href="/assets/ButtonLink-vxwEinK9.js">
+  <link rel="modulepreload" crossorigin href="/assets/useTitle-BDTJckCi.js">
+  <link rel="modulepreload" crossorigin href="/assets/Card-BLrby1-w.js">
+  <link rel="modulepreload" crossorigin href="/assets/secretMutation-lUCUFLVZ.js">
+  <link rel="modulepreload" crossorigin href="/assets/Icon-BAKPjlrs.js">
+  <link rel="modulepreload" crossorigin href="/assets/FancyCheckbox-BUs5DKwk.js">
+  <link rel="modulepreload" crossorigin href="/assets/CustomTransition-CNl92r4S.js">
+  <link rel="modulepreload" crossorigin href="/assets/projectHistory-a8RZQIjg.js">
+  <link rel="modulepreload" crossorigin href="/assets/useProjects-01c2YGF7.js">
+  <link rel="modulepreload" crossorigin href="/assets/labels-mpRygqHN.js">
+  <link rel="modulepreload" crossorigin href="/assets/router-QU_NFAr6.js">
+  <link rel="modulepreload" crossorigin href="/assets/DropdownItem-D0TuPKet.js">
+  <link rel="stylesheet" crossorigin href="/assets/Message-Cyk9bN2V.css">
+  <link rel="stylesheet" crossorigin href="/assets/BaseButton-DaeQslhS.css">
+  <link rel="stylesheet" crossorigin href="/assets/Password-um2N5wEU.css">
+  <link rel="stylesheet" crossorigin href="/assets/FormField-CuqiOF-v.css">
+  <link rel="stylesheet" crossorigin href="/assets/ButtonLink-CPnyNXU6.css">
+  <link rel="stylesheet" crossorigin href="/assets/Card-ChiUTmkc.css">
+  <link rel="stylesheet" crossorigin href="/assets/FancyCheckbox-CvZjW-A5.css">
+  <link rel="stylesheet" crossorigin href="/assets/CustomTransition-DY1lgFF7.css">
+  <link rel="stylesheet" crossorigin href="/assets/router-_-NZf0hA.css">
+  <link rel="stylesheet" crossorigin href="/assets/DropdownItem-0MLQRbMH.css">
+  <link rel="stylesheet" crossorigin href="/assets/index-B5fTxDFC.css">
+<link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials"></head>
+<body>
+<noscript>
+	<strong>We're sorry but Vikunja doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+</noscript>
+<div id="app"></div>
+<script>
+	window.SENTRY_ENABLED = false
+	window.SENTRY_DSN = 'https://85694a2d757547cbbc90cd4b55c5a18d@o1047380.ingest.sentry.io/6024480'
+	window.CUSTOM_LOGO_URL = ''
+	window.CUSTOM_LOGO_URL_DARK = ''
+</script>
+<script>
+	//
+	// This variable points the frontend to the api.
+	// Leave it empty when the api is served from the same origin as the frontend. Otherwise set it to the
+	// url the api is reachable at, including the port and any sub path but without the /api/v2 part.
+	window.API_URL = 'http://127.0.0.1:4790'
+</script>
+</body>
+</html>

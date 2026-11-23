@@ -1,0 +1,1 @@
+import{G as e,J as t,N as n,S as r}from"./vue.runtime.esm-bundler-DUf7TSaf.js";import{t as i}from"./_plugin-vue_export-helper-BDNMzG2s.js";n();var a={},o={class:`has-text-centered has-text-grey is-italic p-4 mbe-4`};function s(n,i){return e(),r(`p`,o,[t(n.$slots,`default`)])}var c=i(a,[[`render`,s]]);export{c as t};

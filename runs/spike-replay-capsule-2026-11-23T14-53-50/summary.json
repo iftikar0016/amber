@@ -1,0 +1,62 @@
+{
+  "runId": "spike-replay-capsule-2026-11-23T14-53-50",
+  "kind": "spike",
+  "target": "capsule",
+  "spend": {
+    "started": "2026-11-23T14:53:52.194Z",
+    "ended": "2026-11-23T14:54:32.854Z",
+    "what": "spike: replay j03-list-view against the capsule",
+    "estimate": 15,
+    "balanceBefore": 9619.985,
+    "balanceAfter": 9619.6176,
+    "spent": 0.37,
+    "runId": "spike-replay-capsule-2026-11-23T14-53-50"
+  },
+  "results": [
+    {
+      "id": "j03-list-view",
+      "tag": "nvnfoe",
+      "verdict": "PASS",
+      "status": "passed",
+      "credits": 0,
+      "ms": 37706,
+      "reasons": [],
+      "counts": {
+        "leaks": 0,
+        "unanswered": 0
+      },
+      "summary": {
+        "type": "test_md_summary",
+        "overall_status": "passed",
+        "duration_s": 22,
+        "steps": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0,
+          "replay_decisions": 1,
+          "author_decisions": 0
+        },
+        "adaptive_heal": {
+          "triggered": false
+        },
+        "commit": {
+          "committed": false,
+          "reason": "readonly_fallback"
+        },
+        "artifacts": {
+          "replaced": false
+        },
+        "upload": {
+          "performed": true,
+          "succeeded": true
+        },
+        "cancelled": false,
+        "v": 1,
+        "ts": "2026-11-23T14:54:28.157Z",
+        "kind": "typed",
+        "_rt": 1795445668158
+      }
+    }
+  ]
+}

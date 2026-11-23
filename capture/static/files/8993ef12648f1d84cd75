@@ -1,0 +1,1 @@
+label.two-col[data-v-2a3cc4f7]{align-items:center;gap:.5rem;display:flex}label.two-col>span[data-v-2a3cc4f7],label.two-col[data-v-2a3cc4f7] input,label.two-col[data-v-2a3cc4f7] .input,label.two-col[data-v-2a3cc4f7] .select,label.two-col[data-v-2a3cc4f7] .timezone-select,label.two-col[data-v-2a3cc4f7] .multiselect{box-sizing:border-box;flex:0 0 50%}

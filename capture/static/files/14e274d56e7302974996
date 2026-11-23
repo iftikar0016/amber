@@ -1,0 +1,1 @@
+import{t as e}from"./useMutation-BoQdv4Sp.js";function t(t){let n=e({...t,gcTime:0}),r=async(...e)=>{try{return await n.mutateAsync(...e)}finally{n.isPending.value||n.reset()}};return{...n,mutateAsync:r,mutate:(...e)=>{r(...e).catch(()=>{})}}}export{t};

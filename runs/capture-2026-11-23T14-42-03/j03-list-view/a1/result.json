@@ -1,0 +1,50 @@
+{
+  "flow": "j03-list-view",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "yezakt",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Website relaunch, then verify its task list shows Write homepage copy, Set up analytics and Launch checklist.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json",
+    "--name",
+    "j03-list-view"
+  ],
+  "startedAt": "2026-11-23T14:42:07.439Z",
+  "ms": 121785,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "opened the Website relaunch project on the project management site",
+  "summary": "Signed in as Amber Demo with the Stay logged in option selected.\nOpened the Website relaunch project.\nConfirmed that the project task list includes Write homepage copy, Set up analytics, and Launch checklist.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "finalState": {
+    "url": "http://127.0.0.1:4790/projects/2/9",
+    "home_page_greeting": "Amber Demo",
+    "project": "Website relaunch",
+    "task_list": "Write homepage copy; Set up analytics; Launch checklist"
+  },
+  "credits": 25.691110000000002,
+  "steps": 13,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": null,
+  "leaks": 0,
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 13,
+    "finalShot": "shots/13.jpg",
+    "failures": []
+  }
+}

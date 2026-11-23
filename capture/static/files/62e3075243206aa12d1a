@@ -1,0 +1,1 @@
+var e={ADMIN_PANEL:`admin_panel`,TIME_TRACKING:`time_tracking`,USER_INVITES:`user_invites`};export{e as t};
