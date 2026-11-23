@@ -1,5 +1,5 @@
 {
-  "$comment": "The plain-English journeys Kane walks. Each is captured against the real Vikunja and then frozen as flows/<id>_test.md. Objectives: one line, no double quotes, visible-page checks only, ending on an outcome.",
+  "$comment": "The plain-English journeys Kane walks. Each is captured against the real Vikunja and then frozen as flows/<id>_test.md. Objectives: one line, no double quotes, visible-page checks only, ending on an outcome. {{amber_tag}} is six random letters supplied fresh for every run, so a write journey cannot pass on a replayed recording; every write journey ends with a reload and a check.",
   "app": "Vikunja v2.8.0",
   "origin": "http://127.0.0.1:4790",
   "signIn": "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo.",
@@ -64,8 +64,8 @@
       "id": "j09-add-task",
       "title": "Add a task",
       "kind": "write",
-      "steps": "Open the project Kitchen renovation, add a new task titled Buy paint samples, then verify Buy paint samples appears in the project task list.",
-      "outcome": "The new task appears in the list"
+      "steps": "Open the project Kitchen renovation, add a new task titled Paint samples {{amber_tag}}, then verify Paint samples {{amber_tag}} appears in the project task list. Reload the page, then verify Paint samples {{amber_tag}} is still listed.",
+      "outcome": "The new task is listed, and still listed after a reload"
     },
     {
       "id": "j10-mark-done",
@@ -78,36 +78,36 @@
       "id": "j11-rename",
       "title": "Rename a task",
       "kind": "write",
-      "steps": "Open the project Website relaunch and open the task Write homepage copy. Change its title to Write homepage copy v2. Go back to the Website relaunch list, then verify Write homepage copy v2 is listed.",
-      "outcome": "The new title shows in the list"
+      "steps": "Open the project Website relaunch and open the task Write homepage copy. Change its title to Homepage copy {{amber_tag}}. Go back to the Website relaunch list and verify Homepage copy {{amber_tag}} is listed. Reload the page, then verify Homepage copy {{amber_tag}} is still listed.",
+      "outcome": "The new title is listed, and still listed after a reload"
     },
     {
       "id": "j12-description",
       "title": "Edit a description",
       "kind": "write",
-      "steps": "Open the project Kitchen renovation and open the task Choose worktop. Set its description to Oak or quartz and save it. Reload the page, then verify the description Oak or quartz is shown.",
-      "outcome": "The description is still there after a reload"
+      "steps": "Open the project Kitchen renovation and open the task Choose worktop. Set its description to Oak or quartz {{amber_tag}} and save it. Reload the page, then verify the description Oak or quartz {{amber_tag}} is shown.",
+      "outcome": "The new description is still there after a reload"
     },
     {
       "id": "j13-delete",
       "title": "Delete a task",
       "kind": "write",
-      "steps": "Open the project Website relaunch and open the task Pick a colour palette. Delete the task and confirm. Then verify the Website relaunch list no longer shows Pick a colour palette but still shows Set up analytics.",
-      "outcome": "The task is gone from the list"
+      "steps": "Open the project Website relaunch and open the task Pick a colour palette. Delete the task and confirm. Verify the Website relaunch list no longer shows Pick a colour palette. Reload the page, then verify Pick a colour palette is still gone and Set up analytics is still listed.",
+      "outcome": "The task is gone from the list, and still gone after a reload"
     },
     {
       "id": "j14-new-project",
       "title": "Create a project",
       "kind": "write",
-      "steps": "Create a new project named Garden. Then open the Projects page from the main menu and verify Garden is listed next to Kitchen renovation.",
-      "outcome": "The new project exists and is listed"
+      "steps": "Create a new project named Garden {{amber_tag}}. Open the Projects page from the main menu and verify Garden {{amber_tag}} is listed. Reload the page, then verify Garden {{amber_tag}} is still listed next to Kitchen renovation.",
+      "outcome": "The new project is listed, and still listed after a reload"
     },
     {
       "id": "j15-comment",
       "title": "Comment on a task",
       "kind": "write",
-      "steps": "Open the project Kitchen renovation and open the task Get three quotes. Add the comment Third quote arrived, then verify the comments show both Third quote arrived and Two quotes in so far.",
-      "outcome": "The new comment shows beside the existing one"
+      "steps": "Open the project Kitchen renovation and open the task Get three quotes. Add the comment Third quote {{amber_tag}}, then verify the comments show both Third quote {{amber_tag}} and Two quotes in so far. Reload the page, then verify Third quote {{amber_tag}} is still shown.",
+      "outcome": "The new comment shows beside the existing one, and after a reload"
     }
   ]
 }
