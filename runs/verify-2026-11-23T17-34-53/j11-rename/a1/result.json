@@ -1,0 +1,66 @@
+{
+  "flow": "j11-rename",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "ubgoal",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Website relaunch and open the task Write homepage copy. Change its title to Homepage copy {{amber_tag}}. Go back to the Website relaunch list and verify Homepage copy {{amber_tag}} is listed. Reload the page, then verify Homepage copy {{amber_tag}} is still listed.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json"
+  ],
+  "startedAt": "2026-11-23T17:52:49.042Z",
+  "ms": 145433,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "renamed a homepage copy task on the Website relaunch project",
+  "summary": "Opened the Website relaunch project and selected the “Write homepage copy” task.\nChanged the task title to “Homepage copy ubgoal”.\nReturned to the Website relaunch task list and confirmed the renamed task was listed.\nReloaded the project list and confirmed “Homepage copy ubgoal” was still listed.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/projects/2/9",
+    "task_title": "Homepage copy ubgoal",
+    "task_list_status": "Homepage copy ubgoal remained listed after reload"
+  },
+  "credits": 42.9504105,
+  "steps": 18,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-23T17:52:49.042Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-23T17:55:14.791Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 18,
+    "finalShot": "shots/18.jpg",
+    "failures": []
+  }
+}

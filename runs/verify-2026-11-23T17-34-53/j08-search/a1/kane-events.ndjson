@@ -1,0 +1,33 @@
+{"type":"stream_start","cli_version":"0.10.7","surface":"run","pid":14504,"v":1,"ts":"2026-11-23T17:47:04.059Z","kind":"typed","_rt":1795456024060}
+{"type":"recording_state","enabled":true,"session_id":"ae16cb3d-1b5c-41fb-a880-ab3c5ddaccf8","persist":false,"v":1,"ts":"2026-11-23T17:47:04.097Z","kind":"typed","_rt":1795456024097}
+{"type":"update_available","current":"0.10.7","latest":"0.10.8","severity":"patch","v":1,"ts":"2026-11-23T17:47:09.136Z","kind":"typed","_rt":1795456029136}
+{"type":"skill_update_available","current":null,"latest":"0.1.4","install_cmd":"kane-cli install skill","v":1,"ts":"2026-11-23T17:47:09.147Z","kind":"typed","_rt":1795456029147}
+{"type":"bifurcation","flows":["Navigate to http://127.0.0.1:4790/login then Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo.","Use the search in the top bar to search for tiles, open the result Order tiles, then verify the task heading reads Order tiles."],"count":2,"v":1,"ts":"2026-11-23T17:47:19.168Z","kind":"typed","_rt":1795456039168}
+{"step":2,"status":"running","remark":"Step 1","v":1,"ts":"2026-11-23T17:47:21.236Z","kind":"step","_rt":1795456041236}
+{"step":2,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login","v":1,"ts":"2026-11-23T17:47:21.247Z","kind":"step","_rt":1795456041247}
+{"step":3,"status":"running","remark":"Step 2","v":1,"ts":"2026-11-23T17:47:24.865Z","kind":"step","_rt":1795456044865}
+{"step":3,"status":"done","remark":"wait: queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click ","v":1,"ts":"2026-11-23T17:47:31.338Z","kind":"step","_rt":1795456051338}
+{"step":4,"status":"running","remark":"Step 3","v":1,"ts":"2026-11-23T17:47:31.994Z","kind":"step","_rt":1795456051994}
+{"step":4,"status":"done","remark":"type: Type \"{{global.amber_user}}\" into \"Username Or Email Address\"","v":1,"ts":"2026-11-23T17:47:32.227Z","kind":"step","_rt":1795456052227}
+{"step":5,"status":"running","remark":"Step 4","v":1,"ts":"2026-11-23T17:47:32.900Z","kind":"step","_rt":1795456052900}
+{"step":5,"status":"done","remark":"type: Type \"{{secrets.user.amber_password}}\" into \"Password\"","v":1,"ts":"2026-11-23T17:47:33.098Z","kind":"step","_rt":1795456053098}
+{"step":6,"status":"running","remark":"Step 5","v":1,"ts":"2026-11-23T17:47:33.749Z","kind":"step","_rt":1795456053749}
+{"step":6,"status":"done","remark":"click: Click \"Stay logged in\"","v":1,"ts":"2026-11-23T17:47:34.440Z","kind":"step","_rt":1795456054440}
+{"step":7,"status":"running","remark":"Step 6","v":1,"ts":"2026-11-23T17:47:35.097Z","kind":"step","_rt":1795456055097}
+{"step":7,"status":"done","remark":"click: Click \"LOGIN\"","v":1,"ts":"2026-11-23T17:47:35.774Z","kind":"step","_rt":1795456055774}
+{"step":8,"status":"running","remark":"Step 7","v":1,"ts":"2026-11-23T17:47:36.483Z","kind":"step","_rt":1795456056482}
+{"step":8,"status":"done","remark":"analyze: the home page greets Amber Demo","v":1,"ts":"2026-11-23T17:47:47.505Z","kind":"step","_rt":1795456067505}
+{"step":9,"status":"running","remark":"Step 8","v":1,"ts":"2026-11-23T17:47:48.197Z","kind":"step","_rt":1795456068196}
+{"step":9,"status":"done","remark":"assert: the home page greets Amber Demo","v":1,"ts":"2026-11-23T17:47:48.215Z","kind":"step","_rt":1795456068215}
+{"step":2,"status":"running","remark":"Step 1","v":1,"ts":"2026-11-23T17:47:56.168Z","kind":"step","_rt":1795456076167}
+{"step":2,"status":"done","remark":"click: Clicking the search in the top bar","v":1,"ts":"2026-11-23T17:48:00.995Z","kind":"step","_rt":1795456080995}
+{"step":3,"status":"running","remark":"Step 2","v":1,"ts":"2026-11-23T17:48:01.660Z","kind":"step","_rt":1795456081660}
+{"step":3,"status":"done","remark":"type: Typing tiles in the top search bar","v":1,"ts":"2026-11-23T17:48:05.972Z","kind":"step","_rt":1795456085972}
+{"step":4,"status":"running","remark":"Step 3","v":1,"ts":"2026-11-23T17:48:06.646Z","kind":"step","_rt":1795456086646}
+{"step":4,"status":"done","remark":"click: Clicking Order tiles in the search results dialog","v":1,"ts":"2026-11-23T17:48:10.911Z","kind":"step","_rt":1795456090911}
+{"step":5,"status":"running","remark":"Step 4","v":1,"ts":"2026-11-23T17:48:11.608Z","kind":"step","_rt":1795456091609}
+{"step":5,"status":"done","remark":"analyze: the task heading reads Order tiles","v":1,"ts":"2026-11-23T17:48:21.023Z","kind":"step","_rt":1795456101023}
+{"step":6,"status":"running","remark":"Step 5","v":1,"ts":"2026-11-23T17:48:21.828Z","kind":"step","_rt":1795456101828}
+{"step":6,"status":"done","remark":"assert: the task heading reads Order tiles","v":1,"ts":"2026-11-23T17:48:21.840Z","kind":"step","_rt":1795456101840}
+{"type":"coverage","status":"skipped","reason":"not_assurance_project","pack":"~\\.testmuai\\kaneai\\sessions\\ae16cb3d-1b5c-41fb-a880-ab3c5ddaccf8\\evidence\\c26576c7-c39c-485a-9baa-31879cbb3ceb.evidence","v":1,"ts":"2026-11-23T17:48:40.505Z","kind":"typed","_rt":1795456120505}
+{"type":"run_end","status":"passed","summary":"Searched for “tiles” using the top search bar.\nOpened the “Order tiles” search result.\nThe Order tiles task page loaded, with the heading reading “Order tiles”.","one_liner":"opened the Order tiles result on the task site","final_state":{"url":"http://127.0.0.1:4790/tasks/8","task_heading":"Order tiles"},"reason":"Objective completed","duration":69.4,"bifurcated":true,"total_runs":2,"credits_consumed":21.9274575,"result_code":100,"reason_code":"success.complete","per_flow_metadata":[{"result_code":"100","reason_code":"success.complete","error_message":null,"summary":"Signed in using the provided Amber Demo account credentials with “Stay logged in” selected.\nThe home page loaded successfully and displayed a greeting for Amber Demo.","one_liner":"signed in to the home page on the local site","credits_consumed":9.067419999999998},{"result_code":"100","reason_code":"success.complete","error_message":null,"summary":"Searched for “tiles” using the top search bar.\nOpened the “Order tiles” search result.\nThe Order tiles task page loaded, with the heading reading “Order tiles”.","one_liner":"opened the Order tiles result on the task site","credits_consumed":12.8600375}],"run_id":"run-0","coverage":{"status":"skipped"},"v":1,"ts":"2026-11-23T17:48:40.505Z","kind":"terminal","_rt":1795456120505}

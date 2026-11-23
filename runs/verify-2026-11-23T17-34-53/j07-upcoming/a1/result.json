@@ -1,0 +1,67 @@
+{
+  "flow": "j07-upcoming",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "ngbrrw",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open Upcoming from the main menu, then verify the tasks Order tiles and Review pricing page are listed.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json"
+  ],
+  "startedAt": "2026-11-23T17:45:24.563Z",
+  "ms": 98003,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "opened upcoming tasks on the task site",
+  "summary": "Signed in as Amber Demo with the Stay logged in option selected.\nOpened Upcoming from the main menu.\nConfirmed that the upcoming task list includes “Order tiles” and “Review pricing page.”",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/tasks/by/upcoming",
+    "home_page_greeting_amber_demo": "true",
+    "order_tiles_listed": "true",
+    "review_pricing_page_listed": "true"
+  },
+  "credits": 25.45507,
+  "steps": 12,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-23T17:45:24.562Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-23T17:47:02.884Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 12,
+    "finalShot": "shots/12.jpg",
+    "failures": []
+  }
+}

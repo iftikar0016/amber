@@ -1,0 +1,35 @@
+{"type":"stream_start","cli_version":"0.10.7","surface":"run","pid":8132,"v":1,"ts":"2026-11-23T17:41:55.134Z","kind":"typed","_rt":1795455715134}
+{"type":"recording_state","enabled":true,"session_id":"d4c247e7-ce21-4182-bd20-95694c2a3cd6","persist":false,"v":1,"ts":"2026-11-23T17:41:55.172Z","kind":"typed","_rt":1795455715171}
+{"type":"update_available","current":"0.10.7","latest":"0.10.8","severity":"patch","v":1,"ts":"2026-11-23T17:42:00.469Z","kind":"typed","_rt":1795455720468}
+{"type":"skill_update_available","current":null,"latest":"0.1.4","install_cmd":"kane-cli install skill","v":1,"ts":"2026-11-23T17:42:00.480Z","kind":"typed","_rt":1795455720478}
+{"type":"bifurcation","flows":["Navigate to http://127.0.0.1:4790/login then Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo.\nOpen the project Kitchen renovation and switch to its Table view, then verify a table lists Get three quotes, Order tiles and Book electrician."],"count":1,"v":1,"ts":"2026-11-23T17:42:09.586Z","kind":"typed","_rt":1795455729585}
+{"step":2,"status":"running","remark":"Step 1","v":1,"ts":"2026-11-23T17:42:11.384Z","kind":"step","_rt":1795455731383}
+{"step":2,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login","v":1,"ts":"2026-11-23T17:42:11.394Z","kind":"step","_rt":1795455731393}
+{"step":3,"status":"running","remark":"Step 2","v":1,"ts":"2026-11-23T17:42:16.438Z","kind":"step","_rt":1795455736437}
+{"step":3,"status":"done","remark":"wait: queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click ","v":1,"ts":"2026-11-23T17:42:21.701Z","kind":"step","_rt":1795455741700}
+{"step":4,"status":"running","remark":"Step 3","v":1,"ts":"2026-11-23T17:42:22.354Z","kind":"step","_rt":1795455742354}
+{"step":4,"status":"done","remark":"type: Type \"{{global.amber_user}}\" into \"Username Or Email Address\"","v":1,"ts":"2026-11-23T17:42:22.576Z","kind":"step","_rt":1795455742575}
+{"step":5,"status":"running","remark":"Step 4","v":1,"ts":"2026-11-23T17:42:23.236Z","kind":"step","_rt":1795455743236}
+{"step":5,"status":"done","remark":"type: Type \"{{secrets.user.amber_password}}\" into \"Password\"","v":1,"ts":"2026-11-23T17:42:23.414Z","kind":"step","_rt":1795455743413}
+{"step":6,"status":"running","remark":"Step 5","v":1,"ts":"2026-11-23T17:42:24.069Z","kind":"step","_rt":1795455744068}
+{"step":6,"status":"done","remark":"click: Click \"Stay logged in\"","v":1,"ts":"2026-11-23T17:42:24.730Z","kind":"step","_rt":1795455744730}
+{"step":7,"status":"running","remark":"Step 6","v":1,"ts":"2026-11-23T17:42:25.385Z","kind":"step","_rt":1795455745385}
+{"step":7,"status":"done","remark":"click: Click \"LOGIN\"","v":1,"ts":"2026-11-23T17:42:26.066Z","kind":"step","_rt":1795455746066}
+{"step":8,"status":"running","remark":"Step 7","v":1,"ts":"2026-11-23T17:42:26.748Z","kind":"step","_rt":1795455746747}
+{"step":8,"status":"done","remark":"wait: PRIMARY: wait 500 ms for the signed-in home page to settle","v":1,"ts":"2026-11-23T17:42:31.443Z","kind":"step","_rt":1795455751443}
+{"step":9,"status":"running","remark":"Step 8","v":1,"ts":"2026-11-23T17:42:32.114Z","kind":"step","_rt":1795455752114}
+{"step":9,"status":"done","remark":"analyze: the home page greets Amber Demo","v":1,"ts":"2026-11-23T17:42:38.947Z","kind":"step","_rt":1795455758947}
+{"step":10,"status":"running","remark":"Step 9","v":1,"ts":"2026-11-23T17:42:39.635Z","kind":"step","_rt":1795455759635}
+{"step":10,"status":"done","remark":"assert: the home page greets Amber Demo","v":1,"ts":"2026-11-23T17:42:39.739Z","kind":"step","_rt":1795455759739}
+{"step":11,"status":"running","remark":"Step 10","v":1,"ts":"2026-11-23T17:42:40.433Z","kind":"step","_rt":1795455760432}
+{"step":11,"status":"done","remark":"click: Clicking Kitchen renovation in Projects sidebar","v":1,"ts":"2026-11-23T17:42:46.456Z","kind":"step","_rt":1795455766456}
+{"step":12,"status":"running","remark":"Step 11","v":1,"ts":"2026-11-23T17:42:47.114Z","kind":"step","_rt":1795455767113}
+{"step":12,"status":"done","remark":"click: Clicking Table view for the Kitchen renovation project","v":1,"ts":"2026-11-23T17:42:53.226Z","kind":"step","_rt":1795455773226}
+{"step":13,"status":"running","remark":"Step 12","v":1,"ts":"2026-11-23T17:42:53.908Z","kind":"step","_rt":1795455773908}
+{"step":13,"status":"done","remark":"wait: PRIMARY: wait 500 ms for the Kitchen renovation Table view to settle","v":1,"ts":"2026-11-23T17:43:00.986Z","kind":"step","_rt":1795455780991}
+{"step":14,"status":"running","remark":"Step 13","v":1,"ts":"2026-11-23T17:43:01.670Z","kind":"step","_rt":1795455781675}
+{"step":14,"status":"done","remark":"analyze: a table lists Book electrician","v":1,"ts":"2026-11-23T17:43:10.823Z","kind":"step","_rt":1795455790827}
+{"step":15,"status":"running","remark":"Step 14","v":1,"ts":"2026-11-23T17:43:11.606Z","kind":"step","_rt":1795455791610}
+{"step":15,"status":"done","remark":"assert: a table lists Get three quotes, Order tiles and Book electrician","v":1,"ts":"2026-11-23T17:43:11.616Z","kind":"step","_rt":1795455791620}
+{"type":"coverage","status":"skipped","reason":"not_assurance_project","pack":"~\\.testmuai\\kaneai\\sessions\\d4c247e7-ce21-4182-bd20-95694c2a3cd6\\evidence\\660e5b84-9c10-4737-aa37-79d8703d9c73.evidence","v":1,"ts":"2026-11-23T17:43:30.922Z","kind":"typed","_rt":1795455810926}
+{"type":"run_end","status":"passed","summary":"Signed in as Amber Demo with the stay-logged-in option selected.\nOpened the Kitchen renovation project and switched to its Table view.\nConfirmed the table lists Get three quotes, Order tiles, and Book electrician.","one_liner":"opened the Kitchen renovation table on the project site","final_state":{"url":"http://127.0.0.1:4790/projects/3/15","home_page_greeting_amber_demo":"true","get_three_quotes_listed":"true","order_tiles_listed":"true","book_electrician_listed":"true"},"reason":"Objective completed","duration":68.2,"bifurcated":false,"total_runs":1,"credits_consumed":27.34449,"result_code":100,"reason_code":"success.complete","per_flow_metadata":[{"result_code":"100","reason_code":"success.complete","error_message":null,"summary":"Signed in as Amber Demo with the stay-logged-in option selected.\nOpened the Kitchen renovation project and switched to its Table view.\nConfirmed the table lists Get three quotes, Order tiles, and Book electrician.","one_liner":"opened the Kitchen renovation table on the project site","credits_consumed":27.34449}],"run_id":"run-0","coverage":{"status":"skipped"},"v":1,"ts":"2026-11-23T17:43:30.923Z","kind":"terminal","_rt":1795455810927}

@@ -1,0 +1,92 @@
+[
+  {
+    "step": 1,
+    "type": "navigate",
+    "intent": "Navigate to http://127.0.0.1:4790/login",
+    "instruction": "Navigate to http://127.0.0.1:4790/login"
+  },
+  {
+    "step": 2,
+    "type": "wait",
+    "intent": "queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click \"Stay logged in\"; click \"LOGIN\"",
+    "instruction": "Waiting for the next login step"
+  },
+  {
+    "step": 3,
+    "type": "fill",
+    "intent": "PRIMARY: Sign in with username {{global.amber_user}}; role=textbox; text=\"Username Or Email Address\" | HINTS: container=Login form",
+    "instruction": "Type \"{{global.amber_user}}\" into \"Username Or Email Address\""
+  },
+  {
+    "step": 4,
+    "type": "fill",
+    "intent": "PRIMARY: Sign in with password {{secrets.user.amber_password}}; role=textbox; text=\"Password\" | HINTS: container=Login form",
+    "instruction": "Type \"{{secrets.user.amber_password}}\" into \"Password\""
+  },
+  {
+    "step": 5,
+    "type": "click",
+    "intent": "PRIMARY: Stay logged in; role=checkbox; text=\"Stay logged in\" | HINTS: container=Login form",
+    "instruction": "Click \"Stay logged in\""
+  },
+  {
+    "step": 6,
+    "type": "click",
+    "intent": "PRIMARY: Sign in; role=button; text=\"LOGIN\" | HINTS: container=Login form",
+    "instruction": "Click \"LOGIN\""
+  },
+  {
+    "step": 7,
+    "type": "wait",
+    "intent": "PRIMARY: wait 500 ms for the signed-in home page to settle",
+    "instruction": "Waiting for the signed-in home page to settle"
+  },
+  {
+    "step": 8,
+    "type": "analyze",
+    "intent": "whether the home page greeting for Amber Demo is present in the main heading",
+    "instruction": "Checking whether the home page greeting is present"
+  },
+  {
+    "step": 9,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  },
+  {
+    "step": 10,
+    "type": "click",
+    "intent": "PRIMARY: Open the project Website relaunch; role=link; text=\"Website relaunch\" | HINTS: container=Projects navigation",
+    "instruction": "Clicking the Website relaunch link in Projects navigation"
+  },
+  {
+    "step": 11,
+    "type": "wait",
+    "intent": "PRIMARY: wait for the Website relaunch project page to finish loading",
+    "instruction": "Waiting for the Website relaunch project page to finish loading"
+  },
+  {
+    "step": 12,
+    "type": "analyze",
+    "intent": "whether the Write homepage copy task link is present in the task list",
+    "instruction": "Checking whether the Write homepage copy task is present"
+  },
+  {
+    "step": 13,
+    "type": "analyze",
+    "intent": "whether the Set up analytics task link is present in the task list",
+    "instruction": "Checking whether the Set up analytics task is present"
+  },
+  {
+    "step": 14,
+    "type": "analyze",
+    "intent": "whether the Launch checklist task link is present in the task list",
+    "instruction": "Checking whether the Launch checklist task is present"
+  },
+  {
+    "step": 15,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  }
+]

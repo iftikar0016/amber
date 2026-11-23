@@ -1,0 +1,116 @@
+[
+  {
+    "step": 1,
+    "type": "navigate",
+    "intent": "Navigate to http://127.0.0.1:4790/login",
+    "instruction": "Navigate to http://127.0.0.1:4790/login"
+  },
+  {
+    "step": 2,
+    "type": "wait",
+    "intent": "queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click \"Stay logged in\"; click \"LOGIN\"",
+    "instruction": "Waiting for the queued login steps to run"
+  },
+  {
+    "step": 3,
+    "type": "fill",
+    "intent": "PRIMARY: Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}}, with Stay logged in ticked; role=textbox; text=\"Username Or Email Address\" | HINTS: container=Login form",
+    "instruction": "Type \"{{global.amber_user}}\" into \"Username Or Email Address\""
+  },
+  {
+    "step": 4,
+    "type": "fill",
+    "intent": "PRIMARY: Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}}, with Stay logged in ticked; role=textbox; text=\"Password\" | HINTS: container=Login form",
+    "instruction": "Type \"{{secrets.user.amber_password}}\" into \"Password\""
+  },
+  {
+    "step": 5,
+    "type": "click",
+    "intent": "PRIMARY: Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}}, with Stay logged in ticked; role=checkbox; text=\"Stay logged in\" | HINTS: container=Login form",
+    "instruction": "Click \"Stay logged in\""
+  },
+  {
+    "step": 6,
+    "type": "click",
+    "intent": "PRIMARY: Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}}, with Stay logged in ticked; role=button; text=\"LOGIN\" | HINTS: container=Login form",
+    "instruction": "Click \"LOGIN\""
+  },
+  {
+    "step": 7,
+    "type": "analyze",
+    "intent": "the greeting heading in the home page main content",
+    "instruction": "Reading the home page greeting"
+  },
+  {
+    "step": 8,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  },
+  {
+    "step": 1,
+    "type": "click",
+    "intent": "PRIMARY: Open the project Website relaunch; role=link; text=\"Website relaunch\" | HINTS: container=Projects navigation",
+    "instruction": "Clicking the Website relaunch link in Projects navigation"
+  },
+  {
+    "step": 2,
+    "type": "click",
+    "intent": "PRIMARY: open the task Write homepage copy; role=link; text=\"Write homepage copy\" | HINTS: container=Website relaunch task list",
+    "instruction": "Clicking Write homepage copy link"
+  },
+  {
+    "step": 3,
+    "type": "click",
+    "intent": "PRIMARY: Change the task title; role=heading; text=\"Title\" | HINTS: container=task detail header",
+    "instruction": "Clicking the task title header to change the task title"
+  },
+  {
+    "step": 4,
+    "type": "fill",
+    "intent": "PRIMARY: Change the task title to Homepage copy {{global.amber_tag}}; role=heading; text=\"Title\" | HINTS: container=task detail header",
+    "instruction": "Typing Homepage copy {{global.amber_tag}} into task title field"
+  },
+  {
+    "step": 5,
+    "type": "click",
+    "intent": "PRIMARY: Go back to the Website relaunch list; role=button; text=\"Back to project\" | HINTS: position=top-left; container=task detail header",
+    "instruction": "Clicking Back to project"
+  },
+  {
+    "step": 6,
+    "type": "analyze",
+    "intent": "whether the task link labeled \"Homepage copy {{global.amber_tag}}\" is present in the project task list",
+    "instruction": "Checking whether the Homepage copy task is present"
+  },
+  {
+    "step": 7,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  },
+  {
+    "step": 8,
+    "type": "refresh",
+    "intent": "Navigate refresh",
+    "instruction": "Navigate refresh"
+  },
+  {
+    "step": 9,
+    "type": "wait",
+    "intent": "PRIMARY: Reload the page",
+    "instruction": "Reloading the page"
+  },
+  {
+    "step": 10,
+    "type": "analyze",
+    "intent": "whether the task link labeled Homepage copy {{global.amber_tag}} is listed in the project task list",
+    "instruction": "Checking whether the Homepage copy {{global.amber_tag}} task is listed"
+  },
+  {
+    "step": 11,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  }
+]

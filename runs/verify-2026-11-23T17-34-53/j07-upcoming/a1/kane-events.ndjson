@@ -1,0 +1,31 @@
+{"type":"stream_start","cli_version":"0.10.7","surface":"run","pid":8220,"v":1,"ts":"2026-11-23T17:45:25.336Z","kind":"typed","_rt":1795455925338}
+{"type":"recording_state","enabled":true,"session_id":"9a00b73f-4a56-4e7b-8c8c-7eeabb8dbec0","persist":false,"v":1,"ts":"2026-11-23T17:45:25.374Z","kind":"typed","_rt":1795455925375}
+{"type":"update_available","current":"0.10.7","latest":"0.10.8","severity":"patch","v":1,"ts":"2026-11-23T17:45:30.645Z","kind":"typed","_rt":1795455930646}
+{"type":"skill_update_available","current":null,"latest":"0.1.4","install_cmd":"kane-cli install skill","v":1,"ts":"2026-11-23T17:45:30.647Z","kind":"typed","_rt":1795455930648}
+{"type":"bifurcation","flows":["Navigate to http://127.0.0.1:4790/login then Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo.\nOpen Upcoming from the main menu, then verify the tasks Order tiles and Review pricing page are listed."],"count":1,"v":1,"ts":"2026-11-23T17:45:41.132Z","kind":"typed","_rt":1795455941134}
+{"step":2,"status":"running","remark":"Step 1","v":1,"ts":"2026-11-23T17:45:43.358Z","kind":"step","_rt":1795455943359}
+{"step":2,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login","v":1,"ts":"2026-11-23T17:45:43.369Z","kind":"step","_rt":1795455943370}
+{"step":3,"status":"running","remark":"Step 2","v":1,"ts":"2026-11-23T17:45:48.340Z","kind":"step","_rt":1795455948341}
+{"step":3,"status":"done","remark":"wait: queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click ","v":1,"ts":"2026-11-23T17:45:58.060Z","kind":"step","_rt":1795455958061}
+{"step":4,"status":"running","remark":"Step 3","v":1,"ts":"2026-11-23T17:45:58.736Z","kind":"step","_rt":1795455958737}
+{"step":4,"status":"done","remark":"type: Type \"{{global.amber_user}}\" into \"Username Or Email Address\"","v":1,"ts":"2026-11-23T17:45:59.036Z","kind":"step","_rt":1795455959037}
+{"step":5,"status":"running","remark":"Step 4","v":1,"ts":"2026-11-23T17:45:59.721Z","kind":"step","_rt":1795455959722}
+{"step":5,"status":"done","remark":"type: Type \"{{secrets.user.amber_password}}\" into \"Password\"","v":1,"ts":"2026-11-23T17:45:59.947Z","kind":"step","_rt":1795455959949}
+{"step":6,"status":"running","remark":"Step 5","v":1,"ts":"2026-11-23T17:46:00.621Z","kind":"step","_rt":1795455960622}
+{"step":6,"status":"done","remark":"click: Click \"Stay logged in\"","v":1,"ts":"2026-11-23T17:46:01.320Z","kind":"step","_rt":1795455961321}
+{"step":7,"status":"running","remark":"Step 6","v":1,"ts":"2026-11-23T17:46:01.992Z","kind":"step","_rt":1795455961993}
+{"step":7,"status":"done","remark":"click: Click \"LOGIN\"","v":1,"ts":"2026-11-23T17:46:02.689Z","kind":"step","_rt":1795455962691}
+{"step":8,"status":"running","remark":"Step 7","v":1,"ts":"2026-11-23T17:46:03.385Z","kind":"step","_rt":1795455963386}
+{"step":8,"status":"done","remark":"analyze: the home page greets Amber Demo","v":1,"ts":"2026-11-23T17:46:12.281Z","kind":"step","_rt":1795455972282}
+{"step":9,"status":"running","remark":"Step 8","v":1,"ts":"2026-11-23T17:46:12.989Z","kind":"step","_rt":1795455972990}
+{"step":9,"status":"done","remark":"assert: the home page greets Amber Demo","v":1,"ts":"2026-11-23T17:46:13.009Z","kind":"step","_rt":1795455973010}
+{"step":10,"status":"running","remark":"Step 9","v":1,"ts":"2026-11-23T17:46:13.847Z","kind":"step","_rt":1795455973848}
+{"step":10,"status":"done","remark":"click: Clicking Upcoming in the main menu","v":1,"ts":"2026-11-23T17:46:21.095Z","kind":"step","_rt":1795455981096}
+{"step":11,"status":"running","remark":"Step 10","v":1,"ts":"2026-11-23T17:46:21.779Z","kind":"step","_rt":1795455981780}
+{"step":11,"status":"done","remark":"wait: PRIMARY: wait for the Upcoming task list to load","v":1,"ts":"2026-11-23T17:46:29.499Z","kind":"step","_rt":1795455989499}
+{"step":12,"status":"running","remark":"Step 11","v":1,"ts":"2026-11-23T17:46:30.207Z","kind":"step","_rt":1795455990208}
+{"step":12,"status":"done","remark":"analyze: the task Review pricing page is listed","v":1,"ts":"2026-11-23T17:46:39.947Z","kind":"step","_rt":1795455999948}
+{"step":13,"status":"running","remark":"Step 12","v":1,"ts":"2026-11-23T17:46:40.618Z","kind":"step","_rt":1795456000618}
+{"step":13,"status":"done","remark":"assert: the tasks Order tiles and Review pricing page are listed","v":1,"ts":"2026-11-23T17:46:40.628Z","kind":"step","_rt":1795456000629}
+{"type":"coverage","status":"skipped","reason":"not_assurance_project","pack":"~\\.testmuai\\kaneai\\sessions\\9a00b73f-4a56-4e7b-8c8c-7eeabb8dbec0\\evidence\\3a06d763-0743-40d3-8555-0c38240411e4.evidence","v":1,"ts":"2026-11-23T17:46:59.423Z","kind":"typed","_rt":1795456019423}
+{"type":"run_end","status":"passed","summary":"Signed in as Amber Demo with the Stay logged in option selected.\nOpened Upcoming from the main menu.\nConfirmed that the upcoming task list includes “Order tiles” and “Review pricing page.”","one_liner":"opened upcoming tasks on the task site","final_state":{"url":"http://127.0.0.1:4790/tasks/by/upcoming","home_page_greeting_amber_demo":"true","order_tiles_listed":"true","review_pricing_page_listed":"true"},"reason":"Objective completed","duration":65.7,"bifurcated":false,"total_runs":1,"credits_consumed":25.45507,"result_code":100,"reason_code":"success.complete","per_flow_metadata":[{"result_code":"100","reason_code":"success.complete","error_message":null,"summary":"Signed in as Amber Demo with the Stay logged in option selected.\nOpened Upcoming from the main menu.\nConfirmed that the upcoming task list includes “Order tiles” and “Review pricing page.”","one_liner":"opened upcoming tasks on the task site","credits_consumed":25.45507}],"run_id":"run-0","coverage":{"status":"skipped"},"v":1,"ts":"2026-11-23T17:46:59.423Z","kind":"terminal","_rt":1795456019424}

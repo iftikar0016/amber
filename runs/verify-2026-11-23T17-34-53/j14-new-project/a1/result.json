@@ -1,0 +1,67 @@
+{
+  "flow": "j14-new-project",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "uhkvyw",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Create a new project named Garden {{amber_tag}}. Open the Projects page from the main menu and verify Garden {{amber_tag}} is listed. Reload the page, then verify the Projects page still lists Garden {{amber_tag}} as well as Kitchen renovation.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json"
+  ],
+  "startedAt": "2026-11-23T17:59:45.039Z",
+  "ms": 174183,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "created a Garden project on the Projects page",
+  "summary": "Created a new project named Garden uhkvyw.\nOpened the Projects page from the main menu and confirmed that Garden uhkvyw was listed.\nReloaded the Projects page and confirmed that both Garden uhkvyw and Kitchen renovation were still listed.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/projects",
+    "garden_project_listed": "true",
+    "garden_project_still_listed": "true",
+    "kitchen_renovation_listed": "true"
+  },
+  "credits": 42.442838,
+  "steps": 19,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-23T17:59:45.038Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-23T18:02:39.522Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 19,
+    "finalShot": "shots/19.jpg",
+    "failures": []
+  }
+}

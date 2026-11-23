@@ -1,0 +1,66 @@
+{
+  "flow": "j06-kanban",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "hrvvvp",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Kitchen renovation and switch to its Kanban view, then verify a board column is shown containing a card titled Choose worktop.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json"
+  ],
+  "startedAt": "2026-11-23T17:43:34.634Z",
+  "ms": 109161,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "opened the Kitchen renovation Kanban board on the project site",
+  "summary": "Opened the Kitchen renovation project and switched it to the Kanban view.\nConfirmed that the board displayed a To-Do column containing the card “Choose worktop.”\nThe requested Kanban view was opened successfully.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/projects/3/16",
+    "board_column_shown": "true",
+    "choose_worktop_card_in_board_column": "true"
+  },
+  "credits": 24.279715000000003,
+  "steps": 12,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-23T17:43:34.633Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-23T17:45:24.142Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 12,
+    "finalShot": "shots/12.jpg",
+    "failures": []
+  }
+}

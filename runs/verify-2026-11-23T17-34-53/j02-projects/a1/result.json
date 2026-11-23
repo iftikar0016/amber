@@ -1,0 +1,68 @@
+{
+  "flow": "j02-projects",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "ppxggz",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the Projects page from the main menu, then verify the projects Website relaunch, Kitchen renovation and Reading list are all shown.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json"
+  ],
+  "startedAt": "2026-11-23T17:36:16.012Z",
+  "ms": 105465,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "opened the Projects page on the planning app",
+  "summary": "Signed in as Amber Demo with the Stay logged in option selected.\nOpened the Projects page from the main menu.\nConfirmed that Website relaunch, Kitchen renovation, and Reading list are shown.\nThe requested sign-in and Projects page navigation were completed successfully.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/projects",
+    "home_page_greeting_amber_demo": "true",
+    "website_relaunch_project_shown": "true",
+    "kitchen_renovation_project_shown": "true",
+    "reading_list_project_shown": "true"
+  },
+  "credits": 26.294997499999997,
+  "steps": 13,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-23T17:36:16.012Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-23T17:38:01.836Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 13,
+    "finalShot": "shots/13.jpg",
+    "failures": []
+  }
+}

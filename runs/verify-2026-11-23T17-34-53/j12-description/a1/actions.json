@@ -1,0 +1,104 @@
+[
+  {
+    "step": 1,
+    "type": "navigate",
+    "intent": "Navigate to http://127.0.0.1:4790/login",
+    "instruction": "Navigate to http://127.0.0.1:4790/login"
+  },
+  {
+    "step": 2,
+    "type": "wait",
+    "intent": "queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click \"Stay logged in\"; click \"LOGIN\"",
+    "instruction": "Waiting for the login page to load"
+  },
+  {
+    "step": 3,
+    "type": "fill",
+    "intent": "PRIMARY: Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}}, with Stay logged in ticked; role=textbox; text=\"Username Or Email Address\" | HINTS: container=Login form",
+    "instruction": "Type \"{{global.amber_user}}\" into \"Username Or Email Address\""
+  },
+  {
+    "step": 4,
+    "type": "fill",
+    "intent": "PRIMARY: Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}}, with Stay logged in ticked; role=textbox; text=\"Password\" | HINTS: container=Login form",
+    "instruction": "Type \"{{secrets.user.amber_password}}\" into \"Password\""
+  },
+  {
+    "step": 5,
+    "type": "click",
+    "intent": "PRIMARY: Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}}, with Stay logged in ticked; role=checkbox; text=\"Stay logged in\" | HINTS: container=Login form",
+    "instruction": "Click \"Stay logged in\""
+  },
+  {
+    "step": 6,
+    "type": "click",
+    "intent": "PRIMARY: Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}}, with Stay logged in ticked; role=button; text=\"LOGIN\" | HINTS: container=Login form",
+    "instruction": "Click \"LOGIN\""
+  },
+  {
+    "step": 7,
+    "type": "wait",
+    "intent": "PRIMARY: wait 500 ms after successful sign-in",
+    "instruction": "Waiting 500 milliseconds after successful sign-in"
+  },
+  {
+    "step": 8,
+    "type": "analyze",
+    "intent": "the home page greeting heading in the main content",
+    "instruction": "Reading the home page greeting"
+  },
+  {
+    "step": 9,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  },
+  {
+    "step": 1,
+    "type": "click",
+    "intent": "PRIMARY: Open the project Kitchen renovation; role=link; text=\"Kitchen renovation\" | HINTS: container=left sidebar projects list",
+    "instruction": "Clicking Kitchen renovation in the left sidebar projects list"
+  },
+  {
+    "step": 2,
+    "type": "click",
+    "intent": "PRIMARY: open the task Choose worktop; role=link; text=\"Choose worktop\" | HINTS: container=Kitchen renovation task list",
+    "instruction": "Clicking Choose worktop in the kitchen renovation task list"
+  },
+  {
+    "step": 3,
+    "type": "fill",
+    "intent": "PRIMARY: Set the task description to Oak or quartz {{global.amber_tag}}; role=clickable; text=\"Enter a description, hit '/' for more options…\" | HINTS: container=Description section",
+    "instruction": "Typing Oak or quartz {{global.amber_tag}} into the task description"
+  },
+  {
+    "step": 4,
+    "type": "click",
+    "intent": "PRIMARY: save it; role=button; text=\"SAVE\" | HINTS: container=Description section below the editor",
+    "instruction": "Clicking the SAVE button in the Description section"
+  },
+  {
+    "step": 5,
+    "type": "navigate",
+    "intent": "PRIMARY: Reload the page",
+    "instruction": "Reloading the page"
+  },
+  {
+    "step": 6,
+    "type": "wait",
+    "intent": "PRIMARY: wait for the reloaded task page to display the Description heading",
+    "instruction": "Waiting for the reloaded task page to display the Description heading"
+  },
+  {
+    "step": 7,
+    "type": "analyze",
+    "intent": "whether the task description text \"Oak or quartz {{global.amber_tag}}\" is present in the Description section",
+    "instruction": "Checking whether the task description is present"
+  },
+  {
+    "step": 8,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  }
+]

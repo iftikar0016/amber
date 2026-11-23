@@ -1,0 +1,66 @@
+{
+  "flow": "j13-delete",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "kzkfga",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Website relaunch and open the task Pick a colour palette. Delete the task and confirm. Verify the Website relaunch list no longer shows Pick a colour palette. Reload the page, then verify Pick a colour palette is still gone and Set up analytics is still listed.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json"
+  ],
+  "startedAt": "2026-11-23T17:57:30.328Z",
+  "ms": 133970,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "deleted the Pick a colour palette task on the Website relaunch project",
+  "summary": "You asked to delete the “Pick a colour palette” task from the Website relaunch project.\nOpened the Website relaunch project, deleted “Pick a colour palette,” and confirmed the deletion.\nReloaded the page and confirmed that “Pick a colour palette” was still gone while “Set up analytics” remained listed.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/projects/2/9",
+    "Pick a colour palette": "absent",
+    "Set up analytics": "listed"
+  },
+  "credits": 33.866530000000004,
+  "steps": 17,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-23T17:57:30.327Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-23T17:59:44.604Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 17,
+    "finalShot": "shots/17.jpg",
+    "failures": []
+  }
+}

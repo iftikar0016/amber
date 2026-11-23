@@ -1,0 +1,33 @@
+{"type":"stream_start","cli_version":"0.10.7","surface":"run","pid":15256,"v":1,"ts":"2026-11-23T17:36:16.813Z","kind":"typed","_rt":1795455376815}
+{"type":"recording_state","enabled":true,"session_id":"55beff61-5f0f-48d1-a553-c09e00201782","persist":false,"v":1,"ts":"2026-11-23T17:36:16.835Z","kind":"typed","_rt":1795455376835}
+{"type":"update_available","current":"0.10.7","latest":"0.10.8","severity":"patch","v":1,"ts":"2026-11-23T17:36:22.633Z","kind":"typed","_rt":1795455382633}
+{"type":"skill_update_available","current":null,"latest":"0.1.4","install_cmd":"kane-cli install skill","v":1,"ts":"2026-11-23T17:36:22.635Z","kind":"typed","_rt":1795455382636}
+{"type":"bifurcation","flows":["Navigate to http://127.0.0.1:4790/login then Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo.\nOpen the Projects page from the main menu, then verify the projects Website relaunch, Kitchen renovation and Reading list are all shown."],"count":1,"v":1,"ts":"2026-11-23T17:36:32.898Z","kind":"typed","_rt":1795455392899}
+{"step":2,"status":"running","remark":"Step 1","v":1,"ts":"2026-11-23T17:36:34.827Z","kind":"step","_rt":1795455394827}
+{"step":2,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login","v":1,"ts":"2026-11-23T17:36:34.836Z","kind":"step","_rt":1795455394837}
+{"step":3,"status":"running","remark":"Step 2","v":1,"ts":"2026-11-23T17:36:39.542Z","kind":"step","_rt":1795455399543}
+{"step":3,"status":"done","remark":"wait: queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click ","v":1,"ts":"2026-11-23T17:36:47.778Z","kind":"step","_rt":1795455407779}
+{"step":4,"status":"running","remark":"Step 3","v":1,"ts":"2026-11-23T17:36:48.435Z","kind":"step","_rt":1795455408436}
+{"step":4,"status":"done","remark":"type: Type \"{{global.amber_user}}\" into \"Username Or Email Address\"","v":1,"ts":"2026-11-23T17:36:48.669Z","kind":"step","_rt":1795455408670}
+{"step":5,"status":"running","remark":"Step 4","v":1,"ts":"2026-11-23T17:36:49.310Z","kind":"step","_rt":1795455409310}
+{"step":5,"status":"done","remark":"type: Type \"{{secrets.user.amber_password}}\" into \"Password\"","v":1,"ts":"2026-11-23T17:36:49.510Z","kind":"step","_rt":1795455409511}
+{"step":6,"status":"running","remark":"Step 5","v":1,"ts":"2026-11-23T17:36:50.174Z","kind":"step","_rt":1795455410175}
+{"step":6,"status":"done","remark":"click: Click \"Stay logged in\"","v":1,"ts":"2026-11-23T17:36:50.841Z","kind":"step","_rt":1795455410841}
+{"step":7,"status":"running","remark":"Step 6","v":1,"ts":"2026-11-23T17:36:51.492Z","kind":"step","_rt":1795455411493}
+{"step":7,"status":"done","remark":"click: Click \"LOGIN\"","v":1,"ts":"2026-11-23T17:36:52.179Z","kind":"step","_rt":1795455412180}
+{"step":8,"status":"running","remark":"Step 7","v":1,"ts":"2026-11-23T17:36:52.854Z","kind":"step","_rt":1795455412855}
+{"step":8,"status":"done","remark":"wait: PRIMARY: Sign in with username {{global.amber_user}} and password {{secrets.user","v":1,"ts":"2026-11-23T17:36:59.087Z","kind":"step","_rt":1795455419087}
+{"step":9,"status":"running","remark":"Step 8","v":1,"ts":"2026-11-23T17:36:59.771Z","kind":"step","_rt":1795455419771}
+{"step":9,"status":"done","remark":"analyze: the home page greets Amber Demo","v":1,"ts":"2026-11-23T17:37:07.775Z","kind":"step","_rt":1795455427776}
+{"step":10,"status":"running","remark":"Step 9","v":1,"ts":"2026-11-23T17:37:08.566Z","kind":"step","_rt":1795455428567}
+{"step":10,"status":"done","remark":"assert: the home page greets Amber Demo","v":1,"ts":"2026-11-23T17:37:08.576Z","kind":"step","_rt":1795455428576}
+{"step":11,"status":"running","remark":"Step 10","v":1,"ts":"2026-11-23T17:37:09.251Z","kind":"step","_rt":1795455429251}
+{"step":11,"status":"done","remark":"click: Clicking Projects in the main menu","v":1,"ts":"2026-11-23T17:37:16.663Z","kind":"step","_rt":1795455436663}
+{"step":12,"status":"running","remark":"Step 11","v":1,"ts":"2026-11-23T17:37:17.338Z","kind":"step","_rt":1795455437337}
+{"step":12,"status":"done","remark":"wait: PRIMARY: Open the Projects page from the main menu","v":1,"ts":"2026-11-23T17:37:25.793Z","kind":"step","_rt":1795455445792}
+{"step":13,"status":"running","remark":"Step 12","v":1,"ts":"2026-11-23T17:37:26.454Z","kind":"step","_rt":1795455446454}
+{"step":13,"status":"done","remark":"analyze: the project Reading list is shown","v":1,"ts":"2026-11-23T17:37:37.614Z","kind":"step","_rt":1795455457613}
+{"step":14,"status":"running","remark":"Step 13","v":1,"ts":"2026-11-23T17:37:38.290Z","kind":"step","_rt":1795455458290}
+{"step":14,"status":"done","remark":"assert: the projects Website relaunch, Kitchen renovation and Reading list are all shown","v":1,"ts":"2026-11-23T17:37:38.300Z","kind":"step","_rt":1795455458300}
+{"type":"coverage","status":"skipped","reason":"not_assurance_project","pack":"~\\.testmuai\\kaneai\\sessions\\55beff61-5f0f-48d1-a553-c09e00201782\\evidence\\fa4a0abb-d8f1-4026-9078-0701410aa79e.evidence","v":1,"ts":"2026-11-23T17:37:58.482Z","kind":"typed","_rt":1795455478482}
+{"type":"run_end","status":"passed","summary":"Signed in as Amber Demo with the Stay logged in option selected.\nOpened the Projects page from the main menu.\nConfirmed that Website relaunch, Kitchen renovation, and Reading list are shown.\nThe requested sign-in and Projects page navigation were completed successfully.","one_liner":"opened the Projects page on the planning app","final_state":{"url":"http://127.0.0.1:4790/projects","home_page_greeting_amber_demo":"true","website_relaunch_project_shown":"true","kitchen_renovation_project_shown":"true","reading_list_project_shown":"true"},"reason":"Objective completed","duration":72.4,"bifurcated":false,"total_runs":1,"credits_consumed":26.294997499999997,"result_code":100,"reason_code":"success.complete","per_flow_metadata":[{"result_code":"100","reason_code":"success.complete","error_message":null,"summary":"Signed in as Amber Demo with the Stay logged in option selected.\nOpened the Projects page from the main menu.\nConfirmed that Website relaunch, Kitchen renovation, and Reading list are shown.\nThe requested sign-in and Projects page navigation were completed successfully.","one_liner":"opened the Projects page on the planning app","credits_consumed":26.294997499999997}],"run_id":"run-0","coverage":{"status":"skipped"},"v":1,"ts":"2026-11-23T17:37:58.482Z","kind":"terminal","_rt":1795455478483}

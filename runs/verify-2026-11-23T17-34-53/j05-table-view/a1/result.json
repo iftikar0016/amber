@@ -1,0 +1,68 @@
+{
+  "flow": "j05-table-view",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "ffyvfu",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Kitchen renovation and switch to its Table view, then verify a table lists Get three quotes, Order tiles and Book electrician.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json"
+  ],
+  "startedAt": "2026-11-23T17:41:54.367Z",
+  "ms": 99516,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "opened the Kitchen renovation table on the project site",
+  "summary": "Signed in as Amber Demo with the stay-logged-in option selected.\nOpened the Kitchen renovation project and switched to its Table view.\nConfirmed the table lists Get three quotes, Order tiles, and Book electrician.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/projects/3/15",
+    "home_page_greeting_amber_demo": "true",
+    "get_three_quotes_listed": "true",
+    "order_tiles_listed": "true",
+    "book_electrician_listed": "true"
+  },
+  "credits": 27.34449,
+  "steps": 14,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-23T17:41:54.367Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-23T17:43:34.220Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 14,
+    "finalShot": "shots/14.jpg",
+    "failures": []
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "flow": "j08-search",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "wsqzel",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Use the search in the top bar to search for tiles, open the result Order tiles, then verify the task heading reads Order tiles.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json"
+  ],
+  "startedAt": "2026-11-23T17:47:03.291Z",
+  "ms": 99749,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "opened the Order tiles result on the task site",
+  "summary": "Searched for “tiles” using the top search bar.\nOpened the “Order tiles” search result.\nThe Order tiles task page loaded, with the heading reading “Order tiles”.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/tasks/8",
+    "task_heading": "Order tiles"
+  },
+  "credits": 21.9274575,
+  "steps": 13,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-23T17:47:03.290Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-23T17:48:43.370Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 13,
+    "finalShot": "shots/13.jpg",
+    "failures": []
+  }
+}

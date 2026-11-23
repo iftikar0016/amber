@@ -1,0 +1,65 @@
+{
+  "flow": "j12-description",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "mjutwm",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Kitchen renovation and open the task Choose worktop. Set its description to Oak or quartz {{amber_tag}} and save it. Reload the page, then verify the description Oak or quartz {{amber_tag}} is shown.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json"
+  ],
+  "startedAt": "2026-11-23T17:55:15.222Z",
+  "ms": 134396,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "updated the Choose worktop task description on the Kitchen renovation project",
+  "summary": "Opened the “Kitchen renovation” project and selected the “Choose worktop” task.\nUpdated the task description to “Oak or quartz mjutwm” and saved the change.\nReloaded the task page and confirmed that the saved description is still shown.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/tasks/7",
+    "task_description": "Oak or quartz mjutwm"
+  },
+  "credits": 28.3861925,
+  "steps": 17,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-23T17:55:15.221Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-23T17:57:29.927Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 17,
+    "finalShot": "shots/17.jpg",
+    "failures": []
+  }
+}
