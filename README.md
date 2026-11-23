@@ -11,7 +11,7 @@ Built for the [KaneCLI Online Hackathon](https://www.kaneclihack.sh/) with Claud
 ## Judge this in 90 seconds
 
 ```bash
-git clone <this repo> && cd amber
+git clone https://github.com/iftikar0016/amber.git && cd amber
 node bin/demo.mjs          # Node 20+, nothing to install, no Kane account, no credits
 ```
 
