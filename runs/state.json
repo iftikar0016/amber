@@ -137,9 +137,9 @@
       "needsHuman": false
     },
     "j09-add-task": {
-      "verdict": "FAIL",
-      "everPassed": false,
-      "failStreak": 1,
+      "verdict": "PASS",
+      "everPassed": true,
+      "failStreak": 0,
       "history": [
         {
           "runId": "verify-2026-11-23T15-33-57",
@@ -151,6 +151,15 @@
           "record": "runs/verify-2026-11-23T15-33-57/j09-add-task/a1",
           "commit": "0c3b711",
           "at": "2026-11-23T15:39:31.511Z"
+        },
+        {
+          "runId": "verify-2026-11-23T16-13-35",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-23T16-13-35/j09-add-task/a1",
+          "commit": "ef8566c",
+          "at": "2026-11-23T16:14:24.720Z"
         }
       ],
       "needsHuman": false

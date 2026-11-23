@@ -1,9 +1,9 @@
 {
   "site": {
-    "events": 19
+    "events": 40
   },
-  "builtAt": "2026-11-23T15:30:55.962Z",
-  "seedId": "31b3a5cc63ac4217",
+  "builtAt": "2026-11-23T16:15:32.076Z",
+  "seedId": "84da985006d92f08",
   "journeys": [
     "j01-sign-in",
     "j02-projects",
@@ -23,5 +23,11 @@
   ],
   "staticFiles": 261,
   "replayEntries": 32,
-  "modelKeys": []
+  "modelKeys": [
+    "user",
+    "tasks",
+    "projects",
+    "positions",
+    "next"
+  ]
 }
