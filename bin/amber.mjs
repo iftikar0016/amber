@@ -2,7 +2,17 @@
 // @ts-check
 // AMBER command line. Each command prints one JSON line on success, so a coding agent can read it.
 import * as vikunja from '../src/vikunja.mjs';
-import { seed, alignDueDates } from '../src/seed.mjs';
+import { seed, alignDueDates, readCredentials } from '../src/seed.mjs';
+import { createRecorder } from '../src/capture/proxy.mjs';
+
+/** Literal secrets that must never reach a committed file. */
+function secretsToScrub() {
+  try {
+    return [readCredentials().password];
+  } catch {
+    return [];
+  }
+}
 
 const [cmd, ...rest] = process.argv.slice(2);
 const out = (o) => console.log(JSON.stringify(o));
@@ -16,6 +26,13 @@ const commands = {
     const seeded = await seed();
     const pristine = await vikunja.snapshotPristine();
     out({ ok: true, seeded, pristine });
+  },
+  /** Run the recording proxy on its own (journey label from --journey), until Ctrl+C. */
+  async record() {
+    const i = rest.indexOf('--journey');
+    const rec = createRecorder({ secrets: secretsToScrub(), log: (o) => console.error(JSON.stringify(o)) });
+    rec.setJourney(i >= 0 ? rest[i + 1] : 'manual');
+    out({ ok: true, recording: await rec.listen() });
   },
   async vikunja() {
     const sub = rest[0];
