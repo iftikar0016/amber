@@ -2,7 +2,7 @@
   "$comment": "The plain-English journeys Kane walks. Each is captured against the real Vikunja and then frozen as flows/<id>_test.md. Objectives: one line, no double quotes, visible-page checks only, ending on an outcome.",
   "app": "Vikunja v2.8.0",
   "origin": "http://127.0.0.1:4790",
-  "signIn": "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}}, then verify the home page greets Amber Demo.",
+  "signIn": "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo.",
   "journeys": [
     {
       "id": "j01-sign-in",
