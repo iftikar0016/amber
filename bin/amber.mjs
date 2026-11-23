@@ -7,6 +7,10 @@ import { createRecorder } from '../src/capture/proxy.mjs';
 import { capture } from '../src/capture/capture.mjs';
 import { cap, spentSoFar } from '../src/run/budget.mjs';
 import { readBalance } from '../src/kane/spawn.mjs';
+import { build } from '../src/capsule/build.mjs';
+import { createCapsuleServer } from '../src/capsule/serve.mjs';
+import path from 'node:path';
+import { ROOT } from '../src/config.mjs';
 
 /** Values after a flag, e.g. --only a,b */
 const flag = (name) => {
@@ -52,6 +56,19 @@ const commands = {
   /** Credit cap, AMBER's spend so far, and the live balance. */
   async budget() {
     out({ ok: true, cap: cap(), spent: Math.round(spentSoFar() * 100) / 100, balance: readBalance() });
+  },
+  /** Stage 2: build the capsule (static files) from the capture. */
+  async build() {
+    const captureDir = flag('--capture');
+    const outDir = flag('--out');
+    out({ ok: true, ...build({ captureDir: captureDir && path.resolve(ROOT, captureDir), outDir: outDir && path.resolve(ROOT, outDir), secrets: secretsToScrub() }) });
+  },
+  /** Serve the capsule as static files on the app's origin (no API), until Ctrl+C. Leaks and the capsule log go to --log. */
+  async serve() {
+    const dir = flag('--dir');
+    const logDir = flag('--log');
+    const srv = createCapsuleServer({ dir: dir && path.resolve(ROOT, dir), logDir: logDir && path.resolve(ROOT, logDir) });
+    out({ ok: true, serving: await srv.listen(), serverOff: await vikunja.serverOffProof() });
   },
   async vikunja() {
     const sub = rest[0];
