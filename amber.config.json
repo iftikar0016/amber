@@ -1,6 +1,6 @@
 {
   "budget": {
-    "cap": 0,
-    "note": "Credits AMBER may spend in total across all runs; 0 means nothing may spend until the user sets a cap."
+    "cap": 2500,
+    "note": "Credits AMBER may spend in total across all runs, set by the user on 2026-11-23. The guard refuses any batch that could exceed it."
   }
 }
