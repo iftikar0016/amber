@@ -11,6 +11,9 @@ import { build } from '../src/capsule/build.mjs';
 import { createCapsuleServer } from '../src/capsule/serve.mjs';
 import { verify } from '../src/verify/verify.mjs';
 import { readState, regressions } from '../src/verify/state.mjs';
+import { freeze, check as frozenCheck } from '../src/flows/freeze.mjs';
+import { gate } from '../src/verify/gate.mjs';
+import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT } from '../src/config.mjs';
 
@@ -85,6 +88,44 @@ const commands = {
     const s = readState();
     const flows = Object.fromEntries(Object.entries(s.flows).map(([id, f]) => [id, { verdict: f.verdict, everPassed: f.everPassed, needsHuman: f.needsHuman ?? false, runs: f.history.length }]));
     out({ ok: true, flows, regressions: regressions(s) });
+  },
+  /**
+   * Freeze the flows that passed against the real server (--only ids, default: every flow in flows/), or with --check
+   * report frozen files that changed (exit 1). Freezing is one-way: a frozen flow is never re-locked.
+   */
+  async freeze() {
+    if (rest.includes('--check')) {
+      const c = frozenCheck();
+      out({ ok: c.changed.length === 0, ...c });
+      if (c.changed.length) process.exitCode = 1;
+      return;
+    }
+    const only = flag('--only')?.split(',').filter(Boolean);
+    const ids = only ?? fs.readdirSync(path.join(ROOT, 'flows')).filter((f) => f.endsWith('_test.md')).map((f) => f.replace(/_test.md$/, ''));
+    // Provenance: the capture run in which each flow passed against the real server.
+    const provenance = {};
+    for (const d of fs.readdirSync(path.join(ROOT, 'runs')).filter((d) => d.startsWith('capture-')).sort()) {
+      const sum = path.join(ROOT, 'runs', d, 'summary.json');
+      if (!fs.existsSync(sum)) continue;
+      for (const r of JSON.parse(fs.readFileSync(sum, 'utf8')).results) if (r.verdict === 'PASS') provenance[r.id] = { capturedIn: d, record: r.record };
+    }
+    const missing = ids.filter((id) => !provenance[id]);
+    if (missing.length) throw new Error(`No passing capture run for: ${missing.join(', ')}`);
+    out({ ok: true, frozen: freeze(ids, provenance) });
+  },
+  /** The Stop hook. With --hook, reads the hook input on stdin and prints the hook's JSON answer. */
+  async gate() {
+    let input = {};
+    if (rest.includes('--hook')) {
+      try {
+        input = JSON.parse(fs.readFileSync(0, 'utf8') || '{}');
+      } catch {
+        input = {};
+      }
+    }
+    const answer = await gate({ stopHookActive: Boolean(input.stop_hook_active), rebuild: () => build({ secrets: secretsToScrub() }) });
+    if (rest.includes('--hook')) console.log(JSON.stringify(answer));
+    else out({ ok: true, ...answer });
   },
   async vikunja() {
     const sub = rest[0];

@@ -9,9 +9,20 @@ import { FLOWS_DIR, ROOT } from '../config.mjs';
 const LOCK = path.join(FLOWS_DIR, 'flows.lock.json');
 const sha = (file) => createHash('sha256').update(fs.readFileSync(file)).digest('hex');
 
-/** The files that define a flow: its _test.md (Kane's recorded step data is listed once the spike shows where it lives). */
+/**
+ * The files that define a flow: its _test.md and everything Kane recorded for it in output-<id>/ (the replayed
+ * actions and their checks live in .internal/steps). Replays run a copy in .amber/, so none of these ever change.
+ */
 export function flowFiles(id) {
-  return [path.join(FLOWS_DIR, `${id}_test.md`)].filter((f) => fs.existsSync(f));
+  const files = [path.join(FLOWS_DIR, `${id}_test.md`)];
+  const out = path.join(FLOWS_DIR, `output-${id}`);
+  if (fs.existsSync(out)) {
+    for (const rel of /** @type {string[]} */ (fs.readdirSync(out, { recursive: true })).sort()) {
+      const abs = path.join(out, rel);
+      if (fs.statSync(abs).isFile()) files.push(abs);
+    }
+  }
+  return files.filter((f) => fs.existsSync(f));
 }
 
 /**

@@ -1,0 +1,10 @@
+#!/bin/sh
+# AMBER: refuse a commit that changes a frozen Kane flow. Frozen flows are the fixed definition of "works";
+# the coding agent must make the capsule pass them, never edit them. Enabled with: git config core.hooksPath .githooks
+node bin/amber.mjs freeze --check >/dev/null 2>&1
+if [ $? -ne 0 ]; then
+  echo "AMBER: a frozen flow in flows/ was changed. Restore it (git checkout -- flows/) and fix the capsule instead." >&2
+  node bin/amber.mjs freeze --check >&2
+  exit 1
+fi
+exit 0
