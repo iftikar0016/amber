@@ -287,7 +287,7 @@
   function readTask({ params, query, url, store }) {
     const m = store.model;
     const t = m.tasks && m.tasks[params.id];
-    if (!t) return null;
+    if (!t) return m.deleted && m.deleted[params.id] ? problem(404, 'This task does not exist.') : null;
     const expand = query.getAll('expand');
     if (expand.includes('buckets') && !Array.isArray(t.buckets)) return null;
     const project = m.projects && m.projects[t.project_id];
@@ -299,7 +299,28 @@
     return json(200, out, { etag });
   }
 
+  /**
+   * DELETE /tasks/:id: the task leaves the store and every view's order. Its id is remembered as deleted,
+   * so its own read answers 404 instead of falling back to the captured task.
+   */
+  async function deleteTask({ params, store }) {
+    const m = store.model;
+    const t = m.tasks && m.tasks[params.id];
+    if (!t) return m.deleted && m.deleted[params.id] ? problem(404, 'This task does not exist.') : null;
+    delete m.tasks[t.id];
+    for (const pos of Object.values(m.positions || {})) delete pos[t.id];
+    (m.deleted ||= {})[t.id] = nowIso();
+    await store.save();
+    return new Response(null, { status: 204, headers: { 'cache-control': 'no-store' } });
+  }
+
   const routes = [
+    {
+      name: 'task-delete',
+      method: 'DELETE',
+      path: /^\/api\/v2\/tasks\/(?<id>\d+)$/,
+      handle: deleteTask,
+    },
     {
       name: 'task-read',
       method: 'GET',

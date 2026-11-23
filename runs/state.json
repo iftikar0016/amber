@@ -494,9 +494,9 @@
       "needsHuman": false
     },
     "j13-delete": {
-      "verdict": "FAIL",
-      "everPassed": false,
-      "failStreak": 1,
+      "verdict": "PASS",
+      "everPassed": true,
+      "failStreak": 0,
       "history": [
         {
           "runId": "verify-2026-11-23T15-33-57",
@@ -508,6 +508,15 @@
           "record": "runs/verify-2026-11-23T15-33-57/j13-delete/a1",
           "commit": "0c3b711",
           "at": "2026-11-23T15:44:11.137Z"
+        },
+        {
+          "runId": "verify-2026-11-23T16-38-00",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-23T16-38-00/j13-delete/a1",
+          "commit": "8f3d1d3",
+          "at": "2026-11-23T16:39:03.543Z"
         }
       ],
       "needsHuman": false

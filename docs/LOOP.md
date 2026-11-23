@@ -24,3 +24,10 @@ Development aid used before spending credits: `node scripts/store-check.mjs pris
 - **Repair:** `GET /tasks/:id` is answered from the store in Vikunja's `TaskReadOneBody` shape (the task's kanban buckets with `expand=buckets`, its subscription, the project's `max_permission`, and Vikunja's `ETag`). It answers `expand=buckets` only for tasks whose buckets the capture shows; others still fall through to the replay. The model now keeps each task's buckets from its captured read.
 - **Checked first (zero credits):** the store's answers to all six pristine task reads equal the server's, and in the captured journey the read after the change equals the server's.
 - **Proof:** `verify-2026-11-23T16-29-21`, PASS, 7.18 credits.
+
+## j13-delete: delete a task
+
+- **Failure** (baseline `verify-2026-11-23T15-33-57`): `DELETE /api/v2/tasks/2` refused with 501, so "Pick a colour palette" stayed in the list.
+- **Repair:** `DELETE /tasks/:id` removes the task from the store and from every view's order and answers 204 as Vikunja does; the list view (from the store) no longer shows it. The id is remembered as deleted, so the task's own read answers 404 rather than falling back to the captured task.
+- **Checked first (zero credits):** in the captured journey, the delete and both list reads after it equal the real server's.
+- **Proof:** `verify-2026-11-23T16-38-00`, PASS, 4.26 credits.
