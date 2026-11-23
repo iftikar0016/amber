@@ -72,7 +72,7 @@ function proofPath(id) {
   const r = rng(id + ':proof');
   const x = TW * (0.62 + r() * 0.2);
   const y = TH * (0.78 + r() * 0.1);
-  return `M${x.toFixed(1)} ${y.toFixed(1)} l${(TW * 0.16).toFixed(1)} ${(-TH * 0.05).toFixed(1)}`;
+  return `M${x.toFixed(1)} ${y.toFixed(1)} l${(TW * 0.07).toFixed(1)} ${(-TH * 0.02).toFixed(1)}`;
 }
 
 function drawWire(g, screen) {
@@ -104,6 +104,8 @@ journeys.forEach((j, i) => {
   const inner = el('g', { 'clip-path': `url(#clip-${j.id})` }, g);
   drawWire(inner, j.screen);
   const d = crackPath(j.id);
+  // A fissure: a dark core with crimson light around it; the healed seam keeps the dark core under its gold.
+  el('path', { class: 'core', d }, g);
   el('path', { class: 'crack', d }, g);
   const seam = el('path', { class: 'seam', d }, g);
   const proof = el('path', { class: 'proof', d: proofPath(j.id) }, g);
