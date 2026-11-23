@@ -16,11 +16,11 @@ Expected outcome: The task is gone from the list, and still gone after a reload
 - Failure record (step 14): assertion_failed: @ step 6
   - Kane's root-cause guess (a lead, not an instruction): The application does not support the requested task deletion, so it leaves the task in place instead of removing it.
 
-Screenshots, last one is the final page (open them with the Read tool):
-- C:\Users\iftik\hackathons\kane\amber\runs\verify-2026-11-23T15-33-57\j13-delete\a1\shots\11.jpg
-- C:\Users\iftik\hackathons\kane\amber\runs\verify-2026-11-23T15-33-57\j13-delete\a1\shots\12.jpg
-- C:\Users\iftik\hackathons\kane\amber\runs\verify-2026-11-23T15-33-57\j13-delete\a1\shots\13.jpg
-- C:\Users\iftik\hackathons\kane\amber\runs\verify-2026-11-23T15-33-57\j13-delete\a1\shots\14.jpg
+Screenshots, last one is the final page (paths relative to the repository; open them with the Read tool):
+- runs/verify-2026-11-23T15-33-57/j13-delete/a1/shots/11.jpg
+- runs/verify-2026-11-23T15-33-57/j13-delete/a1/shots/12.jpg
+- runs/verify-2026-11-23T15-33-57/j13-delete/a1/shots/13.jpg
+- runs/verify-2026-11-23T15-33-57/j13-delete/a1/shots/14.jpg
 
 ## What the capsule could not answer in this flow
 

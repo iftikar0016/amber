@@ -16,11 +16,11 @@ Expected outcome: The done task leaves the open list, after a reload
 - Failure record (step 10): The task remains unchecked and the page reports that this change is not supported by the capsule.
   - Kane's root-cause guess (a lead, not an instruction): The server rejects the request used to mark the task as done, stating that this change is not supported by the capsule.
 
-Screenshots, last one is the final page (open them with the Read tool):
-- C:\Users\iftik\hackathons\kane\amber\runs\verify-2026-11-23T15-56-36\j10-mark-done\a1\shots\14.jpg
-- C:\Users\iftik\hackathons\kane\amber\runs\verify-2026-11-23T15-56-36\j10-mark-done\a1\shots\15.jpg
-- C:\Users\iftik\hackathons\kane\amber\runs\verify-2026-11-23T15-56-36\j10-mark-done\a1\shots\16.jpg
-- C:\Users\iftik\hackathons\kane\amber\runs\verify-2026-11-23T15-56-36\j10-mark-done\a1\shots\17.jpg
+Screenshots, last one is the final page (paths relative to the repository; open them with the Read tool):
+- runs/verify-2026-11-23T15-56-36/j10-mark-done/a1/shots/14.jpg
+- runs/verify-2026-11-23T15-56-36/j10-mark-done/a1/shots/15.jpg
+- runs/verify-2026-11-23T15-56-36/j10-mark-done/a1/shots/16.jpg
+- runs/verify-2026-11-23T15-56-36/j10-mark-done/a1/shots/17.jpg
 
 ## What the capsule could not answer in this flow
 

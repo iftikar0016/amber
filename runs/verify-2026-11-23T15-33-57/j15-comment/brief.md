@@ -12,11 +12,11 @@ Expected outcome: The new comment shows beside the existing one, and after a rel
 
 - disputed: Kane said passed, but the capsule refused 1 change(s) during the flow, so the change cannot have been kept
 
-Screenshots, last one is the final page (open them with the Read tool):
-- C:\Users\iftik\hackathons\kane\amber\runs\verify-2026-11-23T15-33-57\j15-comment\a1\shots\16.jpg
-- C:\Users\iftik\hackathons\kane\amber\runs\verify-2026-11-23T15-33-57\j15-comment\a1\shots\17.jpg
-- C:\Users\iftik\hackathons\kane\amber\runs\verify-2026-11-23T15-33-57\j15-comment\a1\shots\18.jpg
-- C:\Users\iftik\hackathons\kane\amber\runs\verify-2026-11-23T15-33-57\j15-comment\a1\shots\19.jpg
+Screenshots, last one is the final page (paths relative to the repository; open them with the Read tool):
+- runs/verify-2026-11-23T15-33-57/j15-comment/a1/shots/16.jpg
+- runs/verify-2026-11-23T15-33-57/j15-comment/a1/shots/17.jpg
+- runs/verify-2026-11-23T15-33-57/j15-comment/a1/shots/18.jpg
+- runs/verify-2026-11-23T15-33-57/j15-comment/a1/shots/19.jpg
 
 ## What the capsule could not answer in this flow
 

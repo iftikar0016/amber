@@ -16,11 +16,11 @@ Expected outcome: The new title is listed, and still listed after a reload
 - Failure record (step 16): assertion_failed: @ step 7
   - Kane's root-cause guess (a lead, not an instruction): The server refused the request to save the new task title, so the project list continued to show the old title.
 
-Screenshots, last one is the final page (open them with the Read tool):
-- C:\Users\iftik\hackathons\kane\amber\runs\verify-2026-11-23T15-33-57\j11-rename\a1\shots\13.jpg
-- C:\Users\iftik\hackathons\kane\amber\runs\verify-2026-11-23T15-33-57\j11-rename\a1\shots\14.jpg
-- C:\Users\iftik\hackathons\kane\amber\runs\verify-2026-11-23T15-33-57\j11-rename\a1\shots\15.jpg
-- C:\Users\iftik\hackathons\kane\amber\runs\verify-2026-11-23T15-33-57\j11-rename\a1\shots\16.jpg
+Screenshots, last one is the final page (paths relative to the repository; open them with the Read tool):
+- runs/verify-2026-11-23T15-33-57/j11-rename/a1/shots/13.jpg
+- runs/verify-2026-11-23T15-33-57/j11-rename/a1/shots/14.jpg
+- runs/verify-2026-11-23T15-33-57/j11-rename/a1/shots/15.jpg
+- runs/verify-2026-11-23T15-33-57/j11-rename/a1/shots/16.jpg
 
 ## What the capsule could not answer in this flow
 

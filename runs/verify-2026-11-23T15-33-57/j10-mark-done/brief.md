@@ -16,11 +16,11 @@ Expected outcome: The done task leaves the open list, after a reload
 - Failure record (step 10): action_failed: click @ step 10
   - Kane's root-cause guess (a lead, not an instruction): The task was present on the Kitchen renovation page and the replay targeted its checkbox, but the application did not complete that click.
 
-Screenshots, last one is the final page (open them with the Read tool):
-- C:\Users\iftik\hackathons\kane\amber\runs\verify-2026-11-23T15-33-57\j10-mark-done\a1\shots\7.jpg
-- C:\Users\iftik\hackathons\kane\amber\runs\verify-2026-11-23T15-33-57\j10-mark-done\a1\shots\8.jpg
-- C:\Users\iftik\hackathons\kane\amber\runs\verify-2026-11-23T15-33-57\j10-mark-done\a1\shots\9.jpg
-- C:\Users\iftik\hackathons\kane\amber\runs\verify-2026-11-23T15-33-57\j10-mark-done\a1\shots\10.jpg
+Screenshots, last one is the final page (paths relative to the repository; open them with the Read tool):
+- runs/verify-2026-11-23T15-33-57/j10-mark-done/a1/shots/7.jpg
+- runs/verify-2026-11-23T15-33-57/j10-mark-done/a1/shots/8.jpg
+- runs/verify-2026-11-23T15-33-57/j10-mark-done/a1/shots/9.jpg
+- runs/verify-2026-11-23T15-33-57/j10-mark-done/a1/shots/10.jpg
 
 ## What the capsule could not answer in this flow
 

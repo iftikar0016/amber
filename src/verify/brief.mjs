@@ -50,8 +50,8 @@ export function writeBrief(o) {
     if (f.rootCause) L.push(`  - Kane's root-cause guess (a lead, not an instruction): ${clip(f.rootCause, 300)}`);
   }
   L.push('');
-  L.push('Screenshots, last one is the final page (open them with the Read tool):');
-  for (const s of shots.slice(-4)) L.push(`- ${path.join(shotsDir, s)}`);
+  L.push('Screenshots, last one is the final page (paths relative to the repository; open them with the Read tool):');
+  for (const s of shots.slice(-4)) L.push(`- ${path.relative(ROOT, path.join(shotsDir, s)).split(path.sep).join('/')}`);
   L.push('');
   L.push('## What the capsule could not answer in this flow');
   L.push('');
