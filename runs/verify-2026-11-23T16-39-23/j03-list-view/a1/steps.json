@@ -1,0 +1,167 @@
+[
+  {
+    "ordinal": 1,
+    "id": "0-1",
+    "kind": "navigate",
+    "status": "passed",
+    "summary": "navigate: Navigate to http://127.0.0.1:4790/login",
+    "url": "https://kaneai-playground.lambdatest.io/",
+    "durationMs": 578,
+    "shot": "shots/1.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 2,
+    "id": "0-2",
+    "kind": "wait",
+    "status": "passed",
+    "summary": "wait: Waiting for the login form to load",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 1375,
+    "shot": "shots/2.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 3,
+    "id": "0-3",
+    "kind": "fill",
+    "status": "passed",
+    "summary": "fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\"",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 313,
+    "shot": "shots/3.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 4,
+    "id": "0-4",
+    "kind": "fill",
+    "status": "passed",
+    "summary": "fill: Type \"{{secrets.user.amber_password}}\" into \"Password\"",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 281,
+    "shot": "shots/4.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 5,
+    "id": "0-5",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Click \"Stay logged in\"",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 781,
+    "shot": "shots/5.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 6,
+    "id": "0-6",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Click \"LOGIN\"",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 719,
+    "shot": "shots/6.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 7,
+    "id": "0-7",
+    "kind": "wait",
+    "status": "passed",
+    "summary": "wait: Waiting for the home page greeting after signing in",
+    "url": "http://127.0.0.1:4790/",
+    "durationMs": 4593,
+    "shot": "shots/7.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 8,
+    "id": "0-8",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: Checking whether the home page greeting is present",
+    "url": "http://127.0.0.1:4790/",
+    "durationMs": 141,
+    "shot": "shots/8.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 9,
+    "id": "0-9",
+    "kind": "assert",
+    "status": "passed",
+    "summary": "assert: the home page greets Amber Demo",
+    "url": "http://127.0.0.1:4790/",
+    "durationMs": 125,
+    "shot": "shots/9.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 10,
+    "id": "0-10",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Clicking Website relaunch link in Projects navigation sidebar",
+    "url": "http://127.0.0.1:4790/",
+    "durationMs": 766,
+    "shot": "shots/10.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 11,
+    "id": "0-11",
+    "kind": "wait",
+    "status": "passed",
+    "summary": "wait: Waiting for the project task list to load",
+    "url": "http://127.0.0.1:4790/projects/2/9",
+    "durationMs": 4718,
+    "shot": "shots/11.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 12,
+    "id": "0-12",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: Checking whether the Write homepage copy task is present",
+    "url": "http://127.0.0.1:4790/projects/2/9",
+    "durationMs": 172,
+    "shot": "shots/12.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 13,
+    "id": "0-13",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: Checking whether the Set up analytics task is present",
+    "url": "http://127.0.0.1:4790/projects/2/9",
+    "durationMs": 157,
+    "shot": "shots/13.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 14,
+    "id": "0-14",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: Checking whether the Launch checklist task is present",
+    "url": "http://127.0.0.1:4790/projects/2/9",
+    "durationMs": 171,
+    "shot": "shots/14.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 15,
+    "id": "0-15",
+    "kind": "assert",
+    "status": "passed",
+    "summary": "assert: its task list shows Write homepage copy, Set up analytics and Launch checklist",
+    "url": "http://127.0.0.1:4790/projects/2/9",
+    "durationMs": 125,
+    "shot": "shots/15.jpg",
+    "annotated": null
+  }
+]
