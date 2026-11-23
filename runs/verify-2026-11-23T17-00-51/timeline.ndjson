@@ -1,0 +1,231 @@
+{"t":1795453252972,"type":"run_start","runId":"verify-2026-11-23T17-00-51","kind":"verify","mode":"replay","target":"capsule-server-off","commit":"b17978c","label":null,"flows":["j01-sign-in","j02-projects","j03-list-view","j04-task-detail","j05-table-view","j06-kanban","j07-upcoming","j08-search","j09-add-task","j11-rename","j12-description","j13-delete","j14-new-project"],"serverOff":{"checkedAt":"2026-11-23T17:00:51.123Z","port":3456,"portOpen":false,"vikunjaProcesses":[],"off":true}}
+{"t":1795453253327,"type":"flow_start","flow":"j01-sign-in","attempt":1,"mode":"replay","tag":"qlafuq"}
+{"t":1795453266652,"type":"flow_step","flow":"j01-sign-in","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795453268121,"type":"flow_step","flow":"j01-sign-in","attempt":1,"n":2,"status":"done","remark":"wait: Waiting for the queued plan to complete"}
+{"t":1795453268465,"type":"flow_step","flow":"j01-sign-in","attempt":1,"n":3,"status":"done","remark":"fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795453268794,"type":"flow_step","flow":"j01-sign-in","attempt":1,"n":4,"status":"done","remark":"fill: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795453269569,"type":"flow_step","flow":"j01-sign-in","attempt":1,"n":5,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795453270301,"type":"flow_step","flow":"j01-sign-in","attempt":1,"n":6,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795453270911,"type":"flow_step","flow":"j01-sign-in","attempt":1,"n":7,"status":"done","remark":"wait: Waiting for the signed-in home page to fully load and settle"}
+{"t":1795453271060,"type":"flow_step","flow":"j01-sign-in","attempt":1,"n":8,"status":"done","remark":"analyze: Checking whether the home page greeting is present"}
+{"t":1795453271222,"type":"flow_step","flow":"j01-sign-in","attempt":1,"n":9,"status":"done","remark":"analyze: Checking whether the Order tiles task is present"}
+{"t":1795453271314,"type":"flow_step","flow":"j01-sign-in","attempt":1,"n":10,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795453271422,"type":"flow_step","flow":"j01-sign-in","attempt":1,"n":11,"status":"done","remark":"assert: the home page lists the task Order tiles among the current tasks"}
+{"t":1795453283019,"type":"flow_done","flow":"j01-sign-in","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":29276,"shot":"verify-2026-11-23T17-00-51/j01-sign-in/a1/shots/11.jpg"}
+{"t":1795453283422,"type":"flow_start","flow":"j02-projects","attempt":1,"mode":"replay","tag":"fclimw"}
+{"t":1795453296713,"type":"flow_step","flow":"j02-projects","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795453298146,"type":"flow_step","flow":"j02-projects","attempt":1,"n":2,"status":"done","remark":"wait: Waiting for the queued login steps to complete"}
+{"t":1795453298482,"type":"flow_step","flow":"j02-projects","attempt":1,"n":3,"status":"done","remark":"fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795453298801,"type":"flow_step","flow":"j02-projects","attempt":1,"n":4,"status":"done","remark":"fill: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795453299576,"type":"flow_step","flow":"j02-projects","attempt":1,"n":5,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795453300322,"type":"flow_step","flow":"j02-projects","attempt":1,"n":6,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795453300454,"type":"flow_step","flow":"j02-projects","attempt":1,"n":7,"status":"done","remark":"analyze: Checking whether the home page greeting is present"}
+{"t":1795453300552,"type":"flow_step","flow":"j02-projects","attempt":1,"n":8,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795453301308,"type":"flow_step","flow":"j02-projects","attempt":1,"n":9,"status":"done","remark":"click: Clicking Projects in the main menu"}
+{"t":1795453306991,"type":"flow_step","flow":"j02-projects","attempt":1,"n":10,"status":"done","remark":"wait: Waiting for the Projects page to load"}
+{"t":1795453307131,"type":"flow_step","flow":"j02-projects","attempt":1,"n":11,"status":"done","remark":"analyze: Checking whether the Website relaunch project is shown"}
+{"t":1795453307267,"type":"flow_step","flow":"j02-projects","attempt":1,"n":12,"status":"done","remark":"analyze: Checking whether the Kitchen renovation project is shown"}
+{"t":1795453307408,"type":"flow_step","flow":"j02-projects","attempt":1,"n":13,"status":"done","remark":"analyze: Checking whether the Reading list project is shown"}
+{"t":1795453307491,"type":"flow_step","flow":"j02-projects","attempt":1,"n":14,"status":"done","remark":"assert: the projects Website relaunch, Kitchen renovation and Reading list are all shown"}
+{"t":1795453319788,"type":"flow_done","flow":"j02-projects","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":35996,"shot":"verify-2026-11-23T17-00-51/j02-projects/a1/shots/14.jpg"}
+{"t":1795453320175,"type":"flow_start","flow":"j03-list-view","attempt":1,"mode":"replay","tag":"iyqzpj"}
+{"t":1795453333957,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795453335468,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":2,"status":"done","remark":"wait: Waiting for the login form to load"}
+{"t":1795453335848,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":3,"status":"done","remark":"fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795453336167,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":4,"status":"done","remark":"fill: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795453336945,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":5,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795453337712,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":6,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795453342578,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":7,"status":"done","remark":"wait: Waiting for the home page greeting after signing in"}
+{"t":1795453342745,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":8,"status":"done","remark":"analyze: Checking whether the home page greeting is present"}
+{"t":1795453342856,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":9,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795453343611,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":10,"status":"done","remark":"click: Clicking Website relaunch link in Projects navigation sidebar"}
+{"t":1795453347875,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":11,"status":"done","remark":"wait: Waiting for the project task list to load"}
+{"t":1795453348015,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":12,"status":"done","remark":"analyze: Checking whether the Write homepage copy task is present"}
+{"t":1795453348176,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":13,"status":"done","remark":"analyze: Checking whether the Set up analytics task is present"}
+{"t":1795453348314,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":14,"status":"done","remark":"analyze: Checking whether the Launch checklist task is present"}
+{"t":1795453348412,"type":"flow_step","flow":"j03-list-view","attempt":1,"n":15,"status":"done","remark":"assert: its task list shows Write homepage copy, Set up analytics and Launch checklist"}
+{"t":1795453358298,"type":"flow_done","flow":"j03-list-view","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":37739,"shot":"verify-2026-11-23T17-00-51/j03-list-view/a1/shots/15.jpg"}
+{"t":1795453358669,"type":"flow_start","flow":"j04-task-detail","attempt":1,"mode":"replay","tag":"kmwcht"}
+{"t":1795453372078,"type":"flow_step","flow":"j04-task-detail","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795453373476,"type":"flow_step","flow":"j04-task-detail","attempt":1,"n":2,"status":"done","remark":"wait: Waiting for the queued login steps to run"}
+{"t":1795453373808,"type":"flow_step","flow":"j04-task-detail","attempt":1,"n":3,"status":"done","remark":"fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795453374117,"type":"flow_step","flow":"j04-task-detail","attempt":1,"n":4,"status":"done","remark":"fill: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795453374880,"type":"flow_step","flow":"j04-task-detail","attempt":1,"n":5,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795453375710,"type":"flow_step","flow":"j04-task-detail","attempt":1,"n":6,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795453375861,"type":"flow_step","flow":"j04-task-detail","attempt":1,"n":7,"status":"done","remark":"analyze: Checking whether the home page greeting is present"}
+{"t":1795453375949,"type":"flow_step","flow":"j04-task-detail","attempt":1,"n":8,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795453376774,"type":"flow_step","flow":"j04-task-detail","attempt":1,"n":9,"status":"done","remark":"click: Clicking Website relaunch in the project list navigation"}
+{"t":1795453377517,"type":"flow_step","flow":"j04-task-detail","attempt":1,"n":10,"status":"done","remark":"click: Clicking Set up analytics in the website relaunch task list"}
+{"t":1795453377669,"type":"flow_step","flow":"j04-task-detail","attempt":1,"n":11,"status":"done","remark":"analyze: Reading the task heading"}
+{"t":1795453377807,"type":"flow_step","flow":"j04-task-detail","attempt":1,"n":12,"status":"done","remark":"analyze: Checking for a privacy-friendly tool in the description"}
+{"t":1795453377910,"type":"flow_step","flow":"j04-task-detail","attempt":1,"n":13,"status":"done","remark":"assert: the task heading reads Set up analytics and the description mentions a privacy-f"}
+{"t":1795453387452,"type":"flow_done","flow":"j04-task-detail","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":28390,"shot":"verify-2026-11-23T17-00-51/j04-task-detail/a1/shots/13.jpg"}
+{"t":1795453387834,"type":"flow_start","flow":"j05-table-view","attempt":1,"mode":"replay","tag":"kjitsk"}
+{"t":1795453401134,"type":"flow_step","flow":"j05-table-view","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795453402550,"type":"flow_step","flow":"j05-table-view","attempt":1,"n":2,"status":"done","remark":"wait: Waiting for the login form steps to complete"}
+{"t":1795453402929,"type":"flow_step","flow":"j05-table-view","attempt":1,"n":3,"status":"done","remark":"fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795453403250,"type":"flow_step","flow":"j05-table-view","attempt":1,"n":4,"status":"done","remark":"fill: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795453404013,"type":"flow_step","flow":"j05-table-view","attempt":1,"n":5,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795453404837,"type":"flow_step","flow":"j05-table-view","attempt":1,"n":6,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795453405458,"type":"flow_step","flow":"j05-table-view","attempt":1,"n":7,"status":"done","remark":"wait: Waiting for the signed-in home page to load"}
+{"t":1795453405594,"type":"flow_step","flow":"j05-table-view","attempt":1,"n":8,"status":"done","remark":"analyze: Checking whether the home page greeting is present"}
+{"t":1795453405686,"type":"flow_step","flow":"j05-table-view","attempt":1,"n":9,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795453406494,"type":"flow_step","flow":"j05-table-view","attempt":1,"n":10,"status":"done","remark":"click: Clicking Kitchen renovation in the project list"}
+{"t":1795453407282,"type":"flow_step","flow":"j05-table-view","attempt":1,"n":11,"status":"done","remark":"click: Clicking the Table view link in the project navigation"}
+{"t":1795453407419,"type":"flow_step","flow":"j05-table-view","attempt":1,"n":12,"status":"done","remark":"analyze: Checking whether Get three quotes is listed in the table"}
+{"t":1795453407565,"type":"flow_step","flow":"j05-table-view","attempt":1,"n":13,"status":"done","remark":"analyze: Checking whether Order tiles is listed in the table"}
+{"t":1795453407705,"type":"flow_step","flow":"j05-table-view","attempt":1,"n":14,"status":"done","remark":"analyze: Checking whether Book electrician is listed in the table"}
+{"t":1795453407808,"type":"flow_step","flow":"j05-table-view","attempt":1,"n":15,"status":"done","remark":"assert: a table lists Get three quotes, Order tiles and Book electrician"}
+{"t":1795453418761,"type":"flow_done","flow":"j05-table-view","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":30551,"shot":"verify-2026-11-23T17-00-51/j05-table-view/a1/shots/15.jpg"}
+{"t":1795453419131,"type":"flow_start","flow":"j06-kanban","attempt":1,"mode":"replay","tag":"xqxnzq"}
+{"t":1795453432178,"type":"flow_step","flow":"j06-kanban","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795453433675,"type":"flow_step","flow":"j06-kanban","attempt":1,"n":2,"status":"done","remark":"wait: Waiting for the login form steps to finish"}
+{"t":1795453434023,"type":"flow_step","flow":"j06-kanban","attempt":1,"n":3,"status":"done","remark":"fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795453434357,"type":"flow_step","flow":"j06-kanban","attempt":1,"n":4,"status":"done","remark":"fill: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795453435140,"type":"flow_step","flow":"j06-kanban","attempt":1,"n":5,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795453435872,"type":"flow_step","flow":"j06-kanban","attempt":1,"n":6,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795453436016,"type":"flow_step","flow":"j06-kanban","attempt":1,"n":7,"status":"done","remark":"analyze: Checking whether the home page greeting is present"}
+{"t":1795453436133,"type":"flow_step","flow":"j06-kanban","attempt":1,"n":8,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795453436918,"type":"flow_step","flow":"j06-kanban","attempt":1,"n":9,"status":"done","remark":"click: Clicking Kitchen renovation in Projects navigation"}
+{"t":1795453437690,"type":"flow_step","flow":"j06-kanban","attempt":1,"n":10,"status":"done","remark":"click: Clicking Kanban tab to switch to Kanban view"}
+{"t":1795453437844,"type":"flow_step","flow":"j06-kanban","attempt":1,"n":11,"status":"done","remark":"analyze: Checking whether a board column is present"}
+{"t":1795453437952,"type":"flow_step","flow":"j06-kanban","attempt":1,"n":12,"status":"done","remark":"analyze: Checking whether the Choose worktop card is present"}
+{"t":1795453438038,"type":"flow_step","flow":"j06-kanban","attempt":1,"n":13,"status":"done","remark":"assert: a board column is shown containing a card titled Choose worktop"}
+{"t":1795453449136,"type":"flow_done","flow":"j06-kanban","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":29630,"shot":"verify-2026-11-23T17-00-51/j06-kanban/a1/shots/13.jpg"}
+{"t":1795453449512,"type":"flow_start","flow":"j07-upcoming","attempt":1,"mode":"replay","tag":"cyuoje"}
+{"t":1795453462620,"type":"flow_step","flow":"j07-upcoming","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795453464020,"type":"flow_step","flow":"j07-upcoming","attempt":1,"n":2,"status":"done","remark":"wait: Waiting for the queued login steps to complete"}
+{"t":1795453464371,"type":"flow_step","flow":"j07-upcoming","attempt":1,"n":3,"status":"done","remark":"fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795453464690,"type":"flow_step","flow":"j07-upcoming","attempt":1,"n":4,"status":"done","remark":"fill: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795453465483,"type":"flow_step","flow":"j07-upcoming","attempt":1,"n":5,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795453466367,"type":"flow_step","flow":"j07-upcoming","attempt":1,"n":6,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795453466540,"type":"flow_step","flow":"j07-upcoming","attempt":1,"n":7,"status":"done","remark":"analyze: Checking whether the home page greeting is present"}
+{"t":1795453466664,"type":"flow_step","flow":"j07-upcoming","attempt":1,"n":8,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795453467656,"type":"flow_step","flow":"j07-upcoming","attempt":1,"n":9,"status":"done","remark":"click: Clicking Upcoming in the main menu"}
+{"t":1795453473144,"type":"flow_step","flow":"j07-upcoming","attempt":1,"n":10,"status":"done","remark":"wait: Waiting for the Upcoming tasks page to finish loading"}
+{"t":1795453473290,"type":"flow_step","flow":"j07-upcoming","attempt":1,"n":11,"status":"done","remark":"analyze: Checking whether the Order tiles task is listed"}
+{"t":1795453473449,"type":"flow_step","flow":"j07-upcoming","attempt":1,"n":12,"status":"done","remark":"analyze: Checking whether the Review pricing page task is listed"}
+{"t":1795453473556,"type":"flow_step","flow":"j07-upcoming","attempt":1,"n":13,"status":"done","remark":"assert: the tasks Order tiles and Review pricing page are listed"}
+{"t":1795453485821,"type":"flow_done","flow":"j07-upcoming","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":35877,"shot":"verify-2026-11-23T17-00-51/j07-upcoming/a1/shots/13.jpg"}
+{"t":1795453486245,"type":"flow_start","flow":"j08-search","attempt":1,"mode":"replay","tag":"dfkmdp"}
+{"t":1795453501951,"type":"flow_step","flow":"j08-search","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795453503410,"type":"flow_step","flow":"j08-search","attempt":1,"n":2,"status":"done","remark":"wait: Waiting for queued login steps to complete"}
+{"t":1795453503776,"type":"flow_step","flow":"j08-search","attempt":1,"n":3,"status":"done","remark":"fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795453504113,"type":"flow_step","flow":"j08-search","attempt":1,"n":4,"status":"done","remark":"fill: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795453504889,"type":"flow_step","flow":"j08-search","attempt":1,"n":5,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795453505801,"type":"flow_step","flow":"j08-search","attempt":1,"n":6,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795453505940,"type":"flow_step","flow":"j08-search","attempt":1,"n":7,"status":"done","remark":"analyze: Checking whether the home page greeting is present"}
+{"t":1795453506059,"type":"flow_step","flow":"j08-search","attempt":1,"n":8,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795453506911,"type":"flow_step","flow":"j08-search","attempt":1,"n":9,"status":"done","remark":"click: Clicking the search bar in the top bar"}
+{"t":1795453507213,"type":"flow_step","flow":"j08-search","attempt":1,"n":10,"status":"done","remark":"fill: Typing tiles in the top search bar"}
+{"t":1795453507979,"type":"flow_step","flow":"j08-search","attempt":1,"n":11,"status":"done","remark":"click: Clicking the Order tiles result in the search results dialog"}
+{"t":1795453513722,"type":"flow_step","flow":"j08-search","attempt":1,"n":12,"status":"done","remark":"wait: Waiting for the Order tiles page to finish loading"}
+{"t":1795453513874,"type":"flow_step","flow":"j08-search","attempt":1,"n":13,"status":"done","remark":"analyze: Reading the task heading"}
+{"t":1795453513990,"type":"flow_step","flow":"j08-search","attempt":1,"n":14,"status":"done","remark":"assert: the task heading reads Order tiles"}
+{"t":1795453525378,"type":"flow_done","flow":"j08-search","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":38726,"shot":"verify-2026-11-23T17-00-51/j08-search/a1/shots/14.jpg"}
+{"t":1795453525773,"type":"flow_start","flow":"j09-add-task","attempt":1,"mode":"replay","tag":"pypvyt"}
+{"t":1795453540309,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795453541803,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":2,"status":"done","remark":"wait: Waiting for queued steps to finish"}
+{"t":1795453542231,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":3,"status":"done","remark":"fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795453542605,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":4,"status":"done","remark":"fill: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795453543402,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":5,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795453544175,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":6,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795453544326,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":7,"status":"done","remark":"analyze: Checking whether the home page greeting for Amber Demo is present"}
+{"t":1795453544445,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":8,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795453545286,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":9,"status":"done","remark":"click: Clicking Kitchen renovation in the left projects navigation"}
+{"t":1795453546420,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":10,"status":"done","remark":"wait: Waiting for the plan to be queued"}
+{"t":1795453546752,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":11,"status":"done","remark":"fill: Type \"Paint samples {{global.amber_tag}}\" into \"Add a task…\""}
+{"t":1795453547535,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":12,"status":"done","remark":"click: Click \"Add\""}
+{"t":1795453553243,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":13,"status":"done","remark":"analyze: Checking whether the Paint samples task is present in the project task list"}
+{"t":1795453554063,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":14,"status":"done","remark":"assert: Paint samples {{global.amber_tag}} appears in the project task list."}
+{"t":1795453554526,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":15,"status":"done","remark":"refresh: Navigate refresh"}
+{"t":1795453560577,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":16,"status":"done","remark":"analyze: Checking whether the Paint samples task is present"}
+{"t":1795453560684,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":17,"status":"done","remark":"assert: Paint samples {{global.amber_tag}} is still listed."}
+{"t":1795453571733,"type":"flow_done","flow":"j09-add-task","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":45524,"shot":"verify-2026-11-23T17-00-51/j09-add-task/a1/shots/17.jpg"}
+{"t":1795453572156,"type":"flow_start","flow":"j11-rename","attempt":1,"mode":"replay","tag":"irdjhf"}
+{"t":1795453587098,"type":"flow_step","flow":"j11-rename","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795453588786,"type":"flow_step","flow":"j11-rename","attempt":1,"n":2,"status":"done","remark":"wait: Waiting for the next login step"}
+{"t":1795453589212,"type":"flow_step","flow":"j11-rename","attempt":1,"n":3,"status":"done","remark":"fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795453589605,"type":"flow_step","flow":"j11-rename","attempt":1,"n":4,"status":"done","remark":"fill: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795453590385,"type":"flow_step","flow":"j11-rename","attempt":1,"n":5,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795453591157,"type":"flow_step","flow":"j11-rename","attempt":1,"n":6,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795453595669,"type":"flow_step","flow":"j11-rename","attempt":1,"n":7,"status":"done","remark":"wait: Waiting for the home page greeting to load"}
+{"t":1795453595821,"type":"flow_step","flow":"j11-rename","attempt":1,"n":8,"status":"done","remark":"analyze: Checking whether the home page greeting is present"}
+{"t":1795453595953,"type":"flow_step","flow":"j11-rename","attempt":1,"n":9,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795453596786,"type":"flow_step","flow":"j11-rename","attempt":1,"n":10,"status":"done","remark":"click: Clicking the Website relaunch link in the left projects sidebar"}
+{"t":1795453597522,"type":"flow_step","flow":"j11-rename","attempt":1,"n":11,"status":"done","remark":"click: Clicking Write homepage copy in the task list"}
+{"t":1795453598321,"type":"flow_step","flow":"j11-rename","attempt":1,"n":12,"status":"done","remark":"click: Clicking the Title heading to change the task title"}
+{"t":1795453598671,"type":"flow_step","flow":"j11-rename","attempt":1,"n":13,"status":"done","remark":"fill: Typing Homepage copy in the task title field"}
+{"t":1795453599519,"type":"flow_step","flow":"j11-rename","attempt":1,"n":14,"status":"done","remark":"click: Clicking Back to project"}
+{"t":1795453605105,"type":"flow_step","flow":"j11-rename","attempt":1,"n":15,"status":"done","remark":"analyze: Checking whether the Homepage copy task is listed"}
+{"t":1795453606046,"type":"flow_step","flow":"j11-rename","attempt":1,"n":16,"status":"done","remark":"assert: Homepage copy {{global.amber_tag}} is listed."}
+{"t":1795453606521,"type":"flow_step","flow":"j11-rename","attempt":1,"n":17,"status":"done","remark":"refresh: Navigate refresh"}
+{"t":1795453610919,"type":"flow_step","flow":"j11-rename","attempt":1,"n":18,"status":"done","remark":"analyze: Checking whether the Homepage copy task is listed"}
+{"t":1795453611031,"type":"flow_step","flow":"j11-rename","attempt":1,"n":19,"status":"done","remark":"assert: Homepage copy {{global.amber_tag}} is still listed."}
+{"t":1795453622248,"type":"flow_done","flow":"j11-rename","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":49651,"shot":"verify-2026-11-23T17-00-51/j11-rename/a1/shots/19.jpg"}
+{"t":1795453622660,"type":"flow_start","flow":"j12-description","attempt":1,"mode":"replay","tag":"sgjeiv"}
+{"t":1795453637767,"type":"flow_step","flow":"j12-description","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795453639241,"type":"flow_step","flow":"j12-description","attempt":1,"n":2,"status":"done","remark":"wait: Waiting for the queued login steps to run"}
+{"t":1795453639653,"type":"flow_step","flow":"j12-description","attempt":1,"n":3,"status":"done","remark":"fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795453640028,"type":"flow_step","flow":"j12-description","attempt":1,"n":4,"status":"done","remark":"fill: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795453640812,"type":"flow_step","flow":"j12-description","attempt":1,"n":5,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795453641702,"type":"flow_step","flow":"j12-description","attempt":1,"n":6,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795453642320,"type":"flow_step","flow":"j12-description","attempt":1,"n":7,"status":"done","remark":"wait: Waiting for the home page greeting after signing in"}
+{"t":1795453642490,"type":"flow_step","flow":"j12-description","attempt":1,"n":8,"status":"done","remark":"analyze: Checking whether the home page greeting is present"}
+{"t":1795453642612,"type":"flow_step","flow":"j12-description","attempt":1,"n":9,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795453643481,"type":"flow_step","flow":"j12-description","attempt":1,"n":10,"status":"done","remark":"click: Clicking Kitchen renovation in the left projects list"}
+{"t":1795453644242,"type":"flow_step","flow":"j12-description","attempt":1,"n":11,"status":"done","remark":"click: Clicking Choose worktop link in the Kitchen renovation task list"}
+{"t":1795453644655,"type":"flow_step","flow":"j12-description","attempt":1,"n":12,"status":"done","remark":"fill: Typing Oak or quartz into the task description field"}
+{"t":1795453645454,"type":"flow_step","flow":"j12-description","attempt":1,"n":13,"status":"done","remark":"click: Clicking SAVE"}
+{"t":1795453646116,"type":"flow_step","flow":"j12-description","attempt":1,"n":14,"status":"done","remark":"navigate: Reloading the page"}
+{"t":1795453694696,"type":"flow_step","flow":"j12-description","attempt":1,"n":15,"status":"done","remark":"wait: Waiting for the reloaded Choose worktop page to finish loading"}
+{"t":1795453701019,"type":"flow_step","flow":"j12-description","attempt":1,"n":16,"status":"done","remark":"analyze: Checking whether the task description is present"}
+{"t":1795453701890,"type":"flow_step","flow":"j12-description","attempt":1,"n":17,"status":"done","remark":"assert: the description Oak or quartz {{global.amber_tag}} is shown"}
+{"t":1795453713310,"type":"flow_done","flow":"j12-description","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":90143,"shot":"verify-2026-11-23T17-00-51/j12-description/a1/shots/17.jpg"}
+{"t":1795453713743,"type":"flow_start","flow":"j13-delete","attempt":1,"mode":"replay","tag":"gwgwfn"}
+{"t":1795453729272,"type":"flow_step","flow":"j13-delete","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795453730801,"type":"flow_step","flow":"j13-delete","attempt":1,"n":2,"status":"done","remark":"wait: Waiting for login form steps to complete"}
+{"t":1795453731262,"type":"flow_step","flow":"j13-delete","attempt":1,"n":3,"status":"done","remark":"fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795453731664,"type":"flow_step","flow":"j13-delete","attempt":1,"n":4,"status":"done","remark":"fill: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795453732444,"type":"flow_step","flow":"j13-delete","attempt":1,"n":5,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795453733229,"type":"flow_step","flow":"j13-delete","attempt":1,"n":6,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795453733390,"type":"flow_step","flow":"j13-delete","attempt":1,"n":7,"status":"done","remark":"analyze: Checking whether the home page greeting is present"}
+{"t":1795453733519,"type":"flow_step","flow":"j13-delete","attempt":1,"n":8,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795453734372,"type":"flow_step","flow":"j13-delete","attempt":1,"n":9,"status":"done","remark":"click: Clicking Website relaunch in the project list navigation"}
+{"t":1795453735119,"type":"flow_step","flow":"j13-delete","attempt":1,"n":10,"status":"done","remark":"click: Clicking Pick a colour palette task link"}
+{"t":1795453735377,"type":"flow_step","flow":"j13-delete","attempt":1,"n":11,"status":"done","remark":"scroll: Scrolling to delete the task details sidebar"}
+{"t":1795453736157,"type":"flow_step","flow":"j13-delete","attempt":1,"n":12,"status":"done","remark":"click: Clicking Delete for the selected task"}
+{"t":1795453747614,"type":"flow_step","flow":"j13-delete","attempt":1,"n":13,"status":"done","remark":"analyze: Checking whether Pick a colour palette is present in the Website relaunch list"}
+{"t":1795453747718,"type":"flow_step","flow":"j13-delete","attempt":1,"n":14,"status":"done","remark":"assert: the Website relaunch list no longer shows Pick a colour palette."}
+{"t":1795453748190,"type":"flow_step","flow":"j13-delete","attempt":1,"n":15,"status":"done","remark":"refresh: Navigate refresh"}
+{"t":1795453749059,"type":"flow_step","flow":"j13-delete","attempt":1,"n":16,"status":"done","remark":"wait: Waiting for the page to reload"}
+{"t":1795453761874,"type":"flow_step","flow":"j13-delete","attempt":1,"n":17,"status":"done","remark":"analyze: Checking whether Pick a colour palette is present"}
+{"t":1795453762042,"type":"flow_step","flow":"j13-delete","attempt":1,"n":18,"status":"done","remark":"analyze: Checking whether Set up analytics is present"}
+{"t":1795453762144,"type":"flow_step","flow":"j13-delete","attempt":1,"n":19,"status":"done","remark":"assert: Pick a colour palette is still gone and Set up analytics is still listed."}
+{"t":1795453772647,"type":"flow_done","flow":"j13-delete","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":58464,"shot":"verify-2026-11-23T17-00-51/j13-delete/a1/shots/19.jpg"}
+{"t":1795453773070,"type":"flow_start","flow":"j14-new-project","attempt":1,"mode":"replay","tag":"uuzfhy"}
+{"t":1795453788120,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795453789659,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":2,"status":"done","remark":"wait: Waiting for the login form to load"}
+{"t":1795453790047,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":3,"status":"done","remark":"fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795453790406,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":4,"status":"done","remark":"fill: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795453791185,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":5,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795453792073,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":6,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795453797236,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":7,"status":"done","remark":"wait: Waiting for the home page heading Still at it, Amber Demo to appear"}
+{"t":1795453797406,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":8,"status":"done","remark":"analyze: Reading the home page greeting"}
+{"t":1795453797518,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":9,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795453798397,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":10,"status":"done","remark":"click: Clicking Projects page link"}
+{"t":1795453799163,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":11,"status":"done","remark":"click: Clicking NEW PROJECT in the top-right Projects page"}
+{"t":1795453800299,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":12,"status":"done","remark":"wait: Waiting for the queued steps to run"}
+{"t":1795453800627,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":13,"status":"done","remark":"fill: Type \"Garden {{global.amber_tag}}\" into \"Title\""}
+{"t":1795453801416,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":14,"status":"done","remark":"click: Clicking the Create button in the New project dialog"}
+{"t":1795453801635,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":15,"status":"done","remark":"wait: Waiting for the newly created project to be available"}
+{"t":1795453802446,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":16,"status":"done","remark":"click: Clicking Projects in the main navigation"}
+{"t":1795453808428,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":17,"status":"done","remark":"analyze: Checking whether the Garden {{global.amber_tag}} project is present"}
+{"t":1795453809310,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":18,"status":"done","remark":"assert: Garden {{global.amber_tag}} is listed on the Projects page."}
+{"t":1795453809802,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":19,"status":"done","remark":"refresh: Navigate refresh"}
+{"t":1795453810194,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":20,"status":"done","remark":"wait: Waiting for the Projects page to finish reloading and confirm it is updated"}
+{"t":1795453820968,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":21,"status":"done","remark":"analyze: Checking whether the Garden project is listed"}
+{"t":1795453821128,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":22,"status":"done","remark":"analyze: Checking whether Kitchen renovation is listed"}
+{"t":1795453821227,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":23,"status":"done","remark":"assert: The Projects page still lists Garden {{global.amber_tag}} as well as Kitchen ren"}
+{"t":1795453833047,"type":"flow_done","flow":"j14-new-project","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":59532,"shot":"verify-2026-11-23T17-00-51/j14-new-project/a1/shots/23.jpg"}
+{"t":1795453834886,"type":"run_done","runId":"verify-2026-11-23T17-00-51","spent":37.35,"tally":{"PASS":13},"regressions":[]}
