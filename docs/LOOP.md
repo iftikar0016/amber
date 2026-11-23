@@ -64,3 +64,18 @@ Development aid used before spending credits: `node scripts/store-check.mjs pris
 - Reads still replayed, so they do not show store changes: the home page and Upcoming task lists (`GET /tasks?…`), search, the Kanban board (`…/buckets/tasks`), and Gantt views.
 - A task created in the capsule has no kanban buckets in the store, so its own read with `expand=buckets` falls through (404, never captured).
 - Marking a task done does not move it into the Kanban Done bucket (see j10).
+
+## Stop-hook demonstration (deliberate regression)
+
+To show that the Stop hook really gates the coding agent, a fresh Claude Code session in this folder broke j15's repair **on purpose**: the `POST /api/v2/tasks/:id/comments` route was made to fall through to the capsule's 501. The change was never committed. Then the session tried to end its turn. Every decision is in [`runs/gate.ndjson`](../runs/gate.ndjson).
+
+1. **The hook fired** (`via: "hook"`, 2026-11-23 18:28:59 UTC). The capsule source had changed, so it rebuilt the capsule and had Kane replay all 15 journeys with the server off: [`verify-2026-11-23T18-29-00`](../runs/verify-2026-11-23T18-29-00/summary.json), 17 minutes, 169.92 credits.
+2. **Kane was fooled again; AMBER was not.** Kane reported j15 as *passed*: after the reload, Vikunja restored the unsent comment draft into the editor, and Kane's recorded text check found it. The capsule's own log showed the comment refused, so AMBER recorded FAIL (disputed) ([`result.json`](../runs/verify-2026-11-23T18-29-00/j15-comment/a1/result.json): `kaneStatus: passed`, `unansweredWrites: 1`).
+3. **The hook blocked the agent**, verbatim:
+   > AMBER Stop hook (attempt 1 of 3): Kane replayed the frozen flows against the capsule with the server off, and a flow that passed before now fails.
+   > - j15-comment: passed before, fails now (run verify-2026-11-23T18-29-00). Brief: runs/verify-2026-11-23T18-29-00/j15-comment/brief.md
+   > Read the brief, fix the regression in the capsule store, rebuild, and re-run: node bin/amber.mjs verify --only j15-comment
+4. The session read the brief, restored the route, rebuilt, and Kane proved j15 again: [`verify-2026-11-23T18-47-52`](../runs/verify-2026-11-23T18-47-52/summary.json), PASS, 13.50 credits.
+5. **The hook fired again** when the session tried to stop (18:50:16 UTC): Kane replayed all 15 against the restored capsule, [`verify-2026-11-23T18-50-16`](../runs/verify-2026-11-23T18-50-16/summary.json), 15/15 PASS, 16 minutes, 148.56 credits. **The hook allowed the stop.**
+
+The demonstration cost 331.98 credits (each full hook check re-authors j10 and replays the write journeys at 4–9 credits each), about twice the estimate. AMBER's total after it: 1,942.64 of 2,500.

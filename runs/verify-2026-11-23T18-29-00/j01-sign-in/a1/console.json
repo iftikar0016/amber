@@ -1,0 +1,12 @@
+[
+  {
+    "level": "warning",
+    "text": "Manifest: Enctype should be set to either application/x-www-form-urlencoded or multipart/form-data. It currently defaults to application/x-www-form-urlencoded",
+    "step": "0-1"
+  },
+  {
+    "level": "debug",
+    "text": "WebSocket: connected, sending auth",
+    "step": "0-6"
+  }
+]

@@ -1,0 +1,89 @@
+{
+  "flow": "j03-list-view",
+  "attempt": 1,
+  "mode": "replay",
+  "tag": "wzteaf",
+  "args": [
+    "testmd",
+    "run",
+    "~\\hackathons\\kane\\amber\\.amber\\kane\\runs\\j03-list-view\\j03-list-view_test.md",
+    "--agent",
+    "--headless",
+    "--no-adaptive-heal"
+  ],
+  "startedAt": "2026-11-23T18:51:37.022Z",
+  "ms": 81079,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": null,
+  "summary": null,
+  "reason": null,
+  "resultCode": null,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": null,
+  "credits": 0,
+  "steps": 15,
+  "failedSteps": [],
+  "testmdSummary": {
+    "type": "test_md_summary",
+    "overall_status": "passed",
+    "duration_s": 66,
+    "steps": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "replay_decisions": 1,
+      "author_decisions": 0
+    },
+    "adaptive_heal": {
+      "triggered": false
+    },
+    "commit": {
+      "committed": false,
+      "reason": "readonly_fallback"
+    },
+    "artifacts": {
+      "replaced": false
+    },
+    "upload": {
+      "performed": true,
+      "succeeded": true
+    },
+    "cancelled": false,
+    "v": 1,
+    "ts": "2026-11-23T18:52:55.954Z",
+    "kind": "typed",
+    "_rt": 1795459975954
+  },
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-23T18:51:37.021Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-23T18:52:58.461Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 15,
+    "finalShot": "shots/15.jpg",
+    "failures": []
+  }
+}

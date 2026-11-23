@@ -1,0 +1,23 @@
+{"t":1795459674579,"type":"run_start","runId":"verify-2026-11-23T18-47-52","kind":"verify","mode":"replay","target":"capsule-server-off","commit":"00d184f","label":null,"flows":["j15-comment"],"serverOff":{"checkedAt":"2026-11-23T18:47:52.354Z","port":3456,"portOpen":false,"vikunjaProcesses":[],"off":true}}
+{"t":1795459674982,"type":"flow_start","flow":"j15-comment","attempt":1,"mode":"replay","tag":"geuxog"}
+{"t":1795459689367,"type":"flow_step","flow":"j15-comment","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795459690862,"type":"flow_step","flow":"j15-comment","attempt":1,"n":2,"status":"done","remark":"wait: Waiting for the plan queue to start"}
+{"t":1795459691215,"type":"flow_step","flow":"j15-comment","attempt":1,"n":3,"status":"done","remark":"fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795459691587,"type":"flow_step","flow":"j15-comment","attempt":1,"n":4,"status":"done","remark":"fill: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795459692369,"type":"flow_step","flow":"j15-comment","attempt":1,"n":5,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795459693161,"type":"flow_step","flow":"j15-comment","attempt":1,"n":6,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795459699099,"type":"flow_step","flow":"j15-comment","attempt":1,"n":7,"status":"done","remark":"analyze: Checking whether the home page greeting is present"}
+{"t":1795459699216,"type":"flow_step","flow":"j15-comment","attempt":1,"n":8,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795459700014,"type":"flow_step","flow":"j15-comment","attempt":1,"n":9,"status":"done","remark":"click: Clicking Kitchen renovation in Projects navigation"}
+{"t":1795459700792,"type":"flow_step","flow":"j15-comment","attempt":1,"n":10,"status":"done","remark":"click: Clicking Get three quotes"}
+{"t":1795459701909,"type":"flow_step","flow":"j15-comment","attempt":1,"n":11,"status":"done","remark":"wait: Waiting for the comment box to load"}
+{"t":1795459702247,"type":"flow_step","flow":"j15-comment","attempt":1,"n":12,"status":"done","remark":"fill: Type \"Third quote {{global.amber_tag}}\" into \"Add your comment, hit '/' for more"}
+{"t":1795459703035,"type":"flow_step","flow":"j15-comment","attempt":1,"n":13,"status":"done","remark":"click: Click \"COMMENT\""}
+{"t":1795459708372,"type":"flow_step","flow":"j15-comment","attempt":1,"n":14,"status":"done","remark":"analyze: Checking whether the third quote comment is present"}
+{"t":1795459708533,"type":"flow_step","flow":"j15-comment","attempt":1,"n":15,"status":"done","remark":"analyze: Checking whether the two quotes comment is present"}
+{"t":1795459709392,"type":"flow_step","flow":"j15-comment","attempt":1,"n":16,"status":"done","remark":"assert: the comments show both Third quote {{global.amber_tag}} and Two quotes in so far"}
+{"t":1795459709814,"type":"flow_step","flow":"j15-comment","attempt":1,"n":17,"status":"done","remark":"refresh: Navigate refresh"}
+{"t":1795459714508,"type":"flow_step","flow":"j15-comment","attempt":1,"n":18,"status":"done","remark":"analyze: Checking whether the third quote comment is present"}
+{"t":1795459714609,"type":"flow_step","flow":"j15-comment","attempt":1,"n":19,"status":"done","remark":"assert: Third quote {{global.amber_tag}} is still shown"}
+{"t":1795459724106,"type":"flow_done","flow":"j15-comment","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":48604,"shot":"verify-2026-11-23T18-47-52/j15-comment/a1/shots/19.jpg"}
+{"t":1795459725864,"type":"run_done","runId":"verify-2026-11-23T18-47-52","spent":13.5,"tally":{"PASS":1},"regressions":[]}

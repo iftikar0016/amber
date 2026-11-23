@@ -1,0 +1,37 @@
+{"type":"stream_start","cli_version":"0.10.7","surface":"run","pid":5448,"v":1,"ts":"2026-11-23T18:36:35.245Z","kind":"typed","_rt":1795458995246}
+{"type":"recording_state","enabled":true,"session_id":"e9937cf2-c7c2-452f-a188-76da84847baf","persist":false,"v":1,"ts":"2026-11-23T18:36:35.265Z","kind":"typed","_rt":1795458995265}
+{"type":"update_available","current":"0.10.7","latest":"0.10.8","severity":"patch","v":1,"ts":"2026-11-23T18:36:40.845Z","kind":"typed","_rt":1795459000845}
+{"type":"skill_update_available","current":null,"latest":"0.1.4","install_cmd":"kane-cli install skill","v":1,"ts":"2026-11-23T18:36:40.856Z","kind":"typed","_rt":1795459000856}
+{"type":"bifurcation","flows":["Navigate to http://127.0.0.1:4790/login then Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo.","Open the project Kitchen renovation and mark the task Choose worktop as done with its checkbox.\nReload the page, then verify Choose worktop is no longer in the list of open tasks and Order tiles still is."],"count":2,"v":1,"ts":"2026-11-23T18:36:53.418Z","kind":"typed","_rt":1795459013418}
+{"step":2,"status":"running","remark":"Step 1","v":1,"ts":"2026-11-23T18:36:55.407Z","kind":"step","_rt":1795459015407}
+{"step":2,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login","v":1,"ts":"2026-11-23T18:36:55.418Z","kind":"step","_rt":1795459015418}
+{"step":3,"status":"running","remark":"Step 2","v":1,"ts":"2026-11-23T18:36:59.138Z","kind":"step","_rt":1795459019138}
+{"step":3,"status":"done","remark":"wait: queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click ","v":1,"ts":"2026-11-23T18:37:10.020Z","kind":"step","_rt":1795459030020}
+{"step":4,"status":"running","remark":"Step 3","v":1,"ts":"2026-11-23T18:37:10.679Z","kind":"step","_rt":1795459030679}
+{"step":4,"status":"done","remark":"type: Type \"{{global.amber_user}}\" into \"Username Or Email Address\"","v":1,"ts":"2026-11-23T18:37:10.921Z","kind":"step","_rt":1795459030921}
+{"step":5,"status":"running","remark":"Step 4","v":1,"ts":"2026-11-23T18:37:11.566Z","kind":"step","_rt":1795459031566}
+{"step":5,"status":"done","remark":"type: Type \"{{secrets.user.amber_password}}\" into \"Password\"","v":1,"ts":"2026-11-23T18:37:11.760Z","kind":"step","_rt":1795459031759}
+{"step":6,"status":"running","remark":"Step 5","v":1,"ts":"2026-11-23T18:37:12.413Z","kind":"step","_rt":1795459032413}
+{"step":6,"status":"done","remark":"click: Click \"Stay logged in\"","v":1,"ts":"2026-11-23T18:37:13.116Z","kind":"step","_rt":1795459033115}
+{"step":7,"status":"running","remark":"Step 6","v":1,"ts":"2026-11-23T18:37:13.778Z","kind":"step","_rt":1795459033777}
+{"step":7,"status":"done","remark":"click: Click \"LOGIN\"","v":1,"ts":"2026-11-23T18:37:14.475Z","kind":"step","_rt":1795459034475}
+{"step":8,"status":"running","remark":"Step 7","v":1,"ts":"2026-11-23T18:37:15.145Z","kind":"step","_rt":1795459035144}
+{"step":8,"status":"done","remark":"wait: PRIMARY: wait for the home page greeting to load","v":1,"ts":"2026-11-23T18:37:23.646Z","kind":"step","_rt":1795459043646}
+{"step":9,"status":"running","remark":"Step 8","v":1,"ts":"2026-11-23T18:37:24.333Z","kind":"step","_rt":1795459044332}
+{"step":9,"status":"done","remark":"analyze: the home page greets Amber Demo","v":1,"ts":"2026-11-23T18:37:33.010Z","kind":"step","_rt":1795459053006}
+{"step":10,"status":"running","remark":"Step 9","v":1,"ts":"2026-11-23T18:37:33.710Z","kind":"step","_rt":1795459053706}
+{"step":10,"status":"done","remark":"assert: the home page greets Amber Demo","v":1,"ts":"2026-11-23T18:37:33.837Z","kind":"step","_rt":1795459053833}
+{"step":2,"status":"running","remark":"Step 1","v":1,"ts":"2026-11-23T18:37:41.894Z","kind":"step","_rt":1795459061890}
+{"step":2,"status":"done","remark":"click: Clicking Kitchen renovation in the Projects sidebar","v":1,"ts":"2026-11-23T18:37:48.745Z","kind":"step","_rt":1795459068741}
+{"step":3,"status":"running","remark":"Step 2","v":1,"ts":"2026-11-23T18:37:49.418Z","kind":"step","_rt":1795459069415}
+{"step":3,"status":"done","remark":"click: Checking the Choose worktop task checkbox","v":1,"ts":"2026-11-23T18:38:00.111Z","kind":"step","_rt":1795459080108}
+{"step":4,"status":"running","remark":"Step 3","v":1,"ts":"2026-11-23T18:38:00.814Z","kind":"step","_rt":1795459080811}
+{"step":4,"status":"done","remark":"navigate: PRIMARY: Reload the page","v":1,"ts":"2026-11-23T18:38:09.093Z","kind":"step","_rt":1795459089090}
+{"step":5,"status":"running","remark":"Step 4","v":1,"ts":"2026-11-23T18:38:09.785Z","kind":"step","_rt":1795459089782}
+{"step":5,"status":"done","remark":"wait: PRIMARY: wait for the reloaded Kitchen renovation page to display the Order tile","v":1,"ts":"2026-11-23T18:38:19.334Z","kind":"step","_rt":1795459099331}
+{"step":6,"status":"running","remark":"Step 5","v":1,"ts":"2026-11-23T18:38:20.092Z","kind":"step","_rt":1795459100089}
+{"step":6,"status":"done","remark":"analyze: Order tiles still is in the list of open tasks.","v":1,"ts":"2026-11-23T18:38:42.339Z","kind":"step","_rt":1795459122340}
+{"step":7,"status":"running","remark":"Step 6","v":1,"ts":"2026-11-23T18:38:43.045Z","kind":"step","_rt":1795459123045}
+{"step":7,"status":"done","remark":"assert: Choose worktop is no longer in the list of open tasks and Order tiles still is.","v":1,"ts":"2026-11-23T18:38:43.058Z","kind":"step","_rt":1795459123059}
+{"type":"coverage","status":"skipped","reason":"not_assurance_project","pack":"~\\.testmuai\\kaneai\\sessions\\e9937cf2-c7c2-452f-a188-76da84847baf\\evidence\\5aace16c-eb50-4520-92da-8cd617a0758a.evidence","v":1,"ts":"2026-11-23T18:39:02.249Z","kind":"typed","_rt":1795459142250}
+{"type":"run_end","status":"passed","summary":"Opened the Kitchen renovation project and marked the “Choose worktop” task as done.\nReloaded the project page.\nAfter reloading, “Choose worktop” was no longer listed among the open tasks, while “Order tiles” remained open.","one_liner":"completed a task on the Kitchen renovation project page","final_state":{"url":"http://127.0.0.1:4790/projects/3/13","Choose worktop open-task status":"not listed among open tasks","Order tiles open-task status":"listed among open tasks"},"reason":"Objective completed","duration":118.7,"bifurcated":true,"total_runs":2,"credits_consumed":37.0711875,"result_code":100,"reason_code":"success.complete","per_flow_metadata":[{"result_code":"100","reason_code":"success.complete","error_message":null,"summary":"You asked to sign in as Amber Demo with the Stay logged in option selected.\nSigned in successfully and reached the home page.\nThe home page displayed a greeting for Amber Demo.","one_liner":"signed in as Amber Demo on the local site","credits_consumed":18.1757575},{"result_code":"100","reason_code":"success.complete","error_message":null,"summary":"Opened the Kitchen renovation project and marked the “Choose worktop” task as done.\nReloaded the project page.\nAfter reloading, “Choose worktop” was no longer listed among the open tasks, while “Order tiles” remained open.","one_liner":"completed a task on the Kitchen renovation project page","credits_consumed":18.89543}],"run_id":"run-0","coverage":{"status":"skipped"},"v":1,"ts":"2026-11-23T18:39:02.250Z","kind":"terminal","_rt":1795459142250}
