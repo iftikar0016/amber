@@ -9,6 +9,7 @@ import { runKane, normaliseSessionDir, sessionDirFor } from '../kane/spawn.mjs';
 import { stepsTaken } from '../kane/ndjson.mjs';
 import { locatePack, extractPack } from '../kane/evidence.mjs';
 import { verdict } from './verdict.mjs';
+import { materialize } from '../flows/materialize.mjs';
 
 export const TIMEOUT_SEC = 300;
 export const MAX_STEPS = 30;
@@ -87,7 +88,7 @@ export async function runFlow(o) {
   const args =
     o.mode === 'author'
       ? ['run', /** @type {string} */ (o.objective), '--agent', '--headless', '--timeout', String(TIMEOUT_SEC), '--max-steps', String(MAX_STEPS), '--variables-file', varsFile, ...(o.name ? ['--name', o.name] : [])]
-      : ['testmd', 'run', /** @type {string} */ (o.file), '--agent', '--headless', '--no-adaptive-heal'];
+      : ['testmd', 'run', o.file ?? materialize(o.flow, tag), '--agent', '--headless', '--no-adaptive-heal'];
   args.push(...(o.extraArgs ?? []));
 
   const serverOffBefore = o.serverOff ? await o.serverOff() : null;
@@ -98,7 +99,9 @@ export async function runFlow(o) {
     cwd,
     timeoutSec: TIMEOUT_SEC,
     onEvent: (e) => {
+      // kane-cli run reports untyped progress lines; a testmd replay reports typed step_end events.
       if (e.kind === 'step' && (e.status === 'done' || e.status === 'failed')) emit({ type: 'flow_step', flow: o.flow, attempt: o.attempt, n: e.step, status: e.status, remark: String(e.remark ?? '').slice(0, 200) });
+      if (e.type === 'step_end') emit({ type: 'flow_step', flow: o.flow, attempt: o.attempt, n: e.ordinal ?? e.index, status: e.status === 'passed' ? 'done' : e.status, remark: String(e.summary ?? '').slice(0, 200) });
     },
   });
   const ms = Date.now() - started;
@@ -108,18 +111,11 @@ export async function runFlow(o) {
   // Inner run_end events close individual steps of a testmd replay; the run's own end is test_md_done.
   const runEnds = res.events.filter((e) => e.type === 'run_end');
   const terminal = res.terminal;
-  const sessionDir = normaliseSessionDir(terminal?.session_dir) ?? sessionDirFor(res.sessionId);
-  let extracted = null;
-  const pack = locatePack(sessionDir);
-  if (pack) {
-    try {
-      extracted = extractPack(pack, outDir, (rel) => rel);
-    } catch (e) {
-      extracted = { error: String(e) };
-    }
-  }
+  const sessionDir = normaliseSessionDir(terminal?.session_dir) ?? sessionDirFor(res.sessionId ?? terminal?.session_id ?? null);
+  const extracted = extractEvidence(outDir, sessionDir);
+  const facts = kaneFacts(res.events, terminal);
   const leaks = o.leaks ? o.leaks() : 0;
-  const v = verdict({ exitCode: res.exitCode, killed: res.killed, terminal, serverOff, leaks, mode: o.mode });
+  const v = verdict({ exitCode: res.exitCode, killed: res.killed, terminal, serverOff, leaks, mode: o.mode, summaryText: facts.oneLiner });
   const credits = terminal?.credits_consumed ?? runEnds.reduce((a, e) => a + (Number(e.credits_consumed) || 0), 0);
 
   const record = {
@@ -133,15 +129,16 @@ export async function runFlow(o) {
     exitCode: res.exitCode,
     killed: res.killed,
     status: terminal?.type === 'test_md_done' ? terminal.overall_status : terminal?.status ?? null,
-    oneLiner: terminal?.one_liner ?? null,
+    oneLiner: facts.oneLiner,
     summary: terminal?.summary ?? null,
-    reason: terminal?.reason ?? null,
+    reason: facts.reason,
     resultCode: terminal?.result_code ?? null,
-    bug: terminal?.verdict ?? null,
+    bug: facts.bug,
+    failedAssertions: facts.failedAssertions,
     finalState: terminal?.final_state ?? null,
     credits,
-    steps: stepsTaken(res.events),
-    failedSteps: res.events.filter((e) => e.kind === 'step' && e.status === 'failed').map((e) => ({ n: e.step, remark: e.remark })),
+    steps: facts.steps,
+    failedSteps: facts.failedSteps,
     testmdSummary: res.events.find((e) => e.type === 'test_md_summary') ?? null,
     serverOff,
     leaks,
@@ -152,17 +149,52 @@ export async function runFlow(o) {
   // Kane's own stream, minus the account-identifying fields.
   const stream = res.events.map(({ test_url, share_url, session_dir, run_dir, context, ...rest }) => rest);
   fs.writeFileSync(path.join(outDir, 'kane-events.ndjson'), stream.map((e) => JSON.stringify(e)).join('\n') + '\n');
-  if (extracted && !extracted.error) {
-    fs.writeFileSync(path.join(outDir, 'steps.json'), JSON.stringify(extracted.steps, null, 2));
-    fs.writeFileSync(path.join(outDir, 'failure.json'), JSON.stringify(extracted.failures, null, 2));
-    fs.writeFileSync(path.join(outDir, 'actions.json'), JSON.stringify(extracted.actions, null, 2));
-    fs.writeFileSync(path.join(outDir, 'network.json'), JSON.stringify(extracted.har, null, 2));
-    fs.writeFileSync(path.join(outDir, 'console.json'), JSON.stringify(extracted.console, null, 2));
-  }
   fs.writeFileSync(path.join(outDir, 'stderr.txt'), res.stderr.join('\n'));
   scrubTree(outDir);
   emit({ type: 'flow_done', flow: o.flow, attempt: o.attempt, mode: o.mode, verdict: record.verdict, basis: record.basis, reasons: record.reasons, credits, ms, shot: record.evidence?.finalShot ? path.relative(RUNS_DIR, path.join(outDir, record.evidence.finalShot)).split(path.sep).join('/') : null });
   return { record, outDir, sessionDir };
+}
+
+/** Unpack the whitelisted evidence of a Kane session into outDir (screenshots, steps, failures, network, console). */
+export function extractEvidence(outDir, sessionDir) {
+  const pack = locatePack(sessionDir);
+  if (!pack) return null;
+  try {
+    const x = extractPack(pack, outDir, (rel) => rel);
+    // Kane's annotated PNGs are 4x the size of its JPEG screenshots; the repo keeps the JPEGs only.
+    for (const st of x.steps) if (st.annotated) {
+      fs.rmSync(path.join(outDir, st.annotated), { force: true });
+      st.annotated = null;
+    }
+    fs.writeFileSync(path.join(outDir, 'steps.json'), JSON.stringify(x.steps, null, 2));
+    fs.writeFileSync(path.join(outDir, 'failure.json'), JSON.stringify(x.failures, null, 2));
+    fs.writeFileSync(path.join(outDir, 'actions.json'), JSON.stringify(x.actions, null, 2));
+    fs.writeFileSync(path.join(outDir, 'network.json'), JSON.stringify(x.har, null, 2));
+    fs.writeFileSync(path.join(outDir, 'console.json'), JSON.stringify(x.console, null, 2));
+    return x;
+  } catch (e) {
+    return { error: String(e) };
+  }
+}
+
+/** What Kane said, from either stream shape: kane-cli run (untyped progress + run_end) or testmd run (typed steps). */
+export function kaneFacts(events, terminal) {
+  const typedEnds = events.filter((e) => e.type === 'step_end');
+  const failedSteps = typedEnds.length
+    ? typedEnds.filter((e) => e.status === 'failed').map((e) => ({ n: e.ordinal ?? e.index, remark: e.summary }))
+    : events.filter((e) => e.kind === 'step' && e.status === 'failed').map((e) => ({ n: e.step, remark: e.remark }));
+  const failedAssertions = events.filter((e) => e.type === 'step_event' && e.event === 'assertion' && e.passed === false).map((e) => e.detail);
+  const v = events.find((e) => e.type === 'test_md_bug_verdict') ?? (terminal?.verdict ? { ...terminal.verdict } : null);
+  const bug = v ? { confirmed: v.confirmed ?? null, title: v.bug_title ?? v.title ?? null, oneLiner: v.one_liner ?? null, category: v.category ?? null, severity: v.severity ?? null, confidence: v.confidence ?? null } : null;
+  const innerFail = events.filter((e) => e.type === 'run_end' && e.status === 'failed').pop();
+  return {
+    steps: typedEnds.length || stepsTaken(events),
+    failedSteps,
+    failedAssertions,
+    bug,
+    reason: terminal?.reason ?? innerFail?.reason ?? null,
+    oneLiner: terminal?.one_liner ?? bug?.oneLiner ?? (failedAssertions[0] ? `Assertion failed: ${failedAssertions[0]}` : null),
+  };
 }
 
 export const relToRoot = (p) => path.relative(ROOT, p).split(path.sep).join('/');

@@ -50,12 +50,15 @@ export function build(o = {}) {
   fs.rmSync(outDir, { recursive: true, force: true });
   fs.mkdirSync(path.join(outDir, 'amber', 'files'), { recursive: true });
 
-  // 1. The front end, as captured.
+  // 1. The front end, as captured. Every client-side route (/login, /projects/3/13 …) serves the same app shell;
+  // the capsule's index.html is that shell, from / if a journey loaded it, else from any route that served it.
   let files = 0;
+  const shellPath = manifest['/'] ? '/' : Object.keys(manifest).find((p) => /text\/html/.test(manifest[p].type) && !path.extname(p));
+  if (!shellPath) throw new Error('The capture has no app shell (an HTML page from / or a client-side route)');
   for (const [p, f] of Object.entries(manifest)) {
     if (p === '/sw.js') continue; // replaced by AMBER's
     const body = fs.readFileSync(path.join(staticDir, 'files', f.sha));
-    if (p === '/') {
+    if (p === shellPath) {
       const html = transformIndexHtml(body.toString('utf8'));
       fs.writeFileSync(path.join(outDir, 'index.html'), html);
       fs.writeFileSync(path.join(outDir, '404.html'), html); // static hosts that serve 404.html for unknown paths
@@ -106,6 +109,8 @@ export function build(o = {}) {
   const seedText = JSON.stringify(seed);
   assertClean(seedText, o.secrets ?? [], 'in seed.json');
   fs.writeFileSync(path.join(outDir, 'amber', 'seed.json'), seedText);
+  // Small file the boot script reads to sign a visitor in as the demo user without loading the whole seed.
+  fs.writeFileSync(path.join(outDir, 'amber', 'demo-user.json'), JSON.stringify({ id: user.id, username: user.username }));
 
   // 4. AMBER's Service Worker, store and routes.
   fs.copyFileSync(path.join(SRC, 'sw.js'), path.join(outDir, 'sw.js'));

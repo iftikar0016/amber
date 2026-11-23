@@ -54,7 +54,7 @@ export async function verify(o = {}) {
           flow: id,
           attempt,
           mode,
-          ...(mode === 'replay' ? { file: path.join(FLOWS_DIR, `${id}_test.md`) } : { objective: objectiveFor(spec, journey) }),
+          ...(mode === 'replay' ? {} : { objective: objectiveFor(spec, journey) }),
           cwd: KANE_CWD,
           serverOff: serverOffProof,
           leaks: () => srv.flowCounts(id).leaks,

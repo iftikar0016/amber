@@ -9,6 +9,8 @@ import { alignDueDates, readCredentials } from '../seed.mjs';
 import { createRecorder } from './proxy.mjs';
 import { openBatch } from '../run/budget.mjs';
 import { runFlow, timelineWriter } from '../run/kane-flow.mjs';
+import { sanitizeSavedFlow, sanitizeRecording } from '../flows/materialize.mjs';
+import { completeFrontend } from './frontend.mjs';
 
 export const EST_CREDITS_PER_AUTHORED_RUN = 35;
 
@@ -63,12 +65,19 @@ export async function capture(o = {}) {
       let frozenCandidate = null;
       if (r.record.verdict === 'PASS' && fs.existsSync(after.file)) {
         fs.mkdirSync(FLOWS_DIR, { recursive: true });
-        fs.copyFileSync(after.file, path.join(FLOWS_DIR, `${j.id}_test.md`));
-        if (after.output) fs.cpSync(after.output, path.join(FLOWS_DIR, `output-${j.id}`), { recursive: true });
+        // Kane writes variable values (the test password among them) into the frontmatter: blank them before the flow enters the repo.
+        fs.writeFileSync(path.join(FLOWS_DIR, `${j.id}_test.md`), sanitizeSavedFlow(fs.readFileSync(after.file, 'utf8')));
+        if (after.output) {
+          fs.cpSync(after.output, path.join(FLOWS_DIR, `output-${j.id}`), { recursive: true });
+          sanitizeRecording(path.join(FLOWS_DIR, `output-${j.id}`));
+        }
         frozenCandidate = `flows/${j.id}_test.md`;
       }
       results.push({ id: j.id, verdict: r.record.verdict, reasons: r.record.reasons, credits: r.record.credits, savedTest: fs.existsSync(after.file), frozenCandidate, record: path.relative(ROOT, r.outDir).split(path.sep).join('/') });
     }
+    rec.setJourney('frontend-completion');
+    const fe = await completeFrontend(log);
+    emit({ type: 'frontend_completed', ...fe });
   } finally {
     await rec.close();
     const spend = batch.close({ runId });

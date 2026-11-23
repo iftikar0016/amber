@@ -24,5 +24,5 @@ export function verdict(r) {
     return { verdict: 'FAIL', basis: 'wire', reasons: [`leak: ${r.leaks} API request(s) got past the Service Worker to the static server${status === 'passed' ? ' (Kane said passed: disputed)' : ''}`] };
   }
   if (r.exitCode === 0 && status === 'passed') return { verdict: 'PASS', basis: 'kane', reasons: [] };
-  return { verdict: 'FAIL', basis: 'kane', reasons: [String(r.terminal?.one_liner || r.terminal?.reason || r.terminal?.summary || 'Kane reported the flow failed').slice(0, 300)] };
+  return { verdict: 'FAIL', basis: 'kane', reasons: [String(r.summaryText || r.terminal?.one_liner || r.terminal?.reason || r.terminal?.summary || 'Kane reported the flow failed').slice(0, 300)] };
 }
