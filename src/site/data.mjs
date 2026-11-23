@@ -49,6 +49,9 @@ export function siteData(o = {}) {
         oneLiner: r.oneLiner ?? null,
         bug: r.bug?.title ?? null,
         tag: r.tag ?? null,
+        adjudicated: Boolean(d.adjudicated),
+        kaneStatus: d.kaneStatus ?? r.kaneStatus ?? null,
+        reasons: d.reasons ?? [],
         record: path.relative(ROOT, path.dirname(rec)).split(path.sep).join('/'),
         shot: shotSrc && fs.existsSync(shotSrc) && o.copyShot ? o.copyShot(shotSrc, d.flow, runId) : null,
       });

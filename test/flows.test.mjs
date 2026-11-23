@@ -50,4 +50,10 @@ test('verdict tiers', () => {
   const leak = verdict({ exitCode: 0, terminal: passed, mode: 'replay', serverOff: { off: true }, leaks: 1 });
   assert.equal(leak.verdict, 'FAIL');
   assert.match(leak.reasons[0], /disputed/);
+  // Kane said passed, but the capsule refused the change the journey made (j15 in the baseline): disputed, so FAIL.
+  const refused = verdict({ exitCode: 0, terminal: passed, mode: 'replay', serverOff: { off: true }, leaks: 0, unansweredWrites: 1 });
+  assert.equal(refused.verdict, 'FAIL');
+  assert.equal(refused.disputed, true);
+  // A refused change in a flow Kane already failed stays a plain Kane FAIL.
+  assert.equal(verdict({ exitCode: 1, terminal: failed, mode: 'replay', unansweredWrites: 1, summaryText: 'x' }).basis, 'kane');
 });

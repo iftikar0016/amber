@@ -47,17 +47,22 @@ export async function verify(o = {}) {
       srv.setFlow(id);
       let r;
       for (let attempt = 1; attempt <= 2; attempt++) {
-        log(`${id}: ${mode} against the capsule (attempt ${attempt})`);
+        const flowMode = lockedFlows()[id].verifyBy === 'author' ? 'author' : mode;
+        log(`${id}: ${flowMode} against the capsule (attempt ${attempt})`);
+        const before = srv.flowCounts(id);
         const journey = spec.journeys.find((j) => j.id === id);
         r = await runFlow({
           runId,
           flow: id,
           attempt,
-          mode,
-          ...(mode === 'replay' ? {} : { objective: objectiveFor(spec, journey) }),
+          mode: flowMode,
+          ...(flowMode === 'replay' ? {} : { objective: objectiveFor(spec, journey) }),
           cwd: KANE_CWD,
           serverOff: serverOffProof,
-          leaks: () => srv.flowCounts(id).leaks,
+          wire: () => {
+            const now = srv.flowCounts(id);
+            return { leaks: now.leaks - before.leaks, unansweredWrites: now.unansweredWrites - before.unansweredWrites };
+          },
           emit,
         });
         log(`${id}: ${r.record.verdict} ${r.record.reasons.join('; ')} (${r.record.credits ?? '?'} credits, ${Math.round(r.record.ms / 1000)} s)`);

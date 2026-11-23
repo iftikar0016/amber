@@ -76,7 +76,8 @@ export function timelineWriter(runId) {
 /**
  * @param {{runId:string, flow:string, attempt:number, mode:'author'|'replay',
  *          objective?:string, name?:string, file?:string, cwd?:string, extraArgs?:string[],
- *          serverOff?:()=>Promise<{off:boolean}>, leaks?:()=>number, emit?:(e:any)=>void}} o
+ *          serverOff?:()=>Promise<{off:boolean}>, leaks?:()=>number, wire?:()=>{leaks:number, unansweredWrites:number},
+ *          emit?:(e:any)=>void}} o
  */
 export async function runFlow(o) {
   const emit = o.emit ?? (() => {});
@@ -114,8 +115,9 @@ export async function runFlow(o) {
   const sessionDir = normaliseSessionDir(terminal?.session_dir) ?? sessionDirFor(res.sessionId ?? terminal?.session_id ?? null);
   const extracted = extractEvidence(outDir, sessionDir);
   const facts = kaneFacts(res.events, terminal);
-  const leaks = o.leaks ? o.leaks() : 0;
-  const v = verdict({ exitCode: res.exitCode, killed: res.killed, terminal, serverOff, leaks, mode: o.mode, summaryText: facts.oneLiner });
+  const wire = o.wire ? o.wire() : { leaks: o.leaks ? o.leaks() : 0, unansweredWrites: 0 };
+  const leaks = wire.leaks;
+  const v = verdict({ exitCode: res.exitCode, killed: res.killed, terminal, serverOff, leaks, unansweredWrites: wire.unansweredWrites, mode: o.mode, summaryText: facts.oneLiner });
   const credits = terminal?.credits_consumed ?? runEnds.reduce((a, e) => a + (Number(e.credits_consumed) || 0), 0);
 
   const record = {
@@ -142,6 +144,8 @@ export async function runFlow(o) {
     testmdSummary: res.events.find((e) => e.type === 'test_md_summary') ?? null,
     serverOff,
     leaks,
+    unansweredWrites: wire.unansweredWrites,
+    kaneStatus: terminal?.type === 'test_md_done' ? terminal.overall_status : terminal?.status ?? null,
     ...v,
     evidence: extracted ? { steps: extracted.steps?.length ?? 0, finalShot: extracted.finalShot ?? null, failures: extracted.failures ?? [], error: extracted.error } : null,
   };

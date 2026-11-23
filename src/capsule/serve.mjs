@@ -32,7 +32,7 @@ export function createCapsuleServer(o = {}) {
   let logDir = o.logDir ?? null;
   const counts = { leaks: 0, answered: 0, replayed: 0, unanswered: 0, errors: 0 };
   const perFlow = /** @type {Record<string, {leaks:number, unanswered:number}>} */ ({});
-  const bump = (k) => ((perFlow[flow] ??= { leaks: 0, unanswered: 0 })[k]++);
+  const bump = (k) => ((perFlow[flow] ??= { leaks: 0, unanswered: 0, unansweredWrites: 0 })[k]++);
   const append = (name, o2) => {
     if (!logDir) return;
     fs.mkdirSync(logDir, { recursive: true });
@@ -53,6 +53,7 @@ export function createCapsuleServer(o = {}) {
           else {
             counts.unanswered++;
             bump('unanswered');
+            if (e.outcome === 'unanswered-write') bump('unansweredWrites');
           }
           append('capsule-log.ndjson', e);
         } catch {
@@ -112,6 +113,6 @@ export function createCapsuleServer(o = {}) {
     setLogDir(d) {
       logDir = d;
     },
-    flowCounts: (id) => perFlow[id] ?? { leaks: 0, unanswered: 0 },
+    flowCounts: (id) => ({ leaks: 0, unanswered: 0, unansweredWrites: 0, ...perFlow[id] }),
   };
 }

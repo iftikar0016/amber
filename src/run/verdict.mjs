@@ -4,8 +4,8 @@
 
 /**
  * @param {{exitCode:number|null, killed?:boolean, terminal:any, serverOff?:{off:boolean}|null,
- *          leaks?:number, evidence?:boolean, mode:'author'|'replay'}} r
- * @returns {{verdict:'PASS'|'FAIL'|'INCONCLUSIVE', basis:string, reasons:string[]}}
+ *          leaks?:number, unansweredWrites?:number, summaryText?:string|null, evidence?:boolean, mode:'author'|'replay'}} r
+ * @returns {{verdict:'PASS'|'FAIL'|'INCONCLUSIVE', basis:string, reasons:string[], disputed?:boolean}}
  */
 export function verdict(r) {
   const reasons = [];
@@ -22,6 +22,16 @@ export function verdict(r) {
 
   if (r.leaks && r.leaks > 0) {
     return { verdict: 'FAIL', basis: 'wire', reasons: [`leak: ${r.leaks} API request(s) got past the Service Worker to the static server${status === 'passed' ? ' (Kane said passed: disputed)' : ''}`] };
+  }
+  if (r.exitCode === 0 && status === 'passed' && r.unansweredWrites && r.unansweredWrites > 0) {
+    // Kane saw the expected text, but the capsule refused the change the journey made, so the page only looked
+    // right (for example an unsent draft restored into an editor). A change that was never stored was not kept.
+    return {
+      verdict: 'FAIL',
+      basis: 'wire',
+      disputed: true,
+      reasons: [`disputed: Kane said passed, but the capsule refused ${r.unansweredWrites} change(s) during the flow, so the change cannot have been kept`],
+    };
   }
   if (r.exitCode === 0 && status === 'passed') return { verdict: 'PASS', basis: 'kane', reasons: [] };
   return { verdict: 'FAIL', basis: 'kane', reasons: [String(r.summaryText || r.terminal?.one_liner || r.terminal?.reason || r.terminal?.summary || 'Kane reported the flow failed').slice(0, 300)] };

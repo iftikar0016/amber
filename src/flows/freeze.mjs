@@ -42,6 +42,18 @@ export function freeze(ids, provenance = {}) {
   return Object.keys(lock.flows);
 }
 
+/**
+ * Record how a frozen flow is verified, without touching its files or hashes. verifyBy 'author' means Kane re-authors
+ * the journey from its objective on every check, because its saved recording does not replay (with the evidence).
+ */
+export function annotate(id, fields) {
+  const lock = JSON.parse(fs.readFileSync(LOCK, 'utf8'));
+  if (!lock.flows[id]) throw new Error(`${id} is not frozen`);
+  Object.assign(lock.flows[id], fields);
+  fs.writeFileSync(LOCK, JSON.stringify(lock, null, 2) + '\n');
+  return lock.flows[id];
+}
+
 /** Every frozen file whose content no longer matches its hash (or that is missing). */
 export function check() {
   if (!fs.existsSync(LOCK)) return { locked: 0, changed: [] };
