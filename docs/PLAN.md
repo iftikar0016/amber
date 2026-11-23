@@ -1,5 +1,7 @@
 # AMBER: build plan
 
+> **Status (2026-11-24): stages 1–6 are built and recorded; see the [README](../README.md).** All 15 journeys pass on the capsule with the server off, both as replays and as fresh authored runs; the Stop hook blocked the agent on a deliberate regression and allowed it once Kane proved the fix; Kane's suite of AMBER's own page passes. Spent: 1,942.64 of the 2,500-credit cap. Still open, and the user's: public hosting, pushing the repository, the video and the posts. The plan below is kept as it was approved; where the build differed (the spike's findings, per-flow authored verification for j10, the disputed rule), the README and `docs/` say how.
+
 Kane CLI 0.10.7 is signed in with **9,711 credits** (if Argus uses the same Kane account, that balance is shared). No credits have been spent yet: the credit cap in `amber.config.json` is 0 until the user sets one, and every Kane run is refused until then.
 
 ## What AMBER is, honestly
