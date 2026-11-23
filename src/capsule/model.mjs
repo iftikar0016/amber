@@ -37,8 +37,9 @@ export function liftModel(pristine) {
 
   const addTask = (t) => {
     if (!tasks[t.id]) tasks[t.id] = pick(t, TASK_FIELDS);
-    // comment_count is only sent when a list asks for it (expand=comment_count)
+    // comment_count is only sent when a list asks for it (expand=comment_count); subscription only by a task's own read
     if (typeof t.comment_count === 'number' && tasks[t.id].comment_count === undefined) tasks[t.id].comment_count = t.comment_count;
+    if (t.subscription !== undefined && tasks[t.id].subscription === undefined) tasks[t.id].subscription = t.subscription;
     if (!user && t.created_by && t.created_by.name) user = t.created_by;
   };
 

@@ -267,9 +267,9 @@
       "needsHuman": false
     },
     "j11-rename": {
-      "verdict": "FAIL",
-      "everPassed": false,
-      "failStreak": 1,
+      "verdict": "PASS",
+      "everPassed": true,
+      "failStreak": 0,
       "history": [
         {
           "runId": "verify-2026-11-23T15-33-57",
@@ -281,6 +281,15 @@
           "record": "runs/verify-2026-11-23T15-33-57/j11-rename/a1",
           "commit": "0c3b711",
           "at": "2026-11-23T15:41:25.145Z"
+        },
+        {
+          "runId": "verify-2026-11-23T16-21-57",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-23T16-21-57/j11-rename/a1",
+          "commit": "1fd7670",
+          "at": "2026-11-23T16:22:47.973Z"
         }
       ],
       "needsHuman": false

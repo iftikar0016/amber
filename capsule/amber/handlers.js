@@ -209,7 +209,84 @@
     return json(201, { tasks: created });
   }
 
+  /** Fields a task update changes directly, with how Vikunja stores the value it was sent. */
+  const date = (v) => (v ? String(v) : ZERO);
+  const UPDATABLE = {
+    title: (v) => String(v),
+    description: (v) => String(v || ''),
+    due_date: date,
+    start_date: date,
+    end_date: date,
+    priority: (v) => Number(v) || 0,
+    hex_color: (v) => String(v || ''),
+    percent_done: (v) => Number(v) || 0,
+    repeat_after: (v) => Number(v) || 0,
+    repeat_mode: (v) => Number(v) || 0,
+    is_favorite: (v) => Boolean(v),
+    reminders: (v) => (Array.isArray(v) && v.length ? v : null),
+    cover_image_attachment_id: (v) => Number(v) || 0,
+  };
+  /** Read-only or separately managed fields: Vikunja's task update ignores them. */
+  const IGNORED_ON_UPDATE = new Set(['id', 'identifier', 'index', 'created', 'updated', 'created_by', 'done_at', 'labels', 'assignees', 'attachments', 'related_tasks', 'reactions', 'subscription', 'buckets', 'position', 'positions', 'comment_count', 'max_permission']);
+
+  /** The fields a PATCH body sets: a JSON Patch list of top-level add/replace ops, or a plain object. Null if neither. */
+  function patchFields(body) {
+    if (Array.isArray(body)) {
+      const out = {};
+      for (const op of body) {
+        const m = op && /^\/([a-z_]+)$/.exec(op.path || '');
+        if (!m || (op.op !== 'add' && op.op !== 'replace')) return null;
+        out[m[1]] = op.value;
+      }
+      return out;
+    }
+    return body && typeof body === 'object' ? body : null;
+  }
+
+  /**
+   * PATCH /tasks/:id: Vikunja's task update (the task page sends every field on each save).
+   * A change the capsule cannot carry out yet (marking done, moving to another project or bucket, an unknown field)
+   * is not answered here, so the Service Worker refuses it with a 501.
+   */
+  async function updateTask({ params, body, url, store }) {
+    const m = store.model;
+    const t = m.tasks && m.tasks[params.id];
+    if (!t) return problem(404, 'This task does not exist.');
+    const fields = patchFields(body);
+    if (!fields) return null;
+    const next = {};
+    for (const [k, v] of Object.entries(fields)) {
+      if (IGNORED_ON_UPDATE.has(k)) continue;
+      if (k === 'done') {
+        if (Boolean(v) !== Boolean(t.done)) return null;
+        continue;
+      }
+      if (k === 'project_id') {
+        if (v && Number(v) !== t.project_id) return null;
+        continue;
+      }
+      if (k === 'bucket_id') {
+        if (v && Number(v) !== t.bucket_id) return null;
+        continue;
+      }
+      if (!UPDATABLE[k]) return null;
+      next[k] = UPDATABLE[k](v);
+    }
+    if ('title' in next && !next.title.trim()) return problem(400, 'Task title cannot be empty.');
+    Object.assign(t, next, { updated: nowIso() });
+    await store.save();
+    const out = taskJson({ ...t, assignees: t.assignees || [] }, { position: 0 });
+    if (t.subscription !== undefined) out.subscription = t.subscription;
+    return json(200, { $schema: schema(url, 'Task'), ...out });
+  }
+
   const routes = [
+    {
+      name: 'task-update',
+      method: 'PATCH',
+      path: /^\/api\/v2\/tasks\/(?<id>\d+)$/,
+      handle: updateTask,
+    },
     {
       name: 'project-view-tasks',
       method: 'GET',

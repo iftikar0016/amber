@@ -10,3 +10,10 @@ Development aid used before spending credits: `node scripts/store-check.mjs pris
 - **Repair:** the model now holds the seeded tasks, projects (with their views) and each captured view's task positions, lifted from the pristine capture. `POST /projects/:p/tasks/bulk` creates tasks the way Vikunja does (next id, next index in the project, `#<index>` identifier, first in every view at half the lowest position). `GET /projects/:p/views/:v/tasks` for list and table views is answered from the store (view filter, `done = …` request filters, `sort_by`/`order_by`, pagination), and only for views whose order the capture shows; anything else still falls through to the replay.
 - **Checked first (zero credits):** the store's answers to the three pristine list/table reads equal the server's; in the captured journey, the post-change list read equals the server's. Known difference: the create response lists positions only for the list and table views (the capture never showed the Gantt or Kanban order, so they are not invented).
 - **Proof:** `verify-2026-11-23T16-13-35`, PASS, 9.10 credits.
+
+## j11-rename: rename a task
+
+- **Failure** (baseline `verify-2026-11-23T15-33-57`): `PATCH /api/v2/tasks/1` refused with 501, so the list kept "Write homepage copy".
+- **Repair:** `PATCH /tasks/:id` applies the task page's JSON Patch (top-level `add`/`replace`) to the task's own fields in the store and answers with Vikunja's `Task` body; the list view (already answered from the store) shows the new title. A change the store cannot carry out yet (marking done, moving the task to another project or bucket, an unknown field) is still refused with a 501, never half-applied. The model now also keeps a task's `subscription`, which Vikunja returns with the update.
+- **Checked first (zero credits):** in the captured journey, the update's response and the list read after it equal the real server's.
+- **Proof:** `verify-2026-11-23T16-21-57`, PASS, 9.37 credits.
