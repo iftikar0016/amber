@@ -1,0 +1,8 @@
+{"t":1795457521176,"flow":"manual","method":"GET","url":"/api/v2/info","outcome":"replay","how":"exact","status":200}
+{"t":1795457521177,"flow":"manual","method":"GET","url":"/api/v2/user","outcome":"replay","how":"exact","status":200}
+{"t":1795457521281,"flow":"manual","method":"GET","url":"/api/v2/avatar/amber?size=40","outcome":"replay","how":"exact","status":200}
+{"t":1795457521282,"flow":"manual","method":"GET","url":"/api/v2/projects?is_archived=true&expand=permissions&page=1","outcome":"store","handler":"project-list","status":200}
+{"t":1795457521282,"flow":"manual","method":"GET","url":"/api/v2/labels?page=1","outcome":"replay","how":"exact","status":200}
+{"t":1795457521297,"flow":"manual","method":"POST","url":"/api/v2/user/token/refresh","outcome":"store","handler":"token-refresh","status":200}
+{"t":1795457521326,"flow":"manual","method":"GET","url":"/api/v2/tasks?sort_by=due_date&sort_by=id&order_by=asc&order_by=desc&filter=done%20%3D%20false&filter_include_nulls=false&q=&expand=comment_count&expand=is_unread&filter_timezone=GMT&page=1","outcome":"replay","how":"exact","status":200}
+{"t":1795457521411,"flow":"manual","method":"GET","url":"/api/v2/tasks?per_page=1&page=1","outcome":"replay","how":"exact","status":200}

@@ -1,0 +1,50 @@
+[
+  {
+    "step": 1,
+    "type": "navigate",
+    "intent": "Navigate to http://127.0.0.1:4790/amber/",
+    "instruction": "Navigate to http://127.0.0.1:4790/amber/"
+  },
+  {
+    "step": 2,
+    "type": "click",
+    "intent": "PRIMARY: Click the tile labelled J15 · Comment on a task inside the amber block; role=button; text=\"Comment on a task: show Kane's evidence\" | HINTS: container=Journeys group in The amber block region",
+    "instruction": "Clicking the J15 tile to comment on Kane's evidence inside the amber block"
+  },
+  {
+    "step": 3,
+    "type": "analyze",
+    "intent": "whether the Comment on a task side panel is visible on the page",
+    "instruction": "Checking whether the side panel is open"
+  },
+  {
+    "step": 4,
+    "type": "analyze",
+    "intent": "the heading text in the Comment on a task side panel",
+    "instruction": "Reading the side panel heading"
+  },
+  {
+    "step": 5,
+    "type": "analyze",
+    "intent": "whether a FAIL entry for the capsule is listed in the history",
+    "instruction": "Checking whether the history lists a capsule FAIL"
+  },
+  {
+    "step": 6,
+    "type": "analyze",
+    "intent": "whether a PASS entry for the capsule is listed in the history",
+    "instruction": "Checking whether the history lists a capsule PASS"
+  },
+  {
+    "step": 7,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  },
+  {
+    "step": 8,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  }
+]

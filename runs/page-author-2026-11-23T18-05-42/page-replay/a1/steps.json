@@ -1,0 +1,79 @@
+[
+  {
+    "ordinal": 1,
+    "id": "0-1",
+    "kind": "navigate",
+    "status": "passed",
+    "summary": "navigate: Navigate to http://127.0.0.1:4790/amber/?t=start&speed=10",
+    "url": "http://127.0.0.1:4790/amber/?t=start&speed=10",
+    "durationMs": 0,
+    "shot": "shots/1.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 2,
+    "id": "0-2",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: ANALYZE(textual_visual, 'the line above the block reads 0 of 15 interactions pro",
+    "url": "http://127.0.0.1:4790/amber/?t=start&speed=10",
+    "durationMs": 11844,
+    "shot": "shots/2.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 3,
+    "id": "0-3",
+    "kind": "assert",
+    "status": "passed",
+    "summary": "assert: the line above the block reads 0 of 15 interactions proven with the server off",
+    "url": "http://127.0.0.1:4790/amber/?t=start&speed=10",
+    "durationMs": 15,
+    "shot": "shots/3.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 4,
+    "id": "0-4",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Clicking the Replay the run button",
+    "url": "http://127.0.0.1:4790/amber/?t=start&speed=10",
+    "durationMs": 7563,
+    "shot": "shots/4.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 5,
+    "id": "0-5",
+    "kind": "wait",
+    "status": "passed",
+    "summary": "wait: PRIMARY: wait until the line above the block reads 15 of 15 interactions proven ",
+    "url": "http://127.0.0.1:4790/amber/?t=start&speed=10",
+    "durationMs": 13406,
+    "shot": "shots/5.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 6,
+    "id": "0-6",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: ANALYZE(visual, 'the line above the block reads 15 of 15 interactions proven wit",
+    "url": "http://127.0.0.1:4790/amber/?t=start&speed=10",
+    "durationMs": 16860,
+    "shot": "shots/6.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 7,
+    "id": "0-7",
+    "kind": "assert",
+    "status": "passed",
+    "summary": "assert: the line above the block reads 15 of 15 interactions proven with the server off",
+    "url": "http://127.0.0.1:4790/amber/?t=start&speed=10",
+    "durationMs": 15,
+    "shot": "shots/7.jpg",
+    "annotated": null
+  }
+]

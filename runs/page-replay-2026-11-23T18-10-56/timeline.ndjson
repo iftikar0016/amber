@@ -1,0 +1,36 @@
+{"t":1795457458609,"type":"run_start","runId":"page-replay-2026-11-23T18-10-56","kind":"page-suite","mode":"replay","tests":["page-counter","page-evidence","page-flip","page-replay"]}
+{"t":1795457458627,"type":"flow_start","flow":"page-counter","attempt":1,"mode":"replay","tag":"pdraqx"}
+{"t":1795457471838,"type":"flow_step","flow":"page-counter","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/amber/"}
+{"t":1795457472357,"type":"flow_step","flow":"page-counter","attempt":1,"n":2,"status":"done","remark":"analyze: Reading the status line above the amber block"}
+{"t":1795457472510,"type":"flow_step","flow":"page-counter","attempt":1,"n":3,"status":"done","remark":"analyze: Checking whether the caption below the amber block mentions Kane CLI"}
+{"t":1795457472607,"type":"flow_step","flow":"page-counter","attempt":1,"n":4,"status":"done","remark":"assert: the line above the amber block reads 15 of 15 interactions proven with the serve"}
+{"t":1795457472717,"type":"flow_step","flow":"page-counter","attempt":1,"n":5,"status":"done","remark":"assert: the caption below the block mentions Kane CLI"}
+{"t":1795457481879,"type":"flow_done","flow":"page-counter","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":23201,"shot":"page-replay-2026-11-23T18-10-56/page-counter/a1/shots/5.jpg"}
+{"t":1795457481896,"type":"flow_start","flow":"page-evidence","attempt":1,"mode":"replay","tag":"olymqb"}
+{"t":1795457495207,"type":"flow_step","flow":"page-evidence","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/amber/"}
+{"t":1795457496392,"type":"flow_step","flow":"page-evidence","attempt":1,"n":2,"status":"done","remark":"click: Clicking the J15 tile to comment on Kane's evidence inside the amber block"}
+{"t":1795457496592,"type":"flow_step","flow":"page-evidence","attempt":1,"n":3,"status":"done","remark":"analyze: Checking whether the side panel is open"}
+{"t":1795457496753,"type":"flow_step","flow":"page-evidence","attempt":1,"n":4,"status":"done","remark":"analyze: Reading the side panel heading"}
+{"t":1795457496914,"type":"flow_step","flow":"page-evidence","attempt":1,"n":5,"status":"done","remark":"analyze: Checking whether the history lists a capsule FAIL"}
+{"t":1795457497096,"type":"flow_step","flow":"page-evidence","attempt":1,"n":6,"status":"done","remark":"analyze: Checking whether the history lists a capsule PASS"}
+{"t":1795457497211,"type":"flow_step","flow":"page-evidence","attempt":1,"n":7,"status":"done","remark":"assert: a side panel opens with the heading Comment on a task"}
+{"t":1795457497331,"type":"flow_step","flow":"page-evidence","attempt":1,"n":8,"status":"done","remark":"assert: its history lists both a FAIL and a PASS for the capsule"}
+{"t":1795457506913,"type":"flow_done","flow":"page-evidence","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":24952,"shot":"page-replay-2026-11-23T18-10-56/page-evidence/a1/shots/8.jpg"}
+{"t":1795457506930,"type":"flow_start","flow":"page-flip","attempt":1,"mode":"replay","tag":"pcwsyu"}
+{"t":1795457520346,"type":"flow_step","flow":"page-flip","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/amber/"}
+{"t":1795457521623,"type":"flow_step","flow":"page-flip","attempt":1,"n":2,"status":"done","remark":"click: Clicking the Open the live app button"}
+{"t":1795457521864,"type":"flow_step","flow":"page-flip","attempt":1,"n":3,"status":"done","remark":"analyze: Checking whether the signed-in Amber Demo account is shown"}
+{"t":1795457522145,"type":"flow_step","flow":"page-flip","attempt":1,"n":4,"status":"done","remark":"analyze: Checking whether Website relaunch is shown in the project menu"}
+{"t":1795457522315,"type":"flow_step","flow":"page-flip","attempt":1,"n":5,"status":"done","remark":"analyze: Checking whether Kitchen renovation is shown in the project menu"}
+{"t":1795457522421,"type":"flow_step","flow":"page-flip","attempt":1,"n":6,"status":"done","remark":"assert: the block now shows the Vikunja app signed in as Amber Demo, with the projects W"}
+{"t":1795457534040,"type":"flow_done","flow":"page-flip","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":27060,"shot":"page-replay-2026-11-23T18-10-56/page-flip/a1/shots/6.jpg"}
+{"t":1795457534056,"type":"flow_start","flow":"page-replay","attempt":1,"mode":"replay","tag":"dwyluh"}
+{"t":1795457547431,"type":"flow_step","flow":"page-replay","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/amber/?t=start&speed=10"}
+{"t":1795457547806,"type":"flow_step","flow":"page-replay","attempt":1,"n":2,"status":"done","remark":"analyze: Reading the interactions-proven count"}
+{"t":1795457547906,"type":"flow_step","flow":"page-replay","attempt":1,"n":3,"status":"done","remark":"assert: the line above the block reads 0 of 15 interactions proven with the server off"}
+{"t":1795457548702,"type":"flow_step","flow":"page-replay","attempt":1,"n":4,"status":"done","remark":"click: Clicking the Replay the run button"}
+{"t":1795457565649,"type":"flow_step","flow":"page-replay","attempt":1,"n":5,"status":"done","remark":"wait: Waiting until interactions proven reaches 15 of 15 with server off"}
+{"t":1795457572895,"type":"flow_step","flow":"page-replay","attempt":1,"n":6,"status":"done","remark":"analyze: Reading the interaction-proof summary above the block"}
+{"t":1795457573007,"type":"flow_step","flow":"page-replay","attempt":1,"n":7,"status":"done","remark":"assert: the line above the block reads 15 of 15 interactions proven with the server off"}
+{"t":1795457581747,"type":"flow_done","flow":"page-replay","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":47637,"shot":"page-replay-2026-11-23T18-10-56/page-replay/a1/shots/7.jpg"}
+{"t":1795457583534,"type":"run_done","runId":"page-replay-2026-11-23T18-10-56","spent":3.82}

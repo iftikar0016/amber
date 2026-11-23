@@ -1,0 +1,53 @@
+{
+  "flow": "page-flip",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "ghlkyp",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/amber/. Click the Open the live app button. Verify the block now shows the Vikunja app signed in as Amber Demo, with the projects Website relaunch and Kitchen renovation in its menu.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json",
+    "--name",
+    "page-flip"
+  ],
+  "startedAt": "2026-11-23T18:07:56.922Z",
+  "ms": 65583,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "opened the live Vikunja app on the local site",
+  "summary": "Opened the live app as requested.\nThe Vikunja app loaded signed in as Amber Demo.\nConfirmed that the Projects menu shows both Website relaunch and Kitchen renovation.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/amber/",
+    "signed_in_user": "Amber Demo",
+    "website_relaunch_project_in_menu": "true",
+    "kitchen_renovation_project_in_menu": "true"
+  },
+  "credits": 16.9601175,
+  "steps": 4,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": null,
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 4,
+    "finalShot": "shots/4.jpg",
+    "failures": []
+  }
+}

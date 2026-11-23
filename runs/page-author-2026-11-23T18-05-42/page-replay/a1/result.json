@@ -1,0 +1,51 @@
+{
+  "flow": "page-replay",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "ilumpt",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/amber/?t=start&speed=10. Verify the line above the block reads 0 of 15 interactions proven with the server off. Click the Replay the run button and wait until that line reads 15 of 15 interactions proven with the server off, then verify it does.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json",
+    "--name",
+    "page-replay"
+  ],
+  "startedAt": "2026-11-23T18:09:02.545Z",
+  "ms": 98147,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "Replayed the run on the Amber page.",
+  "summary": "The requested replay was started from the Amber page after it showed 0 of 15 interactions proven with the server off.\nThe replay completed successfully, and the status above the block updated to 15 of 15 interactions proven with the server off.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/amber/?t=start&speed=10",
+    "interactions_proven_final_count": "15 OF 15 INTERACTIONS PROVEN WITH THE SERVER OFF"
+  },
+  "credits": 24.2545875,
+  "steps": 7,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": null,
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 7,
+    "finalShot": "shots/7.jpg",
+    "failures": []
+  }
+}

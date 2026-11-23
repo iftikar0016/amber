@@ -1,0 +1,92 @@
+[
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/amber/",
+    "status": 200,
+    "resourceType": "document",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/css2",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/amber/amber.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/amber/amber.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/amber/run-data.json",
+    "status": 200,
+    "resourceType": "fetch",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/amber/wireframes.json",
+    "status": 200,
+    "resourceType": "fetch",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/s/fraunces/v38/6NUs8FyLNQOQZAnv9ZwNjucMHVn85Ni7emAe9lKqZTnbB-gzTK0K1ChJdt9hFwpX9W37lgF_mv0iQg.woff2",
+    "status": 200,
+    "resourceType": "font",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/s/fraunces/v38/6NU78FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0KxC9TeA.woff2",
+    "status": 200,
+    "resourceType": "font",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwg.woff2",
+    "status": 200,
+    "resourceType": "font",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-2",
+    "method": "GET",
+    "path": "/amber/evidence/verify-2026-11-23T17-34-53/j15-comment.jpg",
+    "status": 200,
+    "resourceType": "image",
+    "failed": false,
+    "fault": null
+  }
+]

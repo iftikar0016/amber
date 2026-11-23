@@ -1,0 +1,52 @@
+{
+  "flow": "page-counter",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "kfxzzv",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/amber/. Verify the line above the amber block reads 15 of 15 interactions proven with the server off, and verify the caption below the block mentions Kane CLI.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json",
+    "--name",
+    "page-counter"
+  ],
+  "startedAt": "2026-11-23T18:05:43.803Z",
+  "ms": 59816,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "verified amber block details on the local amber page",
+  "summary": "Verified the amber page at the requested site.\nConfirmed that the status line above the amber block says “15 of 15 interactions proven with the server off.”\nConfirmed that the caption below the block mentions Kane CLI.\nThe requested page details were present and matched the expected text.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/amber/",
+    "amber_block_line_text": "15 OF 15 INTERACTIONS PROVEN WITH THE SERVER OFF",
+    "block_caption_kane_cli": "true"
+  },
+  "credits": 10.0064,
+  "steps": 4,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": null,
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 4,
+    "finalShot": "shots/4.jpg",
+    "failures": []
+  }
+}

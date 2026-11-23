@@ -1,0 +1,46 @@
+[
+  {
+    "ordinal": 1,
+    "id": "0-1",
+    "kind": "navigate",
+    "status": "passed",
+    "summary": "navigate: Navigate to http://127.0.0.1:4790/amber/",
+    "url": "http://127.0.0.1:4790/amber/",
+    "durationMs": 0,
+    "shot": "shots/1.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 2,
+    "id": "0-2",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Clicking the Open the live app button",
+    "url": "http://127.0.0.1:4790/amber/",
+    "durationMs": 6688,
+    "shot": "shots/2.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 3,
+    "id": "0-3",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: ANALYZE(textual_visual, 'the project Kitchen renovation is in the Vikunja app me",
+    "url": "http://127.0.0.1:4790/amber/",
+    "durationMs": 12281,
+    "shot": "shots/3.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 4,
+    "id": "0-4",
+    "kind": "assert",
+    "status": "passed",
+    "summary": "assert: the block now shows the Vikunja app signed in as Amber Demo, with the projects W",
+    "url": "http://127.0.0.1:4790/amber/",
+    "durationMs": 0,
+    "shot": "shots/4.jpg",
+    "annotated": null
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "ordinal": 1,
+    "id": "0-1",
+    "kind": "navigate",
+    "status": "passed",
+    "summary": "navigate: Navigate to http://127.0.0.1:4790/amber/",
+    "url": "http://127.0.0.1:4790/amber/",
+    "durationMs": 16,
+    "shot": "shots/1.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 2,
+    "id": "0-2",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Clicking the J15 tile to comment on Kane's evidence inside the amber block",
+    "url": "http://127.0.0.1:4790/amber/",
+    "durationMs": 6594,
+    "shot": "shots/2.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 3,
+    "id": "0-3",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: the history lists a PASS for the capsule",
+    "url": "http://127.0.0.1:4790/amber/",
+    "durationMs": 15328,
+    "shot": "shots/3.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 4,
+    "id": "0-4",
+    "kind": "assert",
+    "status": "passed",
+    "summary": "assert: a side panel opens with the heading Comment on a task",
+    "url": "http://127.0.0.1:4790/amber/",
+    "durationMs": 0,
+    "shot": "shots/4.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 5,
+    "id": "0-5",
+    "kind": "assert",
+    "status": "passed",
+    "summary": "assert: its history lists both a FAIL and a PASS for the capsule",
+    "url": "http://127.0.0.1:4790/amber/",
+    "durationMs": 16,
+    "shot": "shots/5.jpg",
+    "annotated": null
+  }
+]
