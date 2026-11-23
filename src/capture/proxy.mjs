@@ -127,8 +127,11 @@ export function createRecorder(opts = {}) {
   });
 
   // Pass WebSocket upgrades (/api/v2/ws) straight through so the real app behaves normally while recording.
+  const upgraded = new Set();
   server.on('upgrade', (req, sock, head) => {
     counts.upgrades++;
+    upgraded.add(sock);
+    sock.on('close', () => upgraded.delete(sock));
     opts.log?.({ journey, m: 'UPGRADE', u: req.url });
     const up = net.connect(VIKUNJA.port, VIKUNJA.host, () => {
       const lines = [`${req.method} ${req.url} HTTP/1.1`];
@@ -149,7 +152,13 @@ export function createRecorder(opts = {}) {
   return {
     server,
     listen: () => new Promise((resolve) => server.listen(APP.port, APP.host, () => resolve(APP.origin))),
-    close: () => new Promise((resolve) => server.close(() => resolve(undefined))),
+    // Close idle keep-alive and piped WebSocket connections too, or close() waits for the browser forever.
+    close: () =>
+      new Promise((resolve) => {
+        server.close(() => resolve(undefined));
+        server.closeAllConnections();
+        for (const s2 of upgraded) s2.destroy();
+      }),
     setJourney(id) {
       journey = id;
     },
