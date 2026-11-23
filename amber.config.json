@@ -1,0 +1,6 @@
+{
+  "budget": {
+    "cap": 0,
+    "note": "Credits AMBER may spend in total across all runs; 0 means nothing may spend until the user sets a cap."
+  }
+}

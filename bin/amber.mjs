@@ -4,6 +4,15 @@
 import * as vikunja from '../src/vikunja.mjs';
 import { seed, alignDueDates, readCredentials } from '../src/seed.mjs';
 import { createRecorder } from '../src/capture/proxy.mjs';
+import { capture } from '../src/capture/capture.mjs';
+import { cap, spentSoFar } from '../src/run/budget.mjs';
+import { readBalance } from '../src/kane/spawn.mjs';
+
+/** Values after a flag, e.g. --only a,b */
+const flag = (name) => {
+  const i = rest.indexOf(name);
+  return i >= 0 ? rest[i + 1] : undefined;
+};
 
 /** Literal secrets that must never reach a committed file. */
 function secretsToScrub() {
@@ -33,6 +42,16 @@ const commands = {
     const rec = createRecorder({ secrets: secretsToScrub(), log: (o) => console.error(JSON.stringify(o)) });
     rec.setJourney(i >= 0 ? rest[i + 1] : 'manual');
     out({ ok: true, recording: await rec.listen() });
+  },
+  /** Stage 1: Kane walks the journeys against the real server through the recording proxy. Spends credits. */
+  async capture() {
+    const only = flag('--only')?.split(',').filter(Boolean);
+    const r = await capture({ only, log: (l) => console.error(l) });
+    out({ ok: true, ...r });
+  },
+  /** Credit cap, AMBER's spend so far, and the live balance. */
+  async budget() {
+    out({ ok: true, cap: cap(), spent: Math.round(spentSoFar() * 100) / 100, balance: readBalance() });
   },
   async vikunja() {
     const sub = rest[0];
