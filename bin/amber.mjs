@@ -9,6 +9,8 @@ import { cap, spentSoFar } from '../src/run/budget.mjs';
 import { readBalance } from '../src/kane/spawn.mjs';
 import { build } from '../src/capsule/build.mjs';
 import { createCapsuleServer } from '../src/capsule/serve.mjs';
+import { verify } from '../src/verify/verify.mjs';
+import { readState, regressions } from '../src/verify/state.mjs';
 import path from 'node:path';
 import { ROOT } from '../src/config.mjs';
 
@@ -69,6 +71,20 @@ const commands = {
     const logDir = flag('--log');
     const srv = createCapsuleServer({ dir: dir && path.resolve(ROOT, dir), logDir: logDir && path.resolve(ROOT, logDir) });
     out({ ok: true, serving: await srv.listen(), serverOff: await vikunja.serverOffProof() });
+  },
+  /** Stage 3: Kane runs the frozen flows against the capsule with the server off (--mode replay|author). Spends credits. */
+  async verify() {
+    const only = flag('--only')?.split(',').filter(Boolean);
+    const mode = /** @type {'replay'|'author'} */ (flag('--mode') ?? 'replay');
+    const r = await verify({ only, mode, label: flag('--label'), log: (l) => console.error(l) });
+    out({ ok: true, ...r });
+    if (r.results.some((x) => x.verdict !== 'PASS')) process.exitCode = 1;
+  },
+  /** Every flow's latest verdict, and any regressions. */
+  async status() {
+    const s = readState();
+    const flows = Object.fromEntries(Object.entries(s.flows).map(([id, f]) => [id, { verdict: f.verdict, everPassed: f.everPassed, needsHuman: f.needsHuman ?? false, runs: f.history.length }]));
+    out({ ok: true, flows, regressions: regressions(s) });
   },
   async vikunja() {
     const sub = rest[0];
