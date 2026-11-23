@@ -99,7 +99,7 @@
       "id": "j14-new-project",
       "title": "Create a project",
       "kind": "write",
-      "steps": "Create a new project named Garden {{amber_tag}}. Open the Projects page from the main menu and verify Garden {{amber_tag}} is listed. Reload the page, then verify Garden {{amber_tag}} is still listed next to Kitchen renovation.",
+      "steps": "Create a new project named Garden {{amber_tag}}. Open the Projects page from the main menu and verify Garden {{amber_tag}} is listed. Reload the page, then verify the Projects page still lists Garden {{amber_tag}} as well as Kitchen renovation.",
       "outcome": "The new project is listed, and still listed after a reload"
     },
     {
