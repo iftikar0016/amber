@@ -1,0 +1,21 @@
+{
+  "name": "amber",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Turn one real web app into a zero-backend capsule, proved interaction by interaction by Kane CLI with the server switched off.",
+  "type": "module",
+  "bin": {
+    "amber": "bin/amber.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test \"test/**/*.test.mjs\""
+  },
+  "dependencies": {
+    "fflate": "^0.8.2",
+    "yaml": "^2.6.1"
+  },
+  "license": "MIT"
+}
