@@ -1,0 +1,9 @@
+[
+  {
+    "ordinal": 16,
+    "message": "analyzer_failed: @ step 7",
+    "url": "http://127.0.0.1:4790/tasks/7",
+    "rootCause": "The application rejects the requested description change, so the saved text is not retained when the task page is loaded again.",
+    "suggestedFix": "Fix the description-save path so this valid task update is accepted and remains visible after a reload."
+  }
+]

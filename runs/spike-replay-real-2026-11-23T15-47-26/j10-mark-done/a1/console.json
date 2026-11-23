@@ -1,0 +1,37 @@
+[
+  {
+    "level": "warning",
+    "text": "Manifest: Enctype should be set to either application/x-www-form-urlencoded or multipart/form-data. It currently defaults to application/x-www-form-urlencoded",
+    "step": "0-1"
+  },
+  {
+    "level": "log",
+    "text": "Service worker has been registered.",
+    "step": "0-2"
+  },
+  {
+    "level": "log",
+    "text": "New content is downloading.",
+    "step": "0-2"
+  },
+  {
+    "level": "log",
+    "text": "Content has been cached for offline use.",
+    "step": "0-2"
+  },
+  {
+    "level": "log",
+    "text": "App is being served from cache by a service worker.",
+    "step": "0-2"
+  },
+  {
+    "level": "debug",
+    "text": "WebSocket: connected, sending auth",
+    "step": "0-6"
+  },
+  {
+    "level": "debug",
+    "text": "WebSocket: authenticated",
+    "step": "0-6"
+  }
+]

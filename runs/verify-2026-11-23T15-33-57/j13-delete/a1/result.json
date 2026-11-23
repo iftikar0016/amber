@@ -1,0 +1,111 @@
+{
+  "flow": "j13-delete",
+  "attempt": 1,
+  "mode": "replay",
+  "tag": "yushku",
+  "args": [
+    "testmd",
+    "run",
+    "~\\hackathons\\kane\\amber\\.amber\\kane\\runs\\j13-delete\\j13-delete_test.md",
+    "--agent",
+    "--headless",
+    "--no-adaptive-heal"
+  ],
+  "startedAt": "2026-11-23T15:43:23.077Z",
+  "ms": 47632,
+  "exitCode": 1,
+  "killed": false,
+  "status": "failed",
+  "oneLiner": "Deleting “Pick a colour palette” fails because the application rejects the delete request, leaving the task in the Website relaunch list.",
+  "summary": null,
+  "reason": "assertion_failed: @ step 6",
+  "resultCode": null,
+  "bug": {
+    "confirmed": true,
+    "title": "Task deletion request returns 501 and leaves task undeleted",
+    "oneLiner": "Deleting “Pick a colour palette” fails because the application rejects the delete request, leaving the task in the Website relaunch list.",
+    "category": "api_error",
+    "severity": "major",
+    "confidence": 0.99
+  },
+  "failedAssertions": [
+    "the Website relaunch list no longer shows Pick a colour palette."
+  ],
+  "finalState": null,
+  "credits": 0,
+  "steps": 14,
+  "failedSteps": [
+    {
+      "n": 14,
+      "remark": "assert: the Website relaunch list no longer shows Pick a colour palette."
+    }
+  ],
+  "testmdSummary": {
+    "type": "test_md_summary",
+    "overall_status": "failed",
+    "duration_s": 31,
+    "steps": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0,
+      "replay_decisions": 1,
+      "author_decisions": 0
+    },
+    "adaptive_heal": {
+      "triggered": false
+    },
+    "commit": {
+      "committed": false,
+      "reason": "run_failed"
+    },
+    "artifacts": {
+      "replaced": false
+    },
+    "upload": {
+      "performed": true,
+      "succeeded": true
+    },
+    "cancelled": false,
+    "v": 1,
+    "ts": "2026-11-23T15:44:08.019Z",
+    "kind": "typed",
+    "_rt": 1795448648020
+  },
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-23T15:43:23.076Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-23T15:44:11.034Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "verdict": "FAIL",
+  "basis": "kane",
+  "reasons": [
+    "Deleting “Pick a colour palette” fails because the application rejects the delete request, leaving the task in the Website relaunch list."
+  ],
+  "evidence": {
+    "steps": 14,
+    "finalShot": "shots/14.jpg",
+    "failures": [
+      {
+        "ordinal": 14,
+        "message": "assertion_failed: @ step 6",
+        "url": "http://127.0.0.1:4790/tasks/2",
+        "rootCause": "The application does not support the requested task deletion, so it leaves the task in place instead of removing it.",
+        "suggestedFix": "Implement or restore task deletion for this endpoint, then verify that a successful deletion removes the task from the list and that it remains absent after reload."
+      }
+    ]
+  }
+}

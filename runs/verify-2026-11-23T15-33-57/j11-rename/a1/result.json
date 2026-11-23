@@ -1,0 +1,111 @@
+{
+  "flow": "j11-rename",
+  "attempt": 1,
+  "mode": "replay",
+  "tag": "kwemhc",
+  "args": [
+    "testmd",
+    "run",
+    "~\\hackathons\\kane\\amber\\.amber\\kane\\runs\\j11-rename\\j11-rename_test.md",
+    "--agent",
+    "--headless",
+    "--no-adaptive-heal"
+  ],
+  "startedAt": "2026-11-23T15:40:24.480Z",
+  "ms": 60208,
+  "exitCode": 1,
+  "killed": false,
+  "status": "failed",
+  "oneLiner": "The renamed task is not listed because the application rejects the task update request.",
+  "summary": null,
+  "reason": "assertion_failed: @ step 7",
+  "resultCode": null,
+  "bug": {
+    "confirmed": false,
+    "title": "Task title update rejected with 501 error",
+    "oneLiner": "The renamed task is not listed because the application rejects the task update request.",
+    "category": "api_error",
+    "severity": "major",
+    "confidence": 0.99
+  },
+  "failedAssertions": [
+    "Homepage copy {{global.amber_tag}} is listed."
+  ],
+  "finalState": null,
+  "credits": 0,
+  "steps": 16,
+  "failedSteps": [
+    {
+      "n": 16,
+      "remark": "assert: Homepage copy {{global.amber_tag}} is listed."
+    }
+  ],
+  "testmdSummary": {
+    "type": "test_md_summary",
+    "overall_status": "failed",
+    "duration_s": 43,
+    "steps": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0,
+      "replay_decisions": 1,
+      "author_decisions": 0
+    },
+    "adaptive_heal": {
+      "triggered": false
+    },
+    "commit": {
+      "committed": false,
+      "reason": "run_failed"
+    },
+    "artifacts": {
+      "replaced": false
+    },
+    "upload": {
+      "performed": true,
+      "succeeded": true
+    },
+    "cancelled": false,
+    "v": 1,
+    "ts": "2026-11-23T15:41:21.731Z",
+    "kind": "typed",
+    "_rt": 1795448481738
+  },
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-23T15:40:24.479Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-23T15:41:25.033Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "verdict": "FAIL",
+  "basis": "kane",
+  "reasons": [
+    "The renamed task is not listed because the application rejects the task update request."
+  ],
+  "evidence": {
+    "steps": 16,
+    "finalShot": "shots/16.jpg",
+    "failures": [
+      {
+        "ordinal": 16,
+        "message": "assertion_failed: @ step 7",
+        "url": "http://127.0.0.1:4790/projects/2/9",
+        "rootCause": "The server refused the request to save the new task title, so the project list continued to show the old title.",
+        "suggestedFix": "Investigate why the task-update endpoint returns 501 and restore saving task title changes; then rerun the persistence check."
+      }
+    ]
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "flow": "j12-description",
+  "attempt": 1,
+  "mode": "replay",
+  "tag": "bnaifg",
+  "args": [
+    "testmd",
+    "run",
+    "~\\hackathons\\kane\\amber\\.amber\\kane\\runs\\j12-description\\j12-description_test.md",
+    "--agent",
+    "--headless",
+    "--no-adaptive-heal"
+  ],
+  "startedAt": "2026-11-23T15:41:25.521Z",
+  "ms": 116757,
+  "exitCode": 1,
+  "killed": false,
+  "status": "failed",
+  "oneLiner": "The task description cannot be reliably saved and is missing after the page reloads.",
+  "summary": null,
+  "reason": "analyzer_failed: @ step 7",
+  "resultCode": null,
+  "bug": {
+    "confirmed": false,
+    "title": "Task description changes are rejected by AMBER capsule",
+    "oneLiner": "The task description cannot be reliably saved and is missing after the page reloads.",
+    "category": "functional_defect",
+    "severity": "major",
+    "confidence": 0.95
+  },
+  "failedAssertions": [],
+  "finalState": null,
+  "credits": 0,
+  "steps": 16,
+  "failedSteps": [
+    {
+      "n": 16,
+      "remark": "analyze: Checking whether the task description is present"
+    }
+  ],
+  "testmdSummary": {
+    "type": "test_md_summary",
+    "overall_status": "failed",
+    "duration_s": 99,
+    "steps": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0,
+      "replay_decisions": 1,
+      "author_decisions": 0
+    },
+    "adaptive_heal": {
+      "triggered": false
+    },
+    "commit": {
+      "committed": false,
+      "reason": "run_failed"
+    },
+    "artifacts": {
+      "replaced": false
+    },
+    "upload": {
+      "performed": true,
+      "succeeded": true
+    },
+    "cancelled": false,
+    "v": 1,
+    "ts": "2026-11-23T15:43:19.993Z",
+    "kind": "typed",
+    "_rt": 1795448599993
+  },
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-23T15:41:25.520Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-23T15:43:22.608Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "verdict": "FAIL",
+  "basis": "kane",
+  "reasons": [
+    "The task description cannot be reliably saved and is missing after the page reloads."
+  ],
+  "evidence": {
+    "steps": 16,
+    "finalShot": "shots/16.jpg",
+    "failures": [
+      {
+        "ordinal": 16,
+        "message": "analyzer_failed: @ step 7",
+        "url": "http://127.0.0.1:4790/tasks/7",
+        "rootCause": "The application rejects the requested description change, so the saved text is not retained when the task page is loaded again.",
+        "suggestedFix": "Fix the description-save path so this valid task update is accepted and remains visible after a reload."
+      }
+    ]
+  }
+}

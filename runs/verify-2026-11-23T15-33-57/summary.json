@@ -1,0 +1,192 @@
+{
+  "runId": "verify-2026-11-23T15-33-57",
+  "kind": "verify",
+  "mode": "replay",
+  "commit": "0c3b711",
+  "label": "baseline",
+  "serverOff": {
+    "checkedAt": "2026-11-23T15:33:57.867Z",
+    "port": 3456,
+    "portOpen": false,
+    "vikunjaProcesses": [],
+    "off": true
+  },
+  "spend": {
+    "started": "2026-11-23T15:33:59.824Z",
+    "ended": "2026-11-23T15:46:11.189Z",
+    "what": "verify replay j01-sign-in,j02-projects,j03-list-view,j04-task-detail,j05-table-view,j06-kanban,j07-upcoming,j08-search,j09-add-task,j10-mark-done,j11-rename,j12-description,j13-delete,j14-new-project,j15-comment",
+    "estimate": 112.5,
+    "balanceBefore": 9130.8405,
+    "balanceAfter": 9068.5768,
+    "spent": 62.26,
+    "runId": "verify-2026-11-23T15-33-57"
+  },
+  "results": [
+    {
+      "id": "j01-sign-in",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j02-projects",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j03-list-view",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j04-task-detail",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j05-table-view",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j06-kanban",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j07-upcoming",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j08-search",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j09-add-task",
+      "verdict": "FAIL",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [
+        "The app rejected creation of the requested task, so it never appeared in the project list."
+      ],
+      "unanswered": 1,
+      "leaks": 0,
+      "brief": "runs/verify-2026-11-23T15-33-57/j09-add-task/brief.md"
+    },
+    {
+      "id": "j10-mark-done",
+      "verdict": "FAIL",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [
+        "The visible checkbox for Choose worktop could not be clicked to complete the task."
+      ],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": "runs/verify-2026-11-23T15-33-57/j10-mark-done/brief.md"
+    },
+    {
+      "id": "j11-rename",
+      "verdict": "FAIL",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [
+        "The renamed task is not listed because the application rejects the task update request."
+      ],
+      "unanswered": 1,
+      "leaks": 0,
+      "brief": "runs/verify-2026-11-23T15-33-57/j11-rename/brief.md"
+    },
+    {
+      "id": "j12-description",
+      "verdict": "FAIL",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [
+        "The task description cannot be reliably saved and is missing after the page reloads."
+      ],
+      "unanswered": 1,
+      "leaks": 0,
+      "brief": "runs/verify-2026-11-23T15-33-57/j12-description/brief.md"
+    },
+    {
+      "id": "j13-delete",
+      "verdict": "FAIL",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [
+        "Deleting “Pick a colour palette” fails because the application rejects the delete request, leaving the task in the Website relaunch list."
+      ],
+      "unanswered": 1,
+      "leaks": 0,
+      "brief": "runs/verify-2026-11-23T15-33-57/j13-delete/brief.md"
+    },
+    {
+      "id": "j14-new-project",
+      "verdict": "FAIL",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [
+        "Creating the requested project fails because the application returns an error instead of saving it."
+      ],
+      "unanswered": 1,
+      "leaks": 0,
+      "brief": "runs/verify-2026-11-23T15-33-57/j14-new-project/brief.md"
+    },
+    {
+      "id": "j15-comment",
+      "verdict": "FAIL",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [
+        "disputed: Kane said passed, but the capsule refused 1 change(s) during the flow, so the change cannot have been kept"
+      ],
+      "unanswered": 1,
+      "leaks": 0,
+      "brief": "runs/verify-2026-11-23T15-33-57/j15-comment/brief.md",
+      "adjudicated": true,
+      "kaneStatus": "passed"
+    }
+  ]
+}

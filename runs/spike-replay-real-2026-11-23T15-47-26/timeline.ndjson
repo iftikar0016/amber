@@ -1,0 +1,12 @@
+{"t":1795448849603,"type":"flow_start","flow":"j10-mark-done","attempt":1,"mode":"replay","tag":"icqjav"}
+{"t":1795448863703,"type":"flow_step","flow":"j10-mark-done","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795448865036,"type":"flow_step","flow":"j10-mark-done","attempt":1,"n":2,"status":"done","remark":"wait: Waiting for queued login steps to complete"}
+{"t":1795448865377,"type":"flow_step","flow":"j10-mark-done","attempt":1,"n":3,"status":"done","remark":"fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795448865706,"type":"flow_step","flow":"j10-mark-done","attempt":1,"n":4,"status":"done","remark":"fill: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795448866524,"type":"flow_step","flow":"j10-mark-done","attempt":1,"n":5,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795448867295,"type":"flow_step","flow":"j10-mark-done","attempt":1,"n":6,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795448867545,"type":"flow_step","flow":"j10-mark-done","attempt":1,"n":7,"status":"done","remark":"analyze: Checking whether the home page greeting is present"}
+{"t":1795448867644,"type":"flow_step","flow":"j10-mark-done","attempt":1,"n":8,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795448868489,"type":"flow_step","flow":"j10-mark-done","attempt":1,"n":9,"status":"done","remark":"click: Clicking Kitchen renovation in Projects navigation"}
+{"t":1795448874227,"type":"flow_step","flow":"j10-mark-done","attempt":1,"n":10,"status":"failed","remark":"click: Clicking the Choose worktop checkbox to mark the task as done"}
+{"t":1795448906873,"type":"flow_done","flow":"j10-mark-done","attempt":1,"mode":"replay","verdict":"FAIL","basis":"kane","reasons":["The replay stopped when it tried to mark the open task Choose worktop as done."],"credits":0,"ms":57164,"shot":"spike-replay-real-2026-11-23T15-47-26/j10-mark-done/a1/shots/10.jpg"}

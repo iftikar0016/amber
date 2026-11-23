@@ -1,0 +1,93 @@
+{
+  "flow": "j10-mark-done",
+  "attempt": 1,
+  "mode": "replay",
+  "tag": "icqjav",
+  "args": [
+    "testmd",
+    "run",
+    "~\\hackathons\\kane\\amber\\.amber\\kane\\runs\\j10-mark-done\\j10-mark-done_test.md",
+    "--agent",
+    "--headless",
+    "--no-adaptive-heal"
+  ],
+  "startedAt": "2026-11-23T15:47:29.603Z",
+  "ms": 57164,
+  "exitCode": 1,
+  "killed": false,
+  "status": "failed",
+  "oneLiner": "The replay stopped when it tried to mark the open task Choose worktop as done.",
+  "summary": null,
+  "reason": "action_failed: click @ step 10",
+  "resultCode": null,
+  "bug": {
+    "confirmed": false,
+    "title": "Task completion checkbox fails to mark Choose worktop done",
+    "oneLiner": "The replay stopped when it tried to mark the open task Choose worktop as done.",
+    "category": "functional_defect",
+    "severity": "major",
+    "confidence": 0.62
+  },
+  "failedAssertions": [],
+  "finalState": null,
+  "credits": 0,
+  "steps": 10,
+  "failedSteps": [
+    {
+      "n": 10,
+      "remark": "click: Clicking the Choose worktop checkbox to mark the task as done"
+    }
+  ],
+  "testmdSummary": {
+    "type": "test_md_summary",
+    "overall_status": "failed",
+    "duration_s": 40,
+    "steps": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0,
+      "replay_decisions": 1,
+      "author_decisions": 0
+    },
+    "adaptive_heal": {
+      "triggered": false
+    },
+    "commit": {
+      "committed": false,
+      "reason": "run_failed"
+    },
+    "artifacts": {
+      "replaced": false
+    },
+    "upload": {
+      "performed": true,
+      "succeeded": true
+    },
+    "cancelled": false,
+    "v": 1,
+    "ts": "2026-11-23T15:48:23.874Z",
+    "kind": "typed",
+    "_rt": 1795448903875
+  },
+  "serverOff": null,
+  "leaks": 0,
+  "verdict": "FAIL",
+  "basis": "kane",
+  "reasons": [
+    "The replay stopped when it tried to mark the open task Choose worktop as done."
+  ],
+  "evidence": {
+    "steps": 10,
+    "finalShot": "shots/10.jpg",
+    "failures": [
+      {
+        "ordinal": 10,
+        "message": "action_failed: click @ step 10",
+        "url": "http://127.0.0.1:4790/projects/3/13",
+        "rootCause": "The project opened normally and showed the requested open task, but the task-completion click did not complete successfully.",
+        "suggestedFix": "Retry the checkbox action while capturing the resulting task-update request and the post-click state; investigate the task completion handler if the task remains open or the update request fails."
+      }
+    ]
+  }
+}

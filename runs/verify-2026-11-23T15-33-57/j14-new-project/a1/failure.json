@@ -1,0 +1,9 @@
+[
+  {
+    "ordinal": 16,
+    "message": "action_failed: click @ step 7",
+    "url": "http://127.0.0.1:4790/projects/new",
+    "rootCause": "The application does not support the project creation change required by this flow, so the new-project dialog stays open and blocks the next navigation.",
+    "suggestedFix": "Restore support for creating projects through the projects API, and ensure a successful Create action closes the dialog so users can continue to the Projects page."
+  }
+]

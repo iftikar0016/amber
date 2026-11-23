@@ -1,0 +1,86 @@
+[
+  {
+    "step": 1,
+    "type": "navigate",
+    "intent": "Navigate to http://127.0.0.1:4790/login",
+    "instruction": "Navigate to http://127.0.0.1:4790/login"
+  },
+  {
+    "step": 2,
+    "type": "wait",
+    "intent": "queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click \"Stay logged in\"; click \"LOGIN\"",
+    "instruction": "Waiting for login form steps to complete"
+  },
+  {
+    "step": 3,
+    "type": "fill",
+    "intent": "PRIMARY: Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}} with Stay logged in ticked; role=textbox; text=\"Username Or Email Address\" | HINTS: container=Login form",
+    "instruction": "Type \"{{global.amber_user}}\" into \"Username Or Email Address\""
+  },
+  {
+    "step": 4,
+    "type": "fill",
+    "intent": "PRIMARY: Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}} with Stay logged in ticked; role=textbox; text=\"Password\" | HINTS: container=Login form",
+    "instruction": "Type \"{{secrets.user.amber_password}}\" into \"Password\""
+  },
+  {
+    "step": 5,
+    "type": "click",
+    "intent": "PRIMARY: Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}} with Stay logged in ticked; role=checkbox; text=\"Stay logged in\" | HINTS: container=Login form",
+    "instruction": "Click \"Stay logged in\""
+  },
+  {
+    "step": 6,
+    "type": "click",
+    "intent": "PRIMARY: Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}} with Stay logged in ticked; role=button; text=\"LOGIN\" | HINTS: container=Login form",
+    "instruction": "Click \"LOGIN\""
+  },
+  {
+    "step": 7,
+    "type": "analyze",
+    "intent": "whether the home page greeting heading contains Amber Demo",
+    "instruction": "Checking whether the home page greeting is present"
+  },
+  {
+    "step": 8,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  },
+  {
+    "step": 1,
+    "type": "click",
+    "intent": "PRIMARY: Open the project Website relaunch; role=link; text=\"Website relaunch\" | HINTS: container=left navigation project list",
+    "instruction": "Clicking Website relaunch in the project list navigation"
+  },
+  {
+    "step": 2,
+    "type": "click",
+    "intent": "PRIMARY: open the task Pick a colour palette; role=link; text=\"Pick a colour palette\" | HINTS: container=Website relaunch task list",
+    "instruction": "Clicking Pick a colour palette task link"
+  },
+  {
+    "step": 3,
+    "type": "scroll",
+    "intent": "Scroll into view: PRIMARY: Delete the task Pick a colour palette; role=button; text=\"DELETE\" | HINTS: container=task detail sidebar",
+    "instruction": "Scrolling to delete the task details sidebar"
+  },
+  {
+    "step": 4,
+    "type": "click",
+    "intent": "PRIMARY: Delete the task Pick a colour palette; role=button; text=\"DELETE\" | HINTS: container=task detail sidebar",
+    "instruction": "Clicking Delete for the selected task"
+  },
+  {
+    "step": 5,
+    "type": "analyze",
+    "intent": "whether Pick a colour palette is present in the visible Website relaunch task list",
+    "instruction": "Checking whether Pick a colour palette is present in the Website relaunch list"
+  },
+  {
+    "step": 6,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  }
+]

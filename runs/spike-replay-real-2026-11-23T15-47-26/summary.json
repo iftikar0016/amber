@@ -1,0 +1,74 @@
+{
+  "runId": "spike-replay-real-2026-11-23T15-47-26",
+  "kind": "spike",
+  "target": "real",
+  "spend": {
+    "started": "2026-11-23T15:47:27.773Z",
+    "ended": "2026-11-23T15:48:28.713Z",
+    "what": "spike: replay j10-mark-done against the real",
+    "estimate": 15,
+    "balanceBefore": 9068.5768,
+    "balanceAfter": 9064.7179,
+    "spent": 3.86,
+    "runId": "spike-replay-real-2026-11-23T15-47-26"
+  },
+  "results": [
+    {
+      "id": "j10-mark-done",
+      "tag": "icqjav",
+      "verdict": "FAIL",
+      "status": "failed",
+      "credits": 0,
+      "ms": 57164,
+      "reasons": [
+        "The replay stopped when it tried to mark the open task Choose worktop as done."
+      ],
+      "writes": [
+        {
+          "m": "POST",
+          "p": "/api/v2/login",
+          "s": 200,
+          "body": "{\"username\":\"amber\",\"password\":\"[scrubbed]\",\"long_token\":true}"
+        },
+        {
+          "m": "POST",
+          "p": "/api/v2/user/token/refresh",
+          "s": 200,
+          "body": "null"
+        }
+      ],
+      "summary": {
+        "type": "test_md_summary",
+        "overall_status": "failed",
+        "duration_s": 40,
+        "steps": {
+          "total": 1,
+          "passed": 0,
+          "failed": 1,
+          "skipped": 0,
+          "replay_decisions": 1,
+          "author_decisions": 0
+        },
+        "adaptive_heal": {
+          "triggered": false
+        },
+        "commit": {
+          "committed": false,
+          "reason": "run_failed"
+        },
+        "artifacts": {
+          "replaced": false
+        },
+        "upload": {
+          "performed": true,
+          "succeeded": true
+        },
+        "cancelled": false,
+        "v": 1,
+        "ts": "2026-11-23T15:48:23.874Z",
+        "kind": "typed",
+        "_rt": 1795448903875
+      }
+    }
+  ]
+}

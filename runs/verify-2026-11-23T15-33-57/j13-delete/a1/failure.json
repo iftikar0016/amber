@@ -1,0 +1,9 @@
+[
+  {
+    "ordinal": 14,
+    "message": "assertion_failed: @ step 6",
+    "url": "http://127.0.0.1:4790/tasks/2",
+    "rootCause": "The application does not support the requested task deletion, so it leaves the task in place instead of removing it.",
+    "suggestedFix": "Implement or restore task deletion for this endpoint, then verify that a successful deletion removes the task from the list and that it remains absent after reload."
+  }
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "ordinal": 14,
+    "message": "assertion_failed: @ step 6",
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "rootCause": "The server does not support the task-creation change used by the Add button and returns an error instead of saving the task.",
+    "suggestedFix": "Restore support for the task-creation API used by the Add button, then verify the task is saved and remains listed after a reload."
+  }
+]

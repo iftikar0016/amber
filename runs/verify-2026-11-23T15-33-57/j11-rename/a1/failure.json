@@ -1,0 +1,9 @@
+[
+  {
+    "ordinal": 16,
+    "message": "assertion_failed: @ step 7",
+    "url": "http://127.0.0.1:4790/projects/2/9",
+    "rootCause": "The server refused the request to save the new task title, so the project list continued to show the old title.",
+    "suggestedFix": "Investigate why the task-update endpoint returns 501 and restore saving task title changes; then rerun the persistence check."
+  }
+]

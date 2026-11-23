@@ -1,0 +1,98 @@
+{
+  "flow": "j15-comment",
+  "attempt": 1,
+  "mode": "replay",
+  "tag": "comcvg",
+  "args": [
+    "testmd",
+    "run",
+    "~\\hackathons\\kane\\amber\\.amber\\kane\\runs\\j15-comment\\j15-comment_test.md",
+    "--agent",
+    "--headless",
+    "--no-adaptive-heal"
+  ],
+  "startedAt": "2026-11-23T15:45:00.721Z",
+  "ms": 68338,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": null,
+  "summary": null,
+  "reason": null,
+  "resultCode": null,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": null,
+  "credits": 0,
+  "steps": 19,
+  "failedSteps": [],
+  "testmdSummary": {
+    "type": "test_md_summary",
+    "overall_status": "passed",
+    "duration_s": 50,
+    "steps": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "replay_decisions": 1,
+      "author_decisions": 0
+    },
+    "adaptive_heal": {
+      "triggered": false
+    },
+    "commit": {
+      "committed": false,
+      "reason": "readonly_fallback"
+    },
+    "artifacts": {
+      "replaced": false
+    },
+    "upload": {
+      "performed": true,
+      "succeeded": true
+    },
+    "cancelled": false,
+    "v": 1,
+    "ts": "2026-11-23T15:46:06.754Z",
+    "kind": "typed",
+    "_rt": 1795448766755
+  },
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-23T15:45:00.721Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-23T15:46:09.396Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "verdict": "FAIL",
+  "basis": "wire",
+  "reasons": [
+    "disputed: Kane said passed, but the capsule refused 1 change(s) during the flow, so the change cannot have been kept"
+  ],
+  "evidence": {
+    "steps": 19,
+    "finalShot": "shots/19.jpg",
+    "failures": []
+  },
+  "kaneStatus": "passed",
+  "unansweredWrites": 1,
+  "disputed": true,
+  "adjudicated": {
+    "from": "PASS",
+    "to": "FAIL",
+    "at": "2026-11-23T15:49:52.887Z",
+    "why": "Rule added after the baseline: a pass contradicted by a refused change in the capsule log is disputed (j15: the unsent comment draft was restored into the editor)."
+  }
+}

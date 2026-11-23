@@ -1,0 +1,109 @@
+{
+  "flow": "j14-new-project",
+  "attempt": 1,
+  "mode": "replay",
+  "tag": "lgkkne",
+  "args": [
+    "testmd",
+    "run",
+    "~\\hackathons\\kane\\amber\\.amber\\kane\\runs\\j14-new-project\\j14-new-project_test.md",
+    "--agent",
+    "--headless",
+    "--no-adaptive-heal"
+  ],
+  "startedAt": "2026-11-23T15:44:11.485Z",
+  "ms": 48432,
+  "exitCode": 1,
+  "killed": false,
+  "status": "failed",
+  "oneLiner": "Creating the requested project fails because the application returns an error instead of saving it.",
+  "summary": null,
+  "reason": "action_failed: click @ step 7",
+  "resultCode": null,
+  "bug": {
+    "confirmed": true,
+    "title": "Project creation API rejects valid new projects",
+    "oneLiner": "Creating the requested project fails because the application returns an error instead of saving it.",
+    "category": "api_error",
+    "severity": "major",
+    "confidence": 0.99
+  },
+  "failedAssertions": [],
+  "finalState": null,
+  "credits": 0,
+  "steps": 16,
+  "failedSteps": [
+    {
+      "n": 16,
+      "remark": "click: Clicking Projects in the main navigation"
+    }
+  ],
+  "testmdSummary": {
+    "type": "test_md_summary",
+    "overall_status": "failed",
+    "duration_s": 32,
+    "steps": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0,
+      "replay_decisions": 1,
+      "author_decisions": 0
+    },
+    "adaptive_heal": {
+      "triggered": false
+    },
+    "commit": {
+      "committed": false,
+      "reason": "run_failed"
+    },
+    "artifacts": {
+      "replaced": false
+    },
+    "upload": {
+      "performed": true,
+      "succeeded": true
+    },
+    "cancelled": false,
+    "v": 1,
+    "ts": "2026-11-23T15:44:57.795Z",
+    "kind": "typed",
+    "_rt": 1795448697795
+  },
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-23T15:44:11.484Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-23T15:45:00.253Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "verdict": "FAIL",
+  "basis": "kane",
+  "reasons": [
+    "Creating the requested project fails because the application returns an error instead of saving it."
+  ],
+  "evidence": {
+    "steps": 16,
+    "finalShot": "shots/16.jpg",
+    "failures": [
+      {
+        "ordinal": 16,
+        "message": "action_failed: click @ step 7",
+        "url": "http://127.0.0.1:4790/projects/new",
+        "rootCause": "The application does not support the project creation change required by this flow, so the new-project dialog stays open and blocks the next navigation.",
+        "suggestedFix": "Restore support for creating projects through the projects API, and ensure a successful Create action closes the dialog so users can continue to the Projects page."
+      }
+    ]
+  }
+}

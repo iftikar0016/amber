@@ -1,0 +1,111 @@
+{
+  "flow": "j09-add-task",
+  "attempt": 1,
+  "mode": "replay",
+  "tag": "epycjl",
+  "args": [
+    "testmd",
+    "run",
+    "~\\hackathons\\kane\\amber\\.amber\\kane\\runs\\j09-add-task\\j09-add-task_test.md",
+    "--agent",
+    "--headless",
+    "--no-adaptive-heal"
+  ],
+  "startedAt": "2026-11-23T15:38:35.077Z",
+  "ms": 55987,
+  "exitCode": 1,
+  "killed": false,
+  "status": "failed",
+  "oneLiner": "The app rejected creation of the requested task, so it never appeared in the project list.",
+  "summary": null,
+  "reason": "assertion_failed: @ step 6",
+  "resultCode": null,
+  "bug": {
+    "confirmed": false,
+    "title": "Task creation rejected with 501 error",
+    "oneLiner": "The app rejected creation of the requested task, so it never appeared in the project list.",
+    "category": "api_error",
+    "severity": "major",
+    "confidence": 0.99
+  },
+  "failedAssertions": [
+    "Paint samples {{global.amber_tag}} appears in the project task list."
+  ],
+  "finalState": null,
+  "credits": 0,
+  "steps": 14,
+  "failedSteps": [
+    {
+      "n": 14,
+      "remark": "assert: Paint samples {{global.amber_tag}} appears in the project task list."
+    }
+  ],
+  "testmdSummary": {
+    "type": "test_md_summary",
+    "overall_status": "failed",
+    "duration_s": 39,
+    "steps": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0,
+      "replay_decisions": 1,
+      "author_decisions": 0
+    },
+    "adaptive_heal": {
+      "triggered": false
+    },
+    "commit": {
+      "committed": false,
+      "reason": "run_failed"
+    },
+    "artifacts": {
+      "replaced": false
+    },
+    "upload": {
+      "performed": true,
+      "succeeded": true
+    },
+    "cancelled": false,
+    "v": 1,
+    "ts": "2026-11-23T15:39:28.124Z",
+    "kind": "typed",
+    "_rt": 1795448368124
+  },
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-23T15:38:35.077Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-23T15:39:31.418Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "verdict": "FAIL",
+  "basis": "kane",
+  "reasons": [
+    "The app rejected creation of the requested task, so it never appeared in the project list."
+  ],
+  "evidence": {
+    "steps": 14,
+    "finalShot": "shots/14.jpg",
+    "failures": [
+      {
+        "ordinal": 14,
+        "message": "assertion_failed: @ step 6",
+        "url": "http://127.0.0.1:4790/projects/3/13",
+        "rootCause": "The server does not support the task-creation change used by the Add button and returns an error instead of saving the task.",
+        "suggestedFix": "Restore support for the task-creation API used by the Add button, then verify the task is saved and remains listed after a reload."
+      }
+    ]
+  }
+}

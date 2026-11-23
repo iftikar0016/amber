@@ -153,7 +153,10 @@
         "flows/output-j10-mark-done/playwright-python-code/.env.example": "8e782f4eeca814ebca6a947bae584a5a16c3fa988cade75e928af5a4bdf41b1a",
         "flows/output-j10-mark-done/playwright-python-code/requirements.txt": "5a26e04e1ddca7510ee8620b0facedce7bfe6df12419b6224dfa567b1e5b825e",
         "flows/output-j10-mark-done/playwright-python-code/test.py": "711e475fccb6831e0b81927ac07e424a8e58d55843e9ed5208d457285b39be92"
-      }
+      },
+      "verifyBy": "author",
+      "why": "Its saved recording does not replay even against the real Vikunja: Kane cannot click the custom checkbox through the recorded selector (run spike-replay-real-2026-11-23T15-47-26). Each check re-authors the journey from its objective.",
+      "replayCheck": "runs/spike-replay-real-2026-11-23T15-47-26/summary.json"
     },
     "j11-rename": {
       "frozenAt": "2026-11-23T15:29:46.684Z",

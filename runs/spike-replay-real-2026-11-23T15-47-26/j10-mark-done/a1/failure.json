@@ -1,0 +1,9 @@
+[
+  {
+    "ordinal": 10,
+    "message": "action_failed: click @ step 10",
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "rootCause": "The project opened normally and showed the requested open task, but the task-completion click did not complete successfully.",
+    "suggestedFix": "Retry the checkbox action while capturing the resulting task-update request and the post-click state; investigate the task completion handler if the task remains open or the update request fails."
+  }
+]
