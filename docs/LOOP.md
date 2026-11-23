@@ -17,3 +17,10 @@ Development aid used before spending credits: `node scripts/store-check.mjs pris
 - **Repair:** `PATCH /tasks/:id` applies the task page's JSON Patch (top-level `add`/`replace`) to the task's own fields in the store and answers with Vikunja's `Task` body; the list view (already answered from the store) shows the new title. A change the store cannot carry out yet (marking done, moving the task to another project or bucket, an unknown field) is still refused with a 501, never half-applied. The model now also keeps a task's `subscription`, which Vikunja returns with the update.
 - **Checked first (zero credits):** in the captured journey, the update's response and the list read after it equal the real server's.
 - **Proof:** `verify-2026-11-23T16-21-57`, PASS, 9.37 credits.
+
+## j12-description: set a task's description
+
+- **Failure** (baseline `verify-2026-11-23T15-33-57`): the description save (`PATCH /api/v2/tasks/7`) was refused with 501. After the j11 repair the save is accepted, but the zero-credit check showed the next gap: after the reload, the task page's own read (`GET /tasks/7?expand=…buckets`) was still the replayed pre-change response, with an empty description.
+- **Repair:** `GET /tasks/:id` is answered from the store in Vikunja's `TaskReadOneBody` shape (the task's kanban buckets with `expand=buckets`, its subscription, the project's `max_permission`, and Vikunja's `ETag`). It answers `expand=buckets` only for tasks whose buckets the capture shows; others still fall through to the replay. The model now keeps each task's buckets from its captured read.
+- **Checked first (zero credits):** the store's answers to all six pristine task reads equal the server's, and in the captured journey the read after the change equals the server's.
+- **Proof:** `verify-2026-11-23T16-29-21`, PASS, 7.18 credits.

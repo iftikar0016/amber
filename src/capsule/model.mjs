@@ -40,6 +40,8 @@ export function liftModel(pristine) {
     // comment_count is only sent when a list asks for it (expand=comment_count); subscription only by a task's own read
     if (typeof t.comment_count === 'number' && tasks[t.id].comment_count === undefined) tasks[t.id].comment_count = t.comment_count;
     if (t.subscription !== undefined && tasks[t.id].subscription === undefined) tasks[t.id].subscription = t.subscription;
+    // the kanban buckets a task is in (a task's own read with expand=buckets)
+    if (Array.isArray(t.buckets) && tasks[t.id].buckets === undefined) tasks[t.id].buckets = t.buckets;
     if (!user && t.created_by && t.created_by.name) user = t.created_by;
   };
 

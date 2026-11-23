@@ -280,7 +280,32 @@
     return json(200, { $schema: schema(url, 'Task'), ...out });
   }
 
+  /**
+   * GET /tasks/:id: a task's own read (the task page), from the store.
+   * With expand=buckets it answers only when the store knows the task's kanban buckets.
+   */
+  function readTask({ params, query, url, store }) {
+    const m = store.model;
+    const t = m.tasks && m.tasks[params.id];
+    if (!t) return null;
+    const expand = query.getAll('expand');
+    if (expand.includes('buckets') && !Array.isArray(t.buckets)) return null;
+    const project = m.projects && m.projects[t.project_id];
+    const maxPermission = project && typeof project.max_permission === 'number' ? project.max_permission : null;
+    const out = { $schema: schema(url, 'TaskReadOneBody'), ...taskJson(t, { ...(expand.includes('buckets') ? { buckets: t.buckets } : {}), position: 0 }), max_permission: maxPermission };
+    if (t.subscription !== undefined) out.subscription = t.subscription;
+    // Vikunja's ETag: the task's last change in nanoseconds, and the caller's permission
+    const etag = '"' + String(Date.parse(t.updated)) + '000000-' + maxPermission + '"';
+    return json(200, out, { etag });
+  }
+
   const routes = [
+    {
+      name: 'task-read',
+      method: 'GET',
+      path: /^\/api\/v2\/tasks\/(?<id>\d+)$/,
+      handle: readTask,
+    },
     {
       name: 'task-update',
       method: 'PATCH',

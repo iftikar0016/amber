@@ -376,9 +376,9 @@
       "needsHuman": false
     },
     "j12-description": {
-      "verdict": "FAIL",
-      "everPassed": false,
-      "failStreak": 1,
+      "verdict": "PASS",
+      "everPassed": true,
+      "failStreak": 0,
       "history": [
         {
           "runId": "verify-2026-11-23T15-33-57",
@@ -390,6 +390,15 @@
           "record": "runs/verify-2026-11-23T15-33-57/j12-description/a1",
           "commit": "0c3b711",
           "at": "2026-11-23T15:43:22.736Z"
+        },
+        {
+          "runId": "verify-2026-11-23T16-29-21",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-23T16-29-21/j12-description/a1",
+          "commit": "c3faf55",
+          "at": "2026-11-23T16:30:52.321Z"
         }
       ],
       "needsHuman": false
