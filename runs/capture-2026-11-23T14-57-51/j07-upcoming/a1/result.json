@@ -1,0 +1,51 @@
+{
+  "flow": "j07-upcoming",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "davoef",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open Upcoming from the main menu, then verify the tasks Order tiles and Review pricing page are listed.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json",
+    "--name",
+    "j07-upcoming"
+  ],
+  "startedAt": "2026-11-23T15:06:31.381Z",
+  "ms": 109553,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "opened Upcoming tasks on the task management site",
+  "summary": "Signed in as Amber Demo with the Stay logged in option selected.\nOpened Upcoming from the main menu.\nConfirmed that the Upcoming list includes the tasks “Order tiles” and “Review pricing page.”",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/tasks/by/upcoming",
+    "home_page_greeting_amber_demo": "true",
+    "order_tiles_listed": "true",
+    "review_pricing_page_listed": "true"
+  },
+  "credits": 26.800262500000002,
+  "steps": 12,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": null,
+  "leaks": 0,
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 12,
+    "finalShot": "shots/12.jpg",
+    "failures": []
+  }
+}

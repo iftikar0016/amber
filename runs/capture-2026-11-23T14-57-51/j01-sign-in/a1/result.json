@@ -1,0 +1,50 @@
+{
+  "flow": "j01-sign-in",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "udlmqy",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Verify the home page lists the task Order tiles among the current tasks.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json",
+    "--name",
+    "j01-sign-in"
+  ],
+  "startedAt": "2026-11-23T14:57:54.874Z",
+  "ms": 83441,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "signed in to the home page on the local site",
+  "summary": "Signed in with the provided Amber Demo account and selected Stay logged in.\nReached the home page, which greeted Amber Demo.\nConfirmed that Order tiles appeared in the Current Tasks list.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/",
+    "home_page_greeting_amber_demo": "true",
+    "order_tiles_current_tasks": "true"
+  },
+  "credits": 18.9462275,
+  "steps": 10,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": null,
+  "leaks": 0,
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 10,
+    "finalShot": "shots/10.jpg",
+    "failures": []
+  }
+}

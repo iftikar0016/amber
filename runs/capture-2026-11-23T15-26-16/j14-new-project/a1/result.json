@@ -1,0 +1,51 @@
+{
+  "flow": "j14-new-project",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "mosiyu",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Create a new project named Garden {{amber_tag}}. Open the Projects page from the main menu and verify Garden {{amber_tag}} is listed. Reload the page, then verify the Projects page still lists Garden {{amber_tag}} as well as Kitchen renovation.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json",
+    "--name",
+    "j14-new-project"
+  ],
+  "startedAt": "2026-11-23T15:26:20.551Z",
+  "ms": 186878,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "created a Garden mosiyu project on the Projects page",
+  "summary": "Created the new project “Garden mosiyu.”\nOpened the Projects page from the main menu and confirmed that “Garden mosiyu” was listed.\nReloaded the Projects page and confirmed that both “Garden mosiyu” and “Kitchen renovation” remained listed.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/projects",
+    "garden_project_listed": "true",
+    "garden_project_persists_after_reload": "true",
+    "kitchen_renovation_listed_after_reload": "true"
+  },
+  "credits": 43.82302000000001,
+  "steps": 22,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": null,
+  "leaks": 0,
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 22,
+    "finalShot": "shots/22.jpg",
+    "failures": []
+  }
+}

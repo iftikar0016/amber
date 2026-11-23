@@ -1318,5 +1318,25 @@
   "sha": "d6c9f764a93592aa85ee",
   "type": "image/png",
   "status": 200
+ },
+ "/projects/2/9": {
+  "sha": "5dc899e75e5fa265358a",
+  "type": "text/html; charset=utf-8",
+  "status": 200
+ },
+ "/tasks/7": {
+  "sha": "5dc899e75e5fa265358a",
+  "type": "text/html; charset=utf-8",
+  "status": 200
+ },
+ "/projects": {
+  "sha": "5dc899e75e5fa265358a",
+  "type": "text/html; charset=utf-8",
+  "status": 200
+ },
+ "/tasks/6": {
+  "sha": "5dc899e75e5fa265358a",
+  "type": "text/html; charset=utf-8",
+  "status": 200
  }
 }

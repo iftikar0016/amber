@@ -1,0 +1,140 @@
+[
+  {
+    "step": 1,
+    "type": "navigate",
+    "intent": "Navigate to http://127.0.0.1:4790/login",
+    "instruction": "Navigate to http://127.0.0.1:4790/login"
+  },
+  {
+    "step": 2,
+    "type": "wait",
+    "intent": "queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click \"Stay logged in\"; click \"LOGIN\"",
+    "instruction": "Waiting for the login form to load"
+  },
+  {
+    "step": 3,
+    "type": "fill",
+    "intent": "PRIMARY: username; role=textbox; text=\"Username Or Email Address\" | HINTS: container=Login form",
+    "instruction": "Type \"{{global.amber_user}}\" into \"Username Or Email Address\""
+  },
+  {
+    "step": 4,
+    "type": "fill",
+    "intent": "PRIMARY: password; role=textbox; text=\"Password\" | HINTS: container=Login form",
+    "instruction": "Type \"{{secrets.user.amber_password}}\" into \"Password\""
+  },
+  {
+    "step": 5,
+    "type": "click",
+    "intent": "PRIMARY: Stay logged in; role=checkbox; text=\"Stay logged in\" | HINTS: container=Login form",
+    "instruction": "Click \"Stay logged in\""
+  },
+  {
+    "step": 6,
+    "type": "click",
+    "intent": "PRIMARY: Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}} with Stay logged in ticked; role=button; text=\"LOGIN\" | HINTS: container=Login form",
+    "instruction": "Click \"LOGIN\""
+  },
+  {
+    "step": 7,
+    "type": "wait",
+    "intent": "PRIMARY: wait for the home page heading \"Still at it, Amber Demo?\" to appear",
+    "instruction": "Waiting for the home page heading Still at it, Amber Demo to appear"
+  },
+  {
+    "step": 8,
+    "type": "analyze",
+    "intent": "the greeting text in the home page main heading",
+    "instruction": "Reading the home page greeting"
+  },
+  {
+    "step": 9,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  },
+  {
+    "step": 1,
+    "type": "click",
+    "intent": "PRIMARY: Projects page link; role=link; text=\"Projects\" | HINTS: container=main navigation",
+    "instruction": "Clicking Projects page link"
+  },
+  {
+    "step": 2,
+    "type": "click",
+    "intent": "PRIMARY: Create a new project; role=link; text=\"NEW PROJECT\" | HINTS: position=top-right; container=Projects page",
+    "instruction": "Clicking NEW PROJECT in the top-right Projects page"
+  },
+  {
+    "step": 3,
+    "type": "wait",
+    "intent": "queued plan (2 steps): type \"Title\"; click \"CREATE\"",
+    "instruction": "Waiting for the queued steps to run"
+  },
+  {
+    "step": 4,
+    "type": "fill",
+    "intent": "PRIMARY: Create a new project named Garden {{global.amber_tag}}; role=textbox; text=\"Title\" | HINTS: container=New project dialog",
+    "instruction": "Type \"Garden {{global.amber_tag}}\" into \"Title\""
+  },
+  {
+    "step": 5,
+    "type": "click",
+    "intent": "PRIMARY: Create a new project named Garden {{global.amber_tag}}; role=button; text=\"CREATE\" | HINTS: container=New project dialog; position=bottom-right",
+    "instruction": "Clicking the Create button in the New project dialog"
+  },
+  {
+    "step": 6,
+    "type": "wait",
+    "intent": "PRIMARY: confirm the newly created project is available",
+    "instruction": "Waiting for the newly created project to be available"
+  },
+  {
+    "step": 7,
+    "type": "click",
+    "intent": "PRIMARY: Open the Projects page from the main menu; role=link; text=\"Projects\" | HINTS: container=main navigation",
+    "instruction": "Clicking Projects in the main navigation"
+  },
+  {
+    "step": 8,
+    "type": "analyze",
+    "intent": "whether the Garden {{global.amber_tag}} project is present in the Projects navigation list",
+    "instruction": "Checking whether the Garden {{global.amber_tag}} project is present"
+  },
+  {
+    "step": 9,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  },
+  {
+    "step": 10,
+    "type": "refresh",
+    "intent": "Navigate refresh",
+    "instruction": "Navigate refresh"
+  },
+  {
+    "step": 11,
+    "type": "wait",
+    "intent": "PRIMARY: confirm the Projects page has reloaded",
+    "instruction": "Waiting for the Projects page to finish reloading and confirm it is updated"
+  },
+  {
+    "step": 12,
+    "type": "analyze",
+    "intent": "whether the Garden {{global.amber_tag}} project link in the Projects navigation list is present",
+    "instruction": "Checking whether the Garden project is listed"
+  },
+  {
+    "step": 13,
+    "type": "analyze",
+    "intent": "whether the Kitchen renovation project link in the Projects navigation list is present",
+    "instruction": "Checking whether Kitchen renovation is listed"
+  },
+  {
+    "step": 14,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  }
+]

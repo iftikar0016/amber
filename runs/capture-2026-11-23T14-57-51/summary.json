@@ -1,0 +1,135 @@
+{
+  "runId": "capture-2026-11-23T14-57-51",
+  "kind": "capture",
+  "spend": {
+    "started": "2026-11-23T14:57:53.132Z",
+    "ended": "2026-11-23T15:25:54.716Z",
+    "what": "capture j01-sign-in,j02-projects,j04-task-detail,j05-table-view,j06-kanban,j07-upcoming,j08-search,j10-mark-done,j11-rename,j12-description,j13-delete,j14-new-project,j15-comment",
+    "estimate": 455,
+    "balanceBefore": 9619.6176,
+    "balanceAfter": 9181.9174,
+    "spent": 437.7,
+    "runId": "capture-2026-11-23T14-57-51"
+  },
+  "results": [
+    {
+      "id": "j01-sign-in",
+      "verdict": "PASS",
+      "reasons": [],
+      "credits": 18.9462275,
+      "savedTest": true,
+      "frozenCandidate": "flows/j01-sign-in_test.md",
+      "record": "runs/capture-2026-11-23T14-57-51/j01-sign-in/a1"
+    },
+    {
+      "id": "j02-projects",
+      "verdict": "PASS",
+      "reasons": [],
+      "credits": 24.5597575,
+      "savedTest": true,
+      "frozenCandidate": "flows/j02-projects_test.md",
+      "record": "runs/capture-2026-11-23T14-57-51/j02-projects/a1"
+    },
+    {
+      "id": "j04-task-detail",
+      "verdict": "PASS",
+      "reasons": [],
+      "credits": 28.251329999999996,
+      "savedTest": true,
+      "frozenCandidate": "flows/j04-task-detail_test.md",
+      "record": "runs/capture-2026-11-23T14-57-51/j04-task-detail/a1"
+    },
+    {
+      "id": "j05-table-view",
+      "verdict": "PASS",
+      "reasons": [],
+      "credits": 22.071984999999998,
+      "savedTest": true,
+      "frozenCandidate": "flows/j05-table-view_test.md",
+      "record": "runs/capture-2026-11-23T14-57-51/j05-table-view/a1"
+    },
+    {
+      "id": "j06-kanban",
+      "verdict": "PASS",
+      "reasons": [],
+      "credits": 25.125127499999994,
+      "savedTest": true,
+      "frozenCandidate": "flows/j06-kanban_test.md",
+      "record": "runs/capture-2026-11-23T14-57-51/j06-kanban/a1"
+    },
+    {
+      "id": "j07-upcoming",
+      "verdict": "PASS",
+      "reasons": [],
+      "credits": 26.800262500000002,
+      "savedTest": true,
+      "frozenCandidate": "flows/j07-upcoming_test.md",
+      "record": "runs/capture-2026-11-23T14-57-51/j07-upcoming/a1"
+    },
+    {
+      "id": "j08-search",
+      "verdict": "PASS",
+      "reasons": [],
+      "credits": 22.723242499999998,
+      "savedTest": true,
+      "frozenCandidate": "flows/j08-search_test.md",
+      "record": "runs/capture-2026-11-23T14-57-51/j08-search/a1"
+    },
+    {
+      "id": "j10-mark-done",
+      "verdict": "PASS",
+      "reasons": [],
+      "credits": 27.278015,
+      "savedTest": true,
+      "frozenCandidate": "flows/j10-mark-done_test.md",
+      "record": "runs/capture-2026-11-23T14-57-51/j10-mark-done/a1"
+    },
+    {
+      "id": "j11-rename",
+      "verdict": "PASS",
+      "reasons": [],
+      "credits": 35.368084999999994,
+      "savedTest": true,
+      "frozenCandidate": "flows/j11-rename_test.md",
+      "record": "runs/capture-2026-11-23T14-57-51/j11-rename/a1"
+    },
+    {
+      "id": "j12-description",
+      "verdict": "PASS",
+      "reasons": [],
+      "credits": 37.9172805,
+      "savedTest": true,
+      "frozenCandidate": "flows/j12-description_test.md",
+      "record": "runs/capture-2026-11-23T14-57-51/j12-description/a1"
+    },
+    {
+      "id": "j13-delete",
+      "verdict": "PASS",
+      "reasons": [],
+      "credits": 34.29970499999999,
+      "savedTest": true,
+      "frozenCandidate": "flows/j13-delete_test.md",
+      "record": "runs/capture-2026-11-23T14-57-51/j13-delete/a1"
+    },
+    {
+      "id": "j14-new-project",
+      "verdict": "FAIL",
+      "reasons": [
+        "The project was created and remained after reload, but the final check incorrectly required it to be directly next to Kitchen renovation."
+      ],
+      "credits": 49.046079500000005,
+      "savedTest": true,
+      "frozenCandidate": null,
+      "record": "runs/capture-2026-11-23T14-57-51/j14-new-project/a1"
+    },
+    {
+      "id": "j15-comment",
+      "verdict": "PASS",
+      "reasons": [],
+      "credits": 35.587272500000005,
+      "savedTest": true,
+      "frozenCandidate": "flows/j15-comment_test.md",
+      "record": "runs/capture-2026-11-23T14-57-51/j15-comment/a1"
+    }
+  ]
+}

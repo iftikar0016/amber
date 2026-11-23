@@ -1,0 +1,9 @@
+[
+  {
+    "ordinal": 21,
+    "message": "Final verification failed: \"Garden {{global.amber_tag}} is still listed next to Kitchen renovation.\"",
+    "url": "http://127.0.0.1:4790/projects",
+    "rootCause": "The test assumed a particular card order that the Projects page does not promise. After reload, Garden bwickx is still visible, but Reading list remains between it and Kitchen renovation.",
+    "suggestedFix": "Change the final verification to confirm that the created project and Kitchen renovation are both listed after reload, without requiring them to be adjacent. Only assert an order if the product has a documented sorting rule that guarantees it."
+  }
+]

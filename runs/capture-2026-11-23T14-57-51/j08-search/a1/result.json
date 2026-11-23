@@ -1,0 +1,49 @@
+{
+  "flow": "j08-search",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "usaadt",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Use the search in the top bar to search for tiles, open the result Order tiles, then verify the task heading reads Order tiles.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json",
+    "--name",
+    "j08-search"
+  ],
+  "startedAt": "2026-11-23T15:08:22.746Z",
+  "ms": 114005,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "Opened the Order tiles result on the task site.",
+  "summary": "Searched for “tiles” using the top search bar.\nOpened the “Order tiles” result.\nThe task page opened with the heading “Order tiles”.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/tasks/8",
+    "task_heading": "Order tiles"
+  },
+  "credits": 22.723242499999998,
+  "steps": 14,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": null,
+  "leaks": 0,
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 14,
+    "finalShot": "shots/14.jpg",
+    "failures": []
+  }
+}

@@ -1,0 +1,27 @@
+{"t":1795447578802,"type":"run_start","runId":"capture-2026-11-23T15-26-16","kind":"capture","target":"real-server","flows":["j14-new-project"]}
+{"t":1795447580550,"type":"flow_start","flow":"j14-new-project","attempt":1,"mode":"author","tag":"mosiyu"}
+{"t":1795447603341,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":2,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795447617083,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":3,"status":"done","remark":"wait: queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click "}
+{"t":1795447617956,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":4,"status":"done","remark":"type: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795447618776,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":5,"status":"done","remark":"type: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795447620093,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":6,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795447621417,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":7,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795447631188,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":8,"status":"done","remark":"wait: PRIMARY: wait for the home page heading \"Still at it, Amber Demo?\" to appear"}
+{"t":1795447642786,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":9,"status":"done","remark":"analyze: the home page greeting reads Amber Demo"}
+{"t":1795447643587,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":10,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795447667190,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":2,"status":"done","remark":"click: Clicking Projects page link"}
+{"t":1795447674080,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":3,"status":"done","remark":"click: Clicking NEW PROJECT in the top-right Projects page"}
+{"t":1795447686180,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":4,"status":"done","remark":"wait: queued plan (2 steps): type \"Title\"; click \"CREATE\""}
+{"t":1795447686988,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":5,"status":"done","remark":"type: Type \"Garden {{global.amber_tag}}\" into \"Title\""}
+{"t":1795447687957,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":6,"status":"done","remark":""}
+{"t":1795447694218,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":7,"status":"done","remark":"click: Clicking the Create button in the New project dialog"}
+{"t":1795447704618,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":8,"status":"done","remark":"wait: PRIMARY: confirm the newly created project is available"}
+{"t":1795447711837,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":9,"status":"done","remark":"click: Clicking Projects in the main navigation"}
+{"t":1795447722060,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":10,"status":"done","remark":"analyze: ANALYZE(textual_visual, 'Garden {{global.amber_tag}} is listed on the Projects p"}
+{"t":1795447722738,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":11,"status":"done","remark":"assert: Garden {{global.amber_tag}} is listed on the Projects page."}
+{"t":1795447733729,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":12,"status":"done","remark":"wait: PRIMARY: confirm the Projects page has reloaded"}
+{"t":1795447742975,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":13,"status":"done","remark":"analyze: Kitchen renovation is listed on the Projects page."}
+{"t":1795447743673,"type":"flow_step","flow":"j14-new-project","attempt":1,"n":14,"status":"done","remark":"assert: The Projects page still lists Garden {{global.amber_tag}} as well as Kitchen ren"}
+{"t":1795447767543,"type":"flow_done","flow":"j14-new-project","attempt":1,"mode":"author","verdict":"PASS","basis":"kane","reasons":[],"credits":43.82302000000001,"ms":186878,"shot":"capture-2026-11-23T15-26-16/j14-new-project/a1/shots/22.jpg"}
+{"t":1795447767611,"type":"frontend_completed","fetched":0,"failed":[]}
+{"t":1795447769433,"type":"run_done","runId":"capture-2026-11-23T15-26-16","spent":51.08,"tally":{"PASS":1}}

@@ -1,0 +1,51 @@
+{
+  "flow": "j06-kanban",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "kftmbx",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Kitchen renovation and switch to its Kanban view, then verify a board column is shown containing a card titled Choose worktop.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json",
+    "--name",
+    "j06-kanban"
+  ],
+  "startedAt": "2026-11-23T15:04:41.365Z",
+  "ms": 108120,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "opened the Kitchen renovation Kanban board on the project site",
+  "summary": "Signed in as Amber Demo with the Stay logged in option selected.\nOpened the Kitchen renovation project and switched to its Kanban board.\nConfirmed that the board displays a Done column and a card titled “Choose worktop.”",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/projects/3/16",
+    "home_page_greeting_amber_demo": "true",
+    "board_column_shown": "true",
+    "choose_worktop_card_shown": "true"
+  },
+  "credits": 25.125127499999994,
+  "steps": 12,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": null,
+  "leaks": 0,
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 12,
+    "finalShot": "shots/12.jpg",
+    "failures": []
+  }
+}

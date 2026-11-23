@@ -1,0 +1,68 @@
+{
+  "flow": "j14-new-project",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "bwixkx",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Create a new project named Garden {{amber_tag}}. Open the Projects page from the main menu and verify Garden {{amber_tag}} is listed. Reload the page, then verify Garden {{amber_tag}} is still listed next to Kitchen renovation.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json",
+    "--name",
+    "j14-new-project"
+  ],
+  "startedAt": "2026-11-23T15:20:28.957Z",
+  "ms": 195648,
+  "exitCode": 1,
+  "killed": false,
+  "status": "failed",
+  "oneLiner": "The project was created and remained after reload, but the final check incorrectly required it to be directly next to Kitchen renovation.",
+  "summary": "The test assumed a particular card order that the Projects page does not promise. After reload, Garden bwickx is still visible, but Reading list remains between it and Kitchen renovation.\nChange the final verification to confirm that the created project and Kitchen renovation are both listed after reload, without requiring them to be adjacent. Only assert an order if the product has a documented sorting rule that guarantees it.",
+  "reason": "Final verification failed: \"Garden {{global.amber_tag}} is still listed next to Kitchen renovation.\"",
+  "resultCode": 710,
+  "bug": {
+    "confirmed": false,
+    "title": "Project-order assertion assumes an unsupported placement",
+    "oneLiner": "The project was created and remained after reload, but the final check incorrectly required it to be directly next to Kitchen renovation.",
+    "category": "state_transition_bug",
+    "severity": "minor",
+    "confidence": 0.93
+  },
+  "failedAssertions": [],
+  "finalState": {},
+  "credits": 49.046079500000005,
+  "steps": 22,
+  "failedSteps": [
+    {
+      "n": 14,
+      "remark": "assert: Garden {{global.amber_tag}} is still listed next to Kitchen renovation."
+    }
+  ],
+  "testmdSummary": null,
+  "serverOff": null,
+  "leaks": 0,
+  "verdict": "FAIL",
+  "basis": "kane",
+  "reasons": [
+    "The project was created and remained after reload, but the final check incorrectly required it to be directly next to Kitchen renovation."
+  ],
+  "evidence": {
+    "steps": 22,
+    "finalShot": "shots/22.jpg",
+    "failures": [
+      {
+        "ordinal": 21,
+        "message": "Final verification failed: \"Garden {{global.amber_tag}} is still listed next to Kitchen renovation.\"",
+        "url": "http://127.0.0.1:4790/projects",
+        "rootCause": "The test assumed a particular card order that the Projects page does not promise. After reload, Garden bwickx is still visible, but Reading list remains between it and Kitchen renovation.",
+        "suggestedFix": "Change the final verification to confirm that the created project and Kitchen renovation are both listed after reload, without requiring them to be adjacent. Only assert an order if the product has a documented sorting rule that guarantees it."
+      }
+    ]
+  }
+}

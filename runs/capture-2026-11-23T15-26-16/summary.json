@@ -1,0 +1,25 @@
+{
+  "runId": "capture-2026-11-23T15-26-16",
+  "kind": "capture",
+  "spend": {
+    "started": "2026-11-23T15:26:18.788Z",
+    "ended": "2026-11-23T15:29:29.432Z",
+    "what": "capture j14-new-project",
+    "estimate": 35,
+    "balanceBefore": 9181.9174,
+    "balanceAfter": 9130.8405,
+    "spent": 51.08,
+    "runId": "capture-2026-11-23T15-26-16"
+  },
+  "results": [
+    {
+      "id": "j14-new-project",
+      "verdict": "PASS",
+      "reasons": [],
+      "credits": 43.82302000000001,
+      "savedTest": true,
+      "frozenCandidate": "flows/j14-new-project_test.md",
+      "record": "runs/capture-2026-11-23T15-26-16/j14-new-project/a1"
+    }
+  ]
+}

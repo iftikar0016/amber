@@ -1,0 +1,50 @@
+{
+  "flow": "j13-delete",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "vnbcql",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Website relaunch and open the task Pick a colour palette. Delete the task and confirm. Verify the Website relaunch list no longer shows Pick a colour palette. Reload the page, then verify Pick a colour palette is still gone and Set up analytics is still listed.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json",
+    "--name",
+    "j13-delete"
+  ],
+  "startedAt": "2026-11-23T15:18:01.838Z",
+  "ms": 144909,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "deleted a task from the Website relaunch project on the project page",
+  "summary": "Opened the “Website relaunch” project and selected the “Pick a colour palette” task.\nDeleted “Pick a colour palette” and confirmed the deletion.\nReloaded the project page; “Pick a colour palette” remained removed, while “Set up analytics” was still listed.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/projects/2/9",
+    "Pick a colour palette": "absent from the Website relaunch list",
+    "Set up analytics": "listed in the Website relaunch list"
+  },
+  "credits": 34.29970499999999,
+  "steps": 17,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": null,
+  "leaks": 0,
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 17,
+    "finalShot": "shots/17.jpg",
+    "failures": []
+  }
+}

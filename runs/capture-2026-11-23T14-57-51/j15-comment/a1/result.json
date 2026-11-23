@@ -1,0 +1,50 @@
+{
+  "flow": "j15-comment",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "dszhls",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Kitchen renovation and open the task Get three quotes. Add the comment Third quote {{amber_tag}}, then verify the comments show both Third quote {{amber_tag}} and Two quotes in so far. Reload the page, then verify Third quote {{amber_tag}} is still shown.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json",
+    "--name",
+    "j15-comment"
+  ],
+  "startedAt": "2026-11-23T15:23:46.372Z",
+  "ms": 126465,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "added a quote comment to the Kitchen renovation task on the project site",
+  "summary": "Signed in as Amber Demo with the stay-logged-in option enabled.\nOpened the “Get three quotes” task in the “Kitchen renovation” project.\nAdded the comment “Third quote dszhls”; the existing “Two quotes in so far” comment was also visible.\nReloaded the task page and confirmed that “Third quote dszhls” remained visible.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/tasks/6",
+    "third_quote_comment_still_shown": "true",
+    "two_quotes_in_so_far_comment_shown": "true"
+  },
+  "credits": 35.587272500000005,
+  "steps": 17,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": null,
+  "leaks": 0,
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 17,
+    "finalShot": "shots/17.jpg",
+    "failures": []
+  }
+}

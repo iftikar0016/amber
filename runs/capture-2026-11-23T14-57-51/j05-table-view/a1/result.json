@@ -1,0 +1,51 @@
+{
+  "flow": "j05-table-view",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "neitzq",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Kitchen renovation and switch to its Table view, then verify a table lists Get three quotes, Order tiles and Book electrician.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json",
+    "--name",
+    "j05-table-view"
+  ],
+  "startedAt": "2026-11-23T15:02:49.419Z",
+  "ms": 110137,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "opened the Kitchen renovation project in Table view on the projects site",
+  "summary": "Opened the Kitchen renovation project and switched it to Table view.\nConfirmed that the table lists the tasks Get three quotes, Order tiles, and Book electrician.\nThe requested Table view was opened successfully.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/projects/3/15",
+    "get_three_quotes_listed": "true",
+    "order_tiles_listed": "true",
+    "book_electrician_listed": "true"
+  },
+  "credits": 22.071984999999998,
+  "steps": 13,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": null,
+  "leaks": 0,
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 13,
+    "finalShot": "shots/13.jpg",
+    "failures": []
+  }
+}
