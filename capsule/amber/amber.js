@@ -283,7 +283,12 @@ $('close').addEventListener('click', () => ($('drawer').hidden = true));
 addEventListener('keydown', (e) => e.key === 'Escape' && ($('drawer').hidden = true));
 
 // ---- start ------------------------------------------------------------------------------------------------
-if (params.get('t') === 'start') render(0, false);
-else render(events.length, false);
+// ?t=start shows the block before any Kane run; ?until=<runId> shows it as it stood right after that run;
+// ?play replays from there (from the start if neither is given).
+const untilRun = params.get('until');
+const untilIndex = untilRun ? events.reduce((last, e, i) => (e.runId === untilRun ? i + 1 : last), -1) : -1;
+const startAt = untilIndex >= 0 ? untilIndex : params.get('t') === 'start' ? 0 : events.length;
+render(startAt, false);
+if (startAt < events.length && params.get('play') === null) $('caption').textContent = describe(events[startAt - 1]);
 if (params.get('flow')) openDrawer(params.get('flow'));
-if (params.get('play') !== null) play(0);
+if (params.get('play') !== null) play(startAt === events.length ? 0 : startAt);

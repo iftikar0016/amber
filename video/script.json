@@ -1,0 +1,61 @@
+{
+  "$comment": "The demo video, scene by scene. Every visual is real: headless-Chrome recordings of the committed page and capsule, Kane's own screenshots from committed runs, and text taken from committed logs. The narration is synthetic (ElevenLabs).",
+  "title": "AMBER: Vikunja with its server switched off, proven by Kane CLI",
+  "scenes": [
+    {
+      "id": "s01-open",
+      "visual": "clip:open",
+      "narration": "This is Vikunja, a real open-source to-do app. Its server is switched off. Every journey you are about to see still works, and Kane CLI proved each one. This is AMBER."
+    },
+    {
+      "id": "s02-idea",
+      "visual": "slide:idea",
+      "narration": "The idea is to preserve a real web app as a capsule: its own front end, plus a Service Worker that answers every API call inside the browser. No backend at all. The catch is that a naive replay lies. Add a task, and it shows you the task from the recording, not yours. So AMBER never lets a recording prove a change. Kane has to."
+    },
+    {
+      "id": "s03-capture",
+      "visual": "slide:capture",
+      "narration": "First, Kane walks fifteen plain-English journeys on the real server: sign in, browse, Kanban, search, add, rename, describe, delete, comment. A recording proxy keeps every API exchange, scrubbed of passwords and tokens. Kane saves each journey as a test, and AMBER freezes it by hash, so nobody can edit a test to make it pass. Kane even caught a mistake of mine: one journey was worded wrongly, so it was fixed before anything else."
+    },
+    {
+      "id": "s04-baseline",
+      "visual": "clip:baseline",
+      "narration": "Then the server goes off, and AMBER checks the port and the process before and after every run. Against a capsule that can only replay, Kane passes the eight read journeys and fails all seven that change data."
+    },
+    {
+      "id": "s05-tag",
+      "visual": "slide:j09",
+      "narration": "Every write journey types a fresh random tag, so a replayed response can never pass. Here Kane typed this run's tag, the capsule refused to fake the result, and Kane's own diagnosis says exactly that."
+    },
+    {
+      "id": "s06-falsepass",
+      "visual": "slide:j15",
+      "narration": "One verdict was wrong. Kane passed the comment journey, but the capsule had refused the comment. After the reload, Vikunja restored the unsent draft into the editor, and Kane's check found the text there. AMBER's own log had seen the refused change, so AMBER overruled Kane. A pass the wire contradicts is a fail."
+    },
+    {
+      "id": "s07-loop",
+      "visual": "slide:loop",
+      "narration": "Now the coding agent, Claude Code, repairs the capsule, one interaction per commit. Each repair starts from Kane's failure brief and ends with a Kane run that proves it, with the server off. Seven repairs, seven commits, and after every one, Kane re-checks the journeys that already passed."
+    },
+    {
+      "id": "s08-heal",
+      "visual": "clip:heal",
+      "narration": "Fifteen of fifteen. Then, to be sure, Kane re-authored every journey from its plain English, with no recorded steps at all. Fifteen of fifteen again."
+    },
+    {
+      "id": "s09-hook",
+      "visual": "slide:hook",
+      "narration": "Kane also guards the agent. A Claude Code Stop hook will not let the agent finish while a journey that passed before is failing. To prove it, we broke the comment repair on purpose. The hook had Kane replay all fifteen journeys. Kane was fooled by the draft again, AMBER was not, and the hook blocked the agent with the brief to read. Once Kane proved the fix, the hook let it go. Both decisions are on the record."
+    },
+    {
+      "id": "s10-live",
+      "visual": "clip:live",
+      "narration": "And this is the result. Vikunja, running with no server behind it. Add a task, reload, and it is still there, kept in the browser. Flip the amber block, and the same capsule runs inside it. Kane tests this page too, with four saved tests."
+    },
+    {
+      "id": "s11-try",
+      "visual": "slide:try",
+      "narration": "To try it, clone the repository and run node bin slash demo. No install, no Kane account, no credits. To be honest about it: this is one app, and AMBER is the agent workflow that produced its capsule, not a one-command tool for any site. Fifteen journeys are proven, and the README lists what is not. Build it with an agent. Prove it with Kane. Keep it in amber."
+    }
+  ]
+}

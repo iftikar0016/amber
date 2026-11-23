@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AMBER video slide</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  :root { --night:#0a0806; --ink:#f3e6cf; --dim:#b9a68a; --faint:#7a6a54; --gold:#ffd36b; --crimson:#ff2d46; --serif:'Fraunces',Georgia,serif; --mono:'JetBrains Mono',Consolas,monospace; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; width:1440px; height:810px; overflow:hidden; background: radial-gradient(70% 70% at 50% 45%, #2a1606 0%, var(--night) 65%), var(--night); color:var(--ink); font-family:var(--mono); }
+  .slide { position:absolute; inset:0; padding:56px 72px; display:none; }
+  .slide.on { display:block; }
+  h1 { font: 300 52px/1.08 var(--serif); margin:0 0 10px; letter-spacing:-0.01em; }
+  h1 em { color: var(--gold); font-style: italic; }
+  .sub { color: var(--dim); font-size: 15px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 28px; }
+  .label { color: var(--faint); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+  .panel { background: rgba(255,200,120,.05); border: 1px solid rgba(255,196,110,.25); border-radius: 14px; padding: 18px 22px; }
+  .quote { font: italic 300 22px/1.35 var(--serif); color: var(--ink); }
+  .bad { color: #ff7184; } .good { color: var(--gold); }
+  img.shot { width: 100%; border-radius: 10px; border: 1px solid rgba(255,196,110,.3); display:block; }
+  code, .code { font-family: var(--mono); }
+  /* idea */
+  .flow { display:flex; align-items:stretch; gap:22px; margin-top: 84px; }
+  .flow .arrow { align-self: center; }
+  .box { flex: 1; border:1px solid rgba(255,196,110,.4); border-radius:14px; padding:24px 26px; font-size:19px; line-height:1.45; background: rgba(255,190,90,.06); }
+  .box b { display:block; font: 400 30px/1.2 var(--serif); color: var(--gold); margin-bottom: 8px; }
+  .arrow { color: var(--dim); font-size: 30px; }
+  .lie { margin-top: 72px; display:grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .lie .quote { font-size: 27px; }
+  /* capture grid */
+  .grid { display:grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  .grid figure { margin:0; }
+  .grid img { width:100%; border-radius:6px; border:1px solid rgba(255,196,110,.25); display:block; }
+  .grid figcaption { font-size: 11px; color: var(--dim); margin-top: 4px; letter-spacing: .04em; }
+  /* evidence */
+  .two { display:grid; grid-template-columns: 2.3fr 1fr; gap: 28px; align-items: start; margin-top: 14px; }
+  .rows div { margin: 0 0 16px; font-size: 16px; line-height: 1.5; }
+  .hl { position:absolute; border:3px solid var(--crimson); border-radius:8px; box-shadow: 0 0 24px rgba(255,45,70,.55); }
+  .shotwrap { position: relative; }
+  /* commits */
+  .commits div { display:grid; grid-template-columns: 110px 1fr 270px; gap: 14px; padding: 11px 0; border-bottom: 1px solid rgba(255,196,110,.12); font-size: 16px; align-items: baseline; }
+  .commits .sha { color: #b9d4ff; }
+  .commits .proof { color: var(--gold); font-size: 13px; }
+  /* terminal */
+  .term { background:#120c07; border:1px solid rgba(255,196,110,.3); border-radius: 12px; padding: 22px 26px; font-size: 17px; line-height: 1.6; white-space: pre-wrap; }
+  .term .p { color: var(--dim); }
+  .big { display:block; font-size: 28px; line-height: 1.5; color: var(--gold); margin: 10px 0 14px; }
+</style>
+</head>
+<body>
+
+<section class="slide" id="idea">
+  <div class="sub">The idea</div>
+  <h1>A <em>capsule</em>, not a recording</h1>
+  <div class="flow">
+    <div class="box"><b>Vikunja's own front end</b>the real app, unchanged</div>
+    <div class="arrow">+</div>
+    <div class="box"><b>A Service Worker</b>answers every API call in the browser, from a store</div>
+    <div class="arrow">=</div>
+    <div class="box"><b>No backend at all</b>static files, server switched off</div>
+  </div>
+  <div class="lie">
+    <div class="panel"><div class="label">The catch</div><div class="quote" style="margin-top:8px">A naive replay lies. Add a task, and it shows you the task from the recording, not yours.</div></div>
+    <div class="panel"><div class="label">So</div><div class="quote" style="margin-top:8px">A recording is never allowed to prove a change. Kane CLI has to, with the server off.</div></div>
+  </div>
+</section>
+
+<section class="slide" id="capture">
+  <div class="sub">Stage 1 · Kane CLI on the real Vikunja</div>
+  <h1>15 plain-English journeys, <em>walked by Kane</em></h1>
+  <div class="grid" id="grid"></div>
+  <div class="label" style="margin-top:14px" id="capture-note"></div>
+</section>
+
+<section class="slide" id="j09">
+  <div class="sub">The baseline · capsule, server off</div>
+  <h1>Kane catches a change the capsule <em>cannot fake</em></h1>
+  <div class="two">
+    <div class="shotwrap"><img class="shot" id="j09-shot"></div>
+    <div class="rows" id="j09-rows"></div>
+  </div>
+</section>
+
+<section class="slide" id="j15">
+  <div class="sub">The baseline · a wrong verdict</div>
+  <h1>Kane said <em>passed</em>. AMBER said no.</h1>
+  <div class="two">
+    <div class="shotwrap"><img class="shot" id="j15-shot"><div class="hl" id="j15-hl"></div></div>
+    <div class="rows" id="j15-rows"></div>
+  </div>
+</section>
+
+<section class="slide" id="loop">
+  <div class="sub">The loop · Claude Code repairs, Kane proves</div>
+  <h1>Seven repairs, <em>one per commit</em></h1>
+  <div class="commits" id="commits"></div>
+  <div class="label" style="margin-top:16px">After every repair, Kane re-checks every journey that had already passed.</div>
+</section>
+
+<section class="slide" id="hook">
+  <div class="sub">Kane gates the coding agent · a deliberate regression</div>
+  <h1>The Stop hook <em>blocks</em>, then lets go</h1>
+  <div class="term" id="hook-term"></div>
+</section>
+
+<section class="slide" id="try">
+  <div class="sub">Try it</div>
+  <h1>Clone it. Run it. <em>No server.</em></h1>
+  <div class="term" id="try-term"></div>
+  <div class="two" style="margin-top: 26px; grid-template-columns: 1fr 1fr;">
+    <div class="panel"><div class="label">Honestly</div><div style="margin-top:8px; font-size:16px; line-height:1.5">One app, Vikunja v2.8.0. AMBER is the agent workflow that produced its capsule, not a one-command tool for any site. 15 journeys are proven; the README lists what is not.</div></div>
+    <div class="panel"><div class="label">On the record</div><div style="margin-top:8px; font-size:16px; line-height:1.5" id="record"></div></div>
+  </div>
+</section>
+
+<script type="module">
+  const data = await (await fetch('data.json')).json();
+  const s = new URLSearchParams(location.search).get('s');
+  const el = (id) => document.getElementById(id);
+  const esc = (t) => String(t).replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' })[c]);
+  el('grid').innerHTML = data.capture.map((c) => `<figure><img src="${c.shot}"><figcaption>${esc(c.id)} · ${esc(c.title)}</figcaption></figure>`).join('');
+  el('capture-note').textContent = 'Saved as Kane tests, frozen by SHA-256. Kane caught one journey worded wrongly (j14); it was fixed before anything else.';
+  el('j09-shot').src = data.j09.shot;
+  el('j09-rows').innerHTML = `
+    <div class="label">Kane CLI · run ${esc(data.j09.run)}</div>
+    <div>Kane typed <b class="good">Paint samples ${esc(data.j09.tag)}</b>, this run's tag, then clicked Add.</div>
+    <div class="label">Kane's diagnosis</div>
+    <div class="quote">${esc(data.j09.say)}</div>
+    <div class="label">The capsule's own log</div>
+    <div class="bad">${esc(data.j09.wire)}</div>`;
+  el('j15-shot').src = data.j15.shot;
+  Object.assign(el('j15-hl').style, data.j15.highlight);
+  el('j15-rows').innerHTML = `
+    <div class="label">Kane CLI · run ${esc(data.j15.run)}</div>
+    <div>Kane: <b class="good">passed</b>. The text it checked is the unsent draft, restored into the editor after the reload.</div>
+    <div class="label">The capsule's own log</div>
+    <div class="bad">${esc(data.j15.wire)}</div>
+    <div class="label">AMBER's verdict</div>
+    <div class="quote">FAIL, disputed: a change the capsule refused cannot have been kept.</div>`;
+  el('commits').innerHTML = data.commits.map((c) => `<div><span class="sha">${esc(c.sha)}</span><span>${esc(c.what)}</span><span class="proof">${esc(c.flow)} · Kane PASS, server off</span></div>`).join('');
+  el('hook-term').innerHTML = `<span class="p">${esc(data.hook[0].at)} · Stop hook · Kane replays all 15 journeys</span>\n<span class="bad">BLOCKED</span> ${esc(data.hook[0].message)}\n\n<span class="p">${esc(data.hook[1].at)} · Stop hook · Kane replays all 15 journeys</span>\n<span class="good">ALLOWED</span> 15 of 15 pass. The agent may stop.`;
+  el('try-term').innerHTML = `<span class="p">$</span> git clone https://github.com/iftikar0016/amber && cd amber\n<span class="p">$</span> node bin/demo.mjs\n<span class="big">http://127.0.0.1:4790/        the app, no server\nhttp://127.0.0.1:4790/amber/  the amber block</span><span class="p">No install · no Kane account · no credits</span>`;
+  el('record').innerHTML = data.record.map(esc).join('<br>');
+  document.getElementById(s).classList.add('on');
+  document.body.dataset.ready = '1';
+</script>
+</body>
+</html>

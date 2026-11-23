@@ -29,12 +29,17 @@ export async function launch({ port = 9333, width = 1280, height = 900 } = {}) {
     if (!ws) await sleep(200);
   }
   if (!ws) throw new Error('Chrome did not start');
+  /** @type {Map<string, Set<(params:any)=>void>>} */
+  const listeners = new Map();
   ws.addEventListener('message', (m) => {
     const msg = JSON.parse(m.data);
     if (msg.id && pending.has(msg.id)) {
       pending.get(msg.id)(msg);
       pending.delete(msg.id);
-    } else if (msg.method) events.push(msg);
+    } else if (msg.method) {
+      if (msg.method !== 'Page.screencastFrame') events.push(msg);
+      for (const cb of listeners.get(msg.method) ?? []) cb(msg.params);
+    }
   });
   const send = (method, params = {}) =>
     new Promise((resolve) => {
@@ -50,6 +55,12 @@ export async function launch({ port = 9333, width = 1280, height = 900 } = {}) {
     evaluate,
     events,
     sleep,
+    /** Listen for a DevTools event; returns a function that stops listening. */
+    on(method, cb) {
+      if (!listeners.has(method)) listeners.set(method, new Set());
+      listeners.get(method).add(cb);
+      return () => listeners.get(method).delete(cb);
+    },
     async goto(url, settleMs = 3000) {
       await send('Page.navigate', { url });
       await sleep(settleMs);
