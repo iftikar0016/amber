@@ -1,0 +1,1 @@
+import{_ as e,g as t}from"./useApi-BPuI6ZR9-B9dIbFoP.js";function n(){let n=e(),r=t();return function(){if(n.options.history.state.back){n.back();return}let e=Number(r.params.projectId);n.push(e?{name:`project.index`,params:{projectId:e}}:{name:`home`})}}export{n as t};

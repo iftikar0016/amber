@@ -1,0 +1,27 @@
+{
+  "site": {
+    "events": 19
+  },
+  "builtAt": "2026-11-23T15:30:55.962Z",
+  "seedId": "31b3a5cc63ac4217",
+  "journeys": [
+    "j01-sign-in",
+    "j02-projects",
+    "j03-list-view",
+    "j04-task-detail",
+    "j05-table-view",
+    "j06-kanban",
+    "j07-upcoming",
+    "j08-search",
+    "j09-add-task",
+    "j10-mark-done",
+    "j11-rename",
+    "j12-description",
+    "j13-delete",
+    "j14-new-project",
+    "j15-comment"
+  ],
+  "staticFiles": 261,
+  "replayEntries": 32,
+  "modelKeys": []
+}

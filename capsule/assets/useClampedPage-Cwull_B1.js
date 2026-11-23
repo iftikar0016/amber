@@ -1,0 +1,1 @@
+import{N as e,rt as t}from"./vue.runtime.esm-bundler-DUf7TSaf.js";import{k as n}from"./projects-DnzuaWKI.js";e();function r(e,r){t([r.data,r.isPlaceholderData],([t,r])=>{let i=n(e.value,{data:t,isPlaceholderData:r});i!==e.value&&(e.value=i)},{immediate:!0})}export{r as t};

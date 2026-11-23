@@ -1,0 +1,1 @@
+import{N as e,ut as t,v as n,wt as r}from"./vue.runtime.esm-bundler-DUf7TSaf.js";import{t as i}from"./useQuery-CfIcy9X7.js";import{p as a}from"./projects-DnzuaWKI.js";e(),t();function o(e){let t=i(n(()=>a(Number(r(e)))));return{views:n(()=>t.data.value?.views??[]),isPending:t.isPending,error:t.error}}export{o as t};

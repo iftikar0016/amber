@@ -1,0 +1,1 @@
+import{N as e,ut as t,v as n,wt as r}from"./vue.runtime.esm-bundler-DUf7TSaf.js";import{b as i}from"./dist-D51COhv8.js";e(),t();function a(e=null,t){let a=n(()=>r(e)),o=n(()=>a.value===void 0||a.value===``?`Vikunja`:`${a.value} | Vikunja`);return i(o,t)}export{a as t};

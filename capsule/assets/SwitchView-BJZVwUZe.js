@@ -1,0 +1,1 @@
+import{G as e,J as t,N as n,O as r,Z as i,at as a,b as o}from"./vue.runtime.esm-bundler-DUf7TSaf.js";import{t as s}from"./_plugin-vue_export-helper-BDNMzG2s.js";n();var c=s(r({__name:`SwitchView`,props:{is:{default:`div`}},setup(n){return(r,s)=>(e(),o(i(n.is),{class:`switch-view`},{default:a(()=>[t(r.$slots,`default`)]),_:3}))}}),[[`__scopeId`,`data-v-560183c7`]]);export{c as t};

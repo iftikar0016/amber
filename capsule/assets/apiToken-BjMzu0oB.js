@@ -1,0 +1,1 @@
+import{pn as e}from"./router-QU_NFAr6.js";function t(t,n=Date.now()){return(e(t.expires_at)?.getTime()??1/0)<n}export{t};

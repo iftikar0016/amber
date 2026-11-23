@@ -1,0 +1,1 @@
+import{G as e,J as t,N as n,O as r,at as i,b as a}from"./vue.runtime.esm-bundler-DUf7TSaf.js";import{t as o}from"./BaseButton-LP6-AE4f.js";n();var s=r({__name:`ButtonLink`,setup(n){return(n,r)=>(e(),a(o,{class:`button-link`},{default:i(()=>[t(n.$slots,`default`)]),_:3}))}});export{s as t};
