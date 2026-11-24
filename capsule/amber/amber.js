@@ -282,6 +282,9 @@ function openDrawer(id) {
 $('close').addEventListener('click', () => ($('drawer').hidden = true));
 addEventListener('keydown', (e) => e.key === 'Escape' && ($('drawer').hidden = true));
 
+// Scripted playback, for the demo-video renderer: show the block as it stood after the first i events.
+window.amberPlayback = { events, show: (i, animate = true) => render(i, animate) };
+
 // ---- start ------------------------------------------------------------------------------------------------
 // ?t=start shows the block before any Kane run; ?until=<runId> shows it as it stood right after that run;
 // ?play replays from there (from the start if neither is given).

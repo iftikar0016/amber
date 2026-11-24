@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AMBER video stage</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="stage.css">
+</head>
+<body>
+  <div id="bg">
+    <div class="glow" id="g1"></div>
+    <div class="glow" id="g2"></div>
+    <div class="glow" id="g3"></div>
+    <div id="dust"></div>
+    <div class="vignette"></div>
+  </div>
+  <div id="under" class="plane"></div>
+  <div id="persist" class="plane">
+    <div id="blockCam" class="abs">
+      <iframe id="amber" title="AMBER's page" scrolling="no"></iframe>
+    </div>
+    <div id="appCam" class="abs">
+      <div class="win" id="appWin">
+        <div class="bar"><i></i><i></i><i></i><span class="url" id="appUrl">127.0.0.1:4790/projects/3</span><span class="reload" id="appReload">⟳</span><span class="pill off"><b></b>Vikunja API server: off</span></div>
+        <div class="body" id="appBody">
+          <iframe id="app" title="Vikunja, no server" scrolling="no"></iframe>
+          <div class="flash" id="appFlash"></div>
+          <svg class="cursor" id="cursor" viewBox="0 0 24 24" width="34" height="34"><path d="M3 2l17 9-7.5 1.6L9.6 20z" fill="#fff" stroke="#000" stroke-width="1.4" stroke-linejoin="round"/></svg>
+          <div class="ripple" id="ripple"></div>
+        </div>
+      </div>
+    </div>
+    <div id="counter" class="abs"><span class="n" id="counterN">0</span><span class="of">of 15 proven<br>with the server off</span></div>
+  </div>
+  <div id="over" class="plane"></div>
+  <div id="caps"><div id="capLine"></div></div>
+  <div id="black"></div>
+  <script type="module" src="stage.js"></script>
+</body>
+</html>
