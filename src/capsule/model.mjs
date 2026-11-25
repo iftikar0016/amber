@@ -34,6 +34,8 @@ export function liftModel(pristine) {
   const positions = {};
   /** @type {Record<string, any[]>} task id -> all its comments (only when the captured list was complete) */
   const comments = {};
+  /** @type {Record<string, any[]>} kanban view id -> its buckets, as GET /projects/:p/views/:v/buckets lists them */
+  const buckets = {};
   /** @type {any} */
   let user = null;
 
@@ -57,6 +59,28 @@ export function liftModel(pristine) {
     const cm = /^\/api\/v2\/tasks\/(\d+)\/comments$/.exec(x.path);
     if (cm && Array.isArray(b.items)) {
       if (!comments[cm[1]] && b.items.length === b.total) comments[cm[1]] = b.items.map(withoutSchema);
+      continue;
+    }
+    const bm = /^\/api\/v2\/projects\/(\d+)\/views\/(\d+)\/buckets$/.exec(x.path);
+    if (bm && Array.isArray(b.items)) {
+      if (!buckets[bm[2]]) buckets[bm[2]] = b.items.map(withoutSchema);
+      continue;
+    }
+    // A kanban board: each bucket with its tasks, in the view's order. It shows which bucket each task is in.
+    const km = /^\/api\/v2\/projects\/(\d+)\/views\/(\d+)\/buckets\/tasks$/.exec(x.path);
+    if (km && Array.isArray(b.items)) {
+      const view = (positions[km[2]] ||= {});
+      for (const bucket of b.items) {
+        const { tasks: inBucket, ...plain } = bucket;
+        for (const t of inBucket || []) {
+          if (!isTask(t)) continue;
+          addTask({ ...t, bucket_id: 0 }); // a board sends the bucket's id here; a task's own bucket_id is 0
+          if (typeof t.position === 'number') view[t.id] = t.position;
+          // as a task's own read lists its buckets: no creator, count 0
+          if (tasks[t.id].buckets === undefined) tasks[t.id].buckets = [{ ...plain, count: 0, created_by: null }];
+        }
+      }
+      if (!buckets[km[2]]) buckets[km[2]] = b.items.map(({ tasks: _t, ...plain }) => ({ ...plain, count: 0 }));
       continue;
     }
     const pm = /^\/api\/v2\/projects\/(\d+)$/.exec(x.path);
@@ -97,6 +121,7 @@ export function liftModel(pristine) {
     projects,
     positions,
     comments,
+    buckets,
     next: {
       comment: Math.max(maxOf(commentIds), counted) + 1,
       task: maxOf(Object.keys(tasks).map(Number)) + 1,

@@ -98,3 +98,14 @@ Found while checking for free, not repaired (no journey fails on it): round 1 wa
 - **Repair:** `GET /tasks` (the task collection across projects) is answered from the store for `done = …` filters and the sorts the store knows (due date with no-date last, then id), with `comment_count` when asked and pagination; the same route answers the front end's `per_page=1` probe. A search (`q`) or any other filter (Upcoming's due-date range) still falls through to the replay. The model already held every task: the captured home list shows all 12.
 - **Checked first (zero credits):** the store's answers to the pristine home list and probe equal the server's; in the captured journey, the home list after the change has the new task in the server's place (only the date-shift noise differs).
 - **Proof:** `verify-2026-11-25T04-55-12`, PASS, 9.52 credits.
+
+### Re-check after the j17 repair, and what it now costs
+
+- `verify-2026-11-25T04-57-28` (AMBER's gate, all 16 journeys that had passed): 16/16 PASS, no regression, **187.13 credits**, about twice the expected ~100. j09 and j10 (authored) cost 63; the 14 replays cost about 124, around 9 each (a read-only replay cost about 0.5 in round 1). Cause: every recording waits for the greeting it was captured with, "Still at it, Amber Demo?" (Vikunja's evening greeting); in the morning that wait runs 46 s and the greeting check is then re-evaluated. Reported to the session that owns the budget, with a proposal to re-check once after the remaining repairs instead of after each.
+
+### j19-done-kanban: a task marked done moves to the Kanban Done column
+
+- **Failure** (baseline): after "Mark task done!", Choose worktop stayed in To-Do on the Kanban board. The update was accepted, but the board (`GET /projects/3/views/16/buckets/tasks`) was the replayed pre-change one, and the store did not move the task.
+- **Repair:** the model lifts each kanban view's buckets, and from the captured board each task's bucket and position there. The board is answered from the store (buckets in order, each with its tasks by position, `tasks` left out of an empty bucket as Vikunja does, `count`, `bucket_id` on each card), only when the store knows every task's bucket and position. Marking a task done moves it into each kanban view's done bucket at index × 2^16 (the capture shows 131072 for index 2); reopening a task that is in the done bucket moves it to the default bucket. The task's own read shows the new bucket.
+- **Checked first (zero credits):** the store's answer to the pristine board (j06) equals the server's; in the captured journey, both boards after the change equal the server's (only the date-shift noise differs).
+- **Proof:** `verify-2026-11-25T05-19-04`, PASS, 5.31 credits.

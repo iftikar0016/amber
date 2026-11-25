@@ -1,0 +1,186 @@
+{
+  "runId": "verify-2026-11-25T04-57-28",
+  "kind": "verify",
+  "mode": "replay",
+  "commit": "7e81a4d",
+  "label": "stop-hook regression check",
+  "serverOff": {
+    "checkedAt": "2026-11-25T04:57:28.085Z",
+    "port": 3456,
+    "portOpen": false,
+    "vikunjaProcesses": [],
+    "off": true
+  },
+  "spend": {
+    "started": "2026-11-25T04:57:29.835Z",
+    "ended": "2026-11-25T05:17:56.940Z",
+    "what": "verify replay j01-sign-in,j02-projects,j03-list-view,j04-task-detail,j05-table-view,j06-kanban,j07-upcoming,j08-search,j09-add-task,j10-mark-done,j11-rename,j12-description,j13-delete,j14-new-project,j15-comment,j17-home-new-task",
+    "estimate": 120,
+    "balanceBefore": 7173.884,
+    "balanceAfter": 6986.7576,
+    "spent": 187.13,
+    "runId": "verify-2026-11-25T04-57-28"
+  },
+  "results": [
+    {
+      "id": "j01-sign-in",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j02-projects",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j03-list-view",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j04-task-detail",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j05-table-view",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j06-kanban",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j07-upcoming",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j08-search",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j09-add-task",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j10-mark-done",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j11-rename",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j12-description",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j13-delete",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j14-new-project",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j15-comment",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j17-home-new-task",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    }
+  ]
+}

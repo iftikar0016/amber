@@ -1,0 +1,66 @@
+{
+  "flow": "j09-add-task",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "sunhtl",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Kitchen renovation, add a new task titled Paint samples {{amber_tag}}, then verify Paint samples {{amber_tag}} appears in the project task list. Reload the page, then verify Paint samples {{amber_tag}} is still listed.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json"
+  ],
+  "startedAt": "2026-11-25T05:05:22.908Z",
+  "ms": 125054,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "added a task to the Kitchen renovation project on the project page",
+  "summary": "Opened the Kitchen renovation project.\nAdded a new task titled “Paint samples sunhtl.”\nReloaded the project page and confirmed that the new task remained listed.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "paint_samples_task_listed": "true",
+    "paint_samples_task_still_listed": "true"
+  },
+  "credits": 34.833470000000005,
+  "steps": 15,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-25T05:05:22.907Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-25T05:07:28.248Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 15,
+    "finalShot": "shots/15.jpg",
+    "failures": []
+  }
+}

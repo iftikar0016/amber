@@ -1,0 +1,24 @@
+{"t":1795583946219,"type":"run_start","runId":"verify-2026-11-25T05-19-04","kind":"verify","mode":"replay","target":"capsule-server-off","commit":"7e81a4d","label":null,"flows":["j19-done-kanban"],"serverOff":{"checkedAt":"2026-11-25T05:19:04.311Z","port":3456,"portOpen":false,"vikunjaProcesses":[],"off":true}}
+{"t":1795583946564,"type":"flow_start","flow":"j19-done-kanban","attempt":1,"mode":"replay","tag":"jlqoyw"}
+{"t":1795583959901,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795583961460,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":2,"status":"done","remark":"wait: Waiting for the login steps to complete"}
+{"t":1795583961953,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":3,"status":"done","remark":"fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795583962619,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":4,"status":"done","remark":"fill: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795583963760,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":5,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795583965696,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":6,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795583966251,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":7,"status":"done","remark":"analyze: Checking whether the home page greeting is present"}
+{"t":1795583966774,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":8,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795583967955,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":9,"status":"done","remark":"click: Clicking Kitchen renovation in the left project navigation"}
+{"t":1795583969169,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":10,"status":"done","remark":"click: Clicking Choose worktop in the task list"}
+{"t":1795583971096,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":11,"status":"done","remark":"click: Clicking Mark task done button"}
+{"t":1795583973137,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":12,"status":"done","remark":"click: Clicking Kitchen renovation in the worktop breadcrumb"}
+{"t":1795583973914,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":13,"status":"done","remark":"click: Clicking Kanban tab for Kitchen renovation project view"}
+{"t":1795583974072,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":14,"status":"done","remark":"analyze: Checking whether Choose worktop is present in the Done column"}
+{"t":1795583974170,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":15,"status":"done","remark":"assert: Choose worktop is in the Done column."}
+{"t":1795583975207,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":16,"status":"done","remark":"refresh: Navigate refresh"}
+{"t":1795583976085,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":17,"status":"done","remark":"wait: Reloading the page"}
+{"t":1795583976975,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":18,"status":"done","remark":"analyze: Checking whether Choose worktop is present in the Done column"}
+{"t":1795583990323,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":19,"status":"done","remark":"analyze: Checking whether Order tiles is present in the To-Do column"}
+{"t":1795583991789,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":20,"status":"done","remark":"assert: Choose worktop is still in the Done column and Order tiles is in the To-Do colum"}
+{"t":1795584004815,"type":"flow_done","flow":"j19-done-kanban","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":57822,"shot":"verify-2026-11-25T05-19-04/j19-done-kanban/a1/shots/20.jpg"}
+{"t":1795584006704,"type":"run_done","runId":"verify-2026-11-25T05-19-04","spent":5.31,"tally":{"PASS":1},"regressions":[]}

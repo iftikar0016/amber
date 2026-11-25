@@ -1,9 +1,9 @@
 {
   "site": {
-    "events": 233
+    "events": 253
   },
-  "builtAt": "2026-11-25T04:56:51.182Z",
-  "seedId": "8eac1cc169245afd",
+  "builtAt": "2026-11-25T05:20:27.761Z",
+  "seedId": "8198206554415ab0",
   "journeys": [
     "j01-sign-in",
     "j02-projects",
@@ -35,6 +35,7 @@
     "projects",
     "positions",
     "comments",
+    "buckets",
     "next"
   ]
 }

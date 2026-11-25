@@ -174,6 +174,61 @@
     return paginated(url, query, out, 'PaginatedTask');
   }
 
+  /** The bucket a task is in on a kanban view, from its own bucket list. */
+  const bucketOf = (t, viewId) => (Array.isArray(t.buckets) ? t.buckets.find((b) => String(b.project_view_id) === String(viewId)) : undefined);
+
+  /**
+   * GET /projects/:p/views/:v/buckets/tasks: a kanban board, each bucket with its tasks in the view's order.
+   * Answered only when the store knows the view's buckets and, for every task of the project, its bucket and position.
+   */
+  function kanbanTasks({ params, query, url, store }) {
+    const m = store.model;
+    const { view } = projectView(m, params.project, params.view);
+    if (!view || view.view_kind !== 'kanban') return null;
+    const list = m.buckets && m.buckets[view.id];
+    const positions = m.positions && m.positions[view.id];
+    if (!list || !positions) return null;
+    const filter = parseFilter(query.get('filter'));
+    if (!filter || (query.get('q') || '').trim()) return null;
+    const tasks = Object.values(m.tasks || {}).filter((t) => String(t.project_id) === String(params.project) && filter(t));
+    if (tasks.some((t) => !bucketOf(t, view.id) || typeof positions[t.id] !== 'number')) return null;
+    const perBucket = Math.min(MAX_PER_PAGE, Math.max(1, parseInt(query.get('per_page') || '25', 10) || 25));
+    const withCount = query.getAll('expand').includes('comment_count');
+    const items = [...list]
+      .sort((a, b) => a.position - b.position || a.id - b.id)
+      .map((bucket) => {
+        const inBucket = tasks
+          .filter((t) => bucketOf(t, view.id).id === bucket.id)
+          .sort((a, b) => positions[a.id] - positions[b.id] || a.id - b.id);
+        const out = { id: bucket.id, title: bucket.title, project_view_id: bucket.project_view_id };
+        // Vikunja leaves `tasks` out of an empty bucket
+        if (inBucket.length) {
+          out.tasks = inBucket.slice(0, perBucket).map((t) => taskJson({ ...t, bucket_id: bucket.id }, { ...(withCount ? { comment_count: t.comment_count || 0 } : {}), position: positions[t.id] }));
+        }
+        return { ...out, limit: bucket.limit, count: inBucket.length, position: bucket.position, created: bucket.created, updated: bucket.updated, created_by: bucket.created_by };
+      });
+    return json(200, { $schema: schema(url, 'BucketsWithTasksBodyBody'), items, total: items.length });
+  }
+
+  /**
+   * Vikunja moves a task that is marked done into each kanban view's done bucket (and one that is reopened out of it,
+   * into the default bucket), at the position its index gives (index × 2^16). Only where the store knows the buckets.
+   */
+  function moveForDone(m, t) {
+    const project = m.projects && m.projects[t.project_id];
+    for (const v of (project && project.views) || []) {
+      if (v.view_kind !== 'kanban' || !v.done_bucket_id) continue;
+      const current = bucketOf(t, v.id);
+      const list = m.buckets && m.buckets[v.id];
+      if (!current || !list) continue;
+      const targetId = t.done ? v.done_bucket_id : current.id === v.done_bucket_id ? v.default_bucket_id : current.id;
+      const target = list.find((b) => b.id === targetId);
+      if (!target || target.id === current.id) continue;
+      t.buckets = t.buckets.map((b) => (b === current ? { ...target, count: 0, created_by: null } : b));
+      if (m.positions && m.positions[v.id]) m.positions[v.id][t.id] = (t.index || 0) * 65536;
+    }
+  }
+
   /** POST /projects/:p/tasks/bulk: Vikunja's task creation (the list view's "Add" sends it). */
   async function createTasks({ params, body, url, store }) {
     const m = store.model;
@@ -306,6 +361,7 @@
     }
     if ('title' in next && !next.title.trim()) return problem(400, 'Task title cannot be empty.');
     Object.assign(t, next, { updated: nowIso() });
+    if ('done' in next) moveForDone(m, t);
     await store.save();
     const out = taskJson({ ...t, assignees: t.assignees || [] }, { position: 0 });
     if (t.subscription !== undefined) out.subscription = t.subscription;
@@ -476,6 +532,12 @@
   }
 
   const routes = [
+    {
+      name: 'kanban-tasks',
+      method: 'GET',
+      path: /^\/api\/v2\/projects\/(?<project>-?\d+)\/views\/(?<view>\d+)\/buckets\/tasks$/,
+      handle: kanbanTasks,
+    },
     {
       name: 'task-list',
       method: 'GET',
