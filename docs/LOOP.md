@@ -155,3 +155,7 @@ All six round-2 repairs are now proven, each in its own Kane run. As the user ch
 - **Bug:** round 1 was captured on 2026-11-23 and round 2 on 2026-11-25, each after the seed re-aligned the due dates to "noon UTC, n days from today". The build moved every captured date by one offset (from the latest capture), so round-1 due dates, including the store's seeded tasks, landed two days early ("Order tiles, due in 7 hours" instead of "in 2 days").
 - **Fix:** the build moves each journey's captured **due dates** forward by the UTC days between that journey's capture and the latest one (2 for round 1, 0 for round 2) before building the replay and lifting the model. Only due dates: the tasks and comments were created once, on 2026-11-23, in both rounds. A first version that moved every timestamp put the seeded comment's `created` in the future and broke the comment order, which the zero-credit check caught.
 - **Checked first (zero credits):** with `scripts/store-check.mjs` comparing against the server's answers aligned the same way, all 23 pristine reads the store answers and every journey's reads after its change equal the real server's, with no date differences left; the unit tests pass. The final full pass will cover it with Kane.
+
+### The final pass: the user's decision
+
+- With AMBER's real total at about 3,286, the final full pass over all 21 (about 300 credits) would pass the 3,450 line set for this loop. Asked in this session, the user first declined, then chose to run it after all. It runs as the Stop hook's pass when this session ends its turn.
