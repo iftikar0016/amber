@@ -1,0 +1,39 @@
+{"type":"stream_start","cli_version":"0.10.7","surface":"run","pid":12936,"v":1,"ts":"2026-11-25T06:12:18.862Z","kind":"typed","_rt":1795587138864}
+{"type":"recording_state","enabled":true,"session_id":"ddf82ac6-0af6-4c95-91e9-117725d4234f","persist":false,"v":1,"ts":"2026-11-25T06:12:18.890Z","kind":"typed","_rt":1795587138891}
+{"type":"update_available","current":"0.10.7","latest":"0.10.9","severity":"patch","v":1,"ts":"2026-11-25T06:12:24.704Z","kind":"typed","_rt":1795587144705}
+{"type":"skill_update_available","current":null,"latest":"0.1.4","install_cmd":"kane-cli install skill","v":1,"ts":"2026-11-25T06:12:24.720Z","kind":"typed","_rt":1795587144720}
+{"type":"bifurcation","flows":["Navigate to http://127.0.0.1:4790/login then Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo.","Open the project Kitchen renovation, add a new task titled Paint samples {{global.amber_tag}}, then verify Paint samples {{global.amber_tag}} appears in the project task list.\nReload the page, then verify Paint samples {{global.amber_tag}} is still listed."],"count":2,"v":1,"ts":"2026-11-25T06:12:49.718Z","kind":"typed","_rt":1795587169719}
+{"step":2,"status":"running","remark":"Step 1","v":1,"ts":"2026-11-25T06:12:54.579Z","kind":"step","_rt":1795587174577}
+{"step":2,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login","v":1,"ts":"2026-11-25T06:12:54.604Z","kind":"step","_rt":1795587174602}
+{"step":3,"status":"running","remark":"Step 2","v":1,"ts":"2026-11-25T06:12:57.238Z","kind":"step","_rt":1795587177236}
+{"step":3,"status":"done","remark":"wait: queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click ","v":1,"ts":"2026-11-25T06:13:03.580Z","kind":"step","_rt":1795587183579}
+{"step":4,"status":"running","remark":"Step 3","v":1,"ts":"2026-11-25T06:13:04.586Z","kind":"step","_rt":1795587184584}
+{"step":4,"status":"done","remark":"type: Type \"{{global.amber_user}}\" into \"Username Or Email Address\"","v":1,"ts":"2026-11-25T06:13:05.127Z","kind":"step","_rt":1795587185125}
+{"step":5,"status":"running","remark":"Step 4","v":1,"ts":"2026-11-25T06:13:06.162Z","kind":"step","_rt":1795587186160}
+{"step":5,"status":"done","remark":"type: Type \"{{secrets.user.amber_password}}\" into \"Password\"","v":1,"ts":"2026-11-25T06:13:06.618Z","kind":"step","_rt":1795587186616}
+{"step":6,"status":"running","remark":"Step 5","v":1,"ts":"2026-11-25T06:13:07.670Z","kind":"step","_rt":1795587187668}
+{"step":6,"status":"done","remark":"click: Click \"Stay logged in\"","v":1,"ts":"2026-11-25T06:13:08.567Z","kind":"step","_rt":1795587188565}
+{"step":7,"status":"running","remark":"Step 6","v":1,"ts":"2026-11-25T06:13:10.358Z","kind":"step","_rt":1795587190356}
+{"step":7,"status":"done","remark":"click: Click \"LOGIN\"","v":1,"ts":"2026-11-25T06:13:11.353Z","kind":"step","_rt":1795587191351}
+{"step":8,"status":"running","remark":"Step 7","v":1,"ts":"2026-11-25T06:13:12.720Z","kind":"step","_rt":1795587192717}
+{"step":8,"status":"done","remark":"analyze: the home page greets Amber Demo","v":1,"ts":"2026-11-25T06:13:22.648Z","kind":"step","_rt":1795587202646}
+{"step":9,"status":"running","remark":"Step 8","v":1,"ts":"2026-11-25T06:13:23.785Z","kind":"step","_rt":1795587203783}
+{"step":9,"status":"done","remark":"assert: the home page greets Amber Demo","v":1,"ts":"2026-11-25T06:13:23.842Z","kind":"step","_rt":1795587203840}
+{"step":2,"status":"running","remark":"Step 1","v":1,"ts":"2026-11-25T06:13:34.689Z","kind":"step","_rt":1795587214687}
+{"step":2,"status":"done","remark":"click: Clicking Kitchen renovation in the project list","v":1,"ts":"2026-11-25T06:13:39.380Z","kind":"step","_rt":1795587219378}
+{"step":3,"status":"running","remark":"Step 2","v":1,"ts":"2026-11-25T06:13:40.583Z","kind":"step","_rt":1795587220581}
+{"step":3,"status":"done","remark":"type: Typing Paint samples amber tag into the new task textbox","v":1,"ts":"2026-11-25T06:13:47.660Z","kind":"step","_rt":1795587227657}
+{"step":4,"status":"running","remark":"Step 3","v":1,"ts":"2026-11-25T06:13:48.485Z","kind":"step","_rt":1795587228483}
+{"step":4,"status":"done","remark":"click: Clicking Add to submit the new task with Paint samples Amber tag","v":1,"ts":"2026-11-25T06:13:57.468Z","kind":"step","_rt":1795587237469}
+{"step":5,"status":"running","remark":"Step 4","v":1,"ts":"2026-11-25T06:13:59.353Z","kind":"step","_rt":1795587239354}
+{"step":5,"status":"done","remark":"analyze: ANALYZE(textual_visual, 'Paint samples {{global.amber_tag}} appears in the proje","v":1,"ts":"2026-11-25T06:14:09.224Z","kind":"step","_rt":1795587249225}
+{"step":6,"status":"running","remark":"Step 5","v":1,"ts":"2026-11-25T06:14:11.285Z","kind":"step","_rt":1795587251286}
+{"step":6,"status":"done","remark":"assert: Paint samples {{global.amber_tag}} appears in the project task list.","v":1,"ts":"2026-11-25T06:14:11.314Z","kind":"step","_rt":1795587251315}
+{"step":7,"status":"running","remark":"Step 6","v":1,"ts":"2026-11-25T06:14:13.542Z","kind":"step","_rt":1795587253542}
+{"step":7,"status":"done","remark":"wait: PRIMARY: Reload the page","v":1,"ts":"2026-11-25T06:14:24.519Z","kind":"step","_rt":1795587264520}
+{"step":8,"status":"running","remark":"Step 7","v":1,"ts":"2026-11-25T06:14:25.617Z","kind":"step","_rt":1795587265618}
+{"step":8,"status":"done","remark":"analyze: Paint samples {{global.amber_tag}} is still listed.","v":1,"ts":"2026-11-25T06:14:33.745Z","kind":"step","_rt":1795587273746}
+{"step":9,"status":"running","remark":"Step 8","v":1,"ts":"2026-11-25T06:14:34.696Z","kind":"step","_rt":1795587274697}
+{"step":9,"status":"done","remark":"assert: Paint samples {{global.amber_tag}} is still listed.","v":1,"ts":"2026-11-25T06:14:34.717Z","kind":"step","_rt":1795587274718}
+{"type":"coverage","status":"skipped","reason":"not_assurance_project","pack":"~\\.testmuai\\kaneai\\sessions\\ddf82ac6-0af6-4c95-91e9-117725d4234f\\evidence\\3fc5dd83-f15a-49c4-9463-b0de3e1a3cdf.evidence","v":1,"ts":"2026-11-25T06:14:55.274Z","kind":"typed","_rt":1795587295275}
+{"type":"run_end","status":"passed","summary":"Opened the Kitchen renovation project and added the task “Paint samples sbpbxp.”\nReloaded the project page.\nConfirmed that “Paint samples sbpbxp” remained in the task list after reloading.","one_liner":"added a task to the Kitchen renovation project on the project page","final_state":{"url":"http://127.0.0.1:4790/projects/3/13","task_title":"Paint samples sbpbxp","task_listed_after_reload":"true"},"reason":"Objective completed","duration":115,"bifurcated":true,"total_runs":2,"credits_consumed":41.4753055,"result_code":100,"reason_code":"success.complete","per_flow_metadata":[{"result_code":"100","reason_code":"success.complete","error_message":null,"summary":"Signed in using the provided Amber Demo account credentials with “Stay logged in” selected.\nReached the home page, which displayed a greeting for Amber Demo.","one_liner":"signed in to the home page on the local site","credits_consumed":16.834915499999997},{"result_code":"100","reason_code":"success.complete","error_message":null,"summary":"Opened the Kitchen renovation project and added the task “Paint samples sbpbxp.”\nReloaded the project page.\nConfirmed that “Paint samples sbpbxp” remained in the task list after reloading.","one_liner":"added a task to the Kitchen renovation project on the project page","credits_consumed":24.64039}],"run_id":"run-0","coverage":{"status":"skipped"},"v":1,"ts":"2026-11-25T06:14:55.274Z","kind":"terminal","_rt":1795587295276}

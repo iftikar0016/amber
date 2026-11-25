@@ -1,0 +1,9 @@
+[
+  {
+    "ordinal": 10,
+    "message": "assertion_failed: @ step 10",
+    "url": "http://127.0.0.1:4790/",
+    "rootCause": "The replayed assertion expects an older exact greeting format. The live home page shows “Back at it, Amber Demo,” which fulfills the objective of greeting Amber Demo but is not accepted by the recorded check.",
+    "suggestedFix": "Update the greeting assertion to accept the displayed user name, such as a greeting containing “Amber Demo,” rather than requiring one exact greeting phrase."
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "step": 1,
+    "type": "navigate",
+    "intent": "Navigate to http://127.0.0.1:4790/login",
+    "instruction": "Navigate to http://127.0.0.1:4790/login"
+  },
+  {
+    "step": 2,
+    "type": "wait",
+    "intent": "queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click \"Stay logged in\"; click \"LOGIN\"",
+    "instruction": "Waiting for the login fields to be filled"
+  },
+  {
+    "step": 3,
+    "type": "fill",
+    "intent": "PRIMARY: username input; role=textbox; text=\"Username Or Email Address\" | HINTS: container=Login form",
+    "instruction": "Type \"{{global.amber_user}}\" into \"Username Or Email Address\""
+  },
+  {
+    "step": 4,
+    "type": "fill",
+    "intent": "PRIMARY: password input; role=textbox; text=\"Password\" | HINTS: container=Login form",
+    "instruction": "Type \"{{secrets.user.amber_password}}\" into \"Password\""
+  },
+  {
+    "step": 5,
+    "type": "click",
+    "intent": "PRIMARY: Stay logged in checkbox; role=checkbox; text=\"Stay logged in\" | HINTS: container=Login form",
+    "instruction": "Click \"Stay logged in\""
+  },
+  {
+    "step": 6,
+    "type": "click",
+    "intent": "PRIMARY: sign in; role=button; text=\"LOGIN\" | HINTS: container=Login form",
+    "instruction": "Click \"LOGIN\""
+  },
+  {
+    "step": 7,
+    "type": "analyze",
+    "intent": "whether a greeting to Amber Demo is present in the home page main heading",
+    "instruction": "Checking whether the home page greeting is present"
+  },
+  {
+    "step": 8,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  },
+  {
+    "step": 1,
+    "type": "click",
+    "intent": "PRIMARY: Open the project Kitchen renovation; role=link; text=\"Kitchen renovation\" | HINTS: container=left navigation project list",
+    "instruction": "Clicking Kitchen renovation in the project list navigation"
+  },
+  {
+    "step": 2,
+    "type": "wait",
+    "intent": "queued plan (2 steps): type \"Add a task…\"; click \"Add\"",
+    "instruction": "Waiting for the queued plan to be completed"
+  },
+  {
+    "step": 3,
+    "type": "fill",
+    "intent": "PRIMARY: Add a new task titled Order grout {{global.amber_tag}}; role=textbox; text=\"Add a task…\" | HINTS: container=Kitchen renovation task list",
+    "instruction": "Type \"Order grout {{global.amber_tag}}\" into \"Add a task…\""
+  },
+  {
+    "step": 4,
+    "type": "click",
+    "intent": "PRIMARY: Add a new task titled Order grout {{global.amber_tag}}; role=button; text=\"Add\" | HINTS: next to task title input; container=Kitchen renovation task list",
+    "instruction": "Click \"Add\""
+  },
+  {
+    "step": 5,
+    "type": "wait",
+    "intent": "PRIMARY: confirm the new task titled Order grout {{global.amber_tag}} is present",
+    "instruction": "Waiting for the new task Order grout amber tag to be present"
+  },
+  {
+    "step": 6,
+    "type": "click",
+    "intent": "PRIMARY: Open the task Order grout {{global.amber_tag}}",
+    "instruction": "Clicking Open the task Order grout Amber tag"
+  },
+  {
+    "step": 7,
+    "type": "wait",
+    "intent": "PRIMARY: wait for the task detail page to load",
+    "instruction": "Waiting for the task detail page to load"
+  },
+  {
+    "step": 8,
+    "type": "analyze",
+    "intent": "the task page shows the title Order grout {{global.amber_tag}}",
+    "instruction": "Checking whether the task title is present"
+  },
+  {
+    "step": 9,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  },
+  {
+    "step": 10,
+    "type": "refresh",
+    "intent": "Navigate refresh",
+    "instruction": "Navigate refresh"
+  },
+  {
+    "step": 11,
+    "type": "wait",
+    "intent": "PRIMARY: confirm the page reload completed with the task detail visible",
+    "instruction": "Waiting for the page reload to complete with task details visible"
+  },
+  {
+    "step": 12,
+    "type": "analyze",
+    "intent": "the title Order grout {{global.amber_tag}} is still shown",
+    "instruction": "Checking whether the task title is present in the page title"
+  },
+  {
+    "step": 13,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  }
+]

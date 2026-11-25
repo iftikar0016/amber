@@ -1,0 +1,66 @@
+{
+  "flow": "j10-mark-done",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "amafti",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Kitchen renovation and mark the task Choose worktop as done with its checkbox. Reload the page, then verify Choose worktop is no longer in the list of open tasks and Order tiles still is.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json"
+  ],
+  "startedAt": "2026-11-25T06:15:00.374Z",
+  "ms": 165929,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "completed a task in the Kitchen renovation project on the project page",
+  "summary": "Opened the Kitchen renovation project.\nMarked the “Choose worktop” task as done and reloaded the page.\nConfirmed that “Choose worktop” no longer appears among open tasks, while “Order tiles” remains open.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "Choose worktop open task": "false",
+    "Order tiles open task": "true"
+  },
+  "credits": 27.358484999999995,
+  "steps": 14,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-25T06:15:00.373Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-25T06:17:47.060Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 14,
+    "finalShot": "shots/14.jpg",
+    "failures": []
+  }
+}

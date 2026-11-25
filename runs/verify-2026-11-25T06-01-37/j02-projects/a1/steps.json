@@ -1,0 +1,156 @@
+[
+  {
+    "ordinal": 1,
+    "id": "0-1",
+    "kind": "navigate",
+    "status": "passed",
+    "summary": "navigate: Navigate to http://127.0.0.1:4790/login",
+    "url": "https://kaneai-playground.lambdatest.io/",
+    "durationMs": 1234,
+    "shot": "shots/1.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 2,
+    "id": "0-2",
+    "kind": "wait",
+    "status": "passed",
+    "summary": "wait: Waiting for the queued login steps to complete",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 1969,
+    "shot": "shots/2.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 3,
+    "id": "0-3",
+    "kind": "fill",
+    "status": "passed",
+    "summary": "fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\"",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 797,
+    "shot": "shots/3.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 4,
+    "id": "0-4",
+    "kind": "fill",
+    "status": "passed",
+    "summary": "fill: Type \"{{secrets.user.amber_password}}\" into \"Password\"",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 672,
+    "shot": "shots/4.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 5,
+    "id": "0-5",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Click \"Stay logged in\"",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 968,
+    "shot": "shots/5.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 6,
+    "id": "0-6",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Click \"LOGIN\"",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 2125,
+    "shot": "shots/6.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 7,
+    "id": "0-7",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: Checking whether the home page greeting is present",
+    "url": "http://127.0.0.1:4790/",
+    "durationMs": 7719,
+    "shot": "shots/7.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 8,
+    "id": "0-8",
+    "kind": "assert",
+    "status": "passed",
+    "summary": "assert: the home page greets Amber Demo",
+    "url": "http://127.0.0.1:4790/",
+    "durationMs": 281,
+    "shot": "shots/8.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 9,
+    "id": "0-9",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Clicking Projects in the main menu",
+    "url": "http://127.0.0.1:4790/",
+    "durationMs": 1156,
+    "shot": "shots/9.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 10,
+    "id": "0-10",
+    "kind": "wait",
+    "status": "passed",
+    "summary": "wait: Waiting for the Projects page to load",
+    "url": "http://127.0.0.1:4790/projects",
+    "durationMs": 7406,
+    "shot": "shots/10.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 11,
+    "id": "0-11",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: Checking whether the Website relaunch project is shown",
+    "url": "http://127.0.0.1:4790/projects",
+    "durationMs": 1672,
+    "shot": "shots/11.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 12,
+    "id": "0-12",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: Checking whether the Kitchen renovation project is shown",
+    "url": "http://127.0.0.1:4790/projects",
+    "durationMs": 1688,
+    "shot": "shots/12.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 13,
+    "id": "0-13",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: Checking whether the Reading list project is shown",
+    "url": "http://127.0.0.1:4790/projects",
+    "durationMs": 1500,
+    "shot": "shots/13.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 14,
+    "id": "0-14",
+    "kind": "assert",
+    "status": "passed",
+    "summary": "assert: the projects Website relaunch, Kitchen renovation and Reading list are all shown",
+    "url": "http://127.0.0.1:4790/projects",
+    "durationMs": 1438,
+    "shot": "shots/14.jpg",
+    "annotated": null
+  }
+]

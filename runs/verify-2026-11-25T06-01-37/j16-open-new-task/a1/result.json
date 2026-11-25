@@ -1,0 +1,65 @@
+{
+  "flow": "j16-open-new-task",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "cmgslg",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Kitchen renovation, add a new task titled Order grout {{amber_tag}}, then open the task Order grout {{amber_tag}} and verify its page shows the title Order grout {{amber_tag}}. Reload the page, then verify the title Order grout {{amber_tag}} is still shown.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json"
+  ],
+  "startedAt": "2026-11-25T06:27:33.006Z",
+  "ms": 239496,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "created and reopened the “Order grout cmgslg” task on Vikunja",
+  "summary": "Opened the “Kitchen renovation” project as requested.\nCreated and opened the new task “Order grout cmgslg.”\nReloaded the task page and confirmed that the task title remained visible.\nThe task is open at its saved page.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/tasks/13",
+    "task_title": "Order grout cmgslg | Vikunja"
+  },
+  "credits": 30.560385,
+  "steps": 20,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-25T06:27:33.006Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-25T06:31:33.247Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 20,
+    "finalShot": "shots/20.jpg",
+    "failures": []
+  }
+}

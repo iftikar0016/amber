@@ -144,3 +144,8 @@ Found while checking for free, not repaired (no journey fails on it): round 1 wa
 - **Proof:** `verify-2026-11-25T05-56-28`, PASS (authored, server off), 50.65 credits: the search found "Buy sealant tjaqmd" (answered by the store) and its page still showed it after the reload.
 
 All six round-2 repairs are now proven, each in its own Kane run. As the user chose, the regression check and final check is the Stop hook's full pass over every journey that has passed, when this session stops.
+
+### The Stop hook's pass after the j18 repair: cut off, and j01 fails on its recorded greeting
+
+- When this session ended its turn after the j18 repair, the Stop hook started the full pass over all 21 journeys: `verify-2026-11-25T06-01-37`. It stopped partway (about 31 minutes in, just as j17 started, when a message from another session arrived). It left no summary, and its spend is not in `runs/credits.ndjson`: the Kane balance went from 6,656.81 (after j18) to 6,424.93, so **231.88 credits** went to it. AMBER's real total at that point: 3,054.61 recorded + 231.88 = **about 3,286.49**.
+- It finished 16 journeys: 15 PASS and **j01-sign-in FAIL**, recorded in `runs/state.json` as a regression. Kane's own diagnosis: "The home page correctly identifies Amber Demo, but the recorded greeting check is too specific for the current greeting wording." The page said "Back at it, Amber Demo"; the recording checks for "Still at it, Amber Demo?". Every call was answered by the capsule. This is the same recorded-greeting defect that moved j09 to authored runs; it fails **only** on the greeting. Not changed here: the flow and the lock are not the loop's to change.
