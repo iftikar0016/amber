@@ -1,0 +1,20 @@
+{"t":1795584054153,"type":"run_start","runId":"verify-2026-11-25T05-20-52","kind":"verify","mode":"replay","target":"capsule-server-off","commit":"204aa1c","label":null,"flows":["j20-favourite-project"],"serverOff":{"checkedAt":"2026-11-25T05:20:52.387Z","port":3456,"portOpen":false,"vikunjaProcesses":[],"off":true}}
+{"t":1795584054511,"type":"flow_start","flow":"j20-favourite-project","attempt":1,"mode":"replay","tag":"kqqlxd"}
+{"t":1795584068392,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795584070127,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":2,"status":"done","remark":"wait: Waiting for the login form steps to finish"}
+{"t":1795584070695,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":3,"status":"done","remark":"fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795584071404,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":4,"status":"done","remark":"fill: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795584072534,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":5,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795584074599,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":6,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795584075251,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":7,"status":"done","remark":"analyze: Checking whether the home page greeting is present"}
+{"t":1795584075745,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":8,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795584083704,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":9,"status":"done","remark":"hover: Hover over 'the project Reading list in the main menu on the left'"}
+{"t":1795584092198,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":10,"status":"done","remark":"click: Clicking the favorite star for Reading list in the left projects menu"}
+{"t":1795584093786,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":11,"status":"done","remark":"analyze: Checking whether Reading list is present in the Favorites menu"}
+{"t":1795584095031,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":12,"status":"done","remark":"assert: Reading list is listed as a favorite project in the main menu"}
+{"t":1795584096782,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":13,"status":"done","remark":"refresh: Navigate refresh"}
+{"t":1795584097522,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":14,"status":"done","remark":"wait: Reloading the page"}
+{"t":1795584097874,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":15,"status":"done","remark":"analyze: Checking whether Reading list is listed as a favorite project"}
+{"t":1795584098359,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":16,"status":"done","remark":"assert: Reading list is still listed as a favorite project"}
+{"t":1795584108385,"type":"flow_done","flow":"j20-favourite-project","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":53477,"shot":"verify-2026-11-25T05-20-52/j20-favourite-project/a1/shots/16.jpg"}
+{"t":1795584110306,"type":"run_done","runId":"verify-2026-11-25T05-20-52","spent":1.98,"tally":{"PASS":1},"regressions":[]}

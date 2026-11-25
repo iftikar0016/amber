@@ -1858,9 +1858,9 @@
       "needsHuman": false
     },
     "j20-favourite-project": {
-      "verdict": "FAIL",
-      "everPassed": false,
-      "failStreak": 1,
+      "verdict": "PASS",
+      "everPassed": true,
+      "failStreak": 0,
       "history": [
         {
           "runId": "verify-2026-11-25T04-15-29",
@@ -1872,6 +1872,15 @@
           "record": "runs/verify-2026-11-25T04-15-29/j20-favourite-project/a1",
           "commit": "dd0d420",
           "at": "2026-11-25T04:39:58.760Z"
+        },
+        {
+          "runId": "verify-2026-11-25T05-20-52",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T05-20-52/j20-favourite-project/a1",
+          "commit": "204aa1c",
+          "at": "2026-11-25T05:21:48.424Z"
         }
       ],
       "needsHuman": false

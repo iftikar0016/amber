@@ -109,3 +109,10 @@ Found while checking for free, not repaired (no journey fails on it): round 1 wa
 - **Repair:** the model lifts each kanban view's buckets, and from the captured board each task's bucket and position there. The board is answered from the store (buckets in order, each with its tasks by position, `tasks` left out of an empty bucket as Vikunja does, `count`, `bucket_id` on each card), only when the store knows every task's bucket and position. Marking a task done moves it into each kanban view's done bucket at index × 2^16 (the capture shows 131072 for index 2); reopening a task that is in the done bucket moves it to the default bucket. The task's own read shows the new bucket.
 - **Checked first (zero credits):** the store's answer to the pristine board (j06) equals the server's; in the captured journey, both boards after the change equal the server's (only the date-shift noise differs).
 - **Proof:** `verify-2026-11-25T05-19-04`, PASS, 5.31 credits.
+
+### j20-favourite-project: mark a project as a favourite
+
+- **Failure** (baseline): the star beside Reading list sent `PATCH /api/v2/projects/4` (`[{"op":"replace","path":"/is_favorite","value":true}]`), refused with 501.
+- **Repair:** `PATCH /projects/:id` carries out `is_favorite` and answers with Vikunja's `Project` body (no permission, as the capture shows); any other field must be unchanged, or the change is still refused (501). The projects list, already answered from the store, then shows the flag, and the front end lists the project under favourites.
+- **Checked first (zero credits):** in the captured journey, the update's response and the projects list after it equal the real server's.
+- **Proof:** `verify-2026-11-25T05-20-52`, PASS, 1.98 credits.

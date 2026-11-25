@@ -531,7 +531,36 @@
     return json(201, comment);
   }
 
+  /**
+   * PATCH /projects/:id: Vikunja's project update. The store carries out marking a project as a favourite;
+   * any other field must be unchanged, or the change is not answered here (the Service Worker refuses it, 501).
+   */
+  async function updateProject({ params, body, url, store }) {
+    const m = store.model;
+    const p = m.projects && m.projects[params.project];
+    if (!p || p.id <= 0) return null;
+    const fields = patchFields(body);
+    if (!fields) return null;
+    const readOnly = new Set(['id', 'owner', 'created', 'updated', 'views', 'max_permission', 'background_information', 'background_blur_hash']);
+    const next = {};
+    for (const [k, v] of Object.entries(fields)) {
+      if (readOnly.has(k)) continue;
+      if (k === 'is_favorite') next.is_favorite = Boolean(v);
+      else if (JSON.stringify(v) !== JSON.stringify(p[k])) return null;
+    }
+    Object.assign(p, next, { updated: nowIso() });
+    await store.save();
+    // Vikunja's update body carries no permission, as its create body does not.
+    return json(200, { $schema: schema(url, 'Project'), ...projectJson({ ...p, max_permission: null }) });
+  }
+
   const routes = [
+    {
+      name: 'project-update',
+      method: 'PATCH',
+      path: /^\/api\/v2\/projects\/(?<project>-?\d+)$/,
+      handle: updateProject,
+    },
     {
       name: 'kanban-tasks',
       method: 'GET',
