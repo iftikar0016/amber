@@ -14,7 +14,10 @@
         "flows/output-j01-sign-in/playwright-python-code/.env.example": "8e782f4eeca814ebca6a947bae584a5a16c3fa988cade75e928af5a4bdf41b1a",
         "flows/output-j01-sign-in/playwright-python-code/requirements.txt": "5a26e04e1ddca7510ee8620b0facedce7bfe6df12419b6224dfa567b1e5b825e",
         "flows/output-j01-sign-in/playwright-python-code/test.py": "3d2d2cadfeb64e4f6e46cdd97bf71935cf40a764f431563cfa7937eaf3387d0a"
-      }
+      },
+      "verifyBy": "author",
+      "why": "Its saved recording checks the home page greeting for the exact text 'Still at it, Amber Demo?', which Vikunja shows only on the evening it was captured (the greeting is picked from a hash of date, time of day and account; see j09). In the Stop hook's pass after the round-2 repairs, Kane failed it on the greeting alone: the page said 'Back at it, Amber Demo', every call was answered and Order tiles was listed (verify-2026-11-25T06-01-37). Each check now re-authors the journey from its objective.",
+      "replayCheck": "runs/verify-2026-11-25T06-01-37/j01-sign-in"
     },
     "j02-projects": {
       "frozenAt": "2026-11-23T15:29:46.657Z",
