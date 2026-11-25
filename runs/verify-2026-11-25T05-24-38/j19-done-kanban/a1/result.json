@@ -1,0 +1,89 @@
+{
+  "flow": "j19-done-kanban",
+  "attempt": 1,
+  "mode": "replay",
+  "tag": "upkqrx",
+  "args": [
+    "testmd",
+    "run",
+    "~\\hackathons\\kane\\amber\\.amber\\kane\\runs\\j19-done-kanban\\j19-done-kanban_test.md",
+    "--agent",
+    "--headless",
+    "--no-adaptive-heal"
+  ],
+  "startedAt": "2026-11-25T05:46:37.539Z",
+  "ms": 59673,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": null,
+  "summary": null,
+  "reason": null,
+  "resultCode": null,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": null,
+  "credits": 0,
+  "steps": 20,
+  "failedSteps": [],
+  "testmdSummary": {
+    "type": "test_md_summary",
+    "overall_status": "passed",
+    "duration_s": 44,
+    "steps": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "replay_decisions": 1,
+      "author_decisions": 0
+    },
+    "adaptive_heal": {
+      "triggered": false
+    },
+    "commit": {
+      "committed": false,
+      "reason": "readonly_fallback"
+    },
+    "artifacts": {
+      "replaced": false
+    },
+    "upload": {
+      "performed": true,
+      "succeeded": true
+    },
+    "cancelled": false,
+    "v": 1,
+    "ts": "2026-11-25T05:47:35.084Z",
+    "kind": "typed",
+    "_rt": 1795585655083
+  },
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-25T05:46:37.539Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-25T05:47:37.503Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 20,
+    "finalShot": "shots/20.jpg",
+    "failures": []
+  }
+}

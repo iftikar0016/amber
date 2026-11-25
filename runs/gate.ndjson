@@ -2,3 +2,4 @@
 {"at":"2026-11-23T18:50:16.021Z","via":"hook","stopHookActive":true,"capsuleHash":"11fbc438df3f795c","checked":{"runId":"verify-2026-11-23T18-50-16","flows":15},"ms":977461,"outcome":"allowed","regressions":[],"message":null}
 {"at":"2026-11-23T19:08:26.228Z","via":"hook","stopHookActive":false,"capsuleHash":"11fbc438df3f795c","checked":null,"ms":34,"outcome":"allowed","regressions":[],"message":null}
 {"at":"2026-11-25T04:57:27.039Z","via":"cli","stopHookActive":false,"capsuleHash":"19aabaedd1a3689b","checked":{"runId":"verify-2026-11-25T04-57-28","flows":16},"ms":1229945,"outcome":"allowed","regressions":[],"message":null}
+{"at":"2026-11-25T05:24:37.450Z","via":"cli","stopHookActive":false,"capsuleHash":"eff1337e17cf73c1","checked":{"runId":"verify-2026-11-25T05-24-38","flows":19},"ms":1515852,"outcome":"allowed","regressions":[],"message":null}

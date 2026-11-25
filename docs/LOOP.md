@@ -123,3 +123,8 @@ Found while checking for free, not repaired (no journey fails on it): round 1 wa
 - **Repair:** the model keeps the user's labels when the captured list is complete. `POST /labels` creates Vikunja's label (next label id; the create body carries the creator without profile details, as Vikunja's does), `GET /labels` is answered from the store (a search with `s` still falls through), and `POST /tasks/:id/labels` puts an existing label on the task; the task's own read and the list views, already answered from the store, then show it.
 - **Checked first (zero credits):** the store's answers to every journey's pristine label list equal the server's; in the captured journey, the create, both label lists, the attach and the task's read after it equal the real server's (only the date-shift noise differs).
 - **Proof:** `verify-2026-11-25T05-22-53`, PASS, 10.69 credits.
+
+### Re-check after the j19, j20 and j21 repairs
+
+- `verify-2026-11-25T05-24-38` (AMBER's gate, all 19 journeys that have passed): **19/19 PASS**, no regression, no refused change, no leak, 224.31 credits. Run once after the three repairs rather than after each, because a full re-check now costs about 200 credits (see the re-check after j17); proposed to the session that owns the budget beforehand.
+- AMBER's total after it: 2,966.95 of 3,700. j16 and j18 wait on a lock decision (their recordings hard-code the capture's tag).

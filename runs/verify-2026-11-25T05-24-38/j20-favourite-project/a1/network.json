@@ -1,0 +1,1460 @@
+[
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/login",
+    "status": 200,
+    "resourceType": "document",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/rolldown-runtime-BWaJ3C7D.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/preload-helper-DjzSQ1t3.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/vue.runtime.esm-bundler-DUf7TSaf.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/useMutation-BoQdv4Sp.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/generated-Bd-euk4C.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/problem-BSsrUu2e.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/requestContext-DaLyFbxH.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/vue-i18n.runtime-BoGaVm48.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/virtual_intlify-i18n-13-DtJLHe_B.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/dayjs.min-TpdQFcR3.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/message-DVNPk08I.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/fetchAllPages-CJgMiSy0.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/useQuery-CfIcy9X7.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/contextMutation-B8AkQ8Zn.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/dist-C-dLLG1a.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/dist-D51COhv8.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/projects-DnzuaWKI.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/useBlurHashUrl-0IRTyqe9.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/config-DQpOgepz.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/useApi-BPuI6ZR9-B9dIbFoP.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/sensitiveQueryParams-DatD1YTJ.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/proFeatures-5sxnJ_d9.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/useDelayedLoading-DirwaSKV.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/randomId-DHkpih5Z.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/_plugin-vue_export-helper-BDNMzG2s.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/Message-igREtUfO.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/BaseButton-LP6-AE4f.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/Password-DDcXXi-3.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/FormField-Cu5c_QTF.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/ButtonLink-vxwEinK9.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/useTitle-BDTJckCi.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/Card-BLrby1-w.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/secretMutation-lUCUFLVZ.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/Icon-BAKPjlrs.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/FancyCheckbox-BUs5DKwk.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/CustomTransition-CNl92r4S.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/projectHistory-a8RZQIjg.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/useProjects-01c2YGF7.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/labels-mpRygqHN.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/router-QU_NFAr6.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/DropdownItem-D0TuPKet.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/Message-Cyk9bN2V.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/BaseButton-DaeQslhS.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/Password-um2N5wEU.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/FormField-CuqiOF-v.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/ButtonLink-CPnyNXU6.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/Card-ChiUTmkc.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/FancyCheckbox-CvZjW-A5.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/CustomTransition-DY1lgFF7.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/router-_-NZf0hA.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/DropdownItem-0MLQRbMH.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/assets/index-B5fTxDFC.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/amber/boot.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-1",
+    "method": "GET",
+    "path": "/manifest.webmanifest",
+    "status": 200,
+    "resourceType": "manifest",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-2",
+    "method": "GET",
+    "path": "/images/icons/android-chrome-192x192.png",
+    "status": 200,
+    "resourceType": "other",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-2",
+    "method": "GET",
+    "path": "/assets/index-DHtQJ0wK.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-2",
+    "method": "GET",
+    "path": "/api/v2/info",
+    "status": 200,
+    "resourceType": "fetch",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-2",
+    "method": "GET",
+    "path": "/assets/llama-nightscape-mKZQPxXM.jpg",
+    "status": 200,
+    "resourceType": "image",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-2",
+    "method": "GET",
+    "path": "/assets/OpenSans_wght__0f3a8072-BJG3deEJ.woff2",
+    "status": 200,
+    "resourceType": "font",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-2",
+    "method": "GET",
+    "path": "/assets/llama-Cg7SOh2S.svg",
+    "status": 200,
+    "resourceType": "image",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-2",
+    "method": "GET",
+    "path": "/assets/no-auth-image-Cmfcl6fh.jpg",
+    "status": 200,
+    "resourceType": "image",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-2",
+    "method": "GET",
+    "path": "/assets/Quicksand_wght__a912b486-BSFz85KT.woff2",
+    "status": 200,
+    "resourceType": "font",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-6",
+    "method": "POST",
+    "path": "/api/v2/login",
+    "status": 200,
+    "resourceType": "fetch",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-6",
+    "method": "GET",
+    "path": "/api/v2/user",
+    "status": 200,
+    "resourceType": "fetch",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-6",
+    "method": "GET",
+    "path": "/assets/Home-BQWR_QQq.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-6",
+    "method": "GET",
+    "path": "/assets/ProjectCardGrid-DdSl6gTe.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-6",
+    "method": "GET",
+    "path": "/assets/ProjectCardGrid-C4QaZviO.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-6",
+    "method": "GET",
+    "path": "/assets/AddTask-OIZxnMhW.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-6",
+    "method": "GET",
+    "path": "/assets/Expandable-CLAWgWbP.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-6",
+    "method": "GET",
+    "path": "/assets/Expandable-WOu2euqu.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-6",
+    "method": "GET",
+    "path": "/assets/AddTask-D2V5erXv.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-6",
+    "method": "GET",
+    "path": "/assets/Home-pT6jpxSJ.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-6",
+    "method": "GET",
+    "path": "/api/v2/avatar/amber",
+    "status": 200,
+    "resourceType": "fetch",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-6",
+    "method": "GET",
+    "path": "/api/v2/projects",
+    "status": 200,
+    "resourceType": "fetch",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-6",
+    "method": "GET",
+    "path": "/api/v2/labels",
+    "status": 200,
+    "resourceType": "fetch",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-6",
+    "method": "POST",
+    "path": "/api/v2/user/token/refresh",
+    "status": 200,
+    "resourceType": "fetch",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-6",
+    "method": "GET",
+    "path": "/api/v2/tasks",
+    "status": 200,
+    "resourceType": "fetch",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-6",
+    "method": "GET",
+    "path": "/api/v2/tasks",
+    "status": 200,
+    "resourceType": "fetch",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-6",
+    "method": "GET",
+    "path": "/assets/OpenSans-Italic_wght__f8c82d6f-DqmCXWBq.woff2",
+    "status": 200,
+    "resourceType": "font",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "0-7",
+    "method": "GET",
+    "path": "/api/v2/notifications",
+    "status": 200,
+    "resourceType": "fetch",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-1",
+    "method": "GET",
+    "path": "/api/v2/notifications",
+    "status": 200,
+    "resourceType": "fetch",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-2",
+    "method": "GET",
+    "path": "/api/v2/notifications",
+    "status": 200,
+    "resourceType": "fetch",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-2",
+    "method": "PATCH",
+    "path": "/api/v2/projects/4",
+    "status": 200,
+    "resourceType": "fetch",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/",
+    "status": 200,
+    "resourceType": "document",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/rolldown-runtime-BWaJ3C7D.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/preload-helper-DjzSQ1t3.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/vue.runtime.esm-bundler-DUf7TSaf.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/useMutation-BoQdv4Sp.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/generated-Bd-euk4C.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/problem-BSsrUu2e.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/requestContext-DaLyFbxH.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/vue-i18n.runtime-BoGaVm48.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/virtual_intlify-i18n-13-DtJLHe_B.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/dayjs.min-TpdQFcR3.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/message-DVNPk08I.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/fetchAllPages-CJgMiSy0.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/useQuery-CfIcy9X7.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/contextMutation-B8AkQ8Zn.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/dist-C-dLLG1a.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/dist-D51COhv8.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/projects-DnzuaWKI.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/useBlurHashUrl-0IRTyqe9.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/config-DQpOgepz.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/useApi-BPuI6ZR9-B9dIbFoP.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/sensitiveQueryParams-DatD1YTJ.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/proFeatures-5sxnJ_d9.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/useDelayedLoading-DirwaSKV.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/randomId-DHkpih5Z.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/_plugin-vue_export-helper-BDNMzG2s.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/Message-igREtUfO.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/BaseButton-LP6-AE4f.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/Password-DDcXXi-3.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/FormField-Cu5c_QTF.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/ButtonLink-vxwEinK9.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/useTitle-BDTJckCi.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/Card-BLrby1-w.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/secretMutation-lUCUFLVZ.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/Icon-BAKPjlrs.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/FancyCheckbox-BUs5DKwk.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/CustomTransition-CNl92r4S.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/projectHistory-a8RZQIjg.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/useProjects-01c2YGF7.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/labels-mpRygqHN.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/router-QU_NFAr6.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/DropdownItem-D0TuPKet.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/Message-Cyk9bN2V.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/BaseButton-DaeQslhS.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/Password-um2N5wEU.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/FormField-CuqiOF-v.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/ButtonLink-CPnyNXU6.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/Card-ChiUTmkc.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/FancyCheckbox-CvZjW-A5.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/CustomTransition-DY1lgFF7.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/router-_-NZf0hA.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/DropdownItem-0MLQRbMH.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/index-B5fTxDFC.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/amber/boot.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/manifest.webmanifest",
+    "status": 200,
+    "resourceType": "manifest",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-5",
+    "method": "GET",
+    "path": "/assets/index-DHtQJ0wK.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-6",
+    "method": "GET",
+    "path": "/api/v2/info",
+    "status": 200,
+    "resourceType": "fetch",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-6",
+    "method": "GET",
+    "path": "/api/v2/user",
+    "status": 200,
+    "resourceType": "fetch",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-6",
+    "method": "GET",
+    "path": "/sw.js",
+    "status": 200,
+    "resourceType": "fetch",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-6",
+    "method": "GET",
+    "path": "/assets/llama-nightscape-mKZQPxXM.jpg",
+    "status": 200,
+    "resourceType": "image",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-6",
+    "method": "GET",
+    "path": "/assets/OpenSans_wght__0f3a8072-BJG3deEJ.woff2",
+    "status": 200,
+    "resourceType": "font",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-6",
+    "method": "GET",
+    "path": "/assets/Home-BQWR_QQq.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-6",
+    "method": "GET",
+    "path": "/assets/ProjectCardGrid-DdSl6gTe.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-6",
+    "method": "GET",
+    "path": "/assets/ProjectCardGrid-C4QaZviO.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-6",
+    "method": "GET",
+    "path": "/assets/AddTask-OIZxnMhW.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-6",
+    "method": "GET",
+    "path": "/assets/Expandable-CLAWgWbP.js",
+    "status": 200,
+    "resourceType": "script",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-6",
+    "method": "GET",
+    "path": "/assets/Expandable-WOu2euqu.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-6",
+    "method": "GET",
+    "path": "/assets/AddTask-D2V5erXv.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-6",
+    "method": "GET",
+    "path": "/assets/Home-pT6jpxSJ.css",
+    "status": 200,
+    "resourceType": "stylesheet",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-6",
+    "method": "GET",
+    "path": "/images/icons/android-chrome-192x192.png",
+    "status": 200,
+    "resourceType": "other",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-6",
+    "method": "GET",
+    "path": "/assets/Quicksand_wght__a912b486-BSFz85KT.woff2",
+    "status": 200,
+    "resourceType": "font",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-6",
+    "method": "GET",
+    "path": "/api/v2/avatar/amber",
+    "status": 200,
+    "resourceType": "fetch",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-6",
+    "method": "GET",
+    "path": "/api/v2/projects",
+    "status": 200,
+    "resourceType": "fetch",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-6",
+    "method": "GET",
+    "path": "/api/v2/labels",
+    "status": 200,
+    "resourceType": "fetch",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-6",
+    "method": "POST",
+    "path": "/api/v2/user/token/refresh",
+    "status": 200,
+    "resourceType": "fetch",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-6",
+    "method": "GET",
+    "path": "/api/v2/tasks",
+    "status": 200,
+    "resourceType": "fetch",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-6",
+    "method": "GET",
+    "path": "/api/v2/tasks",
+    "status": 200,
+    "resourceType": "fetch",
+    "failed": false,
+    "fault": null
+  },
+  {
+    "step": "1-6",
+    "method": "GET",
+    "path": "/assets/OpenSans-Italic_wght__f8c82d6f-DqmCXWBq.woff2",
+    "status": 200,
+    "resourceType": "font",
+    "failed": false,
+    "fault": null
+  }
+]

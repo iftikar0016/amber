@@ -1,0 +1,66 @@
+{
+  "flow": "j10-mark-done",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "obhvwg",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Kitchen renovation and mark the task Choose worktop as done with its checkbox. Reload the page, then verify Choose worktop is no longer in the list of open tasks and Order tiles still is.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json"
+  ],
+  "startedAt": "2026-11-25T05:34:52.694Z",
+  "ms": 131719,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "completed a task in the Kitchen renovation project on the project page",
+  "summary": "Opened the Kitchen renovation project and marked “Choose worktop” as done.\nReloaded the page to confirm the change persisted.\n“Choose worktop” no longer appeared among the open tasks, while “Order tiles” remained open.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "Choose worktop in open tasks": "false",
+    "Order tiles in open tasks": "true"
+  },
+  "credits": 30.8106455,
+  "steps": 14,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-25T05:34:52.693Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-25T05:37:04.706Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 14,
+    "finalShot": "shots/14.jpg",
+    "failures": []
+  }
+}
