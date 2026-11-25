@@ -25,4 +25,4 @@ variables:
 # Session: page-replay
 
 ## Step 1
-Go to http://127.0.0.1:4790/amber/?t=start&speed=10. Verify the line above the block reads 0 of 15 interactions proven with the server off. Click the Replay the run button and wait until that line reads 15 of 15 interactions proven with the server off, then verify it does.
+Go to http://127.0.0.1:4790/amber/?t=start&speed=10. Verify the line above the block reads 0 of 21 interactions proven with the server off. Click the Replay the run button and wait until that line reads 21 of 21 interactions proven with the server off, then verify it does.

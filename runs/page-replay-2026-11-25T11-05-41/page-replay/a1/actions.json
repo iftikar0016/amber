@@ -1,0 +1,44 @@
+[
+  {
+    "step": 1,
+    "type": "navigate",
+    "intent": "Navigate to http://127.0.0.1:4790/amber/?t=start&speed=10",
+    "instruction": "Navigate to http://127.0.0.1:4790/amber/?t=start&speed=10"
+  },
+  {
+    "step": 2,
+    "type": "analyze",
+    "intent": "the interactions proof line above the journeys block",
+    "instruction": "Reading the interactions proof line"
+  },
+  {
+    "step": 3,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  },
+  {
+    "step": 4,
+    "type": "click",
+    "intent": "PRIMARY: Click the Replay the run button; role=button; text=\"REPLAY THE RUN\" | HINTS: container=Controls navigation; position=bottom-left",
+    "instruction": "Clicking the REPLAY THE RUN button"
+  },
+  {
+    "step": 5,
+    "type": "wait",
+    "intent": "PRIMARY: wait until the line above the block reads 21 of 21 interactions proven with the server off",
+    "instruction": "Waiting for 21 of 21 interactions with the server turned off"
+  },
+  {
+    "step": 6,
+    "type": "analyze",
+    "intent": "the completed interactions status line above the journeys block",
+    "instruction": "Reading the completed interactions status line"
+  },
+  {
+    "step": 7,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  }
+]

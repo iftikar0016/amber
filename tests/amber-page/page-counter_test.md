@@ -25,4 +25,4 @@ variables:
 # Session: page-counter
 
 ## Step 1
-Go to http://127.0.0.1:4790/amber/. Verify the line above the amber block reads 15 of 15 interactions proven with the server off, and verify the caption below the block mentions Kane CLI.
+Go to http://127.0.0.1:4790/amber/. Verify the line above the amber block reads 21 of 21 interactions proven with the server off, and verify the caption below the block mentions Kane CLI.

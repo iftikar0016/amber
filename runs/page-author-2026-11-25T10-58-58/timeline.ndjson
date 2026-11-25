@@ -1,0 +1,17 @@
+{"t":1795604340530,"type":"run_start","runId":"page-author-2026-11-25T10-58-58","kind":"page-suite","mode":"author","tests":["page-counter","page-replay"]}
+{"t":1795604340533,"type":"flow_start","flow":"page-counter","attempt":1,"mode":"author","tag":"kwfjbe"}
+{"t":1795604360423,"type":"flow_step","flow":"page-counter","attempt":1,"n":2,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/amber/"}
+{"t":1795604377196,"type":"flow_step","flow":"page-counter","attempt":1,"n":3,"status":"done","remark":"analyze: the caption below the block mentions Kane CLI"}
+{"t":1795604379425,"type":"flow_step","flow":"page-counter","attempt":1,"n":4,"status":"done","remark":"assert: the line above the amber block reads 21 of 21 interactions proven with the serve"}
+{"t":1795604381438,"type":"flow_step","flow":"page-counter","attempt":1,"n":5,"status":"done","remark":"assert: the caption below the block mentions Kane CLI"}
+{"t":1795604403972,"type":"flow_done","flow":"page-counter","attempt":1,"mode":"author","verdict":"PASS","basis":"kane","reasons":[],"credits":15.051904999999998,"ms":63411,"shot":"page-author-2026-11-25T10-58-58/page-counter/a1/shots/4.jpg"}
+{"t":1795604404005,"type":"flow_start","flow":"page-replay","attempt":1,"mode":"author","tag":"gvshta"}
+{"t":1795604423434,"type":"flow_step","flow":"page-replay","attempt":1,"n":2,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/amber/?t=start&speed=10"}
+{"t":1795604440136,"type":"flow_step","flow":"page-replay","attempt":1,"n":3,"status":"done","remark":"analyze: ANALYZE(textual_visual, 'the line above the block reads 0 of 21 interactions pro"}
+{"t":1795604442454,"type":"flow_step","flow":"page-replay","attempt":1,"n":4,"status":"done","remark":"assert: the line above the block reads 0 of 21 interactions proven with the server off"}
+{"t":1795604450093,"type":"flow_step","flow":"page-replay","attempt":1,"n":5,"status":"done","remark":"click: Clicking the REPLAY THE RUN button"}
+{"t":1795604474532,"type":"flow_step","flow":"page-replay","attempt":1,"n":6,"status":"done","remark":"wait: PRIMARY: wait until the line above the block reads 21 of 21 interactions proven "}
+{"t":1795604490157,"type":"flow_step","flow":"page-replay","attempt":1,"n":7,"status":"done","remark":"analyze: ANALYZE(textual_visual, 'the line above the block reads 21 of 21 interactions pr"}
+{"t":1795604492488,"type":"flow_step","flow":"page-replay","attempt":1,"n":8,"status":"done","remark":"assert: the line above the block reads 21 of 21 interactions proven with the server off"}
+{"t":1795604514476,"type":"flow_done","flow":"page-replay","attempt":1,"mode":"author","verdict":"PASS","basis":"kane","reasons":[],"credits":23.8985325,"ms":110439,"shot":"page-author-2026-11-25T10-58-58/page-replay/a1/shots/7.jpg"}
+{"t":1795604516250,"type":"run_done","runId":"page-author-2026-11-25T10-58-58","spent":46.69}

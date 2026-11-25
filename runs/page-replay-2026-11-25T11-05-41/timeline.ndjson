@@ -1,0 +1,18 @@
+{"t":1795604743665,"type":"run_start","runId":"page-replay-2026-11-25T11-05-41","kind":"page-suite","mode":"replay","tests":["page-counter","page-replay"]}
+{"t":1795604743694,"type":"flow_start","flow":"page-counter","attempt":1,"mode":"replay","tag":"easujx"}
+{"t":1795604757979,"type":"flow_step","flow":"page-counter","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/amber/"}
+{"t":1795604759494,"type":"flow_step","flow":"page-counter","attempt":1,"n":2,"status":"done","remark":"analyze: Reading the line above the amber block"}
+{"t":1795604760326,"type":"flow_step","flow":"page-counter","attempt":1,"n":3,"status":"done","remark":"analyze: Checking whether the caption mentions Kane CLI"}
+{"t":1795604761297,"type":"flow_step","flow":"page-counter","attempt":1,"n":4,"status":"done","remark":"assert: the line above the amber block reads 21 of 21 interactions proven with the serve"}
+{"t":1795604761416,"type":"flow_step","flow":"page-counter","attempt":1,"n":5,"status":"done","remark":"assert: the caption below the block mentions Kane CLI"}
+{"t":1795604770751,"type":"flow_done","flow":"page-counter","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":27014,"shot":"page-replay-2026-11-25T11-05-41/page-counter/a1/shots/5.jpg"}
+{"t":1795604770769,"type":"flow_start","flow":"page-replay","attempt":1,"mode":"replay","tag":"ckaddv"}
+{"t":1795604784928,"type":"flow_step","flow":"page-replay","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/amber/?t=start&speed=10"}
+{"t":1795604785312,"type":"flow_step","flow":"page-replay","attempt":1,"n":2,"status":"done","remark":"analyze: Reading the interactions proof line"}
+{"t":1795604786384,"type":"flow_step","flow":"page-replay","attempt":1,"n":3,"status":"done","remark":"assert: the line above the block reads 0 of 21 interactions proven with the server off"}
+{"t":1795604787822,"type":"flow_step","flow":"page-replay","attempt":1,"n":4,"status":"done","remark":"click: Clicking the REPLAY THE RUN button"}
+{"t":1795604813887,"type":"flow_step","flow":"page-replay","attempt":1,"n":5,"status":"done","remark":"wait: Waiting for 21 of 21 interactions with the server turned off"}
+{"t":1795604815403,"type":"flow_step","flow":"page-replay","attempt":1,"n":6,"status":"done","remark":"analyze: Reading the completed interactions status line"}
+{"t":1795604816875,"type":"flow_step","flow":"page-replay","attempt":1,"n":7,"status":"done","remark":"assert: the line above the block reads 21 of 21 interactions proven with the server off"}
+{"t":1795604825465,"type":"flow_done","flow":"page-replay","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":54648,"shot":"page-replay-2026-11-25T11-05-41/page-replay/a1/shots/7.jpg"}
+{"t":1795604827256,"type":"run_done","runId":"page-replay-2026-11-25T11-05-41","spent":4.28}

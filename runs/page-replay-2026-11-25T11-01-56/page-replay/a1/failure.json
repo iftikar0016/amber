@@ -1,0 +1,9 @@
+[
+  {
+    "ordinal": 3,
+    "message": "assertion_failed: @ step 3",
+    "url": "http://127.0.0.1:4790/amber/?t=start&speed=10",
+    "rootCause": "The page is loading or counting the wrong total number of interactions for this run.",
+    "suggestedFix": "Check the run data and counter configuration for the start view so this scenario contains and displays 15 interactions."
+  }
+]

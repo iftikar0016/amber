@@ -55,6 +55,13 @@ export async function pageSuite(o) {
     emit({ type: 'run_start', runId, kind: 'page-suite', mode: o.mode, tests: tests.map((t) => t.id) });
     for (const t of tests) {
       let r;
+      if (o.mode === 'author') {
+        // Kane saves a test under a new name (<id>-2) when one with its name already exists, so the previous
+        // saved test is removed first, as capture does; otherwise the old test would be copied back.
+        const testsDir = path.join(KANE_CWD, '.testmuai', 'tests');
+        fs.rmSync(path.join(testsDir, `${t.id}_test.md`), { force: true });
+        for (const d of [path.join(testsDir, `output-${t.id}`), path.join(KANE_CWD, `output-${t.id}`)]) fs.rmSync(d, { recursive: true, force: true });
+      }
       for (let attempt = 1; attempt <= 2; attempt++) {
         log(`${t.id}: ${o.mode} (attempt ${attempt})`);
         r = await runFlow(

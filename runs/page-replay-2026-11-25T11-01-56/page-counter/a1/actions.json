@@ -1,0 +1,26 @@
+[
+  {
+    "step": 1,
+    "type": "navigate",
+    "intent": "Navigate to http://127.0.0.1:4790/amber/",
+    "instruction": "Navigate to http://127.0.0.1:4790/amber/"
+  },
+  {
+    "step": 2,
+    "type": "analyze",
+    "intent": "the status line above the amber block",
+    "instruction": "Reading the status line above the amber block"
+  },
+  {
+    "step": 3,
+    "type": "analyze",
+    "intent": "whether Kane CLI is present in the caption below the amber block",
+    "instruction": "Checking whether the caption below the amber block mentions Kane CLI"
+  },
+  {
+    "step": 4,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  }
+]

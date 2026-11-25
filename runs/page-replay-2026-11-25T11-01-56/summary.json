@@ -1,0 +1,45 @@
+{
+  "runId": "page-replay-2026-11-25T11-01-56",
+  "kind": "page-suite",
+  "mode": "replay",
+  "spend": {
+    "started": "2026-11-25T11:01:58.188Z",
+    "ended": "2026-11-25T11:04:33.392Z",
+    "what": "page suite replay page-counter,page-evidence,page-flip,page-replay",
+    "estimate": 40,
+    "balanceBefore": 6037.6126,
+    "balanceAfter": 6016.1607,
+    "spent": 21.45,
+    "runId": "page-replay-2026-11-25T11-01-56"
+  },
+  "results": [
+    {
+      "id": "page-counter",
+      "verdict": "FAIL",
+      "reasons": [
+        "The amber page shows 21 of 21 proven interactions where the required status is 15 of 15."
+      ],
+      "record": "runs/page-replay-2026-11-25T11-01-56/page-counter/a1"
+    },
+    {
+      "id": "page-evidence",
+      "verdict": "PASS",
+      "reasons": [],
+      "record": "runs/page-replay-2026-11-25T11-01-56/page-evidence/a1"
+    },
+    {
+      "id": "page-flip",
+      "verdict": "PASS",
+      "reasons": [],
+      "record": "runs/page-replay-2026-11-25T11-01-56/page-flip/a1"
+    },
+    {
+      "id": "page-replay",
+      "verdict": "FAIL",
+      "reasons": [
+        "The start screen reports 21 total server-off interactions when it is required to report 15."
+      ],
+      "record": "runs/page-replay-2026-11-25T11-01-56/page-replay/a1"
+    }
+  ]
+}

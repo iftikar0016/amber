@@ -1,0 +1,31 @@
+{"t":1795604518200,"type":"run_start","runId":"page-replay-2026-11-25T11-01-56","kind":"page-suite","mode":"replay","tests":["page-counter","page-evidence","page-flip","page-replay"]}
+{"t":1795604518232,"type":"flow_start","flow":"page-counter","attempt":1,"mode":"replay","tag":"ilcqyw"}
+{"t":1795604532501,"type":"flow_step","flow":"page-counter","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/amber/"}
+{"t":1795604546540,"type":"flow_step","flow":"page-counter","attempt":1,"n":2,"status":"done","remark":"analyze: Reading the status line above the amber block"}
+{"t":1795604546766,"type":"flow_step","flow":"page-counter","attempt":1,"n":3,"status":"done","remark":"analyze: Checking whether the caption below the amber block mentions Kane CLI"}
+{"t":1795604547736,"type":"flow_step","flow":"page-counter","attempt":1,"n":4,"status":"failed","remark":"assert: the line above the amber block reads 15 of 15 interactions proven with the serve"}
+{"t":1795604562647,"type":"flow_done","flow":"page-counter","attempt":1,"mode":"replay","verdict":"FAIL","basis":"kane","reasons":["The amber page shows 21 of 21 proven interactions where the required status is 15 of 15."],"credits":0,"ms":44368,"shot":"page-replay-2026-11-25T11-01-56/page-counter/a1/shots/4.jpg"}
+{"t":1795604562670,"type":"flow_start","flow":"page-evidence","attempt":1,"mode":"replay","tag":"tpsfox"}
+{"t":1795604576752,"type":"flow_step","flow":"page-evidence","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/amber/"}
+{"t":1795604578936,"type":"flow_step","flow":"page-evidence","attempt":1,"n":2,"status":"done","remark":"click: Clicking the J15 tile to comment on Kane's evidence inside the amber block"}
+{"t":1795604580187,"type":"flow_step","flow":"page-evidence","attempt":1,"n":3,"status":"done","remark":"analyze: Checking whether the side panel is open"}
+{"t":1795604581188,"type":"flow_step","flow":"page-evidence","attempt":1,"n":4,"status":"done","remark":"analyze: Reading the side panel heading"}
+{"t":1795604582194,"type":"flow_step","flow":"page-evidence","attempt":1,"n":5,"status":"done","remark":"analyze: Checking whether the history lists a capsule FAIL"}
+{"t":1795604591381,"type":"flow_step","flow":"page-evidence","attempt":1,"n":6,"status":"done","remark":"analyze: Checking whether the history lists a capsule PASS"}
+{"t":1795604592871,"type":"flow_step","flow":"page-evidence","attempt":1,"n":7,"status":"done","remark":"assert: a side panel opens with the heading Comment on a task"}
+{"t":1795604593372,"type":"flow_step","flow":"page-evidence","attempt":1,"n":8,"status":"done","remark":"assert: its history lists both a FAIL and a PASS for the capsule"}
+{"t":1795604602053,"type":"flow_done","flow":"page-evidence","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":39328,"shot":"page-replay-2026-11-25T11-01-56/page-evidence/a1/shots/8.jpg"}
+{"t":1795604602074,"type":"flow_start","flow":"page-flip","attempt":1,"mode":"replay","tag":"hjjmph"}
+{"t":1795604616356,"type":"flow_step","flow":"page-flip","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/amber/"}
+{"t":1795604618765,"type":"flow_step","flow":"page-flip","attempt":1,"n":2,"status":"done","remark":"click: Clicking the Open the live app button"}
+{"t":1795604619025,"type":"flow_step","flow":"page-flip","attempt":1,"n":3,"status":"done","remark":"analyze: Checking whether the signed-in Amber Demo account is shown"}
+{"t":1795604619208,"type":"flow_step","flow":"page-flip","attempt":1,"n":4,"status":"done","remark":"analyze: Checking whether Website relaunch is shown in the project menu"}
+{"t":1795604619645,"type":"flow_step","flow":"page-flip","attempt":1,"n":5,"status":"done","remark":"analyze: Checking whether Kitchen renovation is shown in the project menu"}
+{"t":1795604620110,"type":"flow_step","flow":"page-flip","attempt":1,"n":6,"status":"done","remark":"assert: the block now shows the Vikunja app signed in as Amber Demo, with the projects W"}
+{"t":1795604630707,"type":"flow_done","flow":"page-flip","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":28600,"shot":"page-replay-2026-11-25T11-01-56/page-flip/a1/shots/6.jpg"}
+{"t":1795604630727,"type":"flow_start","flow":"page-replay","attempt":1,"mode":"replay","tag":"aothqx"}
+{"t":1795604644897,"type":"flow_step","flow":"page-replay","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/amber/?t=start&speed=10"}
+{"t":1795604656969,"type":"flow_step","flow":"page-replay","attempt":1,"n":2,"status":"done","remark":"analyze: Reading the interactions-proven count"}
+{"t":1795604657336,"type":"flow_step","flow":"page-replay","attempt":1,"n":3,"status":"failed","remark":"assert: the line above the block reads 0 of 15 interactions proven with the server off"}
+{"t":1795604671679,"type":"flow_done","flow":"page-replay","attempt":1,"mode":"replay","verdict":"FAIL","basis":"kane","reasons":["The start screen reports 21 total server-off interactions when it is required to report 15."],"credits":0,"ms":40928,"shot":"page-replay-2026-11-25T11-01-56/page-replay/a1/shots/3.jpg"}
+{"t":1795604673392,"type":"run_done","runId":"page-replay-2026-11-25T11-01-56","spent":21.45}

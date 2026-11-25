@@ -1,0 +1,68 @@
+[
+  {
+    "ordinal": 1,
+    "id": "0-1",
+    "kind": "navigate",
+    "status": "passed",
+    "summary": "navigate: Navigate to http://127.0.0.1:4790/amber/",
+    "url": "https://kaneai-playground.lambdatest.io/",
+    "durationMs": 844,
+    "shot": "shots/1.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 2,
+    "id": "0-2",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Clicking the Open the live app button",
+    "url": "http://127.0.0.1:4790/amber/",
+    "durationMs": 2171,
+    "shot": "shots/2.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 3,
+    "id": "0-3",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: Checking whether the signed-in Amber Demo account is shown",
+    "url": "http://127.0.0.1:4790/amber/",
+    "durationMs": 250,
+    "shot": "shots/3.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 4,
+    "id": "0-4",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: Checking whether Website relaunch is shown in the project menu",
+    "url": "http://127.0.0.1:4790/amber/",
+    "durationMs": 188,
+    "shot": "shots/4.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 5,
+    "id": "0-5",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: Checking whether Kitchen renovation is shown in the project menu",
+    "url": "http://127.0.0.1:4790/amber/",
+    "durationMs": 437,
+    "shot": "shots/5.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 6,
+    "id": "0-6",
+    "kind": "assert",
+    "status": "passed",
+    "summary": "assert: the block now shows the Vikunja app signed in as Amber Demo, with the projects W",
+    "url": "http://127.0.0.1:4790/amber/",
+    "durationMs": 469,
+    "shot": "shots/6.jpg",
+    "annotated": null
+  }
+]

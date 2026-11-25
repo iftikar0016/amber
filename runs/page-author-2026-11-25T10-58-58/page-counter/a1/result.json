@@ -1,0 +1,52 @@
+{
+  "flow": "page-counter",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "kwfjbe",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/amber/. Verify the line above the amber block reads 21 of 21 interactions proven with the server off, and verify the caption below the block mentions Kane CLI.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json",
+    "--name",
+    "page-counter"
+  ],
+  "startedAt": "2026-11-25T10:59:00.534Z",
+  "ms": 63411,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "verified amber section text on the local site",
+  "summary": "Verified the amber section on the page.\nConfirmed that the line above it says “21 of 21 interactions proven with the server off.”\nConfirmed that the caption below the block mentions Kane CLI.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/amber/",
+    "amber_block_line_text": "21 OF 21 INTERACTIONS PROVEN WITH THE SERVER OFF",
+    "caption_mentions_kane_cli": "true"
+  },
+  "credits": 15.051904999999998,
+  "steps": 4,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": null,
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 4,
+    "finalShot": "shots/4.jpg",
+    "failures": []
+  }
+}

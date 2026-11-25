@@ -1,0 +1,38 @@
+[
+  {
+    "step": 1,
+    "type": "navigate",
+    "intent": "Navigate to http://127.0.0.1:4790/amber/",
+    "instruction": "Navigate to http://127.0.0.1:4790/amber/"
+  },
+  {
+    "step": 2,
+    "type": "click",
+    "intent": "PRIMARY: Click the Open the live app button; role=button; text=\"OPEN THE LIVE APP\" | HINTS: container=Controls navigation",
+    "instruction": "Clicking the Open the live app button"
+  },
+  {
+    "step": 3,
+    "type": "analyze",
+    "intent": "whether the Amber Demo user account button is present in the Vikunja app header",
+    "instruction": "Checking whether the signed-in Amber Demo account is shown"
+  },
+  {
+    "step": 4,
+    "type": "analyze",
+    "intent": "whether the Website relaunch project link is present in the Projects navigation menu",
+    "instruction": "Checking whether Website relaunch is shown in the project menu"
+  },
+  {
+    "step": 5,
+    "type": "analyze",
+    "intent": "whether the Kitchen renovation project link is present in the Projects navigation menu",
+    "instruction": "Checking whether Kitchen renovation is shown in the project menu"
+  },
+  {
+    "step": 6,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  }
+]

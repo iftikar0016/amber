@@ -1,0 +1,29 @@
+{
+  "runId": "page-replay-2026-11-25T11-05-41",
+  "kind": "page-suite",
+  "mode": "replay",
+  "spend": {
+    "started": "2026-11-25T11:05:43.652Z",
+    "ended": "2026-11-25T11:07:07.256Z",
+    "what": "page suite replay page-counter,page-replay",
+    "estimate": 20,
+    "balanceBefore": 6016.1607,
+    "balanceAfter": 6011.8766,
+    "spent": 4.28,
+    "runId": "page-replay-2026-11-25T11-05-41"
+  },
+  "results": [
+    {
+      "id": "page-counter",
+      "verdict": "PASS",
+      "reasons": [],
+      "record": "runs/page-replay-2026-11-25T11-05-41/page-counter/a1"
+    },
+    {
+      "id": "page-replay",
+      "verdict": "PASS",
+      "reasons": [],
+      "record": "runs/page-replay-2026-11-25T11-05-41/page-replay/a1"
+    }
+  ]
+}

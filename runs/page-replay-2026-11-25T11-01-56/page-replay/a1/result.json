@@ -1,0 +1,97 @@
+{
+  "flow": "page-replay",
+  "attempt": 1,
+  "mode": "replay",
+  "tag": "aothqx",
+  "args": [
+    "testmd",
+    "run",
+    "~\\hackathons\\kane\\amber\\.amber\\kane\\page-runs\\page-replay\\page-replay_test.md",
+    "--agent",
+    "--headless",
+    "--no-adaptive-heal"
+  ],
+  "startedAt": "2026-11-25T11:03:50.727Z",
+  "ms": 40928,
+  "exitCode": 1,
+  "killed": false,
+  "status": "failed",
+  "oneLiner": "The start screen reports 21 total server-off interactions when it is required to report 15.",
+  "summary": null,
+  "reason": "assertion_failed: @ step 3",
+  "resultCode": null,
+  "bug": {
+    "confirmed": false,
+    "title": "Interactions counter reports 21 instead of 15",
+    "oneLiner": "The start screen reports 21 total server-off interactions when it is required to report 15.",
+    "category": "ui_data_defect",
+    "severity": "minor",
+    "confidence": 0.99
+  },
+  "failedAssertions": [
+    "the line above the block reads 0 of 15 interactions proven with the server off"
+  ],
+  "finalState": null,
+  "credits": 0,
+  "steps": 3,
+  "failedSteps": [
+    {
+      "n": 3,
+      "remark": "assert: the line above the block reads 0 of 15 interactions proven with the server off"
+    }
+  ],
+  "testmdSummary": {
+    "type": "test_md_summary",
+    "overall_status": "failed",
+    "duration_s": 27,
+    "steps": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0,
+      "replay_decisions": 1,
+      "author_decisions": 0
+    },
+    "adaptive_heal": {
+      "triggered": false
+    },
+    "commit": {
+      "committed": false,
+      "reason": "run_failed"
+    },
+    "artifacts": {
+      "replaced": false
+    },
+    "upload": {
+      "performed": true,
+      "succeeded": true
+    },
+    "cancelled": false,
+    "v": 1,
+    "ts": "2026-11-25T11:04:29.620Z",
+    "kind": "typed",
+    "_rt": 1795604669620
+  },
+  "serverOff": null,
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "failed",
+  "verdict": "FAIL",
+  "basis": "kane",
+  "reasons": [
+    "The start screen reports 21 total server-off interactions when it is required to report 15."
+  ],
+  "evidence": {
+    "steps": 3,
+    "finalShot": "shots/3.jpg",
+    "failures": [
+      {
+        "ordinal": 3,
+        "message": "assertion_failed: @ step 3",
+        "url": "http://127.0.0.1:4790/amber/?t=start&speed=10",
+        "rootCause": "The page is loading or counting the wrong total number of interactions for this run.",
+        "suggestedFix": "Check the run data and counter configuration for the start view so this scenario contains and displays 15 interactions."
+      }
+    ]
+  }
+}

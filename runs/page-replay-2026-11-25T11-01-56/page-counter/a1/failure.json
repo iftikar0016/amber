@@ -1,0 +1,9 @@
+[
+  {
+    "ordinal": 4,
+    "message": "assertion_failed: @ step 4",
+    "url": "http://127.0.0.1:4790/amber/",
+    "rootCause": "The status line above the amber block is displaying the wrong interaction total.",
+    "suggestedFix": "Check the source for the amber status count and restore the displayed total to 15 of 15 if that remains the intended claim."
+  }
+]

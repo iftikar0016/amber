@@ -6,3 +6,4 @@
 {"at":"2026-11-25T05:52:23.280Z","via":"hook","stopHookActive":false,"capsuleHash":"eff1337e17cf73c1","checked":null,"ms":79,"outcome":"allowed","regressions":[],"message":null}
 {"at":"2026-11-25T10:19:08.331Z","via":"hook","stopHookActive":false,"capsuleHash":"30ad0d253f960808","checked":null,"ms":352,"outcome":"allowed, with a message","regressions":["j01-sign-in"],"message":"AMBER gate: a Kane check is already running (pid 6448, stop-hook regression check); not starting a second one. Its result will be checked the next time a turn ends."}
 {"at":"2026-11-25T10:17:23.800Z","via":"cli","stopHookActive":false,"capsuleHash":"30ad0d253f960808","checked":{"runId":"verify-2026-11-25T10-17-26","flows":21},"ms":2463601,"outcome":"allowed","regressions":[],"message":null}
+{"at":"2026-11-25T10:59:08.932Z","via":"hook","stopHookActive":false,"capsuleHash":"30ad0d253f960808","checked":null,"ms":146,"outcome":"allowed","regressions":[],"message":null}

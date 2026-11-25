@@ -1,0 +1,97 @@
+{
+  "flow": "page-counter",
+  "attempt": 1,
+  "mode": "replay",
+  "tag": "ilcqyw",
+  "args": [
+    "testmd",
+    "run",
+    "~\\hackathons\\kane\\amber\\.amber\\kane\\page-runs\\page-counter\\page-counter_test.md",
+    "--agent",
+    "--headless",
+    "--no-adaptive-heal"
+  ],
+  "startedAt": "2026-11-25T11:01:58.232Z",
+  "ms": 44368,
+  "exitCode": 1,
+  "killed": false,
+  "status": "failed",
+  "oneLiner": "The amber page shows 21 of 21 proven interactions where the required status is 15 of 15.",
+  "summary": null,
+  "reason": "assertion_failed: @ step 4",
+  "resultCode": null,
+  "bug": {
+    "confirmed": false,
+    "title": "Amber interaction total renders 21 instead of 15",
+    "oneLiner": "The amber page shows 21 of 21 proven interactions where the required status is 15 of 15.",
+    "category": "ui_data_defect",
+    "severity": "minor",
+    "confidence": 0.98
+  },
+  "failedAssertions": [
+    "the line above the amber block reads 15 of 15 interactions proven with the server off"
+  ],
+  "finalState": null,
+  "credits": 0,
+  "steps": 4,
+  "failedSteps": [
+    {
+      "n": 4,
+      "remark": "assert: the line above the amber block reads 15 of 15 interactions proven with the serve"
+    }
+  ],
+  "testmdSummary": {
+    "type": "test_md_summary",
+    "overall_status": "failed",
+    "duration_s": 30,
+    "steps": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0,
+      "replay_decisions": 1,
+      "author_decisions": 0
+    },
+    "adaptive_heal": {
+      "triggered": false
+    },
+    "commit": {
+      "committed": false,
+      "reason": "run_failed"
+    },
+    "artifacts": {
+      "replaced": false
+    },
+    "upload": {
+      "performed": true,
+      "succeeded": true
+    },
+    "cancelled": false,
+    "v": 1,
+    "ts": "2026-11-25T11:02:40.585Z",
+    "kind": "typed",
+    "_rt": 1795604560585
+  },
+  "serverOff": null,
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "failed",
+  "verdict": "FAIL",
+  "basis": "kane",
+  "reasons": [
+    "The amber page shows 21 of 21 proven interactions where the required status is 15 of 15."
+  ],
+  "evidence": {
+    "steps": 4,
+    "finalShot": "shots/4.jpg",
+    "failures": [
+      {
+        "ordinal": 4,
+        "message": "assertion_failed: @ step 4",
+        "url": "http://127.0.0.1:4790/amber/",
+        "rootCause": "The status line above the amber block is displaying the wrong interaction total.",
+        "suggestedFix": "Check the source for the amber status count and restore the displayed total to 15 of 15 if that remains the intended claim."
+      }
+    ]
+  }
+}

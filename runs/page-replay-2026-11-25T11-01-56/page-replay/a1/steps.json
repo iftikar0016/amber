@@ -1,0 +1,35 @@
+[
+  {
+    "ordinal": 1,
+    "id": "0-1",
+    "kind": "navigate",
+    "status": "passed",
+    "summary": "navigate: Navigate to http://127.0.0.1:4790/amber/?t=start&speed=10",
+    "url": "https://kaneai-playground.lambdatest.io/",
+    "durationMs": 875,
+    "shot": "shots/1.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 2,
+    "id": "0-2",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: Reading the interactions-proven count",
+    "url": "http://127.0.0.1:4790/amber/?t=start&speed=10",
+    "durationMs": 12079,
+    "shot": "shots/2.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 3,
+    "id": "0-3",
+    "kind": "assert",
+    "status": "failed",
+    "summary": "assert: the line above the block reads 0 of 15 interactions proven with the server off",
+    "url": "http://127.0.0.1:4790/amber/?t=start&speed=10",
+    "durationMs": 359,
+    "shot": "shots/3.jpg",
+    "annotated": null
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "runId": "page-author-2026-11-25T10-58-58",
+  "kind": "page-suite",
+  "mode": "author",
+  "spend": {
+    "started": "2026-11-25T10:59:00.516Z",
+    "ended": "2026-11-25T11:01:56.250Z",
+    "what": "page suite author page-counter,page-replay",
+    "estimate": 80,
+    "balanceBefore": 6084.3072,
+    "balanceAfter": 6037.6126,
+    "spent": 46.69,
+    "runId": "page-author-2026-11-25T10-58-58"
+  },
+  "results": [
+    {
+      "id": "page-counter",
+      "verdict": "PASS",
+      "reasons": [],
+      "record": "runs/page-author-2026-11-25T10-58-58/page-counter/a1"
+    },
+    {
+      "id": "page-replay",
+      "verdict": "PASS",
+      "reasons": [],
+      "record": "runs/page-author-2026-11-25T10-58-58/page-replay/a1"
+    }
+  ]
+}

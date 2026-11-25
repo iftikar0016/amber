@@ -1,25 +1,25 @@
 {
-  "test_id": "9df5ddab-1397-46d9-b568-7513f45d3aa9",
+  "test_id": "20d9881d-6540-44a5-bbb2-a9c332c14d84",
   "version": "v4",
   "auto_heal_version": "AH2",
-  "session_id": "45034c7a-761e-4cfa-8f96-36dbce7920d2",
+  "session_id": "08de79ff-d3ee-41af-b494-1cb3f602e828",
   "org_id": "",
   "user_id": "",
   "url": "",
-  "start_timestamp": "2026-11-23T18:05:47.618Z",
-  "end_timestamp": "2026-11-23T18:06:25.712Z",
+  "start_timestamp": "2026-11-25T10:59:03.976Z",
+  "end_timestamp": "2026-11-25T10:59:44.580Z",
   "status": "success",
-  "commit_id": "45034c7a-761e-4cfa-8f96-36dbce7920d2",
+  "commit_id": "08de79ff-d3ee-41af-b494-1cb3f602e828",
   "instructions": [
     {
       "content_type": "generative_block",
-      "instruction_id": "generative_block_a5938b58a37a48c79a5b8e6753b2d748",
-      "generative_id": "a5938b58a37a48c79a5b8e6753b2d748",
-      "objective": "Go to http://127.0.0.1:4790/amber/. Verify the line above the amber block reads 15 of 15 interactions proven with the server off, and verify the caption below the block mentions Kane CLI.",
+      "instruction_id": "generative_block_9762a35b28e84dbfb585a16ff1583b98",
+      "generative_id": "9762a35b28e84dbfb585a16ff1583b98",
+      "objective": "Go to http://127.0.0.1:4790/amber/. Verify the line above the amber block reads 21 of 21 interactions proven with the server off, and verify the caption below the block mentions Kane CLI.",
       "status": "success",
       "children": [
         {
-          "instruction_id": "99363cf4-1cde-4881-9c03-a92ee9c0cd83",
+          "instruction_id": "d4ebf283-c753-4e93-8c7d-4b86ddee7515",
           "instruction_class": "driver_action",
           "module_id": "",
           "instruction": "Navigate to http://127.0.0.1:4790/amber/",
@@ -30,12 +30,12 @@
           "classification_error": {},
           "operations": [
             {
-              "operation_id": "32974830-5713-4b55-8cee-92ba34726b8f",
-              "instruction_id": "99363cf4-1cde-4881-9c03-a92ee9c0cd83",
+              "operation_id": "b50e7749-f62e-4b4d-9bc0-d23447061bac",
+              "instruction_id": "d4ebf283-c753-4e93-8c7d-4b86ddee7515",
               "instruction": "Navigate to http://127.0.0.1:4790/amber/",
               "intent": "Navigate to http://127.0.0.1:4790/amber/",
-              "operation_start": "2026-11-23T18:06:01.378549+00:00",
-              "operation_end": "2026-11-23T18:06:01.988Z",
+              "operation_start": "2026-11-25T10:59:18.519004+00:00",
+              "operation_end": "2026-11-25T10:59:19.487Z",
               "status": "success",
               "command": "OPEN",
               "name": "",
@@ -60,7 +60,7 @@
               "update_time_stamp": "",
               "locator_variable": "",
               "locator_variable_name": "",
-              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/32974830-5713-4b55-8cee-92ba34726b8f.webp",
+              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/b50e7749-f62e-4b4d-9bc0-d23447061bac.webp",
               "alternative_xpaths": [],
               "attribute": "",
               "value_description": "",
@@ -158,8 +158,8 @@
             }
           ],
           "status": "success",
-          "start_timestamp": "2026-11-23T18:06:01.378549+00:00",
-          "end_timestamp": "2026-11-23T18:06:01.988Z",
+          "start_timestamp": "2026-11-25T10:59:18.519004+00:00",
+          "end_timestamp": "2026-11-25T10:59:19.487Z",
           "type": "agent_generated",
           "tags": [],
           "html_paths": [],
@@ -185,9 +185,9 @@
           "network_assertion_content": {},
           "screenshot_command": "",
           "smartui_contents": {},
-          "generative_id": "a5938b58a37a48c79a5b8e6753b2d748",
+          "generative_id": "9762a35b28e84dbfb585a16ff1583b98",
           "plan_id": "",
-          "generative_objective": "Go to http://127.0.0.1:4790/amber/. Verify the line above the amber block reads 15 of 15 interactions proven with the server off, and verify the caption below the block mentions Kane CLI.",
+          "generative_objective": "Go to http://127.0.0.1:4790/amber/. Verify the line above the amber block reads 21 of 21 interactions proven with the server off, and verify the caption below the block mentions Kane CLI.",
           "error_message": "",
           "error_code": "",
           "reason": "",
@@ -196,10 +196,10 @@
           "reasoning": "Navigate to http://127.0.0.1:4790/amber/"
         },
         {
-          "instruction_id": "b0d9affa-764a-4ed9-a4d0-0f941b12453a",
+          "instruction_id": "45e6494b-7cfc-44bc-b8ae-26e32d6dff7c",
           "instruction_class": "driver_action",
           "module_id": "",
-          "instruction": "Reading the status line above the amber block",
+          "instruction": "Reading the line above the amber block",
           "command": "TEXTUAL_ANALYZER",
           "error": null,
           "parent_instruction_id": "",
@@ -207,11 +207,11 @@
           "classification_error": {},
           "operations": [
             {
-              "operation_id": "316f4ceb-7229-4936-ba65-c379b98b272d",
-              "instruction_id": "b0d9affa-764a-4ed9-a4d0-0f941b12453a",
-              "instruction": "Reading the status line above the amber block",
-              "intent": "Reading the status line above the amber block",
-              "operation_start": "2026-11-23T18:06:20.278825+00:00",
+              "operation_id": "54331015-ef5c-45ae-b419-7aa413332fcd",
+              "instruction_id": "45e6494b-7cfc-44bc-b8ae-26e32d6dff7c",
+              "instruction": "Reading the line above the amber block",
+              "intent": "Reading the line above the amber block",
+              "operation_start": "2026-11-25T10:59:37.190571+00:00",
               "operation_end": "",
               "status": "success",
               "command": "TEXTUAL_ANALYZER",
@@ -226,7 +226,7 @@
               "grounded_by": "",
               "error_message": "",
               "code_snippet": "",
-              "sub_instruction_obj": "{\"operation\":\"Reading the status line above the amber block\",\"agent\":\"Operation Agent\",\"operation_dict\":{\"operation_type\":\"TEXTUAL_ANALYZER\"},\"reasoning\":\"the status line above the amber block\",\"variable\":{},\"secrets\":{},\"params\":{},\"code_js\":\"el(2).innerText.trim()\",\"wrapped_js\":\"(els) => {\\n  const __m = {2: 0};\\n  const el = (i) => els[__m[i]];\\n  const __v = (el(2).innerText.trim());\\n  return (typeof __v === 'boolean' ? String(__v) : __v);\\n}\",\"locators\":[\"internal:text=\\\"15 of 15 interactions proven\\\"i\"],\"operator\":\"equals\",\"transforms\":[\"strip\",\"lowercase\"],\"query\":\"the status line above the amber block\",\"expected_value\":\"15 of 15 interactions proven with the server off\",\"needs_unit_conversion\":false,\"condition\":\"the line above the amber block reads 15 of 15 interactions proven with the server off\"}",
+              "sub_instruction_obj": "{\"operation\":\"Reading the line above the amber block\",\"agent\":\"Operation Agent\",\"operation_dict\":{\"operation_type\":\"TEXTUAL_ANALYZER\"},\"reasoning\":\"the line above the amber block\",\"variable\":{},\"secrets\":{},\"params\":{},\"code_js\":\"el(2).innerText.trim()\",\"wrapped_js\":\"(els) => {\\n  const __m = {2: 0};\\n  const el = (i) => els[__m[i]];\\n  const __v = (el(2).innerText.trim());\\n  return (typeof __v === 'boolean' ? String(__v) : __v);\\n}\",\"locators\":[\"internal:text=\\\"21 of 21 interactions proven\\\"i\"],\"operator\":\"equals\",\"transforms\":[\"strip\",\"lowercase\"],\"query\":\"the line above the amber block\",\"expected_value\":\"21 of 21 interactions proven with the server off\",\"needs_unit_conversion\":false,\"condition\":\"the line above the amber block reads 21 of 21 interactions proven with the server off\"}",
               "test_id": "",
               "test_version": "",
               "action": "",
@@ -237,7 +237,7 @@
               "update_time_stamp": "",
               "locator_variable": "",
               "locator_variable_name": "",
-              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/316f4ceb-7229-4936-ba65-c379b98b272d.webp",
+              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/54331015-ef5c-45ae-b419-7aa413332fcd.webp",
               "alternative_xpaths": [],
               "attribute": "",
               "value_description": "",
@@ -245,7 +245,7 @@
               "navigation_direction": "",
               "tagified_image_url": "",
               "query_variable_name": "amber_block_line_text",
-              "query_variable_value": "15 OF 15 INTERACTIONS PROVEN WITH THE SERVER OFF",
+              "query_variable_value": "21 OF 21 INTERACTIONS PROVEN WITH THE SERVER OFF",
               "query_variable_type": "",
               "expected_value": "",
               "queried_value": "",
@@ -330,14 +330,14 @@
               "until_settle_ms": 0,
               "api_data": {},
               "output_variables": {
-                "amber_block_line_text": "15 OF 15 INTERACTIONS PROVEN WITH THE SERVER OFF"
+                "amber_block_line_text": "21 OF 21 INTERACTIONS PROVEN WITH THE SERVER OFF"
               },
               "visual_context": null,
-              "reasoning": "the status line above the amber block"
+              "reasoning": "the line above the amber block"
             }
           ],
           "status": "success",
-          "start_timestamp": "2026-11-23T18:06:20.278825+00:00",
+          "start_timestamp": "2026-11-25T10:59:37.190571+00:00",
           "end_timestamp": "",
           "type": "agent_generated",
           "tags": [],
@@ -364,21 +364,21 @@
           "network_assertion_content": {},
           "screenshot_command": "",
           "smartui_contents": {},
-          "generative_id": "a5938b58a37a48c79a5b8e6753b2d748",
+          "generative_id": "9762a35b28e84dbfb585a16ff1583b98",
           "plan_id": "",
-          "generative_objective": "Go to http://127.0.0.1:4790/amber/. Verify the line above the amber block reads 15 of 15 interactions proven with the server off, and verify the caption below the block mentions Kane CLI.",
+          "generative_objective": "Go to http://127.0.0.1:4790/amber/. Verify the line above the amber block reads 21 of 21 interactions proven with the server off, and verify the caption below the block mentions Kane CLI.",
           "error_message": "",
           "error_code": "",
           "reason": "",
           "title": "",
           "used_variables": [],
-          "reasoning": "the status line above the amber block"
+          "reasoning": "the line above the amber block"
         },
         {
-          "instruction_id": "3d6fb584-3a78-4a8e-83de-d4bd6b0d0e1d",
+          "instruction_id": "03d6d0ef-c9c6-4d1a-a122-70978173bb9e",
           "instruction_class": "driver_action",
           "module_id": "",
-          "instruction": "Checking whether the caption below the amber block mentions Kane CLI",
+          "instruction": "Checking whether the caption mentions Kane CLI",
           "command": "TEXTUAL_ANALYZER",
           "error": null,
           "parent_instruction_id": "",
@@ -386,11 +386,11 @@
           "classification_error": {},
           "operations": [
             {
-              "operation_id": "28cc74a8-9f6c-445a-8c94-f0f8390aef2e",
-              "instruction_id": "3d6fb584-3a78-4a8e-83de-d4bd6b0d0e1d",
-              "instruction": "Checking whether the caption below the amber block mentions Kane CLI",
-              "intent": "Checking whether the caption below the amber block mentions Kane CLI",
-              "operation_start": "2026-11-23T18:06:20.285155+00:00",
+              "operation_id": "c106e3e1-3ed5-4075-bbff-e21e7adb6872",
+              "instruction_id": "03d6d0ef-c9c6-4d1a-a122-70978173bb9e",
+              "instruction": "Checking whether the caption mentions Kane CLI",
+              "intent": "Checking whether the caption mentions Kane CLI",
+              "operation_start": "2026-11-25T10:59:37.192014+00:00",
               "operation_end": "",
               "status": "success",
               "command": "TEXTUAL_ANALYZER",
@@ -405,7 +405,7 @@
               "grounded_by": "",
               "error_message": "",
               "code_snippet": "",
-              "sub_instruction_obj": "{\"operation\":\"Checking whether the caption below the amber block mentions Kane CLI\",\"agent\":\"Operation Agent\",\"operation_dict\":{\"operation_type\":\"TEXTUAL_ANALYZER\"},\"reasoning\":\"whether Kane CLI is present in the caption below the amber block\",\"variable\":{},\"secrets\":{},\"params\":{},\"code_js\":\"el(25).innerText.includes('Kane CLI')\",\"wrapped_js\":\"(els) => {\\n  const __m = {25: 0};\\n  const el = (i) => els[__m[i]];\\n  const __v = (el(25).innerText.includes('Kane CLI'));\\n  return (typeof __v === 'boolean' ? String(__v) : __v);\\n}\",\"locators\":[\"internal:text=\\\"Vikunja v2.8.0 with its\\\"i\"],\"operator\":\"equals\",\"transforms\":[],\"query\":\"whether Kane CLI is present in the caption below the amber block\",\"expected_value\":\"true\",\"needs_unit_conversion\":false,\"condition\":\"the caption below the block mentions Kane CLI\"}",
+              "sub_instruction_obj": "{\"operation\":\"Checking whether the caption mentions Kane CLI\",\"agent\":\"Operation Agent\",\"operation_dict\":{\"operation_type\":\"TEXTUAL_ANALYZER\"},\"reasoning\":\"whether the caption below the amber block mentions Kane CLI\",\"variable\":{},\"secrets\":{},\"params\":{},\"code_js\":\"el(31).innerText.includes('Kane CLI')\",\"wrapped_js\":\"(els) => {\\n  const __m = {31: 0};\\n  const el = (i) => els[__m[i]];\\n  const __v = (el(31).innerText.includes('Kane CLI'));\\n  return (typeof __v === 'boolean' ? String(__v) : __v);\\n}\",\"locators\":[\"internal:text=\\\"Vikunja v2.8.0 with its\\\"i\"],\"operator\":\"equals\",\"transforms\":[],\"query\":\"whether the caption below the amber block mentions Kane CLI\",\"expected_value\":\"true\",\"needs_unit_conversion\":false,\"condition\":\"the caption below the block mentions Kane CLI\"}",
               "test_id": "",
               "test_version": "",
               "action": "",
@@ -416,14 +416,14 @@
               "update_time_stamp": "",
               "locator_variable": "",
               "locator_variable_name": "",
-              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/28cc74a8-9f6c-445a-8c94-f0f8390aef2e.webp",
+              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/c106e3e1-3ed5-4075-bbff-e21e7adb6872.webp",
               "alternative_xpaths": [],
               "attribute": "",
               "value_description": "",
               "url": "",
               "navigation_direction": "",
               "tagified_image_url": "",
-              "query_variable_name": "block_caption_kane_cli",
+              "query_variable_name": "caption_mentions_kane_cli",
               "query_variable_value": "true",
               "query_variable_type": "",
               "expected_value": "",
@@ -509,14 +509,14 @@
               "until_settle_ms": 0,
               "api_data": {},
               "output_variables": {
-                "block_caption_kane_cli": "true"
+                "caption_mentions_kane_cli": "true"
               },
               "visual_context": null,
-              "reasoning": "whether Kane CLI is present in the caption below the amber block"
+              "reasoning": "whether the caption below the amber block mentions Kane CLI"
             }
           ],
           "status": "success",
-          "start_timestamp": "2026-11-23T18:06:20.285155+00:00",
+          "start_timestamp": "2026-11-25T10:59:37.192014+00:00",
           "end_timestamp": "",
           "type": "agent_generated",
           "tags": [],
@@ -543,18 +543,18 @@
           "network_assertion_content": {},
           "screenshot_command": "",
           "smartui_contents": {},
-          "generative_id": "a5938b58a37a48c79a5b8e6753b2d748",
+          "generative_id": "9762a35b28e84dbfb585a16ff1583b98",
           "plan_id": "",
-          "generative_objective": "Go to http://127.0.0.1:4790/amber/. Verify the line above the amber block reads 15 of 15 interactions proven with the server off, and verify the caption below the block mentions Kane CLI.",
+          "generative_objective": "Go to http://127.0.0.1:4790/amber/. Verify the line above the amber block reads 21 of 21 interactions proven with the server off, and verify the caption below the block mentions Kane CLI.",
           "error_message": "",
           "error_code": "",
           "reason": "",
           "title": "",
           "used_variables": [],
-          "reasoning": "whether Kane CLI is present in the caption below the amber block"
+          "reasoning": "whether the caption below the amber block mentions Kane CLI"
         },
         {
-          "instruction_id": "0a3154d2-c687-4175-a587-2fef928b8d9f",
+          "instruction_id": "d795f6d6-ef6f-4377-97d3-4075b3cb6fe8",
           "instruction_class": "non_driver_action",
           "module_id": "",
           "instruction": "Assertion check",
@@ -570,7 +570,7 @@
                 "assertion_tree": {
                   "sub_results": [
                     {
-                      "description": "the line above the amber block reads 15 of 15 interactions proven with the server off",
+                      "description": "the line above the amber block reads 21 of 21 interactions proven with the server off",
                       "passed": true,
                       "operator": "equals",
                       "transforms": [
@@ -578,19 +578,19 @@
                         "lowercase"
                       ],
                       "json_path": null,
-                      "expected": "15 of 15 interactions proven with the server off",
+                      "expected": "21 of 21 interactions proven with the server off",
                       "extracted_value": "{{amber_block_line_text}}",
                       "store_key": "amber_block_line_text",
                       "variable_refs": {
-                        "{{amber_block_line_text}}": "15 OF 15 INTERACTIONS PROVEN WITH THE SERVER OFF"
+                        "{{amber_block_line_text}}": "21 OF 21 INTERACTIONS PROVEN WITH THE SERVER OFF"
                       }
                     }
                   ],
                   "sub_checks": [
                     {
-                      "description": "the line above the amber block reads 15 of 15 interactions proven with the server off",
+                      "description": "the line above the amber block reads 21 of 21 interactions proven with the server off",
                       "store_key": "amber_block_line_text",
-                      "expected_value": "15 of 15 interactions proven with the server off",
+                      "expected_value": "21 of 21 interactions proven with the server off",
                       "extracted_value": "{{amber_block_line_text}}",
                       "operator": "equals",
                       "transforms": [
@@ -601,7 +601,7 @@
                   ],
                   "composite_operator": "and",
                   "verification": "",
-                  "claim": "the line above the amber block reads 15 of 15 interactions proven with the server off",
+                  "claim": "the line above the amber block reads 21 of 21 interactions proven with the server off",
                   "operator": [],
                   "assertion_operands": [],
                   "left_operand": null,
@@ -617,11 +617,11 @@
           "classification_error": {},
           "operations": [
             {
-              "operation_id": "60a38a99-4c91-4955-856c-aca96c47f67a",
-              "instruction_id": "0a3154d2-c687-4175-a587-2fef928b8d9f",
+              "operation_id": "a3ef26f4-b5c4-4f99-bdcf-47909df9eee3",
+              "instruction_id": "d795f6d6-ef6f-4377-97d3-4075b3cb6fe8",
               "instruction": "Assertion check",
               "intent": "Assertion check",
-              "operation_start": "2026-11-23T18:06:21.169175+00:00",
+              "operation_start": "2026-11-25T10:59:39.419773+00:00",
               "operation_end": "",
               "status": "success",
               "command": "ASSERTION",
@@ -647,7 +647,7 @@
               "update_time_stamp": "",
               "locator_variable": "",
               "locator_variable_name": "",
-              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/60a38a99-4c91-4955-856c-aca96c47f67a.webp",
+              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/a3ef26f4-b5c4-4f99-bdcf-47909df9eee3.webp",
               "alternative_xpaths": [],
               "attribute": "",
               "value_description": "",
@@ -713,7 +713,7 @@
                 "operands": [],
                 "sub_results": [
                   {
-                    "description": "the line above the amber block reads 15 of 15 interactions proven with the server off",
+                    "description": "the line above the amber block reads 21 of 21 interactions proven with the server off",
                     "passed": true,
                     "operator": "equals",
                     "transforms": [
@@ -721,19 +721,19 @@
                       "lowercase"
                     ],
                     "json_path": null,
-                    "expected": "15 of 15 interactions proven with the server off",
+                    "expected": "21 of 21 interactions proven with the server off",
                     "extracted_value": "{{amber_block_line_text}}",
                     "store_key": "amber_block_line_text",
                     "variable_refs": {
-                      "{{amber_block_line_text}}": "15 OF 15 INTERACTIONS PROVEN WITH THE SERVER OFF"
+                      "{{amber_block_line_text}}": "21 OF 21 INTERACTIONS PROVEN WITH THE SERVER OFF"
                     }
                   }
                 ],
                 "sub_checks": [
                   {
-                    "description": "the line above the amber block reads 15 of 15 interactions proven with the server off",
+                    "description": "the line above the amber block reads 21 of 21 interactions proven with the server off",
                     "store_key": "amber_block_line_text",
-                    "expected_value": "15 of 15 interactions proven with the server off",
+                    "expected_value": "21 of 21 interactions proven with the server off",
                     "extracted_value": "{{amber_block_line_text}}",
                     "operator": "equals",
                     "transforms": [
@@ -744,15 +744,15 @@
                 ],
                 "composite_operator": "and",
                 "verification": "the line above the amber block",
-                "claim": "the line above the amber block reads 15 of 15 interactions proven with the server off"
+                "claim": "the line above the amber block reads 21 of 21 interactions proven with the server off"
               },
               "assertion_tree": {
                 "assertion_id": "assert_cp_1",
                 "status": "passed",
-                "description": "the line above the amber block reads 15 of 15 interactions proven with the server off",
+                "description": "the line above the amber block reads 21 of 21 interactions proven with the server off",
                 "sub_results": [
                   {
-                    "description": "the line above the amber block reads 15 of 15 interactions proven with the server off",
+                    "description": "the line above the amber block reads 21 of 21 interactions proven with the server off",
                     "passed": true,
                     "operator": "equals",
                     "transforms": [
@@ -760,11 +760,11 @@
                       "lowercase"
                     ],
                     "json_path": null,
-                    "expected": "15 of 15 interactions proven with the server off",
+                    "expected": "21 of 21 interactions proven with the server off",
                     "extracted_value": "{{amber_block_line_text}}",
                     "store_key": "amber_block_line_text",
                     "variable_refs": {
-                      "{{amber_block_line_text}}": "15 OF 15 INTERACTIONS PROVEN WITH THE SERVER OFF"
+                      "{{amber_block_line_text}}": "21 OF 21 INTERACTIONS PROVEN WITH THE SERVER OFF"
                     }
                   }
                 ],
@@ -814,7 +814,7 @@
             }
           ],
           "status": "success",
-          "start_timestamp": "2026-11-23T18:06:21.169175+00:00",
+          "start_timestamp": "2026-11-25T10:59:39.419773+00:00",
           "end_timestamp": "",
           "type": "agent_generated",
           "tags": [],
@@ -841,9 +841,9 @@
           "network_assertion_content": {},
           "screenshot_command": "",
           "smartui_contents": {},
-          "generative_id": "a5938b58a37a48c79a5b8e6753b2d748",
+          "generative_id": "9762a35b28e84dbfb585a16ff1583b98",
           "plan_id": "",
-          "generative_objective": "Go to http://127.0.0.1:4790/amber/. Verify the line above the amber block reads 15 of 15 interactions proven with the server off, and verify the caption below the block mentions Kane CLI.",
+          "generative_objective": "Go to http://127.0.0.1:4790/amber/. Verify the line above the amber block reads 21 of 21 interactions proven with the server off, and verify the caption below the block mentions Kane CLI.",
           "error_message": "",
           "error_code": "",
           "reason": "",
@@ -852,7 +852,7 @@
           "reasoning": ""
         },
         {
-          "instruction_id": "f21fefcb-6fcc-479f-8a13-ecfd382bb8bb",
+          "instruction_id": "b3787399-c47b-460c-aaa8-93c5e37dd349",
           "instruction_class": "non_driver_action",
           "module_id": "",
           "instruction": "Assertion check",
@@ -874,19 +874,19 @@
                       "transforms": [],
                       "json_path": null,
                       "expected": "true",
-                      "extracted_value": "{{block_caption_kane_cli}}",
-                      "store_key": "block_caption_kane_cli",
+                      "extracted_value": "{{caption_mentions_kane_cli}}",
+                      "store_key": "caption_mentions_kane_cli",
                       "variable_refs": {
-                        "{{block_caption_kane_cli}}": "true"
+                        "{{caption_mentions_kane_cli}}": "true"
                       }
                     }
                   ],
                   "sub_checks": [
                     {
                       "description": "the caption below the block mentions Kane CLI",
-                      "store_key": "block_caption_kane_cli",
+                      "store_key": "caption_mentions_kane_cli",
                       "expected_value": "true",
-                      "extracted_value": "{{block_caption_kane_cli}}",
+                      "extracted_value": "{{caption_mentions_kane_cli}}",
                       "operator": "equals",
                       "transforms": []
                     }
@@ -909,11 +909,11 @@
           "classification_error": {},
           "operations": [
             {
-              "operation_id": "634aafa1-2596-405c-aa1a-808f89fbce5e",
-              "instruction_id": "f21fefcb-6fcc-479f-8a13-ecfd382bb8bb",
+              "operation_id": "b9af7561-eea9-4dc6-8fb3-62ef5f3cbe5b",
+              "instruction_id": "b3787399-c47b-460c-aaa8-93c5e37dd349",
               "instruction": "Assertion check",
               "intent": "Assertion check",
-              "operation_start": "2026-11-23T18:06:22.049421+00:00",
+              "operation_start": "2026-11-25T10:59:41.434650+00:00",
               "operation_end": "",
               "status": "success",
               "command": "ASSERTION",
@@ -939,7 +939,7 @@
               "update_time_stamp": "",
               "locator_variable": "",
               "locator_variable_name": "",
-              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/634aafa1-2596-405c-aa1a-808f89fbce5e.webp",
+              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/b9af7561-eea9-4dc6-8fb3-62ef5f3cbe5b.webp",
               "alternative_xpaths": [],
               "attribute": "",
               "value_description": "",
@@ -1011,19 +1011,19 @@
                     "transforms": [],
                     "json_path": null,
                     "expected": "true",
-                    "extracted_value": "{{block_caption_kane_cli}}",
-                    "store_key": "block_caption_kane_cli",
+                    "extracted_value": "{{caption_mentions_kane_cli}}",
+                    "store_key": "caption_mentions_kane_cli",
                     "variable_refs": {
-                      "{{block_caption_kane_cli}}": "true"
+                      "{{caption_mentions_kane_cli}}": "true"
                     }
                   }
                 ],
                 "sub_checks": [
                   {
                     "description": "the caption below the block mentions Kane CLI",
-                    "store_key": "block_caption_kane_cli",
+                    "store_key": "caption_mentions_kane_cli",
                     "expected_value": "true",
-                    "extracted_value": "{{block_caption_kane_cli}}",
+                    "extracted_value": "{{caption_mentions_kane_cli}}",
                     "operator": "equals",
                     "transforms": []
                   }
@@ -1044,10 +1044,10 @@
                     "transforms": [],
                     "json_path": null,
                     "expected": "true",
-                    "extracted_value": "{{block_caption_kane_cli}}",
-                    "store_key": "block_caption_kane_cli",
+                    "extracted_value": "{{caption_mentions_kane_cli}}",
+                    "store_key": "caption_mentions_kane_cli",
                     "variable_refs": {
-                      "{{block_caption_kane_cli}}": "true"
+                      "{{caption_mentions_kane_cli}}": "true"
                     }
                   }
                 ],
@@ -1097,7 +1097,7 @@
             }
           ],
           "status": "success",
-          "start_timestamp": "2026-11-23T18:06:22.049421+00:00",
+          "start_timestamp": "2026-11-25T10:59:41.434650+00:00",
           "end_timestamp": "",
           "type": "agent_generated",
           "tags": [],
@@ -1124,9 +1124,9 @@
           "network_assertion_content": {},
           "screenshot_command": "",
           "smartui_contents": {},
-          "generative_id": "a5938b58a37a48c79a5b8e6753b2d748",
+          "generative_id": "9762a35b28e84dbfb585a16ff1583b98",
           "plan_id": "",
-          "generative_objective": "Go to http://127.0.0.1:4790/amber/. Verify the line above the amber block reads 15 of 15 interactions proven with the server off, and verify the caption below the block mentions Kane CLI.",
+          "generative_objective": "Go to http://127.0.0.1:4790/amber/. Verify the line above the amber block reads 21 of 21 interactions proven with the server off, and verify the caption below the block mentions Kane CLI.",
           "error_message": "",
           "error_code": "",
           "reason": "",
@@ -1140,10 +1140,9 @@
       "result_code": null,
       "bifurcation_context": [],
       "approach_reason": [
-        "Verified the amber page at the requested site.",
-        "Confirmed that the status line above the amber block says “15 of 15 interactions proven with the server off.”",
-        "Confirmed that the caption below the block mentions Kane CLI.",
-        "The requested page details were present and matched the expected text."
+        "Verified the amber section on the page.",
+        "Confirmed that the line above it says “21 of 21 interactions proven with the server off.”",
+        "Confirmed that the caption below the block mentions Kane CLI."
       ],
       "one_liner": null
     }
@@ -1151,7 +1150,7 @@
   "modules": [],
   "uploaded_files": [],
   "test_params": [],
-  "test_level_variables": "[{\"name\":\"amber_block_line_text\",\"value\":\"15 OF 15 INTERACTIONS PROVEN WITH THE SERVER OFF\",\"value_type\":\"test_level\",\"variable_description\":\"ANALYZE result\"},{\"name\":\"block_caption_kane_cli\",\"value\":\"true\",\"value_type\":\"test_level\",\"variable_description\":\"ANALYZE result\"}]",
+  "test_level_variables": "[{\"name\":\"amber_block_line_text\",\"value\":\"21 OF 21 INTERACTIONS PROVEN WITH THE SERVER OFF\",\"value_type\":\"test_level\",\"variable_description\":\"ANALYZE result\"},{\"name\":\"caption_mentions_kane_cli\",\"value\":\"true\",\"value_type\":\"test_level\",\"variable_description\":\"ANALYZE result\"}]",
   "test_global_variables": [
     {
       "id": 661733,
@@ -1165,8 +1164,8 @@
     {
       "id": 661734,
       "name": "amber_tag",
-      "value": "kfxzzv",
-      "session_value": "kfxzzv",
+      "value": "kwfjbe",
+      "session_value": "kwfjbe",
       "is_persist": false,
       "environment_id": 0,
       "environment_name": "No Env"

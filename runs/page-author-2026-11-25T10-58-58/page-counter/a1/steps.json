@@ -1,0 +1,46 @@
+[
+  {
+    "ordinal": 1,
+    "id": "0-1",
+    "kind": "navigate",
+    "status": "passed",
+    "summary": "navigate: Navigate to http://127.0.0.1:4790/amber/",
+    "url": "http://127.0.0.1:4790/amber/",
+    "durationMs": 0,
+    "shot": "shots/1.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 2,
+    "id": "0-2",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: the caption below the block mentions Kane CLI",
+    "url": "http://127.0.0.1:4790/amber/",
+    "durationMs": 12281,
+    "shot": "shots/2.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 3,
+    "id": "0-3",
+    "kind": "assert",
+    "status": "passed",
+    "summary": "assert: the line above the amber block reads 21 of 21 interactions proven with the serve",
+    "url": "http://127.0.0.1:4790/amber/",
+    "durationMs": 16,
+    "shot": "shots/3.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 4,
+    "id": "0-4",
+    "kind": "assert",
+    "status": "passed",
+    "summary": "assert: the caption below the block mentions Kane CLI",
+    "url": "http://127.0.0.1:4790/amber/",
+    "durationMs": 15,
+    "shot": "shots/4.jpg",
+    "annotated": null
+  }
+]

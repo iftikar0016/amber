@@ -65,9 +65,9 @@ try {
     await c.sleep(500);
     return waitFor(`document.body.innerText.includes(${JSON.stringify(task)})`, 30000);
   });
-  await check("AMBER's page shows 15 of 15", async () => {
+  await check("AMBER's page shows every journey proven", async () => {
     await c.goto(`${ORIGIN}/amber/`, 500);
-    return waitFor('document.getElementById("proven") && document.getElementById("proven").textContent === "15"');
+    return waitFor('document.getElementById("proven") && document.getElementById("proven").textContent === document.getElementById("total").textContent');
   });
 } finally {
   await c.close();

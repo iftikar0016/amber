@@ -1,25 +1,25 @@
 {
-  "test_id": "81002583-ffb2-4cd5-a676-8648b19ef519",
+  "test_id": "bf586a73-77dd-4ca5-9c0a-67d31c093a38",
   "version": "v4",
   "auto_heal_version": "AH2",
-  "session_id": "f999c4c4-0120-44b2-92e3-c13280068b40",
+  "session_id": "4768a35c-0acc-438e-a808-db13bc78cc07",
   "org_id": "",
   "user_id": "",
   "url": "",
-  "start_timestamp": "2026-11-23T18:09:05.951Z",
-  "end_timestamp": "2026-11-23T18:10:22.136Z",
+  "start_timestamp": "2026-11-25T11:00:07.329Z",
+  "end_timestamp": "2026-11-25T11:01:35.638Z",
   "status": "success",
-  "commit_id": "f999c4c4-0120-44b2-92e3-c13280068b40",
+  "commit_id": "4768a35c-0acc-438e-a808-db13bc78cc07",
   "instructions": [
     {
       "content_type": "generative_block",
-      "instruction_id": "generative_block_9c432b127c38432686834c999ec5b72c",
-      "generative_id": "9c432b127c38432686834c999ec5b72c",
-      "objective": "Go to http://127.0.0.1:4790/amber/?t=start&speed=10. Verify the line above the block reads 0 of 15 interactions proven with the server off. Click the Replay the run button and wait until that line reads 15 of 15 interactions proven with the server off, then verify it does.",
+      "instruction_id": "generative_block_bf889c5aef47419eae6be514d4d17160",
+      "generative_id": "bf889c5aef47419eae6be514d4d17160",
+      "objective": "Go to http://127.0.0.1:4790/amber/?t=start&speed=10. Verify the line above the block reads 0 of 21 interactions proven with the server off. Click the Replay the run button and wait until that line reads 21 of 21 interactions proven with the server off, then verify it does.",
       "status": "success",
       "children": [
         {
-          "instruction_id": "e7580b3d-72d1-48be-8541-3734287843eb",
+          "instruction_id": "5477328f-05ea-4b12-9057-bda7eec4296e",
           "instruction_class": "driver_action",
           "module_id": "",
           "instruction": "Navigate to http://127.0.0.1:4790/amber/?t=start&speed=10",
@@ -30,12 +30,12 @@
           "classification_error": {},
           "operations": [
             {
-              "operation_id": "4dc6bd7e-f3bd-4d67-83d9-110746c350e5",
-              "instruction_id": "e7580b3d-72d1-48be-8541-3734287843eb",
+              "operation_id": "fb2a1734-fe75-4c10-b017-21846a48932f",
+              "instruction_id": "5477328f-05ea-4b12-9057-bda7eec4296e",
               "instruction": "Navigate to http://127.0.0.1:4790/amber/?t=start&speed=10",
               "intent": "Navigate to http://127.0.0.1:4790/amber/?t=start&speed=10",
-              "operation_start": "2026-11-23T18:09:19.004019+00:00",
-              "operation_end": "2026-11-23T18:09:19.582Z",
+              "operation_start": "2026-11-25T11:00:21.888171+00:00",
+              "operation_end": "2026-11-25T11:00:22.606Z",
               "status": "success",
               "command": "OPEN",
               "name": "",
@@ -60,7 +60,7 @@
               "update_time_stamp": "",
               "locator_variable": "",
               "locator_variable_name": "",
-              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/4dc6bd7e-f3bd-4d67-83d9-110746c350e5.webp",
+              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/fb2a1734-fe75-4c10-b017-21846a48932f.webp",
               "alternative_xpaths": [],
               "attribute": "",
               "value_description": "",
@@ -158,8 +158,8 @@
             }
           ],
           "status": "success",
-          "start_timestamp": "2026-11-23T18:09:19.004019+00:00",
-          "end_timestamp": "2026-11-23T18:09:19.582Z",
+          "start_timestamp": "2026-11-25T11:00:21.888171+00:00",
+          "end_timestamp": "2026-11-25T11:00:22.606Z",
           "type": "agent_generated",
           "tags": [],
           "html_paths": [],
@@ -185,9 +185,9 @@
           "network_assertion_content": {},
           "screenshot_command": "",
           "smartui_contents": {},
-          "generative_id": "9c432b127c38432686834c999ec5b72c",
+          "generative_id": "bf889c5aef47419eae6be514d4d17160",
           "plan_id": "",
-          "generative_objective": "Go to http://127.0.0.1:4790/amber/?t=start&speed=10. Verify the line above the block reads 0 of 15 interactions proven with the server off. Click the Replay the run button and wait until that line reads 15 of 15 interactions proven with the server off, then verify it does.",
+          "generative_objective": "Go to http://127.0.0.1:4790/amber/?t=start&speed=10. Verify the line above the block reads 0 of 21 interactions proven with the server off. Click the Replay the run button and wait until that line reads 21 of 21 interactions proven with the server off, then verify it does.",
           "error_message": "",
           "error_code": "",
           "reason": "",
@@ -196,10 +196,10 @@
           "reasoning": "Navigate to http://127.0.0.1:4790/amber/?t=start&speed=10"
         },
         {
-          "instruction_id": "0ae81a75-05e8-4e8f-9c28-7ac8207dc9bd",
+          "instruction_id": "0aa14ab5-8c4e-4485-9ce4-414f1dd23d9b",
           "instruction_class": "driver_action",
           "module_id": "",
-          "instruction": "Reading the interactions-proven count",
+          "instruction": "Reading the interactions proof line",
           "command": "TEXTUAL_ANALYZER",
           "error": null,
           "parent_instruction_id": "",
@@ -207,11 +207,11 @@
           "classification_error": {},
           "operations": [
             {
-              "operation_id": "9f083d42-0cef-485e-afaa-df54378deb01",
-              "instruction_id": "0ae81a75-05e8-4e8f-9c28-7ac8207dc9bd",
-              "instruction": "Reading the interactions-proven count",
-              "intent": "Reading the interactions-proven count",
-              "operation_start": "2026-11-23T18:09:36.386419+00:00",
+              "operation_id": "c3e60bb9-2593-494f-92d5-b64e8e73b151",
+              "instruction_id": "0aa14ab5-8c4e-4485-9ce4-414f1dd23d9b",
+              "instruction": "Reading the interactions proof line",
+              "intent": "Reading the interactions proof line",
+              "operation_start": "2026-11-25T11:00:40.132189+00:00",
               "operation_end": "",
               "status": "success",
               "command": "TEXTUAL_ANALYZER",
@@ -226,7 +226,7 @@
               "grounded_by": "",
               "error_message": "",
               "code_snippet": "",
-              "sub_instruction_obj": "{\"operation\":\"Reading the interactions-proven count\",\"agent\":\"Operation Agent\",\"operation_dict\":{\"operation_type\":\"TEXTUAL_ANALYZER\"},\"reasoning\":\"the interactions-proven count line above the journeys block\",\"variable\":{},\"secrets\":{},\"params\":{},\"code_js\":\"el(2).innerText.trim()\",\"wrapped_js\":\"(els) => {\\n  const __m = {2: 0};\\n  const el = (i) => els[__m[i]];\\n  const __v = (el(2).innerText.trim());\\n  return (typeof __v === 'boolean' ? String(__v) : __v);\\n}\",\"locators\":[\"internal:text=\\\"0 of 15 interactions proven\\\"i\"],\"operator\":\"equals\",\"transforms\":[\"strip\",\"lowercase\"],\"query\":\"the interactions-proven count line above the journeys block\",\"expected_value\":\"0 of 15 interactions proven with the server off\",\"needs_unit_conversion\":false,\"condition\":\"the line above the block reads 0 of 15 interactions proven with the server off\"}",
+              "sub_instruction_obj": "{\"operation\":\"Reading the interactions proof line\",\"agent\":\"Operation Agent\",\"operation_dict\":{\"operation_type\":\"TEXTUAL_ANALYZER\"},\"reasoning\":\"the interactions proof line above the journeys block\",\"variable\":{},\"secrets\":{},\"params\":{},\"code_js\":\"el(2).innerText\",\"wrapped_js\":\"(els) => {\\n  const __m = {2: 0};\\n  const el = (i) => els[__m[i]];\\n  const __v = (el(2).innerText);\\n  return (typeof __v === 'boolean' ? String(__v) : __v);\\n}\",\"locators\":[\"internal:text=\\\"0 of 21 interactions proven\\\"i\"],\"operator\":\"equals\",\"transforms\":[\"strip\",\"lowercase\"],\"query\":\"the interactions proof line above the journeys block\",\"expected_value\":\"0 of 21 interactions proven with the server off\",\"needs_unit_conversion\":false,\"condition\":\"the line above the block reads 0 of 21 interactions proven with the server off\"}",
               "test_id": "",
               "test_version": "",
               "action": "",
@@ -237,15 +237,15 @@
               "update_time_stamp": "",
               "locator_variable": "",
               "locator_variable_name": "",
-              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/9f083d42-0cef-485e-afaa-df54378deb01.webp",
+              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/c3e60bb9-2593-494f-92d5-b64e8e73b151.webp",
               "alternative_xpaths": [],
               "attribute": "",
               "value_description": "",
               "url": "",
               "navigation_direction": "",
               "tagified_image_url": "",
-              "query_variable_name": "interactions_proven_initial_count",
-              "query_variable_value": "0 OF 15 INTERACTIONS PROVEN WITH THE SERVER OFF",
+              "query_variable_name": "initial_interactions_line",
+              "query_variable_value": "0 OF 21 INTERACTIONS PROVEN WITH THE SERVER OFF",
               "query_variable_type": "",
               "expected_value": "",
               "queried_value": "",
@@ -330,14 +330,14 @@
               "until_settle_ms": 0,
               "api_data": {},
               "output_variables": {
-                "interactions_proven_initial_count": "0 OF 15 INTERACTIONS PROVEN WITH THE SERVER OFF"
+                "initial_interactions_line": "0 OF 21 INTERACTIONS PROVEN WITH THE SERVER OFF"
               },
               "visual_context": null,
-              "reasoning": "the interactions-proven count line above the journeys block"
+              "reasoning": "the interactions proof line above the journeys block"
             }
           ],
           "status": "success",
-          "start_timestamp": "2026-11-23T18:09:36.386419+00:00",
+          "start_timestamp": "2026-11-25T11:00:40.132189+00:00",
           "end_timestamp": "",
           "type": "agent_generated",
           "tags": [],
@@ -364,18 +364,18 @@
           "network_assertion_content": {},
           "screenshot_command": "",
           "smartui_contents": {},
-          "generative_id": "9c432b127c38432686834c999ec5b72c",
+          "generative_id": "bf889c5aef47419eae6be514d4d17160",
           "plan_id": "",
-          "generative_objective": "Go to http://127.0.0.1:4790/amber/?t=start&speed=10. Verify the line above the block reads 0 of 15 interactions proven with the server off. Click the Replay the run button and wait until that line reads 15 of 15 interactions proven with the server off, then verify it does.",
+          "generative_objective": "Go to http://127.0.0.1:4790/amber/?t=start&speed=10. Verify the line above the block reads 0 of 21 interactions proven with the server off. Click the Replay the run button and wait until that line reads 21 of 21 interactions proven with the server off, then verify it does.",
           "error_message": "",
           "error_code": "",
           "reason": "",
           "title": "",
           "used_variables": [],
-          "reasoning": "the interactions-proven count line above the journeys block"
+          "reasoning": "the interactions proof line above the journeys block"
         },
         {
-          "instruction_id": "2bea9148-5808-45a1-8808-0f48d9c63c23",
+          "instruction_id": "22d34781-32df-4264-89e5-e31246258c74",
           "instruction_class": "non_driver_action",
           "module_id": "",
           "instruction": "Assertion check",
@@ -391,7 +391,7 @@
                 "assertion_tree": {
                   "sub_results": [
                     {
-                      "description": "the line above the block reads 0 of 15 interactions proven with the server off",
+                      "description": "the line above the block reads 0 of 21 interactions proven with the server off",
                       "passed": true,
                       "operator": "equals",
                       "transforms": [
@@ -399,20 +399,20 @@
                         "lowercase"
                       ],
                       "json_path": null,
-                      "expected": "0 of 15 interactions proven with the server off",
-                      "extracted_value": "{{interactions_proven_initial_count}}",
-                      "store_key": "interactions_proven_initial_count",
+                      "expected": "0 of 21 interactions proven with the server off",
+                      "extracted_value": "{{initial_interactions_line}}",
+                      "store_key": "initial_interactions_line",
                       "variable_refs": {
-                        "{{interactions_proven_initial_count}}": "0 OF 15 INTERACTIONS PROVEN WITH THE SERVER OFF"
+                        "{{initial_interactions_line}}": "0 OF 21 INTERACTIONS PROVEN WITH THE SERVER OFF"
                       }
                     }
                   ],
                   "sub_checks": [
                     {
-                      "description": "the line above the block reads 0 of 15 interactions proven with the server off",
-                      "store_key": "interactions_proven_initial_count",
-                      "expected_value": "0 of 15 interactions proven with the server off",
-                      "extracted_value": "{{interactions_proven_initial_count}}",
+                      "description": "the line above the block reads 0 of 21 interactions proven with the server off",
+                      "store_key": "initial_interactions_line",
+                      "expected_value": "0 of 21 interactions proven with the server off",
+                      "extracted_value": "{{initial_interactions_line}}",
                       "operator": "equals",
                       "transforms": [
                         "strip",
@@ -422,7 +422,7 @@
                   ],
                   "composite_operator": "and",
                   "verification": "",
-                  "claim": "the line above the block reads 0 of 15 interactions proven with the server off",
+                  "claim": "the line above the block reads 0 of 21 interactions proven with the server off",
                   "operator": [],
                   "assertion_operands": [],
                   "left_operand": null,
@@ -438,11 +438,11 @@
           "classification_error": {},
           "operations": [
             {
-              "operation_id": "fabe7b84-5ebd-4296-bee1-a2d5ec94faeb",
-              "instruction_id": "2bea9148-5808-45a1-8808-0f48d9c63c23",
+              "operation_id": "eb297d7e-0485-4948-b28c-3a55a6c6bbc7",
+              "instruction_id": "22d34781-32df-4264-89e5-e31246258c74",
               "instruction": "Assertion check",
               "intent": "Assertion check",
-              "operation_start": "2026-11-23T18:09:37.267730+00:00",
+              "operation_start": "2026-11-25T11:00:42.450639+00:00",
               "operation_end": "",
               "status": "success",
               "command": "ASSERTION",
@@ -468,7 +468,7 @@
               "update_time_stamp": "",
               "locator_variable": "",
               "locator_variable_name": "",
-              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/fabe7b84-5ebd-4296-bee1-a2d5ec94faeb.webp",
+              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/eb297d7e-0485-4948-b28c-3a55a6c6bbc7.webp",
               "alternative_xpaths": [],
               "attribute": "",
               "value_description": "",
@@ -534,7 +534,7 @@
                 "operands": [],
                 "sub_results": [
                   {
-                    "description": "the line above the block reads 0 of 15 interactions proven with the server off",
+                    "description": "the line above the block reads 0 of 21 interactions proven with the server off",
                     "passed": true,
                     "operator": "equals",
                     "transforms": [
@@ -542,20 +542,20 @@
                       "lowercase"
                     ],
                     "json_path": null,
-                    "expected": "0 of 15 interactions proven with the server off",
-                    "extracted_value": "{{interactions_proven_initial_count}}",
-                    "store_key": "interactions_proven_initial_count",
+                    "expected": "0 of 21 interactions proven with the server off",
+                    "extracted_value": "{{initial_interactions_line}}",
+                    "store_key": "initial_interactions_line",
                     "variable_refs": {
-                      "{{interactions_proven_initial_count}}": "0 OF 15 INTERACTIONS PROVEN WITH THE SERVER OFF"
+                      "{{initial_interactions_line}}": "0 OF 21 INTERACTIONS PROVEN WITH THE SERVER OFF"
                     }
                   }
                 ],
                 "sub_checks": [
                   {
-                    "description": "the line above the block reads 0 of 15 interactions proven with the server off",
-                    "store_key": "interactions_proven_initial_count",
-                    "expected_value": "0 of 15 interactions proven with the server off",
-                    "extracted_value": "{{interactions_proven_initial_count}}",
+                    "description": "the line above the block reads 0 of 21 interactions proven with the server off",
+                    "store_key": "initial_interactions_line",
+                    "expected_value": "0 of 21 interactions proven with the server off",
+                    "extracted_value": "{{initial_interactions_line}}",
                     "operator": "equals",
                     "transforms": [
                       "strip",
@@ -564,16 +564,16 @@
                   }
                 ],
                 "composite_operator": "and",
-                "verification": "the line above the block reads 0 of 15 interactions proven with the server off",
-                "claim": "the line above the block reads 0 of 15 interactions proven with the server off"
+                "verification": "The line above the block reads 0 of 21 interactions proven with the server off.",
+                "claim": "the line above the block reads 0 of 21 interactions proven with the server off"
               },
               "assertion_tree": {
                 "assertion_id": "assert_cp_1",
                 "status": "passed",
-                "description": "the line above the block reads 0 of 15 interactions proven with the server off",
+                "description": "the line above the block reads 0 of 21 interactions proven with the server off",
                 "sub_results": [
                   {
-                    "description": "the line above the block reads 0 of 15 interactions proven with the server off",
+                    "description": "the line above the block reads 0 of 21 interactions proven with the server off",
                     "passed": true,
                     "operator": "equals",
                     "transforms": [
@@ -581,11 +581,11 @@
                       "lowercase"
                     ],
                     "json_path": null,
-                    "expected": "0 of 15 interactions proven with the server off",
-                    "extracted_value": "{{interactions_proven_initial_count}}",
-                    "store_key": "interactions_proven_initial_count",
+                    "expected": "0 of 21 interactions proven with the server off",
+                    "extracted_value": "{{initial_interactions_line}}",
+                    "store_key": "initial_interactions_line",
                     "variable_refs": {
-                      "{{interactions_proven_initial_count}}": "0 OF 15 INTERACTIONS PROVEN WITH THE SERVER OFF"
+                      "{{initial_interactions_line}}": "0 OF 21 INTERACTIONS PROVEN WITH THE SERVER OFF"
                     }
                   }
                 ],
@@ -593,7 +593,7 @@
                 "passed": true,
                 "step": 3,
                 "is_final": false,
-                "verification": "the line above the block reads 0 of 15 interactions proven with the server off",
+                "verification": "The line above the block reads 0 of 21 interactions proven with the server off.",
                 "error_message": null,
                 "duration_ms": 0
               },
@@ -635,7 +635,7 @@
             }
           ],
           "status": "success",
-          "start_timestamp": "2026-11-23T18:09:37.267730+00:00",
+          "start_timestamp": "2026-11-25T11:00:42.450639+00:00",
           "end_timestamp": "",
           "type": "agent_generated",
           "tags": [],
@@ -662,9 +662,9 @@
           "network_assertion_content": {},
           "screenshot_command": "",
           "smartui_contents": {},
-          "generative_id": "9c432b127c38432686834c999ec5b72c",
+          "generative_id": "bf889c5aef47419eae6be514d4d17160",
           "plan_id": "",
-          "generative_objective": "Go to http://127.0.0.1:4790/amber/?t=start&speed=10. Verify the line above the block reads 0 of 15 interactions proven with the server off. Click the Replay the run button and wait until that line reads 15 of 15 interactions proven with the server off, then verify it does.",
+          "generative_objective": "Go to http://127.0.0.1:4790/amber/?t=start&speed=10. Verify the line above the block reads 0 of 21 interactions proven with the server off. Click the Replay the run button and wait until that line reads 21 of 21 interactions proven with the server off, then verify it does.",
           "error_message": "",
           "error_code": "",
           "reason": "",
@@ -673,10 +673,10 @@
           "reasoning": ""
         },
         {
-          "instruction_id": "fdf09fef-5e07-422d-a82d-8106367cf5dd",
+          "instruction_id": "5ed09d90-d496-4188-88bd-1707edda87d4",
           "instruction_class": "driver_action",
           "module_id": "",
-          "instruction": "Clicking the Replay the run button",
+          "instruction": "Clicking the REPLAY THE RUN button",
           "command": "CLICK",
           "error": null,
           "parent_instruction_id": "",
@@ -684,12 +684,12 @@
           "classification_error": {},
           "operations": [
             {
-              "operation_id": "476455c6-b88c-4b0c-8ab0-bf5841fd7581",
-              "instruction_id": "fdf09fef-5e07-422d-a82d-8106367cf5dd",
-              "instruction": "Clicking the Replay the run button",
-              "intent": "Clicking the Replay the run button",
-              "operation_start": "2026-11-23T18:09:44.760414+00:00",
-              "operation_end": "2026-11-23T18:09:44.807Z",
+              "operation_id": "c037b809-2225-49ab-9120-bb843fff2dc0",
+              "instruction_id": "5ed09d90-d496-4188-88bd-1707edda87d4",
+              "instruction": "Clicking the REPLAY THE RUN button",
+              "intent": "Clicking the REPLAY THE RUN button",
+              "operation_start": "2026-11-25T11:00:48.916359+00:00",
+              "operation_end": "2026-11-25T11:00:48.963Z",
               "status": "success",
               "command": "CLICK",
               "name": "",
@@ -703,7 +703,7 @@
               "grounded_by": "",
               "error_message": "",
               "code_snippet": "",
-              "sub_instruction_obj": "{\"operation\":\"Clicking the Replay the run button\",\"agent\":\"Vision Agent\",\"operation_dict\":{\"operation_type\":\"CLICK\"},\"reasoning\":\"PRIMARY: Click the Replay the run button; role=button; text=\\\"REPLAY THE RUN\\\" | HINTS: container=Controls; position=below the interaction block\",\"variable\":{},\"secrets\":{},\"params\":{}}",
+              "sub_instruction_obj": "{\"operation\":\"Clicking the REPLAY THE RUN button\",\"agent\":\"Vision Agent\",\"operation_dict\":{\"operation_type\":\"CLICK\"},\"reasoning\":\"PRIMARY: Click the Replay the run button; role=button; text=\\\"REPLAY THE RUN\\\" | HINTS: container=Controls navigation; position=bottom-left\",\"variable\":{},\"secrets\":{},\"params\":{}}",
               "test_id": "",
               "test_version": "",
               "action": "",
@@ -714,7 +714,7 @@
               "update_time_stamp": "",
               "locator_variable": "",
               "locator_variable_name": "",
-              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/476455c6-b88c-4b0c-8ab0-bf5841fd7581.webp",
+              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/c037b809-2225-49ab-9120-bb843fff2dc0.webp",
               "alternative_xpaths": [],
               "attribute": "",
               "value_description": "",
@@ -828,17 +828,17 @@
                 "viewport_width": 1920,
                 "viewport_height": 1080,
                 "scale_factor": null,
-                "raw_image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/476455c6-b88c-4b0c-8ab0-bf5841fd7581.webp",
+                "raw_image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/c037b809-2225-49ab-9120-bb843fff2dc0.webp",
                 "raw_image_sas_url": "",
                 "annotated_image_url": "",
                 "annotated_image_sas_url": ""
               },
-              "reasoning": "PRIMARY: Click the Replay the run button; role=button; text=\"REPLAY THE RUN\" | HINTS: container=Controls; position=below the interaction block"
+              "reasoning": "PRIMARY: Click the Replay the run button; role=button; text=\"REPLAY THE RUN\" | HINTS: container=Controls navigation; position=bottom-left"
             }
           ],
           "status": "success",
-          "start_timestamp": "2026-11-23T18:09:44.760414+00:00",
-          "end_timestamp": "2026-11-23T18:09:44.807Z",
+          "start_timestamp": "2026-11-25T11:00:48.916359+00:00",
+          "end_timestamp": "2026-11-25T11:00:48.963Z",
           "type": "agent_generated",
           "tags": [],
           "html_paths": [],
@@ -864,30 +864,30 @@
           "network_assertion_content": {},
           "screenshot_command": "",
           "smartui_contents": {},
-          "generative_id": "9c432b127c38432686834c999ec5b72c",
+          "generative_id": "bf889c5aef47419eae6be514d4d17160",
           "plan_id": "",
-          "generative_objective": "Go to http://127.0.0.1:4790/amber/?t=start&speed=10. Verify the line above the block reads 0 of 15 interactions proven with the server off. Click the Replay the run button and wait until that line reads 15 of 15 interactions proven with the server off, then verify it does.",
+          "generative_objective": "Go to http://127.0.0.1:4790/amber/?t=start&speed=10. Verify the line above the block reads 0 of 21 interactions proven with the server off. Click the Replay the run button and wait until that line reads 21 of 21 interactions proven with the server off, then verify it does.",
           "error_message": "",
           "error_code": "",
           "reason": "",
           "title": "",
           "used_variables": [],
-          "reasoning": "PRIMARY: Click the Replay the run button; role=button; text=\"REPLAY THE RUN\" | HINTS: container=Controls; position=below the interaction block"
+          "reasoning": "PRIMARY: Click the Replay the run button; role=button; text=\"REPLAY THE RUN\" | HINTS: container=Controls navigation; position=bottom-left"
         },
         {
           "content_type": "until_block",
-          "instruction_id": "until_8f489b51",
-          "condition": "the line above the block reads '15 OF 15 INTERACTIONS PROVEN WITH THE SERVER OFF'",
+          "instruction_id": "until_daac019c",
+          "condition": "the line above the block reads '21 OF 21 INTERACTIONS PROVEN WITH THE SERVER OFF'",
           "max_retries": 10,
           "settle_ms": 500,
           "current_count": 0,
           "condition_met": true,
           "children": [
             {
-              "instruction_id": "bd097203-a303-4872-9bac-01b1051f0db6",
+              "instruction_id": "a61530a6-1b18-4ca1-8d6d-dfa7db34f66f",
               "instruction_class": "driver_action",
               "module_id": "",
-              "instruction": "Waiting until interactions proven reaches 15 of 15 with server off",
+              "instruction": "Waiting for 21 of 21 interactions with the server turned off",
               "command": "WAIT",
               "error": null,
               "parent_instruction_id": "",
@@ -895,12 +895,12 @@
               "classification_error": {},
               "operations": [
                 {
-                  "operation_id": "9d968014-6322-4508-ab11-42c6e7452d2a",
-                  "instruction_id": "bd097203-a303-4872-9bac-01b1051f0db6",
-                  "instruction": "Waiting until interactions proven reaches 15 of 15 with server off",
-                  "intent": "Waiting until interactions proven reaches 15 of 15 with server off",
-                  "operation_start": "2026-11-23T18:10:00.084289+00:00",
-                  "operation_end": "2026-11-23T18:10:10.131Z",
+                  "operation_id": "8c5448c4-94c2-4550-a9de-7b5fbdab8ec6",
+                  "instruction_id": "a61530a6-1b18-4ca1-8d6d-dfa7db34f66f",
+                  "instruction": "Waiting for 21 of 21 interactions with the server turned off",
+                  "intent": "Waiting for 21 of 21 interactions with the server turned off",
+                  "operation_start": "2026-11-25T11:01:14.527366+00:00",
+                  "operation_end": "2026-11-25T11:01:35.089Z",
                   "status": "success",
                   "command": "WAIT",
                   "name": "",
@@ -914,7 +914,7 @@
                   "grounded_by": "",
                   "error_message": "",
                   "code_snippet": "",
-                  "sub_instruction_obj": "{\"operation\":\"Waiting until interactions proven reaches 15 of 15 with server off\",\"agent\":\"Operation Agent\",\"operation_dict\":{\"operation_type\":\"WAIT\"},\"reasoning\":\"PRIMARY: wait until the line above the block reads 15 of 15 interactions proven with the server off\",\"variable\":{},\"secrets\":{},\"params\":{}}",
+                  "sub_instruction_obj": "{\"operation\":\"Waiting for 21 of 21 interactions with the server turned off\",\"agent\":\"Operation Agent\",\"operation_dict\":{\"operation_type\":\"WAIT\"},\"reasoning\":\"PRIMARY: wait until the line above the block reads 21 of 21 interactions proven with the server off\",\"variable\":{},\"secrets\":{},\"params\":{}}",
                   "test_id": "",
                   "test_version": "",
                   "action": "",
@@ -925,7 +925,7 @@
                   "update_time_stamp": "",
                   "locator_variable": "",
                   "locator_variable_name": "",
-                  "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/9d968014-6322-4508-ab11-42c6e7452d2a.webp",
+                  "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/8c5448c4-94c2-4550-a9de-7b5fbdab8ec6.webp",
                   "alternative_xpaths": [],
                   "attribute": "",
                   "value_description": "",
@@ -933,7 +933,7 @@
                   "navigation_direction": "",
                   "tagified_image_url": "",
                   "query_variable_name": "",
-                  "query_variable_value": "{'condition_met': True, 'retries': 2}",
+                  "query_variable_value": "{'condition_met': True, 'retries': 4}",
                   "query_variable_type": "",
                   "expected_value": "",
                   "queried_value": "",
@@ -1019,12 +1019,12 @@
                   "api_data": {},
                   "output_variables": {},
                   "visual_context": null,
-                  "reasoning": "PRIMARY: wait until the line above the block reads 15 of 15 interactions proven with the server off"
+                  "reasoning": "PRIMARY: wait until the line above the block reads 21 of 21 interactions proven with the server off"
                 }
               ],
               "status": "success",
-              "start_timestamp": "2026-11-23T18:10:00.084289+00:00",
-              "end_timestamp": "2026-11-23T18:10:10.131Z",
+              "start_timestamp": "2026-11-25T11:01:14.527366+00:00",
+              "end_timestamp": "2026-11-25T11:01:35.089Z",
               "type": "agent_generated",
               "tags": [],
               "html_paths": [],
@@ -1058,7 +1058,7 @@
               "reason": "",
               "title": "",
               "used_variables": [],
-              "reasoning": "PRIMARY: wait until the line above the block reads 15 of 15 interactions proven with the server off"
+              "reasoning": "PRIMARY: wait until the line above the block reads 21 of 21 interactions proven with the server off"
             }
           ],
           "generative_id": "",
@@ -1067,25 +1067,25 @@
           "status": "success"
         },
         {
-          "instruction_id": "9c1b2df5-1551-4e40-92a6-c856c270dc0f",
+          "instruction_id": "20fab570-2a91-4cf4-ab11-b9fda1b8177d",
           "instruction_class": "driver_action",
           "module_id": "",
-          "instruction": "Reading the interaction-proof summary above the block",
-          "command": "VISION_QUERY",
+          "instruction": "Reading the completed interactions status line",
+          "command": "TEXTUAL_ANALYZER",
           "error": null,
           "parent_instruction_id": "",
           "classification_layer_resp": [],
           "classification_error": {},
           "operations": [
             {
-              "operation_id": "86cda3a2-a6e4-4644-ac99-22a5b311b373",
-              "instruction_id": "9c1b2df5-1551-4e40-92a6-c856c270dc0f",
-              "instruction": "Reading the interaction-proof summary above the block",
-              "intent": "Reading the interaction-proof summary above the block",
-              "operation_start": "2026-11-23T18:10:17.761045+00:00",
+              "operation_id": "03691871-658a-4701-bb9a-c3aa0cf7d033",
+              "instruction_id": "20fab570-2a91-4cf4-ab11-b9fda1b8177d",
+              "instruction": "Reading the completed interactions status line",
+              "intent": "Reading the completed interactions status line",
+              "operation_start": "2026-11-25T11:01:30.153883+00:00",
               "operation_end": "",
               "status": "success",
-              "command": "VISION_QUERY",
+              "command": "TEXTUAL_ANALYZER",
               "name": "",
               "target": "",
               "value": "",
@@ -1097,7 +1097,7 @@
               "grounded_by": "",
               "error_message": "",
               "code_snippet": "",
-              "sub_instruction_obj": "{\"operation\":\"Reading the interaction-proof summary above the block\",\"agent\":\"Vision Agent\",\"operation_dict\":{\"operation_type\":\"VISION_QUERY\"},\"reasoning\":\"the line above the block reads 15 of 15 interactions proven with the server off\",\"variable\":{},\"secrets\":{},\"params\":{}}",
+              "sub_instruction_obj": "{\"operation\":\"Reading the completed interactions status line\",\"agent\":\"Operation Agent\",\"operation_dict\":{\"operation_type\":\"TEXTUAL_ANALYZER\"},\"reasoning\":\"the completed interactions status line above the journeys block\",\"variable\":{},\"secrets\":{},\"params\":{},\"code_js\":\"el(2).innerText\",\"wrapped_js\":\"(els) => {\\n  const __m = {2: 0};\\n  const el = (i) => els[__m[i]];\\n  const __v = (el(2).innerText);\\n  return (typeof __v === 'boolean' ? String(__v) : __v);\\n}\",\"locators\":[\"internal:text=\\\"21 of 21 interactions proven\\\"i\"],\"operator\":\"equals\",\"transforms\":[\"strip\",\"lowercase\"],\"query\":\"the completed interactions status line above the journeys block\",\"expected_value\":\"21 of 21 interactions proven with the server off\",\"needs_unit_conversion\":false,\"condition\":\"the line above the block reads 21 of 21 interactions proven with the server off\"}",
               "test_id": "",
               "test_version": "",
               "action": "",
@@ -1108,15 +1108,15 @@
               "update_time_stamp": "",
               "locator_variable": "",
               "locator_variable_name": "",
-              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/86cda3a2-a6e4-4644-ac99-22a5b311b373.webp",
+              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/03691871-658a-4701-bb9a-c3aa0cf7d033.webp",
               "alternative_xpaths": [],
               "attribute": "",
               "value_description": "",
               "url": "",
               "navigation_direction": "",
               "tagified_image_url": "",
-              "query_variable_name": "interactions_proven_final_count",
-              "query_variable_value": "15 OF 15 INTERACTIONS PROVEN WITH THE SERVER OFF",
+              "query_variable_name": "completed_interactions_line",
+              "query_variable_value": "21 OF 21 INTERACTIONS PROVEN WITH THE SERVER OFF",
               "query_variable_type": "",
               "expected_value": "",
               "queried_value": "",
@@ -1201,14 +1201,14 @@
               "until_settle_ms": 0,
               "api_data": {},
               "output_variables": {
-                "interactions_proven_final_count": "15 OF 15 INTERACTIONS PROVEN WITH THE SERVER OFF"
+                "completed_interactions_line": "21 OF 21 INTERACTIONS PROVEN WITH THE SERVER OFF"
               },
               "visual_context": null,
-              "reasoning": "the line above the block reads 15 of 15 interactions proven with the server off"
+              "reasoning": "the completed interactions status line above the journeys block"
             }
           ],
           "status": "success",
-          "start_timestamp": "2026-11-23T18:10:17.761045+00:00",
+          "start_timestamp": "2026-11-25T11:01:30.153883+00:00",
           "end_timestamp": "",
           "type": "agent_generated",
           "tags": [],
@@ -1235,18 +1235,18 @@
           "network_assertion_content": {},
           "screenshot_command": "",
           "smartui_contents": {},
-          "generative_id": "9c432b127c38432686834c999ec5b72c",
+          "generative_id": "bf889c5aef47419eae6be514d4d17160",
           "plan_id": "",
-          "generative_objective": "Go to http://127.0.0.1:4790/amber/?t=start&speed=10. Verify the line above the block reads 0 of 15 interactions proven with the server off. Click the Replay the run button and wait until that line reads 15 of 15 interactions proven with the server off, then verify it does.",
+          "generative_objective": "Go to http://127.0.0.1:4790/amber/?t=start&speed=10. Verify the line above the block reads 0 of 21 interactions proven with the server off. Click the Replay the run button and wait until that line reads 21 of 21 interactions proven with the server off, then verify it does.",
           "error_message": "",
           "error_code": "",
           "reason": "",
           "title": "",
           "used_variables": [],
-          "reasoning": "the line above the block reads 15 of 15 interactions proven with the server off"
+          "reasoning": "the completed interactions status line above the journeys block"
         },
         {
-          "instruction_id": "60df84b2-5913-49cd-b776-837c45cfc2e4",
+          "instruction_id": "c0b60d09-d1a0-4a63-a5e6-4d15bc7fc017",
           "instruction_class": "non_driver_action",
           "module_id": "",
           "instruction": "Assertion check",
@@ -1262,36 +1262,38 @@
                 "assertion_tree": {
                   "sub_results": [
                     {
-                      "description": "the line above the block reads 15 of 15 interactions proven with the server off",
+                      "description": "the line above the block reads 21 of 21 interactions proven with the server off",
                       "passed": true,
                       "operator": "equals",
                       "transforms": [
+                        "strip",
                         "lowercase"
                       ],
                       "json_path": null,
-                      "expected": "15 of 15 interactions proven with the server off",
-                      "extracted_value": "{{interactions_proven_final_count}}",
-                      "store_key": "interactions_proven_final_count",
+                      "expected": "21 of 21 interactions proven with the server off",
+                      "extracted_value": "{{completed_interactions_line}}",
+                      "store_key": "completed_interactions_line",
                       "variable_refs": {
-                        "{{interactions_proven_final_count}}": "15 OF 15 INTERACTIONS PROVEN WITH THE SERVER OFF"
+                        "{{completed_interactions_line}}": "21 OF 21 INTERACTIONS PROVEN WITH THE SERVER OFF"
                       }
                     }
                   ],
                   "sub_checks": [
                     {
-                      "description": "the line above the block reads 15 of 15 interactions proven with the server off",
-                      "store_key": "interactions_proven_final_count",
-                      "expected_value": "15 of 15 interactions proven with the server off",
-                      "extracted_value": "{{interactions_proven_final_count}}",
+                      "description": "the line above the block reads 21 of 21 interactions proven with the server off",
+                      "store_key": "completed_interactions_line",
+                      "expected_value": "21 of 21 interactions proven with the server off",
+                      "extracted_value": "{{completed_interactions_line}}",
                       "operator": "equals",
                       "transforms": [
+                        "strip",
                         "lowercase"
                       ]
                     }
                   ],
                   "composite_operator": "and",
                   "verification": "",
-                  "claim": "the line above the block reads 15 of 15 interactions proven with the server off",
+                  "claim": "the line above the block reads 21 of 21 interactions proven with the server off",
                   "operator": [],
                   "assertion_operands": [],
                   "left_operand": null,
@@ -1307,11 +1309,11 @@
           "classification_error": {},
           "operations": [
             {
-              "operation_id": "7897c9d6-b028-44fa-be07-b66ab3dacda2",
-              "instruction_id": "60df84b2-5913-49cd-b776-837c45cfc2e4",
+              "operation_id": "27712c4d-c5a3-43ec-adf4-cbf493d01406",
+              "instruction_id": "c0b60d09-d1a0-4a63-a5e6-4d15bc7fc017",
               "instruction": "Assertion check",
               "intent": "Assertion check",
-              "operation_start": "2026-11-23T18:10:18.644984+00:00",
+              "operation_start": "2026-11-25T11:01:32.482451+00:00",
               "operation_end": "",
               "status": "success",
               "command": "ASSERTION",
@@ -1337,7 +1339,7 @@
               "update_time_stamp": "",
               "locator_variable": "",
               "locator_variable_name": "",
-              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/7897c9d6-b028-44fa-be07-b66ab3dacda2.webp",
+              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/27712c4d-c5a3-43ec-adf4-cbf493d01406.webp",
               "alternative_xpaths": [],
               "attribute": "",
               "value_description": "",
@@ -1403,55 +1405,58 @@
                 "operands": [],
                 "sub_results": [
                   {
-                    "description": "the line above the block reads 15 of 15 interactions proven with the server off",
+                    "description": "the line above the block reads 21 of 21 interactions proven with the server off",
                     "passed": true,
                     "operator": "equals",
                     "transforms": [
+                      "strip",
                       "lowercase"
                     ],
                     "json_path": null,
-                    "expected": "15 of 15 interactions proven with the server off",
-                    "extracted_value": "{{interactions_proven_final_count}}",
-                    "store_key": "interactions_proven_final_count",
+                    "expected": "21 of 21 interactions proven with the server off",
+                    "extracted_value": "{{completed_interactions_line}}",
+                    "store_key": "completed_interactions_line",
                     "variable_refs": {
-                      "{{interactions_proven_final_count}}": "15 OF 15 INTERACTIONS PROVEN WITH THE SERVER OFF"
+                      "{{completed_interactions_line}}": "21 OF 21 INTERACTIONS PROVEN WITH THE SERVER OFF"
                     }
                   }
                 ],
                 "sub_checks": [
                   {
-                    "description": "the line above the block reads 15 of 15 interactions proven with the server off",
-                    "store_key": "interactions_proven_final_count",
-                    "expected_value": "15 of 15 interactions proven with the server off",
-                    "extracted_value": "{{interactions_proven_final_count}}",
+                    "description": "the line above the block reads 21 of 21 interactions proven with the server off",
+                    "store_key": "completed_interactions_line",
+                    "expected_value": "21 of 21 interactions proven with the server off",
+                    "extracted_value": "{{completed_interactions_line}}",
                     "operator": "equals",
                     "transforms": [
+                      "strip",
                       "lowercase"
                     ]
                   }
                 ],
                 "composite_operator": "and",
-                "verification": "the line above the block reads 15 of 15 interactions proven with the server off",
-                "claim": "the line above the block reads 15 of 15 interactions proven with the server off"
+                "verification": "The line above the block reads 21 of 21 interactions proven with the server off.",
+                "claim": "the line above the block reads 21 of 21 interactions proven with the server off"
               },
               "assertion_tree": {
                 "assertion_id": "assert_cp_2",
                 "status": "passed",
-                "description": "the line above the block reads 15 of 15 interactions proven with the server off",
+                "description": "the line above the block reads 21 of 21 interactions proven with the server off",
                 "sub_results": [
                   {
-                    "description": "the line above the block reads 15 of 15 interactions proven with the server off",
+                    "description": "the line above the block reads 21 of 21 interactions proven with the server off",
                     "passed": true,
                     "operator": "equals",
                     "transforms": [
+                      "strip",
                       "lowercase"
                     ],
                     "json_path": null,
-                    "expected": "15 of 15 interactions proven with the server off",
-                    "extracted_value": "{{interactions_proven_final_count}}",
-                    "store_key": "interactions_proven_final_count",
+                    "expected": "21 of 21 interactions proven with the server off",
+                    "extracted_value": "{{completed_interactions_line}}",
+                    "store_key": "completed_interactions_line",
                     "variable_refs": {
-                      "{{interactions_proven_final_count}}": "15 OF 15 INTERACTIONS PROVEN WITH THE SERVER OFF"
+                      "{{completed_interactions_line}}": "21 OF 21 INTERACTIONS PROVEN WITH THE SERVER OFF"
                     }
                   }
                 ],
@@ -1459,7 +1464,7 @@
                 "passed": true,
                 "step": 7,
                 "is_final": true,
-                "verification": "the line above the block reads 15 of 15 interactions proven with the server off",
+                "verification": "The line above the block reads 21 of 21 interactions proven with the server off.",
                 "error_message": null,
                 "duration_ms": 0
               },
@@ -1501,7 +1506,7 @@
             }
           ],
           "status": "success",
-          "start_timestamp": "2026-11-23T18:10:18.644984+00:00",
+          "start_timestamp": "2026-11-25T11:01:32.482451+00:00",
           "end_timestamp": "",
           "type": "agent_generated",
           "tags": [],
@@ -1528,9 +1533,9 @@
           "network_assertion_content": {},
           "screenshot_command": "",
           "smartui_contents": {},
-          "generative_id": "9c432b127c38432686834c999ec5b72c",
+          "generative_id": "bf889c5aef47419eae6be514d4d17160",
           "plan_id": "",
-          "generative_objective": "Go to http://127.0.0.1:4790/amber/?t=start&speed=10. Verify the line above the block reads 0 of 15 interactions proven with the server off. Click the Replay the run button and wait until that line reads 15 of 15 interactions proven with the server off, then verify it does.",
+          "generative_objective": "Go to http://127.0.0.1:4790/amber/?t=start&speed=10. Verify the line above the block reads 0 of 21 interactions proven with the server off. Click the Replay the run button and wait until that line reads 21 of 21 interactions proven with the server off, then verify it does.",
           "error_message": "",
           "error_code": "",
           "reason": "",
@@ -1544,8 +1549,10 @@
       "result_code": null,
       "bifurcation_context": [],
       "approach_reason": [
-        "The requested replay was started from the Amber page after it showed 0 of 15 interactions proven with the server off.",
-        "The replay completed successfully, and the status above the block updated to 15 of 15 interactions proven with the server off."
+        "You asked to replay the run and wait for all 21 interactions to be proven with the server off.",
+        "The page initially showed 0 of 21 interactions proven with the server off.",
+        "The Replay the run button was used, and the replay completed successfully.",
+        "The page finished showing 21 of 21 interactions proven with the server off."
       ],
       "one_liner": null
     }
@@ -1553,7 +1560,7 @@
   "modules": [],
   "uploaded_files": [],
   "test_params": [],
-  "test_level_variables": "[{\"name\":\"interactions_proven_initial_count\",\"value\":\"0 OF 15 INTERACTIONS PROVEN WITH THE SERVER OFF\",\"value_type\":\"test_level\",\"variable_description\":\"ANALYZE result\"},{\"name\":\"interactions_proven_final_count\",\"value\":\"15 OF 15 INTERACTIONS PROVEN WITH THE SERVER OFF\",\"value_type\":\"test_level\",\"variable_description\":\"ANALYZE result\"}]",
+  "test_level_variables": "[{\"name\":\"initial_interactions_line\",\"value\":\"0 OF 21 INTERACTIONS PROVEN WITH THE SERVER OFF\",\"value_type\":\"test_level\",\"variable_description\":\"ANALYZE result\"},{\"name\":\"completed_interactions_line\",\"value\":\"21 OF 21 INTERACTIONS PROVEN WITH THE SERVER OFF\",\"value_type\":\"test_level\",\"variable_description\":\"ANALYZE result\"}]",
   "test_global_variables": [
     {
       "id": 661733,
@@ -1567,8 +1574,8 @@
     {
       "id": 661734,
       "name": "amber_tag",
-      "value": "ilumpt",
-      "session_value": "ilumpt",
+      "value": "gvshta",
+      "session_value": "gvshta",
       "is_persist": false,
       "environment_id": 0,
       "environment_name": "No Env"
