@@ -46,9 +46,13 @@ self.addEventListener('fetch', (e) => {
     e.respondWith(answer(e.request, url));
     return;
   }
-  // Client-side routes (/projects/2/9, /tasks/3 …) get the app shell.
+  // Client-side routes (/projects/2/9, /tasks/3 …) get the app shell. It is fetched as / because hosts with
+  // "pretty URLs" (Cloudflare Pages, Netlify) redirect /index.html to /, and a redirected response may not answer
+  // a navigation (the browser fails it); any redirect that still happens is rebuilt as a plain response.
   if (e.request.mode === 'navigate' && !/\.[a-z0-9]+$/i.test(url.pathname) && !/^\/amber(\/|$)/.test(url.pathname)) {
-    e.respondWith(fetch('/index.html', { cache: 'no-store' }));
+    e.respondWith(
+      fetch('/', { cache: 'no-store' }).then((r) => (r.redirected ? new Response(r.body, { status: r.status, statusText: r.statusText, headers: r.headers }) : r)),
+    );
   }
 });
 
