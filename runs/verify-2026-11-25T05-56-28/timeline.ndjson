@@ -1,0 +1,26 @@
+{"t":1795586190096,"type":"run_start","runId":"verify-2026-11-25T05-56-28","kind":"verify","mode":"replay","target":"capsule-server-off","commit":"f9edd0b","label":null,"flows":["j18-search-new-task"],"serverOff":{"checkedAt":"2026-11-25T05:56:28.321Z","port":3456,"portOpen":false,"vikunjaProcesses":[],"off":true}}
+{"t":1795586190395,"type":"flow_start","flow":"j18-search-new-task","attempt":1,"mode":"author","tag":"tjaqmd"}
+{"t":1795586215746,"type":"flow_step","flow":"j18-search-new-task","attempt":1,"n":2,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795586226559,"type":"flow_step","flow":"j18-search-new-task","attempt":1,"n":3,"status":"done","remark":"wait: queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click "}
+{"t":1795586227751,"type":"flow_step","flow":"j18-search-new-task","attempt":1,"n":4,"status":"done","remark":"type: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795586229027,"type":"flow_step","flow":"j18-search-new-task","attempt":1,"n":5,"status":"done","remark":"type: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795586231070,"type":"flow_step","flow":"j18-search-new-task","attempt":1,"n":6,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795586234134,"type":"flow_step","flow":"j18-search-new-task","attempt":1,"n":7,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795586243174,"type":"flow_step","flow":"j18-search-new-task","attempt":1,"n":8,"status":"done","remark":"analyze: the home page greets Amber Demo"}
+{"t":1795586244463,"type":"flow_step","flow":"j18-search-new-task","attempt":1,"n":9,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795586251435,"type":"flow_step","flow":"j18-search-new-task","attempt":1,"n":10,"status":"done","remark":"click: Clicking Kitchen renovation in Projects navigation"}
+{"t":1795586258443,"type":"flow_step","flow":"j18-search-new-task","attempt":1,"n":11,"status":"done","remark":"wait: queued plan (2 steps): type \"Add a task…\"; click \"Add\""}
+{"t":1795586259819,"type":"flow_step","flow":"j18-search-new-task","attempt":1,"n":12,"status":"done","remark":"type: Type \"Buy sealant {{global.amber_tag}}\" into \"Add a task…\""}
+{"t":1795586261861,"type":"flow_step","flow":"j18-search-new-task","attempt":1,"n":13,"status":"done","remark":"click: Click \"Add\""}
+{"t":1795586269244,"type":"flow_step","flow":"j18-search-new-task","attempt":1,"n":14,"status":"done","remark":"wait: Waiting confirm the new task titled Buy sealant {{global.amber_tag}} is present in Kitchen renovation"}
+{"t":1795586285620,"type":"flow_step","flow":"j18-search-new-task","attempt":1,"n":2,"status":"done","remark":"click: Clicking the search button in the top bar"}
+{"t":1795586292808,"type":"flow_step","flow":"j18-search-new-task","attempt":1,"n":3,"status":"done","remark":"type: Typing in the search bar"}
+{"t":1795586300997,"type":"flow_step","flow":"j18-search-new-task","attempt":1,"n":4,"status":"done","remark":"click: Clicking the Buy sealant Amber tag result"}
+{"t":1795586364099,"type":"flow_step","flow":"j18-search-new-task","attempt":1,"n":5,"status":"done","remark":"wait: PRIMARY: wait for the opened task page to load"}
+{"t":1795586376768,"type":"flow_step","flow":"j18-search-new-task","attempt":1,"n":6,"status":"done","remark":"analyze: ANALYZE(textual_visual, \"The opened item's page shows the title Buy sealant {{gl"}
+{"t":1795586379257,"type":"flow_step","flow":"j18-search-new-task","attempt":1,"n":7,"status":"done","remark":"assert: its page shows the title Buy sealant {{global.amber_tag}}"}
+{"t":1795586391020,"type":"flow_step","flow":"j18-search-new-task","attempt":1,"n":8,"status":"done","remark":"wait: PRIMARY: wait after reloading the page"}
+{"t":1795586399138,"type":"flow_step","flow":"j18-search-new-task","attempt":1,"n":9,"status":"done","remark":"analyze: ANALYZE(title, 'The page still shows the title Buy sealant {{global.amber_tag}}."}
+{"t":1795586401376,"type":"flow_step","flow":"j18-search-new-task","attempt":1,"n":10,"status":"done","remark":"assert: the title Buy sealant {{global.amber_tag}} is still shown"}
+{"t":1795586426769,"type":"flow_done","flow":"j18-search-new-task","attempt":1,"mode":"author","verdict":"PASS","basis":"kane","reasons":[],"credits":43.48629,"ms":235349,"shot":"verify-2026-11-25T05-56-28/j18-search-new-task/a1/shots/22.jpg"}
+{"t":1795586430031,"type":"run_done","runId":"verify-2026-11-25T05-56-28","spent":50.65,"tally":{"PASS":1},"regressions":[]}

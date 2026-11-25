@@ -1,0 +1,66 @@
+{
+  "flow": "j18-search-new-task",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "tjaqmd",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Kitchen renovation and add a new task titled Buy sealant {{amber_tag}}. Use the search in the top bar to search for {{amber_tag}}, open Buy sealant {{amber_tag}} from the results, then verify its page shows the title Buy sealant {{amber_tag}}. Reload the page, then verify the title Buy sealant {{amber_tag}} is still shown.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json"
+  ],
+  "startedAt": "2026-11-25T05:56:30.395Z",
+  "ms": 235349,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "opened and reloaded Buy sealant tjaqmd on Vikunja",
+  "summary": "Searched for “tjaqmd” using the top-bar search.\nOpened the result titled “Buy sealant tjaqmd.”\nReloaded the item page; “Buy sealant tjaqmd” remained displayed.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/tasks/13",
+    "item_title": "Buy sealant tjaqmd",
+    "page_title": "Buy sealant tjaqmd | Vikunja"
+  },
+  "credits": 43.48629,
+  "steps": 22,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-25T05:56:30.395Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-25T06:00:26.502Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 22,
+    "finalShot": "shots/22.jpg",
+    "failures": []
+  }
+}

@@ -1964,9 +1964,9 @@
       "needsHuman": false
     },
     "j18-search-new-task": {
-      "verdict": "FAIL",
-      "everPassed": false,
-      "failStreak": 1,
+      "verdict": "PASS",
+      "everPassed": true,
+      "failStreak": 0,
       "history": [
         {
           "runId": "verify-2026-11-25T04-15-29",
@@ -1978,6 +1978,15 @@
           "record": "runs/verify-2026-11-25T04-15-29/j18-search-new-task/a1",
           "commit": "dd0d420",
           "at": "2026-11-25T04:37:48.212Z"
+        },
+        {
+          "runId": "verify-2026-11-25T05-56-28",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T05-56-28/j18-search-new-task/a1",
+          "commit": "f9edd0b",
+          "at": "2026-11-25T06:00:26.861Z"
         }
       ],
       "needsHuman": false

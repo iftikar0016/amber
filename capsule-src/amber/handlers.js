@@ -84,9 +84,10 @@
   }
 
   /** Comparator for Vikunja's sort_by/order_by lists, or null for a sort the capsule cannot reproduce. */
-  function taskOrder(sortBy, orderBy, positions) {
+  function taskOrder(sortBy, orderBy, positions, extra) {
     const dateKey = (v) => (!v || String(v).startsWith('0001-') ? null : Date.parse(v));
     const getters = {
+      ...(extra || {}),
       position: (t) => positions[t.id],
       id: (t) => t.id,
       index: (t) => t.index,
@@ -151,22 +152,27 @@
 
   /**
    * GET /tasks: every task the user can see, across projects (the home page's Current Tasks, and the
-   * "is there any task" probe with per_page=1). Answered for `done = …` filters and the sorts taskOrder knows;
-   * a search (q) or any other filter (Upcoming's due-date range) still falls through.
+   * "is there any task" probe with per_page=1, and the top bar's search with q). Answered for `done = …` filters and
+   * the sorts taskOrder knows; any other filter (Upcoming's due-date range) still falls through.
    */
   function listTasks({ query, url, store }) {
     const m = store.model;
-    if (!m.tasks || (query.get('q') || '').trim() || (query.get('s') || '').trim()) return null;
+    if (!m.tasks || (query.get('s') || '').trim()) return null;
     const filter = parseFilter(query.get('filter'));
     if (!filter) return null;
     const visible = (t) => {
       const p = m.projects && m.projects[t.project_id];
       return Boolean(p && p.id > 0);
     };
-    const items = Object.values(m.tasks).filter((t) => visible(t) && filter(t));
+    // The top bar's search: q in a task's title or description, case-insensitive.
+    const q = (query.get('q') || '').trim().toLowerCase();
+    const where = (t) => (String(t.title || '').toLowerCase().includes(q) ? 'title' : String(t.description || '').toLowerCase().includes(q) ? 'description' : null);
+    const items = Object.values(m.tasks).filter((t) => visible(t) && filter(t) && (!q || where(t)));
     const sortBy = query.getAll('sort_by');
     if (sortBy.includes('position')) return null; // a position belongs to a project view, not to this list
-    const order = taskOrder(sortBy, query.getAll('order_by'), {});
+    // "relevance" (a search only): a title that starts with q, then a title that contains it, then a description match
+    const extra = q ? { relevance: (t) => (String(t.title || '').toLowerCase().startsWith(q) ? 0 : where(t) === 'title' ? 1 : 2) } : {};
+    const order = taskOrder(sortBy, query.getAll('order_by'), {}, extra);
     if (!order) return null;
     items.sort(order);
     const withCount = query.getAll('expand').includes('comment_count');

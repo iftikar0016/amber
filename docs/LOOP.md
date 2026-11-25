@@ -135,3 +135,12 @@ Found while checking for free, not repaired (no journey fails on it): round 1 wa
 - **Repair** (as tried in the first attempt above): a new task gets its creator's subscription (the next id; captured subscriptions run with task ids) and goes into each kanban view's default bucket, so its own read with `expand=buckets` is answered from the store.
 - **Checked first (zero credits):** the new task's read equals the real server's, field for field; all 22 pristine reads the store answers still equal the server's.
 - **Proof:** `verify-2026-11-25T05-53-07`, PASS (authored, server off), 37.01 credits: "#5 Order grout ctxeau" shown on its page, also after the reload; both reads answered by the store.
+
+### j18-search-new-task: find a task just added with the top-bar search (authored)
+
+- **Failure** (baseline): the search (`GET /tasks?q=<tag>&sort_by=done&sort_by=relevance…`) was never captured, so it answered 404 and there was no result to open. Its recording also checks the capture's own tag, so the lock verifies it by authored runs (0c31fc1).
+- **Repair:** the task collection, already answered from the store for j17, now also answers a search: `q` in a task's title or description, case-insensitive, sorted by Vikunja's `done` then `relevance`. Relevance here is a title that starts with the text, then a title that contains it, then a description match; the capture only ever shows single results, so that order is not otherwise evidenced. Opening the result uses the j16 repair.
+- **Checked first (zero credits):** the store's answer to the pristine search (j08, "tiles") and, in the captured journey, to the search for the new task equal the real server's; all 23 pristine reads the store answers still equal the server's.
+- **Proof:** `verify-2026-11-25T05-56-28`, PASS (authored, server off), 50.65 credits: the search found "Buy sealant tjaqmd" (answered by the store) and its page still showed it after the reload.
+
+All six round-2 repairs are now proven, each in its own Kane run. As the user chose, the regression check and final check is the Stop hook's full pass over every journey that has passed, when this session stops.
