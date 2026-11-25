@@ -1,0 +1,52 @@
+{
+  "flow": "j18-search-new-task",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "fggucf",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Kitchen renovation and add a new task titled Buy sealant {{amber_tag}}. Use the search in the top bar to search for {{amber_tag}}, open Buy sealant {{amber_tag}} from the results, then verify its page shows the title Buy sealant {{amber_tag}}. Reload the page, then verify the title Buy sealant {{amber_tag}} is still shown.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json",
+    "--name",
+    "j18-search-new-task"
+  ],
+  "startedAt": "2026-11-25T03:57:05.838Z",
+  "ms": 287191,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "created and reopened a task on Vikunja",
+  "summary": "Created the task “Buy sealant fggucf” in the Kitchen renovation project.\nSearched for “fggucf” using the top bar and opened the matching task.\nReloaded the task page; “Buy sealant fggucf” remained displayed.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/tasks/13",
+    "page_title": "Buy sealant fggucf | Vikunja",
+    "task_title": "Buy sealant fggucf"
+  },
+  "credits": 32.732845000000005,
+  "steps": 22,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": null,
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 22,
+    "finalShot": "shots/22.jpg",
+    "failures": []
+  }
+}

@@ -236,6 +236,102 @@
         "flows/output-j15-comment/playwright-python-code/requirements.txt": "5a26e04e1ddca7510ee8620b0facedce7bfe6df12419b6224dfa567b1e5b825e",
         "flows/output-j15-comment/playwright-python-code/test.py": "fd44e421d12298410428e853ceb07b2b515da8a8bbf76424fd34b01023ddaf17"
       }
+    },
+    "j16-open-new-task": {
+      "frozenAt": "2026-11-25T04:14:53.273Z",
+      "capturedIn": "capture-2026-11-25T03-51-37",
+      "record": "runs/capture-2026-11-25T03-51-37/j16-open-new-task/a1",
+      "files": {
+        "flows/j16-open-new-task_test.md": "4186dac3ca79e8354b48e78741e759870415dd1a47bef753a07059d374eb7227",
+        "flows/output-j16-open-new-task/.internal/execution.json": "d37af81a6909e4fd74568c29bc42568fc4ead69418f2faf25a39a240828dcb96",
+        "flows/output-j16-open-new-task/.internal/meta.json": "eeed145027fedb727af964fd2976847d25879d954ba516369b6d410b08855310",
+        "flows/output-j16-open-new-task/.internal/steps/1-87903d40/flows/0/actions.ndjson": "6982b5f603e8464fcb2ac0d78964dc13b1e67ef18ef2a835736902d17512debf",
+        "flows/output-j16-open-new-task/.internal/steps/1-87903d40/flows/1/actions.ndjson": "d4ce89b456bc0426375d25dba81cc6e438bab9e0aef207c4ebaaaa22c5785588",
+        "flows/output-j16-open-new-task/Result.md": "90f6f212461b19e7d298b7edb27f2c67732012adcb2198a4596007c64379bd17",
+        "flows/output-j16-open-new-task/playwright-python-code/.env.example": "8e782f4eeca814ebca6a947bae584a5a16c3fa988cade75e928af5a4bdf41b1a",
+        "flows/output-j16-open-new-task/playwright-python-code/requirements.txt": "fd2251ce3bf9139102ed03aeee2dc5176767d89e5702e328e1bf0d9d338a347d",
+        "flows/output-j16-open-new-task/playwright-python-code/test.py": "3fc082044d67f8a1e6e112b91d57b97b9de5efc7ac07d09f08ed5bffae4b7f80"
+      }
+    },
+    "j17-home-new-task": {
+      "frozenAt": "2026-11-25T04:14:53.278Z",
+      "capturedIn": "capture-2026-11-25T03-51-37",
+      "record": "runs/capture-2026-11-25T03-51-37/j17-home-new-task/a1",
+      "files": {
+        "flows/j17-home-new-task_test.md": "2e4456713df0cf3d3d43da37d1d4ba3dbdc7d5494c310ae0c96e611af75971ff",
+        "flows/output-j17-home-new-task/.internal/execution.json": "e1ed2c7b24ee96a0d2485fa28fa1f4926428fa53dc4694a0fd76afd771023470",
+        "flows/output-j17-home-new-task/.internal/meta.json": "3aa943221f5d72c274cf9bef1c0551764a0dfc7e7e8d44105ccb700ef14ac928",
+        "flows/output-j17-home-new-task/.internal/steps/1-1dae0711/flows/0/actions.ndjson": "6172322f9f23e3932eb80dd64cd95920f09f1b4cc4f21908d8004d85d03af9d0",
+        "flows/output-j17-home-new-task/.internal/steps/1-1dae0711/flows/1/actions.ndjson": "21065573381943ce8c7723c35767f8f1ffe44e32934763eec8e05265aa55d044",
+        "flows/output-j17-home-new-task/Result.md": "abe6518abf6b43fd3f712bcb520ca3128d0f444c6ef263dd1a6000b754569e98",
+        "flows/output-j17-home-new-task/playwright-python-code/.env.example": "8e782f4eeca814ebca6a947bae584a5a16c3fa988cade75e928af5a4bdf41b1a",
+        "flows/output-j17-home-new-task/playwright-python-code/requirements.txt": "fd2251ce3bf9139102ed03aeee2dc5176767d89e5702e328e1bf0d9d338a347d",
+        "flows/output-j17-home-new-task/playwright-python-code/test.py": "6ff079e576db3b063b4104859c6c10d78f8447864e0f4b36c0ee8bca285c3a9f"
+      }
+    },
+    "j18-search-new-task": {
+      "frozenAt": "2026-11-25T04:14:53.282Z",
+      "capturedIn": "capture-2026-11-25T03-51-37",
+      "record": "runs/capture-2026-11-25T03-51-37/j18-search-new-task/a1",
+      "files": {
+        "flows/j18-search-new-task_test.md": "d9bce2dd521636a752d36e5efa666d17fcfb78bd65577e57e31e3654d84591a4",
+        "flows/output-j18-search-new-task/.internal/execution.json": "39e71bf6ac5fbf4b2fc1825b6298cba8c9ed402c44babebad3aa4a5940a5e209",
+        "flows/output-j18-search-new-task/.internal/meta.json": "5a41df10b6a91657f67a62ce79ddffb3d34838aa7903736d1e7f620200aa58d2",
+        "flows/output-j18-search-new-task/.internal/steps/1-31d72eca/flows/0/actions.ndjson": "7e5b2fcc59f28b55b04cbdcd092bcf660e37ff82498e6e853a2879cb9203b76d",
+        "flows/output-j18-search-new-task/.internal/steps/1-31d72eca/flows/1/actions.ndjson": "29325348e78d219e6c291428ba6ffddbece29cbacec115809c9500f778415c35",
+        "flows/output-j18-search-new-task/Result.md": "18059676647c50e8681acbcfb1269d2955bc164dd8b14cc44a57b3db155a065a",
+        "flows/output-j18-search-new-task/playwright-python-code/.env.example": "8e782f4eeca814ebca6a947bae584a5a16c3fa988cade75e928af5a4bdf41b1a",
+        "flows/output-j18-search-new-task/playwright-python-code/requirements.txt": "fd2251ce3bf9139102ed03aeee2dc5176767d89e5702e328e1bf0d9d338a347d",
+        "flows/output-j18-search-new-task/playwright-python-code/test.py": "9159c0c7a2897ad86682e45d5693bcff1ed8bd0095a93658151be38f7ea04ebf"
+      }
+    },
+    "j19-done-kanban": {
+      "frozenAt": "2026-11-25T04:14:53.286Z",
+      "capturedIn": "capture-2026-11-25T04-09-43",
+      "record": "runs/capture-2026-11-25T04-09-43/j19-done-kanban/a1",
+      "files": {
+        "flows/j19-done-kanban_test.md": "889b9bc24c58702d6eb41fa6730c527384485f5ed0778fb775e0544d983300bf",
+        "flows/output-j19-done-kanban/.internal/execution.json": "b97da1e92dbfefa34608993ef690195ce295138415d48323843eda352954a0a4",
+        "flows/output-j19-done-kanban/.internal/meta.json": "b1c3ec812fb5b781c4dcfbf9fe0c9fb03a412192b71d709c98cfbc55a5f3cddb",
+        "flows/output-j19-done-kanban/.internal/steps/1-5bed8895/flows/0/actions.ndjson": "a95b962c4c100b5bf64fa8a37f11743f57656e36087b221148aa0cd8d4f89848",
+        "flows/output-j19-done-kanban/.internal/steps/1-5bed8895/flows/1/actions.ndjson": "7ab58bb3abad284db3d59021f65213f9f7ff99c5173f7f6dd0ffabd03f142fdc",
+        "flows/output-j19-done-kanban/Result.md": "7a24afb8af19bccd6a325d6e58a1969102f3ecba915c45db894f4304571819b6",
+        "flows/output-j19-done-kanban/playwright-python-code/.env.example": "8e782f4eeca814ebca6a947bae584a5a16c3fa988cade75e928af5a4bdf41b1a",
+        "flows/output-j19-done-kanban/playwright-python-code/requirements.txt": "fd2251ce3bf9139102ed03aeee2dc5176767d89e5702e328e1bf0d9d338a347d",
+        "flows/output-j19-done-kanban/playwright-python-code/test.py": "642730be00d01ba9dfdcebef379fadc2f46cd8f8d50399d331267c6828097c4c"
+      }
+    },
+    "j20-favourite-project": {
+      "frozenAt": "2026-11-25T04:14:53.290Z",
+      "capturedIn": "capture-2026-11-25T04-09-43",
+      "record": "runs/capture-2026-11-25T04-09-43/j20-favourite-project/a1",
+      "files": {
+        "flows/j20-favourite-project_test.md": "682f5e299fe9e4face015f73537ebad91fcec58b94689f863225925998c4519e",
+        "flows/output-j20-favourite-project/.internal/execution.json": "efbaa724c583ed502497a4de5be6600a69ce5b607e38dd2c6f05a2919b7f6d93",
+        "flows/output-j20-favourite-project/.internal/meta.json": "c285e442857eaee021aa3d0b306e66b9fcf6fa50385bfd9da66dc176b46c2089",
+        "flows/output-j20-favourite-project/.internal/steps/1-6f77e6fc/flows/0/actions.ndjson": "b5a81cab0726ad89b40bb1243028e2c5c878998974d7d644a027ed3d4678dfd4",
+        "flows/output-j20-favourite-project/.internal/steps/1-6f77e6fc/flows/1/actions.ndjson": "b0c6277376f28095fa4097544fb7d52d52357a2921f8d9f07fbcb6b791f26fd2",
+        "flows/output-j20-favourite-project/Result.md": "f74475d33ee4e72649e10ee85bd7afdd3916cb96016b330e58d241f20ffecf3e",
+        "flows/output-j20-favourite-project/playwright-python-code/.env.example": "8e782f4eeca814ebca6a947bae584a5a16c3fa988cade75e928af5a4bdf41b1a",
+        "flows/output-j20-favourite-project/playwright-python-code/requirements.txt": "fd2251ce3bf9139102ed03aeee2dc5176767d89e5702e328e1bf0d9d338a347d",
+        "flows/output-j20-favourite-project/playwright-python-code/test.py": "64e07ac062d8e079a9c63e570b9b3056d88d6db2bd72893dd5a4b970f45cde6b"
+      }
+    },
+    "j21-label-task": {
+      "frozenAt": "2026-11-25T04:14:53.293Z",
+      "capturedIn": "capture-2026-11-25T03-51-37",
+      "record": "runs/capture-2026-11-25T03-51-37/j21-label-task/a1",
+      "files": {
+        "flows/j21-label-task_test.md": "420bf359c44dfde3d1dfcd7eda031d1eb20f12591deeb601b5d07f46e1c11cbe",
+        "flows/output-j21-label-task/.internal/execution.json": "a8510361045507540ba39cc84efb931115b301ec49da5387f544bf7816bedce7",
+        "flows/output-j21-label-task/.internal/meta.json": "36db3fe3421d8470f6906a79a766be1fc4d98a31ed6e7cb253e3a55ddb08e61a",
+        "flows/output-j21-label-task/.internal/steps/1-f254ebf6/flows/0/actions.ndjson": "b1e72eb08b52c69723c8073fae7bd9364d0a5499e1a9676b1cc5a6725eb390be",
+        "flows/output-j21-label-task/.internal/steps/1-f254ebf6/flows/1/actions.ndjson": "7b9b32729b3ce268588ac2222a97fdb367097045565d23d12b154e66e03c9352",
+        "flows/output-j21-label-task/Result.md": "92b3709b54be30869117e5592174a6dcafad519f7eeba973692f7b5e0032ebfa",
+        "flows/output-j21-label-task/playwright-python-code/.env.example": "8e782f4eeca814ebca6a947bae584a5a16c3fa988cade75e928af5a4bdf41b1a",
+        "flows/output-j21-label-task/playwright-python-code/requirements.txt": "fd2251ce3bf9139102ed03aeee2dc5176767d89e5702e328e1bf0d9d338a347d",
+        "flows/output-j21-label-task/playwright-python-code/test.py": "4a8f0e955dd85083e771424e91b63da80c289a8b64abe93052f7cd3963879942"
+      }
     }
   }
 }

@@ -1,0 +1,40 @@
+{"t":1795579785656,"type":"run_start","runId":"capture-2026-11-25T04-09-43","kind":"capture","target":"real-server","flows":["j19-done-kanban","j20-favourite-project"]}
+{"t":1795579787388,"type":"flow_start","flow":"j19-done-kanban","attempt":1,"mode":"author","tag":"qbocbl"}
+{"t":1795579809307,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":2,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795579818769,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":3,"status":"done","remark":"wait: queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click "}
+{"t":1795579820078,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":4,"status":"done","remark":"type: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795579821335,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":5,"status":"done","remark":"type: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795579823097,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":6,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795579825789,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":7,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795579836748,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":8,"status":"done","remark":"analyze: the home page greets Amber Demo"}
+{"t":1795579837721,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":9,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795579851421,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":2,"status":"done","remark":"click: Clicking Kitchen renovation in the left project navigation"}
+{"t":1795579858193,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":3,"status":"done","remark":"click: Clicking Choose worktop in the task list"}
+{"t":1795579866002,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":4,"status":"done","remark":"click: Clicking Mark task done button"}
+{"t":1795579874553,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":5,"status":"done","remark":"click: Clicking Kitchen renovation in the worktop breadcrumb"}
+{"t":1795579879726,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":6,"status":"done","remark":"click: Clicking Kanban tab for Kitchen renovation project view"}
+{"t":1795579889875,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":7,"status":"done","remark":"analyze: Choose worktop is in the Done column."}
+{"t":1795579891954,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":8,"status":"done","remark":"assert: Choose worktop is in the Done column."}
+{"t":1795579905121,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":9,"status":"done","remark":"wait: PRIMARY: Reload the page"}
+{"t":1795579917156,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":10,"status":"done","remark":"analyze: Order tiles is in the To-Do column."}
+{"t":1795579919196,"type":"flow_step","flow":"j19-done-kanban","attempt":1,"n":11,"status":"done","remark":"assert: Choose worktop is still in the Done column and Order tiles is in the To-Do colum"}
+{"t":1795579942659,"type":"flow_done","flow":"j19-done-kanban","attempt":1,"mode":"author","verdict":"PASS","basis":"kane","reasons":[],"credits":37.251467500000004,"ms":155167,"shot":"capture-2026-11-25T04-09-43/j19-done-kanban/a1/shots/18.jpg"}
+{"t":1795579944325,"type":"flow_start","flow":"j20-favourite-project","attempt":1,"mode":"author","tag":"vzefyf"}
+{"t":1795579963085,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":2,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795579970963,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":3,"status":"done","remark":"wait: queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click "}
+{"t":1795579972313,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":4,"status":"done","remark":"type: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795579973606,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":5,"status":"done","remark":"type: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795579975337,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":6,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795579978088,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":7,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795579985983,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":8,"status":"done","remark":"analyze: the home page greets Amber Demo"}
+{"t":1795579986824,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":9,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795580009630,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":2,"status":"done","remark":"click: Clicking In the main menu on the left, hover over the project Reading list and click the star button beside its name, labelled Mark this project as favorite"}
+{"t":1795580019505,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":3,"status":"done","remark":"click: PRIMARY: In the main menu on the left, hover over the project Reading list and c"}
+{"t":1795580028005,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":4,"status":"done","remark":"analyze: ANALYZE(textual_visual, 'Reading list is listed as a favorite project in the mai"}
+{"t":1795580029654,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":5,"status":"done","remark":"assert: Reading list is listed as a favorite project in the main menu"}
+{"t":1795580041539,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":6,"status":"done","remark":"wait: PRIMARY: Reload the page"}
+{"t":1795580051962,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":7,"status":"done","remark":"analyze: Reading list is still listed as a favorite project"}
+{"t":1795580052846,"type":"flow_step","flow":"j20-favourite-project","attempt":1,"n":8,"status":"done","remark":"assert: Reading list is still listed as a favorite project"}
+{"t":1795580075532,"type":"flow_done","flow":"j20-favourite-project","attempt":1,"mode":"author","verdict":"PASS","basis":"kane","reasons":[],"credits":31.766060000000003,"ms":131147,"shot":"capture-2026-11-25T04-09-43/j20-favourite-project/a1/shots/15.jpg"}
+{"t":1795580075680,"type":"frontend_completed","fetched":0,"failed":[]}
+{"t":1795580077446,"type":"run_done","runId":"capture-2026-11-25T04-09-43","spent":77.19,"tally":{"PASS":2}}

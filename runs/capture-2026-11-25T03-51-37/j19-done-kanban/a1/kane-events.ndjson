@@ -1,0 +1,46 @@
+{"type":"stream_start","cli_version":"0.10.7","surface":"run","pid":21376,"v":1,"ts":"2026-11-25T04:01:55.627Z","kind":"typed","_rt":1795579315628}
+{"type":"recording_state","enabled":true,"session_id":"8e04c4a9-055e-4b73-b824-021bed234e95","persist":true,"session_name":"j19-done-kanban","test_path":"~\\hackathons\\kane\\amber\\.amber\\kane\\.testmuai\\tests\\j19-done-kanban_test.md","output_path":"~\\hackathons\\kane\\amber\\.amber\\kane\\.testmuai\\tests\\output-j19-done-kanban","v":1,"ts":"2026-11-25T04:01:55.653Z","kind":"typed","_rt":1795579315653}
+{"type":"update_available","current":"0.10.7","latest":"0.10.9","severity":"patch","v":1,"ts":"2026-11-25T04:02:00.894Z","kind":"typed","_rt":1795579320893}
+{"type":"skill_update_available","current":null,"latest":"0.1.4","install_cmd":"kane-cli install skill","v":1,"ts":"2026-11-25T04:02:00.905Z","kind":"typed","_rt":1795579320904}
+{"type":"bifurcation","flows":["Navigate to http://127.0.0.1:4790/login then Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo.\nOpen the project Kitchen renovation and open the task Choose worktop.\nClick Mark task done!, then open the Kanban view of Kitchen renovation and verify Choose worktop is in the Done column.\nReload the page, then verify Choose worktop is still in the Done column and Order tiles is in the To-Do column."],"count":1,"v":1,"ts":"2026-11-25T04:02:18.231Z","kind":"typed","_rt":1795579338230}
+{"step":2,"status":"running","remark":"Step 1","v":1,"ts":"2026-11-25T04:02:20.659Z","kind":"step","_rt":1795579340659}
+{"step":2,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login","v":1,"ts":"2026-11-25T04:02:20.670Z","kind":"step","_rt":1795579340670}
+{"step":3,"status":"running","remark":"Step 2","v":1,"ts":"2026-11-25T04:02:25.971Z","kind":"step","_rt":1795579345971}
+{"step":3,"status":"done","remark":"wait: queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click ","v":1,"ts":"2026-11-25T04:02:34.942Z","kind":"step","_rt":1795579354942}
+{"step":4,"status":"running","remark":"Step 3","v":1,"ts":"2026-11-25T04:02:36.027Z","kind":"step","_rt":1795579356027}
+{"step":4,"status":"done","remark":"type: Type \"{{global.amber_user}}\" into \"Username Or Email Address\"","v":1,"ts":"2026-11-25T04:02:36.322Z","kind":"step","_rt":1795579356322}
+{"step":5,"status":"running","remark":"Step 4","v":1,"ts":"2026-11-25T04:02:37.370Z","kind":"step","_rt":1795579357370}
+{"step":5,"status":"done","remark":"type: Type \"{{secrets.user.amber_password}}\" into \"Password\"","v":1,"ts":"2026-11-25T04:02:37.595Z","kind":"step","_rt":1795579357595}
+{"step":6,"status":"running","remark":"Step 5","v":1,"ts":"2026-11-25T04:02:38.671Z","kind":"step","_rt":1795579358671}
+{"step":6,"status":"done","remark":"click: Click \"Stay logged in\"","v":1,"ts":"2026-11-25T04:02:39.377Z","kind":"step","_rt":1795579359377}
+{"step":7,"status":"running","remark":"Step 6","v":1,"ts":"2026-11-25T04:02:41.405Z","kind":"step","_rt":1795579361405}
+{"step":7,"status":"done","remark":"click: Click \"LOGIN\"","v":1,"ts":"2026-11-25T04:02:42.098Z","kind":"step","_rt":1795579362098}
+{"step":8,"status":"running","remark":"Step 7","v":1,"ts":"2026-11-25T04:02:42.909Z","kind":"step","_rt":1795579362908}
+{"step":8,"status":"done","remark":"wait: PRIMARY: wait 500 ms after signing in","v":1,"ts":"2026-11-25T04:02:48.003Z","kind":"step","_rt":1795579368003}
+{"step":9,"status":"running","remark":"Step 8","v":1,"ts":"2026-11-25T04:02:48.734Z","kind":"step","_rt":1795579368734}
+{"step":9,"status":"done","remark":"analyze: the home page greets Amber Demo","v":1,"ts":"2026-11-25T04:02:55.753Z","kind":"step","_rt":1795579375753}
+{"step":10,"status":"running","remark":"Step 9","v":1,"ts":"2026-11-25T04:02:56.813Z","kind":"step","_rt":1795579376813}
+{"step":10,"status":"done","remark":"assert: the home page greets Amber Demo","v":1,"ts":"2026-11-25T04:02:56.826Z","kind":"step","_rt":1795579376826}
+{"step":11,"status":"running","remark":"Step 10","v":1,"ts":"2026-11-25T04:02:57.756Z","kind":"step","_rt":1795579377756}
+{"step":11,"status":"done","remark":"click: Clicking Kitchen renovation link in Projects navigation","v":1,"ts":"2026-11-25T04:03:04.460Z","kind":"step","_rt":1795579384461}
+{"step":12,"status":"running","remark":"Step 11","v":1,"ts":"2026-11-25T04:03:05.260Z","kind":"step","_rt":1795579385260}
+{"step":12,"status":"done","remark":"click: Clicking Choose worktop link in the kitchen renovation task list","v":1,"ts":"2026-11-25T04:03:11.314Z","kind":"step","_rt":1795579391314}
+{"step":13,"status":"running","remark":"Step 12","v":1,"ts":"2026-11-25T04:03:13.295Z","kind":"step","_rt":1795579393295}
+{"step":13,"status":"done","remark":"click: Clicking Mark task done button","v":1,"ts":"2026-11-25T04:03:19.230Z","kind":"step","_rt":1795579399231}
+{"step":14,"status":"running","remark":"Step 13","v":1,"ts":"2026-11-25T04:03:20.941Z","kind":"step","_rt":1795579400942}
+{"step":14,"status":"done","remark":"click: Clicking Kitchen renovation worktop breadcrumb in Choose worktop container","v":1,"ts":"2026-11-25T04:03:27.354Z","kind":"step","_rt":1795579407355}
+{"step":15,"status":"running","remark":"Step 14","v":1,"ts":"2026-11-25T04:03:28.048Z","kind":"step","_rt":1795579408049}
+{"step":15,"status":"done","remark":"click: Clicking Kanban to open the Kitchen renovation view","v":1,"ts":"2026-11-25T04:03:34.744Z","kind":"step","_rt":1795579414745}
+{"step":16,"status":"running","remark":"Step 15","v":1,"ts":"2026-11-25T04:03:35.693Z","kind":"step","_rt":1795579415693}
+{"step":16,"status":"done","remark":"analyze: Choose worktop is in the Done column","v":1,"ts":"2026-11-25T04:03:44.290Z","kind":"step","_rt":1795579424291}
+{"step":17,"status":"running","remark":"Step 16","v":1,"ts":"2026-11-25T04:03:46.309Z","kind":"step","_rt":1795579426309}
+{"step":17,"status":"done","remark":"assert: Choose worktop is in the Done column","v":1,"ts":"2026-11-25T04:03:46.324Z","kind":"step","_rt":1795579426325}
+{"step":18,"status":"running","remark":"Step 17","v":1,"ts":"2026-11-25T04:03:48.382Z","kind":"step","_rt":1795579428383}
+{"step":18,"status":"done","remark":"wait: PRIMARY: wait 500 ms after reloading the Kitchen renovation Kanban page","v":1,"ts":"2026-11-25T04:03:59.131Z","kind":"step","_rt":1795579439132}
+{"step":19,"status":"running","remark":"Step 18","v":1,"ts":"2026-11-25T04:04:01.185Z","kind":"step","_rt":1795579441186}
+{"step":19,"status":"done","remark":"analyze: Order tiles is in the To-Do column","v":1,"ts":"2026-11-25T04:04:12.045Z","kind":"step","_rt":1795579452046}
+{"step":20,"status":"running","remark":"Step 19","v":1,"ts":"2026-11-25T04:04:14.067Z","kind":"step","_rt":1795579454068}
+{"step":20,"status":"done","remark":"assert: Choose worktop is still in the Done column and Order tiles is in the To-Do colum","v":1,"ts":"2026-11-25T04:04:14.077Z","kind":"step","_rt":1795579454078}
+{"type":"test_md_bundle_sync","status":"ok","commit_id":"8e04c4a9-055e-4b73-b824-021bed234e95","path":"~\\hackathons\\kane\\amber\\.amber\\kane\\.testmuai\\tests\\j19-done-kanban_test.md","bytes":20081,"v":1,"ts":"2026-11-25T04:04:33.990Z","kind":"typed","_rt":1795579473991}
+{"type":"coverage","status":"skipped","reason":"not_assurance_project","pack":"~\\.testmuai\\kaneai\\sessions\\8e04c4a9-055e-4b73-b824-021bed234e95\\evidence\\4e972a92-7ae1-40ae-b472-ccd7b0b2d0a6.evidence","v":1,"ts":"2026-11-25T04:04:33.991Z","kind":"typed","_rt":1795579473992}
+{"type":"run_end","status":"passed","summary":"Signed in as Amber Demo with the stay-logged-in option selected.\nOpened the Kitchen renovation project, marked the “Choose worktop” task as done, and switched to its Kanban view.\nReloaded the Kanban board; “Choose worktop” remained in Done and “Order tiles” remained in To-Do.","one_liner":"completed a Kitchen renovation task on the project board","final_state":{"url":"http://127.0.0.1:4790/projects/3/16","Choose worktop status":"Done","Order tiles status":"To-Do"},"reason":"Objective completed","duration":129.1,"bifurcated":false,"total_runs":1,"credits_consumed":42.7969875,"result_code":100,"reason_code":"success.complete","per_flow_metadata":[{"result_code":"100","reason_code":"success.complete","error_message":null,"summary":"Signed in as Amber Demo with the stay-logged-in option selected.\nOpened the Kitchen renovation project, marked the “Choose worktop” task as done, and switched to its Kanban view.\nReloaded the Kanban board; “Choose worktop” remained in Done and “Order tiles” remained in To-Do.","one_liner":"completed a Kitchen renovation task on the project board","credits_consumed":42.7969875}],"run_id":"run-0","coverage":{"status":"skipped"},"v":1,"ts":"2026-11-25T04:04:33.992Z","kind":"terminal","_rt":1795579473993}

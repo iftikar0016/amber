@@ -1,0 +1,52 @@
+{
+  "flow": "j19-done-kanban",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "qbocbl",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Kitchen renovation and open the task Choose worktop. Click Mark task done!, then open the Kanban view of Kitchen renovation and verify Choose worktop is in the Done column. Reload the page, then verify Choose worktop is still in the Done column and Order tiles is in the To-Do column.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json",
+    "--name",
+    "j19-done-kanban"
+  ],
+  "startedAt": "2026-11-25T04:09:47.388Z",
+  "ms": 155167,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "completed the Choose worktop task on the Kitchen renovation project board",
+  "summary": "Opened the Kitchen renovation project and marked the “Choose worktop” task as done.\nOpened the project’s Kanban board and reloaded the page.\nConfirmed that “Choose worktop” remained in the Done column and “Order tiles” remained in the To-Do column after the reload.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/projects/3/16",
+    "choose_worktop_done_column": "true",
+    "order_tiles_todo_column": "true"
+  },
+  "credits": 37.251467500000004,
+  "steps": 18,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": null,
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 18,
+    "finalShot": "shots/18.jpg",
+    "failures": []
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "runId": "capture-2026-11-25T03-51-37",
+  "kind": "capture",
+  "spend": {
+    "started": "2026-11-25T03:51:39.237Z",
+    "ended": "2026-11-25T04:08:58.997Z",
+    "what": "capture j16-open-new-task,j17-home-new-task,j18-search-new-task,j19-done-kanban,j20-favourite-project,j21-label-task",
+    "estimate": 210,
+    "balanceBefore": 7768.7708,
+    "balanceAfter": 7520.4527,
+    "spent": 248.32,
+    "runId": "capture-2026-11-25T03-51-37"
+  },
+  "results": [
+    {
+      "id": "j16-open-new-task",
+      "verdict": "PASS",
+      "reasons": [],
+      "credits": 37.610177500000006,
+      "savedTest": true,
+      "frozenCandidate": "flows/j16-open-new-task_test.md",
+      "record": "runs/capture-2026-11-25T03-51-37/j16-open-new-task/a1"
+    },
+    {
+      "id": "j17-home-new-task",
+      "verdict": "PASS",
+      "reasons": [],
+      "credits": 34.1117725,
+      "savedTest": true,
+      "frozenCandidate": "flows/j17-home-new-task_test.md",
+      "record": "runs/capture-2026-11-25T03-51-37/j17-home-new-task/a1"
+    },
+    {
+      "id": "j18-search-new-task",
+      "verdict": "PASS",
+      "reasons": [],
+      "credits": 32.732845000000005,
+      "savedTest": true,
+      "frozenCandidate": "flows/j18-search-new-task_test.md",
+      "record": "runs/capture-2026-11-25T03-51-37/j18-search-new-task/a1"
+    },
+    {
+      "id": "j19-done-kanban",
+      "verdict": "PASS",
+      "reasons": [],
+      "credits": 42.7969875,
+      "savedTest": true,
+      "frozenCandidate": "flows/j19-done-kanban_test.md",
+      "record": "runs/capture-2026-11-25T03-51-37/j19-done-kanban/a1"
+    },
+    {
+      "id": "j20-favourite-project",
+      "verdict": "FAIL",
+      "reasons": [
+        "The run starred a task in Reading list rather than marking the Reading list project as a favorite."
+      ],
+      "credits": 26.303327499999998,
+      "savedTest": true,
+      "frozenCandidate": null,
+      "record": "runs/capture-2026-11-25T03-51-37/j20-favourite-project/a1"
+    },
+    {
+      "id": "j21-label-task",
+      "verdict": "PASS",
+      "reasons": [],
+      "credits": 36.03836,
+      "savedTest": true,
+      "frozenCandidate": "flows/j21-label-task_test.md",
+      "record": "runs/capture-2026-11-25T03-51-37/j21-label-task/a1"
+    }
+  ]
+}

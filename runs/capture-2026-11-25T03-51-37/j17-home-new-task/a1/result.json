@@ -1,0 +1,51 @@
+{
+  "flow": "j17-home-new-task",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "pfoluj",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Kitchen renovation and add a new task titled Call plumber {{amber_tag}}. Open Overview from the main menu, then verify Call plumber {{amber_tag}} is listed under Current Tasks. Reload the page, then verify Call plumber {{amber_tag}} is still listed under Current Tasks.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json",
+    "--name",
+    "j17-home-new-task"
+  ],
+  "startedAt": "2026-11-25T03:54:42.436Z",
+  "ms": 141652,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "added a plumbing task to the Kitchen renovation project on the project management site",
+  "summary": "Added the task “Call plumber pfoluj” to the Kitchen renovation project.\nOpened the Overview page from the main menu, where the new task appeared under Current Tasks.\nReloaded the page and confirmed that “Call plumber pfoluj” remained listed under Current Tasks.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/",
+    "Call plumber pfoluj listed under Current Tasks after reload": "true"
+  },
+  "credits": 34.1117725,
+  "steps": 18,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": null,
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 18,
+    "finalShot": "shots/18.jpg",
+    "failures": []
+  }
+}

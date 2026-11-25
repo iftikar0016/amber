@@ -1,0 +1,51 @@
+{
+  "flow": "j20-favourite-project",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "vzefyf",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. In the main menu on the left, hover over the project Reading list and click the star button beside its name, labelled Mark this project as favorite; do not star any task. Then verify Reading list is listed as a favorite project in the main menu. Reload the page, then verify Reading list is still listed as a favorite project.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json",
+    "--name",
+    "j20-favourite-project"
+  ],
+  "startedAt": "2026-11-25T04:12:24.325Z",
+  "ms": 131147,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "marked Reading list as a favorite on the project page",
+  "summary": "You asked to mark the “Reading list” project as a favorite from the left-side menu and then reload the page.\nMarked “Reading list” as a favorite without starring any tasks.\nReloaded the page and confirmed that “Reading list” remained in the Favorites section.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/",
+    "Reading list favorite status after reload": "Favorited and still listed in Favorites"
+  },
+  "credits": 31.766060000000003,
+  "steps": 15,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": null,
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 15,
+    "finalShot": "shots/15.jpg",
+    "failures": []
+  }
+}

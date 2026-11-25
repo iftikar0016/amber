@@ -108,6 +108,54 @@
       "kind": "write",
       "steps": "Open the project Kitchen renovation and open the task Get three quotes. Add the comment Third quote {{amber_tag}}, then verify the comments show both Third quote {{amber_tag}} and Two quotes in so far. Reload the page, then verify Third quote {{amber_tag}} is still shown.",
       "outcome": "The new comment shows beside the existing one, and after a reload"
+    },
+    {
+      "id": "j16-open-new-task",
+      "title": "Open a new task",
+      "kind": "write",
+      "steps": "Open the project Kitchen renovation, add a new task titled Order grout {{amber_tag}}, then open the task Order grout {{amber_tag}} and verify its page shows the title Order grout {{amber_tag}}. Reload the page, then verify the title Order grout {{amber_tag}} is still shown.",
+      "outcome": "A new task opens on its own page, and again after a reload",
+      "screen": "task"
+    },
+    {
+      "id": "j17-home-new-task",
+      "title": "New task on the home page",
+      "kind": "write",
+      "steps": "Open the project Kitchen renovation and add a new task titled Call plumber {{amber_tag}}. Open Overview from the main menu, then verify Call plumber {{amber_tag}} is listed under Current Tasks. Reload the page, then verify Call plumber {{amber_tag}} is still listed under Current Tasks.",
+      "outcome": "A new task is listed on the home page, and after a reload",
+      "screen": "home"
+    },
+    {
+      "id": "j18-search-new-task",
+      "title": "Search for a new task",
+      "kind": "write",
+      "steps": "Open the project Kitchen renovation and add a new task titled Buy sealant {{amber_tag}}. Use the search in the top bar to search for {{amber_tag}}, open Buy sealant {{amber_tag}} from the results, then verify its page shows the title Buy sealant {{amber_tag}}. Reload the page, then verify the title Buy sealant {{amber_tag}} is still shown.",
+      "outcome": "Search finds a new task and opens it",
+      "screen": "task"
+    },
+    {
+      "id": "j19-done-kanban",
+      "title": "Done moves to the Done column",
+      "kind": "write",
+      "steps": "Open the project Kitchen renovation and open the task Choose worktop. Click Mark task done!, then open the Kanban view of Kitchen renovation and verify Choose worktop is in the Done column. Reload the page, then verify Choose worktop is still in the Done column and Order tiles is in the To-Do column.",
+      "outcome": "A task marked done shows in the Kanban Done column, after a reload",
+      "screen": "kanban"
+    },
+    {
+      "id": "j20-favourite-project",
+      "title": "Favourite a project",
+      "kind": "write",
+      "steps": "In the main menu on the left, hover over the project Reading list and click the star button beside its name, labelled Mark this project as favorite; do not star any task. Then verify Reading list is listed as a favorite project in the main menu. Reload the page, then verify Reading list is still listed as a favorite project.",
+      "outcome": "A favourite project stays a favourite after a reload",
+      "screen": "projects"
+    },
+    {
+      "id": "j21-label-task",
+      "title": "Label a task",
+      "kind": "write",
+      "steps": "Open the project Kitchen renovation and open the task Order tiles. Add a new label named Urgent {{amber_tag}} to the task, then verify the task shows the label Urgent {{amber_tag}}. Reload the page, then verify the label Urgent {{amber_tag}} is still shown on the task.",
+      "outcome": "A new label shows on the task, and after a reload",
+      "screen": "task"
     }
   ]
 }

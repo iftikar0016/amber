@@ -1,0 +1,134 @@
+[
+  {
+    "step": 1,
+    "type": "navigate",
+    "intent": "Navigate to http://127.0.0.1:4790/login",
+    "instruction": "Navigate to http://127.0.0.1:4790/login"
+  },
+  {
+    "step": 2,
+    "type": "wait",
+    "intent": "queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click \"Stay logged in\"; click \"LOGIN\"",
+    "instruction": "Waiting for the login form to load and queued steps to run"
+  },
+  {
+    "step": 3,
+    "type": "fill",
+    "intent": "PRIMARY: Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}} with Stay logged in ticked; role=textbox; text=\"Username Or Email Address\" | HINTS: container=Login form",
+    "instruction": "Type \"{{global.amber_user}}\" into \"Username Or Email Address\""
+  },
+  {
+    "step": 4,
+    "type": "fill",
+    "intent": "PRIMARY: Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}} with Stay logged in ticked; role=textbox; text=\"Password\" | HINTS: container=Login form",
+    "instruction": "Type \"{{secrets.user.amber_password}}\" into \"Password\""
+  },
+  {
+    "step": 5,
+    "type": "click",
+    "intent": "PRIMARY: Stay logged in ticked; role=checkbox; text=\"Stay logged in\" | HINTS: container=Login form",
+    "instruction": "Click \"Stay logged in\""
+  },
+  {
+    "step": 6,
+    "type": "click",
+    "intent": "PRIMARY: Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}} with Stay logged in ticked; role=button; text=\"LOGIN\" | HINTS: container=Login form",
+    "instruction": "Click \"LOGIN\""
+  },
+  {
+    "step": 7,
+    "type": "wait",
+    "intent": "PRIMARY: confirm the signed-in home page is loaded",
+    "instruction": "Waiting for the signed-in home page to load"
+  },
+  {
+    "step": 8,
+    "type": "analyze",
+    "intent": "the greeting heading in the home page main content",
+    "instruction": "Reading the home page greeting"
+  },
+  {
+    "step": 9,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  },
+  {
+    "step": 1,
+    "type": "click",
+    "intent": "PRIMARY: Open the project Kitchen renovation; role=link; text=\"Kitchen renovation\" | HINTS: container=left sidebar project list",
+    "instruction": "Clicking Kitchen renovation in the left sidebar project list"
+  },
+  {
+    "step": 2,
+    "type": "wait",
+    "intent": "queued plan (2 steps): type \"Add a task…\"; click \"Add\"",
+    "instruction": "Waiting for the queued plan to complete"
+  },
+  {
+    "step": 3,
+    "type": "fill",
+    "intent": "PRIMARY: Add a new task titled Order grout {{global.amber_tag}}; role=textbox; text=\"Add a task…\" | HINTS: container=project task list input",
+    "instruction": "Type \"Order grout {{global.amber_tag}}\" into \"Add a task…\""
+  },
+  {
+    "step": 4,
+    "type": "click",
+    "intent": "PRIMARY: Add a new task titled Order grout {{global.amber_tag}}; role=button; text=\"Add\" | HINTS: next to the add-task textbox",
+    "instruction": "Click \"Add\""
+  },
+  {
+    "step": 5,
+    "type": "wait",
+    "intent": "PRIMARY: confirm the new task Order grout {{global.amber_tag}} is present in the project task list",
+    "instruction": "Waiting for the new task Order grout to appear in the project task list"
+  },
+  {
+    "step": 6,
+    "type": "click",
+    "intent": "PRIMARY: Open the task Order grout {{global.amber_tag}}",
+    "instruction": "Clicking Open the task Order grout {{global.amber_tag}}"
+  },
+  {
+    "step": 7,
+    "type": "wait",
+    "intent": "PRIMARY: wait for the task page title Order grout {{global.amber_tag}} to be visible",
+    "instruction": "Waiting for the task page title Order grout to be visible"
+  },
+  {
+    "step": 8,
+    "type": "analyze",
+    "intent": "the task page shows the title Order grout {{global.amber_tag}}",
+    "instruction": "Checking whether the task title is present"
+  },
+  {
+    "step": 9,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  },
+  {
+    "step": 10,
+    "type": "refresh",
+    "intent": "Navigate refresh",
+    "instruction": "Navigate refresh"
+  },
+  {
+    "step": 11,
+    "type": "wait",
+    "intent": "PRIMARY: confirm the reloaded task page shows Order grout {{global.amber_tag}}",
+    "instruction": "Waiting for the task page to reload and confirm Order grout tag"
+  },
+  {
+    "step": 12,
+    "type": "analyze",
+    "intent": "the title Order grout {{global.amber_tag}} is still shown",
+    "instruction": "Reading the current page title"
+  },
+  {
+    "step": 13,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  }
+]

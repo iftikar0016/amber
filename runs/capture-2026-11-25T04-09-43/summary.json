@@ -1,0 +1,34 @@
+{
+  "runId": "capture-2026-11-25T04-09-43",
+  "kind": "capture",
+  "spend": {
+    "started": "2026-11-25T04:09:45.640Z",
+    "ended": "2026-11-25T04:14:37.445Z",
+    "what": "capture j19-done-kanban,j20-favourite-project",
+    "estimate": 70,
+    "balanceBefore": 7520.4527,
+    "balanceAfter": 7443.2669,
+    "spent": 77.19,
+    "runId": "capture-2026-11-25T04-09-43"
+  },
+  "results": [
+    {
+      "id": "j19-done-kanban",
+      "verdict": "PASS",
+      "reasons": [],
+      "credits": 37.251467500000004,
+      "savedTest": true,
+      "frozenCandidate": "flows/j19-done-kanban_test.md",
+      "record": "runs/capture-2026-11-25T04-09-43/j19-done-kanban/a1"
+    },
+    {
+      "id": "j20-favourite-project",
+      "verdict": "PASS",
+      "reasons": [],
+      "credits": 31.766060000000003,
+      "savedTest": true,
+      "frozenCandidate": "flows/j20-favourite-project_test.md",
+      "record": "runs/capture-2026-11-25T04-09-43/j20-favourite-project/a1"
+    }
+  ]
+}

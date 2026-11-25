@@ -1,0 +1,52 @@
+{
+  "flow": "j21-label-task",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "orybah",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Kitchen renovation and open the task Order tiles. Add a new label named Urgent {{amber_tag}} to the task, then verify the task shows the label Urgent {{amber_tag}}. Reload the page, then verify the label Urgent {{amber_tag}} is still shown on the task.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json",
+    "--name",
+    "j21-label-task"
+  ],
+  "startedAt": "2026-11-25T04:06:28.528Z",
+  "ms": 148473,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "added and confirmed a task label on the Kitchen renovation project",
+  "summary": "Opened the “Order tiles” task in the “Kitchen renovation” project.\nAdded the new label “Urgent orybah” to the task.\nReloaded the page and confirmed that the label was still shown.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/tasks/8",
+    "task_label_urgent_global_amber_tag": "true",
+    "task_label_urgent_global_amber_tag_persisted": "true"
+  },
+  "credits": 36.03836,
+  "steps": 18,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": null,
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 18,
+    "finalShot": "shots/18.jpg",
+    "failures": []
+  }
+}

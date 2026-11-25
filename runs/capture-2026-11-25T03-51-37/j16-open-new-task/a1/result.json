@@ -1,0 +1,51 @@
+{
+  "flow": "j16-open-new-task",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "dmkrhw",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Kitchen renovation, add a new task titled Order grout {{amber_tag}}, then open the task Order grout {{amber_tag}} and verify its page shows the title Order grout {{amber_tag}}. Reload the page, then verify the title Order grout {{amber_tag}} is still shown.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json",
+    "--name",
+    "j16-open-new-task"
+  ],
+  "startedAt": "2026-11-25T03:51:40.960Z",
+  "ms": 179675,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "created and verified the Order grout dmkrhw task on Vikunja",
+  "summary": "Opened the Kitchen renovation project.\nAdded a new task named “Order grout dmkrhw.”\nOpened the new task and reloaded the page.\nThe task title remained visible after reloading, confirming the task was saved.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/tasks/13",
+    "task_title": "Order grout dmkrhw | Vikunja"
+  },
+  "credits": 37.610177500000006,
+  "steps": 21,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": null,
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 21,
+    "finalShot": "shots/21.jpg",
+    "failures": []
+  }
+}

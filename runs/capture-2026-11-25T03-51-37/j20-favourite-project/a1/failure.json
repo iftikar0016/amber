@@ -1,0 +1,9 @@
+[
+  {
+    "ordinal": 11,
+    "message": "Checkpoint assertion failed: \"Reading list is shown as a favorite.\"",
+    "url": "http://127.0.0.1:4790/",
+    "rootCause": "The automation selected the star on a task row instead of the star next to the Reading list project in the main menu.",
+    "suggestedFix": "Update the automation to target the Reading list project’s main-menu star, then verify the project appears under Favorites before reloading."
+  }
+]

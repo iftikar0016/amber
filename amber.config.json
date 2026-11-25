@@ -1,6 +1,6 @@
 {
   "budget": {
-    "cap": 2500,
-    "note": "Credits AMBER may spend in total across all runs, set by the user on 2026-11-23. The guard refuses any batch that could exceed it."
+    "cap": 3700,
+    "note": "Credits AMBER may spend in total across all runs. Set by the user at 2,500 on 2026-11-23, raised by the user to 3,700 on 2026-11-25 for the second round of journeys (j16-j21). The guard refuses any batch that could exceed it."
   }
 }

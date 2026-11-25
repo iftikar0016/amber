@@ -1,0 +1,70 @@
+{
+  "flow": "j20-favourite-project",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "rtembu",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. In the main menu, mark the project Reading list as a favorite with the star next to it, then verify Reading list is shown as a favorite. Reload the page, then verify Reading list is still shown as a favorite.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json",
+    "--name",
+    "j20-favourite-project"
+  ],
+  "startedAt": "2026-11-25T04:04:39.630Z",
+  "ms": 107192,
+  "exitCode": 1,
+  "killed": false,
+  "status": "failed",
+  "oneLiner": "The run starred a task in Reading list rather than marking the Reading list project as a favorite.",
+  "summary": "The automation selected the star on a task row instead of the star next to the Reading list project in the main menu.\nUpdate the automation to target the Reading list project’s main-menu star, then verify the project appears under Favorites before reloading.",
+  "reason": "Checkpoint assertion failed: \"Reading list is shown as a favorite.\"",
+  "resultCode": 720,
+  "bug": {
+    "confirmed": false,
+    "title": "Agent starred a task instead of the Reading list project",
+    "oneLiner": "The run starred a task in Reading list rather than marking the Reading list project as a favorite.",
+    "category": "agent_misstep",
+    "severity": "minor",
+    "confidence": 0.97
+  },
+  "failedAssertions": [],
+  "finalState": {},
+  "credits": 26.303327499999998,
+  "steps": 13,
+  "failedSteps": [
+    {
+      "n": 5,
+      "remark": "assert: Reading list is shown as a favorite."
+    }
+  ],
+  "testmdSummary": null,
+  "serverOff": null,
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "failed",
+  "verdict": "FAIL",
+  "basis": "kane",
+  "reasons": [
+    "The run starred a task in Reading list rather than marking the Reading list project as a favorite."
+  ],
+  "evidence": {
+    "steps": 13,
+    "finalShot": "shots/13.jpg",
+    "failures": [
+      {
+        "ordinal": 11,
+        "message": "Checkpoint assertion failed: \"Reading list is shown as a favorite.\"",
+        "url": "http://127.0.0.1:4790/",
+        "rootCause": "The automation selected the star on a task row instead of the star next to the Reading list project in the main menu.",
+        "suggestedFix": "Update the automation to target the Reading list project’s main-menu star, then verify the project appears under Favorites before reloading."
+      }
+    ]
+  }
+}

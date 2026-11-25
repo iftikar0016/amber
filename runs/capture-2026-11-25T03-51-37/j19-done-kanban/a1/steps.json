@@ -1,0 +1,211 @@
+[
+  {
+    "ordinal": 1,
+    "id": "0-1",
+    "kind": "navigate",
+    "status": "passed",
+    "summary": "navigate: Navigate to http://127.0.0.1:4790/login",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 0,
+    "shot": "shots/1.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 2,
+    "id": "0-2",
+    "kind": "wait",
+    "status": "passed",
+    "summary": "wait: queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click ",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 8968,
+    "shot": "shots/2.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 3,
+    "id": "0-3",
+    "kind": "type",
+    "status": "passed",
+    "summary": "type: Type \"{{global.amber_user}}\" into \"Username Or Email Address\"",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 235,
+    "shot": "shots/3.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 4,
+    "id": "0-4",
+    "kind": "type",
+    "status": "passed",
+    "summary": "type: Type \"{{secrets.user.amber_password}}\" into \"Password\"",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 156,
+    "shot": "shots/4.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 5,
+    "id": "0-5",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Click \"Stay logged in\"",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 640,
+    "shot": "shots/5.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 6,
+    "id": "0-6",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Click \"LOGIN\"",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 625,
+    "shot": "shots/6.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 7,
+    "id": "0-7",
+    "kind": "wait",
+    "status": "passed",
+    "summary": "wait: PRIMARY: wait 500 ms after signing in",
+    "url": "http://127.0.0.1:4790/",
+    "durationMs": 5094,
+    "shot": "shots/7.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 8,
+    "id": "0-8",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: the home page greets Amber Demo",
+    "url": "http://127.0.0.1:4790/",
+    "durationMs": 7016,
+    "shot": "shots/8.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 9,
+    "id": "0-9",
+    "kind": "assert",
+    "status": "passed",
+    "summary": "assert: the home page greets Amber Demo",
+    "url": "http://127.0.0.1:4790/",
+    "durationMs": 0,
+    "shot": "shots/9.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 10,
+    "id": "0-10",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Clicking Kitchen renovation link in Projects navigation",
+    "url": "http://127.0.0.1:4790/",
+    "durationMs": 6656,
+    "shot": "shots/10.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 11,
+    "id": "0-11",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Clicking Choose worktop link in the kitchen renovation task list",
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "durationMs": 6015,
+    "shot": "shots/11.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 12,
+    "id": "0-12",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Clicking Mark task done button",
+    "url": "http://127.0.0.1:4790/tasks/7",
+    "durationMs": 5828,
+    "shot": "shots/12.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 13,
+    "id": "0-13",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Clicking Kitchen renovation worktop breadcrumb in Choose worktop container",
+    "url": "http://127.0.0.1:4790/tasks/7",
+    "durationMs": 6344,
+    "shot": "shots/13.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 14,
+    "id": "0-14",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Clicking Kanban to open the Kitchen renovation view",
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "durationMs": 6640,
+    "shot": "shots/14.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 15,
+    "id": "0-15",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: Choose worktop is in the Done column",
+    "url": "http://127.0.0.1:4790/projects/3/16",
+    "durationMs": 8594,
+    "shot": "shots/15.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 16,
+    "id": "0-16",
+    "kind": "assert",
+    "status": "passed",
+    "summary": "assert: Choose worktop is in the Done column",
+    "url": "http://127.0.0.1:4790/projects/3/16",
+    "durationMs": 15,
+    "shot": "shots/16.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 17,
+    "id": "0-17",
+    "kind": "wait",
+    "status": "passed",
+    "summary": "wait: PRIMARY: wait 500 ms after reloading the Kitchen renovation Kanban page",
+    "url": "http://127.0.0.1:4790/projects/3/16",
+    "durationMs": 10750,
+    "shot": "shots/17.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 18,
+    "id": "0-18",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: Order tiles is in the To-Do column",
+    "url": "http://127.0.0.1:4790/projects/3/16",
+    "durationMs": 10844,
+    "shot": "shots/18.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 19,
+    "id": "0-19",
+    "kind": "assert",
+    "status": "passed",
+    "summary": "assert: Choose worktop is still in the Done column and Order tiles is in the To-Do colum",
+    "url": "http://127.0.0.1:4790/projects/3/16",
+    "durationMs": 0,
+    "shot": "shots/19.jpg",
+    "annotated": null
+  }
+]
