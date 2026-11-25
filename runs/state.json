@@ -1879,9 +1879,9 @@
       "needsHuman": false
     },
     "j16-open-new-task": {
-      "verdict": "FAIL",
-      "everPassed": false,
-      "failStreak": 2,
+      "verdict": "PASS",
+      "everPassed": true,
+      "failStreak": 0,
       "history": [
         {
           "runId": "verify-2026-11-25T04-15-29",
@@ -1904,6 +1904,15 @@
           "record": "runs/verify-2026-11-25T04-51-13/j16-open-new-task/a1",
           "commit": "1d2fa74",
           "at": "2026-11-25T04:53:15.606Z"
+        },
+        {
+          "runId": "verify-2026-11-25T05-53-07",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T05-53-07/j16-open-new-task/a1",
+          "commit": "f695492",
+          "at": "2026-11-25T05:55:47.421Z"
         }
       ],
       "needsHuman": false

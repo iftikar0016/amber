@@ -272,7 +272,14 @@
         reactions: null,
         created_by: m.user,
         comment_count: 0,
+        // Vikunja subscribes the creator to a new task
+        subscription: { id: m.next.subscription++, entity: 'task', entity_id: 0, created: now },
       };
+      task.subscription.entity_id = task.id;
+      // ... and puts it in each kanban view's default bucket (as a task's own read shows it: no creator, count 0)
+      const kanban = (project.views || []).filter((v) => v.view_kind === 'kanban');
+      const defaults = kanban.map((v) => ((m.buckets && m.buckets[v.id]) || []).find((b) => b.id === v.default_bucket_id));
+      if (defaults.every(Boolean)) task.buckets = defaults.map((b) => ({ ...b, count: 0, created_by: null }));
       m.tasks[task.id] = task;
       // Vikunja puts a new task first in each view: half the lowest position there (2^16 in an empty view).
       const positions = [];

@@ -1,0 +1,65 @@
+{
+  "flow": "j16-open-new-task",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "ctxeau",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Kitchen renovation, add a new task titled Order grout {{amber_tag}}, then open the task Order grout {{amber_tag}} and verify its page shows the title Order grout {{amber_tag}}. Reload the page, then verify the title Order grout {{amber_tag}} is still shown.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json"
+  ],
+  "startedAt": "2026-11-25T05:53:09.778Z",
+  "ms": 157200,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "added and reopened a task in the Kitchen renovation project on Vikunja",
+  "summary": "Opened the Kitchen renovation project and added a new task named “Order grout ctxeau.”\nOpened the new task and confirmed its title was displayed.\nReloaded the task page and confirmed that “Order grout ctxeau” remained displayed.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/tasks/13",
+    "task_title_after_reload": "Order grout ctxeau | Vikunja"
+  },
+  "credits": 30.4738125,
+  "steps": 19,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-25T05:53:09.778Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-25T05:55:47.272Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 19,
+    "finalShot": "shots/19.jpg",
+    "failures": []
+  }
+}

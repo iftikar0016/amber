@@ -1,0 +1,23 @@
+{"t":1795585989467,"type":"run_start","runId":"verify-2026-11-25T05-53-07","kind":"verify","mode":"replay","target":"capsule-server-off","commit":"f695492","label":null,"flows":["j16-open-new-task"],"serverOff":{"checkedAt":"2026-11-25T05:53:07.742Z","port":3456,"portOpen":false,"vikunjaProcesses":[],"off":true}}
+{"t":1795585989778,"type":"flow_start","flow":"j16-open-new-task","attempt":1,"mode":"author","tag":"ctxeau"}
+{"t":1795586009407,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":2,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795586017871,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":3,"status":"done","remark":"wait: queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click "}
+{"t":1795586019162,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":4,"status":"done","remark":"type: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795586020438,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":5,"status":"done","remark":"type: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795586022238,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":6,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795586024977,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":7,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795586036258,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":8,"status":"done","remark":"analyze: the home page greets Amber Demo"}
+{"t":1795586037317,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":9,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795586052108,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":2,"status":"done","remark":"click: Clicking Kitchen renovation in the Projects sidebar"}
+{"t":1795586059598,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":3,"status":"done","remark":"wait: queued plan (2 steps): type \"Add a task…\"; click \"Add\""}
+{"t":1795586060567,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":4,"status":"done","remark":"type: Type \"Order grout {{global.amber_tag}}\" into \"Add a task…\""}
+{"t":1795586062388,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":5,"status":"done","remark":"click: Click \"Add\""}
+{"t":1795586074695,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":6,"status":"done","remark":"click: Clicking to open the task Order grout {{global.amber_tag}}"}
+{"t":1795586088497,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":7,"status":"done","remark":"wait: PRIMARY: Open the task Order grout {{global.amber_tag}}"}
+{"t":1795586096985,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":8,"status":"done","remark":"analyze: ANALYZE(title, 'the title Order grout {{global.amber_tag}} is shown on the task "}
+{"t":1795586099080,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":9,"status":"done","remark":"assert: the task page shows the title Order grout {{global.amber_tag}}"}
+{"t":1795586114480,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":10,"status":"done","remark":"wait: PRIMARY: Reload the page"}
+{"t":1795586122640,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":11,"status":"done","remark":"analyze: the title Order grout {{global.amber_tag}} is still shown"}
+{"t":1795586124747,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":12,"status":"done","remark":"assert: the title Order grout {{global.amber_tag}} is still shown"}
+{"t":1795586147380,"type":"flow_done","flow":"j16-open-new-task","attempt":1,"mode":"author","verdict":"PASS","basis":"kane","reasons":[],"credits":30.4738125,"ms":157200,"shot":"verify-2026-11-25T05-53-07/j16-open-new-task/a1/shots/19.jpg"}
+{"t":1795586149386,"type":"run_done","runId":"verify-2026-11-25T05-53-07","spent":37.01,"tally":{"PASS":1},"regressions":[]}

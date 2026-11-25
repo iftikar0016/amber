@@ -122,6 +122,9 @@ export function liftModel(pristine) {
   for (const x of pristine) {
     if (/^\/api\/v2\/projects\/\d+\/views\/\d+\/buckets$/.test(x.path) && Array.isArray(x.resBody?.items)) bucketIds.push(...x.resBody.items.map((b) => b.id));
   }
+  // Every task read in the capture carries its creator's subscription, with the task's own id: Vikunja subscribes
+  // the creator when a task is created, so subscription ids run with task ids.
+  const subscriptionIds = Object.values(tasks).map((t) => t.subscription && t.subscription.id);
   // Comment ids are global: at least every comment counted on a task has used one.
   const commentIds = Object.values(comments).flatMap((cs) => cs.map((c) => c.id));
   const counted = Object.values(tasks).reduce((n, t) => n + (t.comment_count || 0), 0);
@@ -134,6 +137,7 @@ export function liftModel(pristine) {
     buckets,
     ...(labelsComplete ? { labels } : {}),
     next: {
+      subscription: Math.max(maxOf(subscriptionIds), maxOf(Object.keys(tasks).map(Number))) + 1,
       label: maxOf([...Object.keys(labels).map(Number), ...Object.values(tasks).flatMap((t) => (t.labels || []).map((l) => l.id))]) + 1,
       comment: Math.max(maxOf(commentIds), counted) + 1,
       task: maxOf(Object.keys(tasks).map(Number)) + 1,

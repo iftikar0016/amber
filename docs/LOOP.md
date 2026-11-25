@@ -128,3 +128,10 @@ Found while checking for free, not repaired (no journey fails on it): round 1 wa
 
 - `verify-2026-11-25T05-24-38` (AMBER's gate, all 19 journeys that have passed): **19/19 PASS**, no regression, no refused change, no leak, 224.31 credits. Run once after the three repairs rather than after each, because a full re-check now costs about 200 credits (see the re-check after j17); proposed to the session that owns the budget beforehand.
 - AMBER's total after it: 2,966.95 of 3,700. j16 and j18 wait on a lock decision (their recordings hard-code the capture's tag).
+
+### j16-open-new-task: open a task just added (second attempt, authored)
+
+- **Decision:** the lock owner switched j16 and j18 to authored verification (0c31fc1), as for j09 and j10, because their recordings check the capture's own tag. The user chose to prove each round-2 repair on its own and let the Stop hook's full pass (when this session stops) be the regression check and the final check.
+- **Repair** (as tried in the first attempt above): a new task gets its creator's subscription (the next id; captured subscriptions run with task ids) and goes into each kanban view's default bucket, so its own read with `expand=buckets` is answered from the store.
+- **Checked first (zero credits):** the new task's read equals the real server's, field for field; all 22 pristine reads the store answers still equal the server's.
+- **Proof:** `verify-2026-11-25T05-53-07`, PASS (authored, server off), 37.01 credits: "#5 Order grout ctxeau" shown on its page, also after the reload; both reads answered by the store.
