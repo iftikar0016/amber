@@ -1,0 +1,113 @@
+{
+  "flow": "j17-home-new-task",
+  "attempt": 1,
+  "mode": "replay",
+  "tag": "zzlfcd",
+  "args": [
+    "testmd",
+    "run",
+    "~\\hackathons\\kane\\amber\\.amber\\kane\\runs\\j17-home-new-task\\j17-home-new-task_test.md",
+    "--agent",
+    "--headless",
+    "--no-adaptive-heal"
+  ],
+  "startedAt": "2026-11-25T04:35:45.965Z",
+  "ms": 63039,
+  "exitCode": 1,
+  "killed": false,
+  "status": "failed",
+  "oneLiner": "A task created in Kitchen renovation does not appear in Overview's Current Tasks list.",
+  "summary": null,
+  "reason": "assertion_failed: @ step 7",
+  "resultCode": null,
+  "bug": {
+    "confirmed": false,
+    "title": "Newly created task missing from Overview Current Tasks",
+    "oneLiner": "A task created in Kitchen renovation does not appear in Overview's Current Tasks list.",
+    "category": "functional_defect",
+    "severity": "major",
+    "confidence": 0.93
+  },
+  "failedAssertions": [
+    "Call plumber {{global.amber_tag}} is listed under Current Tasks."
+  ],
+  "finalState": null,
+  "credits": 0,
+  "steps": 16,
+  "failedSteps": [
+    {
+      "n": 16,
+      "remark": "assert: Call plumber {{global.amber_tag}} is listed under Current Tasks."
+    }
+  ],
+  "testmdSummary": {
+    "type": "test_md_summary",
+    "overall_status": "failed",
+    "duration_s": 47,
+    "steps": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0,
+      "replay_decisions": 1,
+      "author_decisions": 0
+    },
+    "adaptive_heal": {
+      "triggered": false
+    },
+    "commit": {
+      "committed": false,
+      "reason": "run_failed"
+    },
+    "artifacts": {
+      "replaced": false
+    },
+    "upload": {
+      "performed": true,
+      "succeeded": true
+    },
+    "cancelled": false,
+    "v": 1,
+    "ts": "2026-11-25T04:36:46.899Z",
+    "kind": "typed",
+    "_rt": 1795581406899
+  },
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-25T04:35:45.965Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-25T04:36:49.295Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "failed",
+  "verdict": "FAIL",
+  "basis": "kane",
+  "reasons": [
+    "A task created in Kitchen renovation does not appear in Overview's Current Tasks list."
+  ],
+  "evidence": {
+    "steps": 16,
+    "finalShot": "shots/16.jpg",
+    "failures": [
+      {
+        "ordinal": 16,
+        "message": "assertion_failed: @ step 7",
+        "url": "http://127.0.0.1:4790/",
+        "rootCause": "The Overview page is not showing the newly created open task even though the task was created in the selected project.",
+        "suggestedFix": "Check why newly created open tasks from Kitchen renovation are omitted when the Overview page loads, and add coverage for the task appearing there and remaining after reload."
+      }
+    ]
+  }
+}

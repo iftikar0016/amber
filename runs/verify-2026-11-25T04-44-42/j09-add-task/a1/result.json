@@ -1,0 +1,68 @@
+{
+  "flow": "j09-add-task",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "nmznbx",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Kitchen renovation, add a new task titled Paint samples {{amber_tag}}, then verify Paint samples {{amber_tag}} appears in the project task list. Reload the page, then verify Paint samples {{amber_tag}} is still listed.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json"
+  ],
+  "startedAt": "2026-11-25T04:44:44.795Z",
+  "ms": 138991,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "added a Paint samples task to the Kitchen renovation project on the project management site",
+  "summary": "Signed in as Amber Demo with the stay-logged-in option enabled.\nOpened the Kitchen renovation project and added the task “Paint samples nmznbx.”\nReloaded the project page and confirmed that “Paint samples nmznbx” was still listed.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "signed_in_user": "Amber Demo",
+    "project": "Kitchen renovation",
+    "task_title": "Paint samples nmznbx",
+    "task_persisted_after_reload": "true"
+  },
+  "credits": 35.35851,
+  "steps": 18,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-25T04:44:44.794Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-25T04:47:04.083Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 18,
+    "finalShot": "shots/18.jpg",
+    "failures": []
+  }
+}

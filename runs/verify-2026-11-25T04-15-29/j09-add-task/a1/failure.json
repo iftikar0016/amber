@@ -1,0 +1,9 @@
+[
+  {
+    "ordinal": 8,
+    "message": "assertion_failed: @ step 8",
+    "url": "http://127.0.0.1:4790/",
+    "rootCause": "The recorded assertion appears tied to an older greeting format. The live page shows “Fresh start, Amber Demo,” which fulfills the objective but was not accepted by the check.",
+    "suggestedFix": "Update the assertion to accept or locate the greeting by the displayed user name, such as Amber Demo, rather than relying on a retired exact greeting phrase."
+  }
+]

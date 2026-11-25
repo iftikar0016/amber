@@ -1,0 +1,9 @@
+[
+  {
+    "ordinal": 15,
+    "message": "assertion_failed: @ step 7",
+    "url": "http://127.0.0.1:4790/projects/3/16",
+    "rootCause": "The app saved the completion action but did not place the completed task in the Done column.",
+    "suggestedFix": "Investigate why completing a task does not update its Kanban bucket to Done, and verify that the completed state persists after a refresh."
+  }
+]

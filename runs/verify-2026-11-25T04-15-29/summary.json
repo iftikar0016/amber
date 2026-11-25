@@ -1,0 +1,250 @@
+{
+  "runId": "verify-2026-11-25T04-15-29",
+  "kind": "verify",
+  "mode": "replay",
+  "commit": "dd0d420",
+  "label": "round 2 baseline: six new journeys, and the 15 after the boot and Service Worker fixes",
+  "serverOff": {
+    "checkedAt": "2026-11-25T04:15:29.481Z",
+    "port": 3456,
+    "portOpen": false,
+    "vikunjaProcesses": [],
+    "off": true
+  },
+  "spend": {
+    "started": "2026-11-25T04:15:31.204Z",
+    "ended": "2026-11-25T04:41:13.850Z",
+    "what": "verify replay j01-sign-in,j02-projects,j03-list-view,j04-task-detail,j05-table-view,j06-kanban,j07-upcoming,j08-search,j09-add-task,j10-mark-done,j11-rename,j12-description,j13-delete,j14-new-project,j15-comment,j16-open-new-task,j17-home-new-task,j18-search-new-task,j19-done-kanban,j20-favourite-project,j21-label-task",
+    "estimate": 157.5,
+    "balanceBefore": 7443.2669,
+    "balanceAfter": 7243.2492,
+    "spent": 200.02,
+    "runId": "verify-2026-11-25T04-15-29"
+  },
+  "results": [
+    {
+      "id": "j01-sign-in",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j02-projects",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j03-list-view",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j04-task-detail",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j05-table-view",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j06-kanban",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j07-upcoming",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j08-search",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j09-add-task",
+      "verdict": "FAIL",
+      "regression": true,
+      "needsHuman": false,
+      "reasons": [
+        "The home page visibly greets Amber Demo, but the recorded greeting check rejected the current greeting wording."
+      ],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": "runs/verify-2026-11-25T04-15-29/j09-add-task/brief.md"
+    },
+    {
+      "id": "j10-mark-done",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j11-rename",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j12-description",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j13-delete",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j14-new-project",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j15-comment",
+      "verdict": "PASS",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": null
+    },
+    {
+      "id": "j16-open-new-task",
+      "verdict": "FAIL",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [
+        "Opening the newly added task leads to a Not found page instead of its task details."
+      ],
+      "unanswered": 2,
+      "leaks": 0,
+      "brief": "runs/verify-2026-11-25T04-15-29/j16-open-new-task/brief.md"
+    },
+    {
+      "id": "j17-home-new-task",
+      "verdict": "FAIL",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [
+        "A task created in Kitchen renovation does not appear in Overview's Current Tasks list."
+      ],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": "runs/verify-2026-11-25T04-15-29/j17-home-new-task/brief.md"
+    },
+    {
+      "id": "j18-search-new-task",
+      "verdict": "FAIL",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [
+        "Searching for the newly created task fails because the task-search request returns a 404 error, leaving no result to open."
+      ],
+      "unanswered": 2,
+      "leaks": 0,
+      "brief": "runs/verify-2026-11-25T04-15-29/j18-search-new-task/brief.md"
+    },
+    {
+      "id": "j19-done-kanban",
+      "verdict": "FAIL",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [
+        "After the task was marked done, Choose worktop still appeared in the Kitchen renovation Kanban To-Do column instead of Done."
+      ],
+      "unanswered": 0,
+      "leaks": 0,
+      "brief": "runs/verify-2026-11-25T04-15-29/j19-done-kanban/brief.md"
+    },
+    {
+      "id": "j20-favourite-project",
+      "verdict": "FAIL",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [
+        "The app cannot save Reading list as a favorite because its project update request fails."
+      ],
+      "unanswered": 1,
+      "leaks": 0,
+      "brief": "runs/verify-2026-11-25T04-15-29/j20-favourite-project/brief.md"
+    },
+    {
+      "id": "j21-label-task",
+      "verdict": "FAIL",
+      "regression": false,
+      "needsHuman": false,
+      "reasons": [
+        "The app could not create and attach the requested label, so the task did not show it."
+      ],
+      "unanswered": 1,
+      "leaks": 0,
+      "brief": "runs/verify-2026-11-25T04-15-29/j21-label-task/brief.md"
+    }
+  ]
+}

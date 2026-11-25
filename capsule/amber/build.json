@@ -1,8 +1,8 @@
 {
   "site": {
-    "events": 193
+    "events": 205
   },
-  "builtAt": "2026-11-25T03:42:53.685Z",
+  "builtAt": "2026-11-25T04:15:16.608Z",
   "seedId": "8eac1cc169245afd",
   "journeys": [
     "j01-sign-in",
@@ -19,7 +19,13 @@
     "j12-description",
     "j13-delete",
     "j14-new-project",
-    "j15-comment"
+    "j15-comment",
+    "j16-open-new-task",
+    "j17-home-new-task",
+    "j18-search-new-task",
+    "j19-done-kanban",
+    "j20-favourite-project",
+    "j21-label-task"
   ],
   "staticFiles": 261,
   "replayEntries": 32,

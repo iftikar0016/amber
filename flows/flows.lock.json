@@ -138,7 +138,10 @@
         "flows/output-j09-add-task/playwright-python-code/.env.example": "8e782f4eeca814ebca6a947bae584a5a16c3fa988cade75e928af5a4bdf41b1a",
         "flows/output-j09-add-task/playwright-python-code/requirements.txt": "5a26e04e1ddca7510ee8620b0facedce7bfe6df12419b6224dfa567b1e5b825e",
         "flows/output-j09-add-task/playwright-python-code/test.py": "9fe1423b3f9e5f5cd8d50027fb3b6c52d7388212e0f7b01aacf8f364d9832a9f"
-      }
+      },
+      "verifyBy": "author",
+      "why": "Its saved recording checks the home page heading for the exact text 'Still at it, Amber Demo?'. Vikunja picks that greeting from a hash of the date, the time of day and the account, so the recorded check only holds on the evening it was captured (2026-11-23); on other days the replay depends on Kane's fallback. On the capsule on 2026-11-25 Kane failed it on the greeting alone (verify-2026-11-25T04-15-29: the page showed 'Fresh start, Amber Demo'), and on the real server half an hour later the same replay passed (spike-replay-real-2026-11-25T04-42-18). Each check now re-authors the journey from its objective.",
+      "replayCheck": "runs/spike-replay-real-2026-11-25T04-42-18/summary.json"
     },
     "j10-mark-done": {
       "frozenAt": "2026-11-23T15:29:46.681Z",

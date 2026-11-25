@@ -1,0 +1,84 @@
+{
+  "runId": "spike-replay-real-2026-11-25T04-42-18",
+  "kind": "spike",
+  "target": "real",
+  "spend": {
+    "started": "2026-11-25T04:42:20.109Z",
+    "ended": "2026-11-25T04:43:21.436Z",
+    "what": "spike: replay j09-add-task against the real",
+    "estimate": 15,
+    "balanceBefore": 7243.2492,
+    "balanceAfter": 7229.5351,
+    "spent": 13.71,
+    "runId": "spike-replay-real-2026-11-25T04-42-18"
+  },
+  "results": [
+    {
+      "id": "j09-add-task",
+      "tag": "kueyps",
+      "verdict": "PASS",
+      "status": "passed",
+      "credits": 0,
+      "ms": 57818,
+      "reasons": [],
+      "writes": [
+        {
+          "m": "POST",
+          "p": "/api/v2/login",
+          "s": 200,
+          "body": "{\"username\":\"amber\",\"password\":\"[scrubbed]\",\"long_token\":true}"
+        },
+        {
+          "m": "POST",
+          "p": "/api/v2/user/token/refresh",
+          "s": 200,
+          "body": "null"
+        },
+        {
+          "m": "POST",
+          "p": "/api/v2/projects/3/tasks/bulk",
+          "s": 201,
+          "body": "{\"tasks\":[{\"title\":\"Paint samples kueyps\",\"description\":\"\",\"done\":false,\"priority\":0,\"hex_color\":\"\",\"percent_done\":0,\"re"
+        },
+        {
+          "m": "POST",
+          "p": "/api/v2/user/token/refresh",
+          "s": 200,
+          "body": "null"
+        }
+      ],
+      "summary": {
+        "type": "test_md_summary",
+        "overall_status": "passed",
+        "duration_s": 42,
+        "steps": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0,
+          "replay_decisions": 1,
+          "author_decisions": 0
+        },
+        "adaptive_heal": {
+          "triggered": false
+        },
+        "commit": {
+          "committed": false,
+          "reason": "readonly_fallback"
+        },
+        "artifacts": {
+          "replaced": false
+        },
+        "upload": {
+          "performed": true,
+          "succeeded": true
+        },
+        "cancelled": false,
+        "v": 1,
+        "ts": "2026-11-25T04:43:16.891Z",
+        "kind": "typed",
+        "_rt": 1795581796879
+      }
+    }
+  ]
+}

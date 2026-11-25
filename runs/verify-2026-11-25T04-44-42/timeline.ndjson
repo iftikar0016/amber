@@ -1,0 +1,22 @@
+{"t":1795581884489,"type":"run_start","runId":"verify-2026-11-25T04-44-42","kind":"verify","mode":"replay","target":"capsule-server-off","commit":"dd0d420","label":null,"flows":["j09-add-task"],"serverOff":{"checkedAt":"2026-11-25T04:44:42.104Z","port":3456,"portOpen":false,"vikunjaProcesses":[],"off":true}}
+{"t":1795581884794,"type":"flow_start","flow":"j09-add-task","attempt":1,"mode":"author","tag":"nmznbx"}
+{"t":1795581906737,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":2,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795581918123,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":3,"status":"done","remark":"wait: queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click "}
+{"t":1795581919289,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":4,"status":"done","remark":"type: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795581920582,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":5,"status":"done","remark":"type: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795581922317,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":6,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795581925090,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":7,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795581934980,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":8,"status":"done","remark":"wait: PRIMARY: wait for the home page greeting 'Fresh start, Amber Demo' to be visible"}
+{"t":1795581943980,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":9,"status":"done","remark":"analyze: the home page greets Amber Demo"}
+{"t":1795581944960,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":10,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795581951965,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":11,"status":"done","remark":"click: Clicking the Kitchen renovation project link in Projects navigation"}
+{"t":1795581961042,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":12,"status":"done","remark":"wait: PRIMARY: wait for the Kitchen renovation task input to be visible"}
+{"t":1795581967821,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":13,"status":"done","remark":"wait: queued plan (2 steps): type \"Add a task…\"; click \"Add\""}
+{"t":1795581968917,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":14,"status":"done","remark":"type: Type \"Paint samples {{global.amber_tag}}\" into \"Add a task…\""}
+{"t":1795581970821,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":15,"status":"done","remark":"click: Click \"Add\""}
+{"t":1795581983666,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":16,"status":"done","remark":"analyze: ANALYZE(textual_visual, 'Paint samples {{global.amber_tag}} appears in the proje"}
+{"t":1795581985309,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":17,"status":"done","remark":"assert: Paint samples {{global.amber_tag}} appears in the project task list"}
+{"t":1795581999064,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":18,"status":"done","remark":"analyze: Paint samples {{global.amber_tag}} is still listed"}
+{"t":1795582000345,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":19,"status":"done","remark":"assert: Paint samples {{global.amber_tag}} is still listed"}
+{"t":1795582024185,"type":"flow_done","flow":"j09-add-task","attempt":1,"mode":"author","verdict":"PASS","basis":"kane","reasons":[],"credits":35.35851,"ms":138991,"shot":"verify-2026-11-25T04-44-42/j09-add-task/a1/shots/18.jpg"}
+{"t":1795582026016,"type":"run_done","runId":"verify-2026-11-25T04-44-42","spent":39.54,"tally":{"PASS":1},"regressions":[]}

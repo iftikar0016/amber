@@ -103,6 +103,15 @@
           "record": "runs/verify-2026-11-23T18-50-16/j01-sign-in/a1",
           "commit": "00d184f",
           "at": "2026-11-23T18:50:55.113Z"
+        },
+        {
+          "runId": "verify-2026-11-25T04-15-29",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T04-15-29/j01-sign-in/a1",
+          "commit": "dd0d420",
+          "at": "2026-11-25T04:16:13.908Z"
         }
       ],
       "needsHuman": false
@@ -210,6 +219,15 @@
           "record": "runs/verify-2026-11-23T18-50-16/j02-projects/a1",
           "commit": "00d184f",
           "at": "2026-11-23T18:51:36.644Z"
+        },
+        {
+          "runId": "verify-2026-11-25T04-15-29",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T04-15-29/j02-projects/a1",
+          "commit": "dd0d420",
+          "at": "2026-11-25T04:17:07.865Z"
         }
       ],
       "needsHuman": false
@@ -317,6 +335,15 @@
           "record": "runs/verify-2026-11-23T18-50-16/j03-list-view/a1",
           "commit": "00d184f",
           "at": "2026-11-23T18:52:58.565Z"
+        },
+        {
+          "runId": "verify-2026-11-25T04-15-29",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T04-15-29/j03-list-view/a1",
+          "commit": "dd0d420",
+          "at": "2026-11-25T04:18:38.269Z"
         }
       ],
       "needsHuman": false
@@ -424,6 +451,15 @@
           "record": "runs/verify-2026-11-23T18-50-16/j04-task-detail/a1",
           "commit": "00d184f",
           "at": "2026-11-23T18:53:35.181Z"
+        },
+        {
+          "runId": "verify-2026-11-25T04-15-29",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T04-15-29/j04-task-detail/a1",
+          "commit": "dd0d420",
+          "at": "2026-11-25T04:19:21.985Z"
         }
       ],
       "needsHuman": false
@@ -531,6 +567,15 @@
           "record": "runs/verify-2026-11-23T18-50-16/j05-table-view/a1",
           "commit": "00d184f",
           "at": "2026-11-23T18:54:12.950Z"
+        },
+        {
+          "runId": "verify-2026-11-25T04-15-29",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T04-15-29/j05-table-view/a1",
+          "commit": "dd0d420",
+          "at": "2026-11-25T04:20:09.977Z"
         }
       ],
       "needsHuman": false
@@ -638,6 +683,15 @@
           "record": "runs/verify-2026-11-23T18-50-16/j06-kanban/a1",
           "commit": "00d184f",
           "at": "2026-11-23T18:54:49.133Z"
+        },
+        {
+          "runId": "verify-2026-11-25T04-15-29",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T04-15-29/j06-kanban/a1",
+          "commit": "dd0d420",
+          "at": "2026-11-25T04:20:53.618Z"
         }
       ],
       "needsHuman": false
@@ -745,6 +799,15 @@
           "record": "runs/verify-2026-11-23T18-50-16/j07-upcoming/a1",
           "commit": "00d184f",
           "at": "2026-11-23T18:56:08.055Z"
+        },
+        {
+          "runId": "verify-2026-11-25T04-15-29",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T04-15-29/j07-upcoming/a1",
+          "commit": "dd0d420",
+          "at": "2026-11-25T04:22:33.814Z"
         }
       ],
       "needsHuman": false
@@ -852,6 +915,15 @@
           "record": "runs/verify-2026-11-23T18-50-16/j08-search/a1",
           "commit": "00d184f",
           "at": "2026-11-23T18:56:48.530Z"
+        },
+        {
+          "runId": "verify-2026-11-25T04-15-29",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T04-15-29/j08-search/a1",
+          "commit": "dd0d420",
+          "at": "2026-11-25T04:23:23.330Z"
         }
       ],
       "needsHuman": false
@@ -961,6 +1033,26 @@
           "record": "runs/verify-2026-11-23T18-50-16/j09-add-task/a1",
           "commit": "00d184f",
           "at": "2026-11-23T18:57:38.272Z"
+        },
+        {
+          "runId": "verify-2026-11-25T04-15-29",
+          "mode": "replay",
+          "verdict": "FAIL",
+          "reasons": [
+            "The home page visibly greets Amber Demo, but the recorded greeting check rejected the current greeting wording."
+          ],
+          "record": "runs/verify-2026-11-25T04-15-29/j09-add-task/a1",
+          "commit": "dd0d420",
+          "at": "2026-11-25T04:24:08.956Z"
+        },
+        {
+          "runId": "verify-2026-11-25T04-44-42",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T04-44-42/j09-add-task/a1",
+          "commit": "dd0d420",
+          "at": "2026-11-25T04:47:04.212Z"
         }
       ],
       "needsHuman": false
@@ -1036,6 +1128,15 @@
           "record": "runs/verify-2026-11-23T18-50-16/j10-mark-done/a1",
           "commit": "00d184f",
           "at": "2026-11-23T18:59:54.989Z"
+        },
+        {
+          "runId": "verify-2026-11-25T04-15-29",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T04-15-29/j10-mark-done/a1",
+          "commit": "dd0d420",
+          "at": "2026-11-25T04:25:56.954Z"
         }
       ],
       "needsHuman": false
@@ -1136,6 +1237,15 @@
           "record": "runs/verify-2026-11-23T18-50-16/j11-rename/a1",
           "commit": "00d184f",
           "at": "2026-11-23T19:01:32.037Z"
+        },
+        {
+          "runId": "verify-2026-11-25T04-15-29",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T04-15-29/j11-rename/a1",
+          "commit": "dd0d420",
+          "at": "2026-11-25T04:27:39.860Z"
         }
       ],
       "needsHuman": false
@@ -1227,6 +1337,15 @@
           "record": "runs/verify-2026-11-23T18-50-16/j12-description/a1",
           "commit": "00d184f",
           "at": "2026-11-23T19:03:02.253Z"
+        },
+        {
+          "runId": "verify-2026-11-25T04-15-29",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T04-15-29/j12-description/a1",
+          "commit": "dd0d420",
+          "at": "2026-11-25T04:29:33.706Z"
         }
       ],
       "needsHuman": false
@@ -1309,6 +1428,15 @@
           "record": "runs/verify-2026-11-23T18-50-16/j13-delete/a1",
           "commit": "00d184f",
           "at": "2026-11-23T19:04:06.160Z"
+        },
+        {
+          "runId": "verify-2026-11-25T04-15-29",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T04-15-29/j13-delete/a1",
+          "commit": "dd0d420",
+          "at": "2026-11-25T04:30:49.671Z"
         }
       ],
       "needsHuman": false
@@ -1382,6 +1510,15 @@
           "record": "runs/verify-2026-11-23T18-50-16/j14-new-project/a1",
           "commit": "00d184f",
           "at": "2026-11-23T19:05:42.631Z"
+        },
+        {
+          "runId": "verify-2026-11-25T04-15-29",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T04-15-29/j14-new-project/a1",
+          "commit": "dd0d420",
+          "at": "2026-11-25T04:32:46.168Z"
         }
       ],
       "needsHuman": false
@@ -1458,6 +1595,129 @@
           "record": "runs/verify-2026-11-23T18-50-16/j15-comment/a1",
           "commit": "00d184f",
           "at": "2026-11-23T19:06:31.817Z"
+        },
+        {
+          "runId": "verify-2026-11-25T04-15-29",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T04-15-29/j15-comment/a1",
+          "commit": "dd0d420",
+          "at": "2026-11-25T04:33:50.034Z"
+        }
+      ],
+      "needsHuman": false
+    },
+    "j16-open-new-task": {
+      "verdict": "FAIL",
+      "everPassed": false,
+      "failStreak": 1,
+      "history": [
+        {
+          "runId": "verify-2026-11-25T04-15-29",
+          "mode": "replay",
+          "verdict": "FAIL",
+          "reasons": [
+            "Opening the newly added task leads to a Not found page instead of its task details."
+          ],
+          "record": "runs/verify-2026-11-25T04-15-29/j16-open-new-task/a1",
+          "commit": "dd0d420",
+          "at": "2026-11-25T04:35:45.649Z"
+        }
+      ],
+      "needsHuman": false
+    },
+    "j17-home-new-task": {
+      "verdict": "FAIL",
+      "everPassed": false,
+      "failStreak": 1,
+      "history": [
+        {
+          "runId": "verify-2026-11-25T04-15-29",
+          "mode": "replay",
+          "verdict": "FAIL",
+          "reasons": [
+            "A task created in Kitchen renovation does not appear in Overview's Current Tasks list."
+          ],
+          "record": "runs/verify-2026-11-25T04-15-29/j17-home-new-task/a1",
+          "commit": "dd0d420",
+          "at": "2026-11-25T04:36:49.382Z"
+        }
+      ],
+      "needsHuman": false
+    },
+    "j18-search-new-task": {
+      "verdict": "FAIL",
+      "everPassed": false,
+      "failStreak": 1,
+      "history": [
+        {
+          "runId": "verify-2026-11-25T04-15-29",
+          "mode": "replay",
+          "verdict": "FAIL",
+          "reasons": [
+            "Searching for the newly created task fails because the task-search request returns a 404 error, leaving no result to open."
+          ],
+          "record": "runs/verify-2026-11-25T04-15-29/j18-search-new-task/a1",
+          "commit": "dd0d420",
+          "at": "2026-11-25T04:37:48.212Z"
+        }
+      ],
+      "needsHuman": false
+    },
+    "j19-done-kanban": {
+      "verdict": "FAIL",
+      "everPassed": false,
+      "failStreak": 1,
+      "history": [
+        {
+          "runId": "verify-2026-11-25T04-15-29",
+          "mode": "replay",
+          "verdict": "FAIL",
+          "reasons": [
+            "After the task was marked done, Choose worktop still appeared in the Kitchen renovation Kanban To-Do column instead of Done."
+          ],
+          "record": "runs/verify-2026-11-25T04-15-29/j19-done-kanban/a1",
+          "commit": "dd0d420",
+          "at": "2026-11-25T04:38:49.193Z"
+        }
+      ],
+      "needsHuman": false
+    },
+    "j20-favourite-project": {
+      "verdict": "FAIL",
+      "everPassed": false,
+      "failStreak": 1,
+      "history": [
+        {
+          "runId": "verify-2026-11-25T04-15-29",
+          "mode": "replay",
+          "verdict": "FAIL",
+          "reasons": [
+            "The app cannot save Reading list as a favorite because its project update request fails."
+          ],
+          "record": "runs/verify-2026-11-25T04-15-29/j20-favourite-project/a1",
+          "commit": "dd0d420",
+          "at": "2026-11-25T04:39:58.760Z"
+        }
+      ],
+      "needsHuman": false
+    },
+    "j21-label-task": {
+      "verdict": "FAIL",
+      "everPassed": false,
+      "failStreak": 1,
+      "history": [
+        {
+          "runId": "verify-2026-11-25T04-15-29",
+          "mode": "replay",
+          "verdict": "FAIL",
+          "reasons": [
+            "The app could not create and attach the requested label, so the task did not show it."
+          ],
+          "record": "runs/verify-2026-11-25T04-15-29/j21-label-task/a1",
+          "commit": "dd0d420",
+          "at": "2026-11-25T04:41:12.082Z"
         }
       ],
       "needsHuman": false

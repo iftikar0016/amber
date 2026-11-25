@@ -1,0 +1,19 @@
+{"t":1795581741810,"type":"flow_start","flow":"j09-add-task","attempt":1,"mode":"replay","tag":"kueyps"}
+{"t":1795581755474,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795581756854,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":2,"status":"done","remark":"wait: Waiting for queued steps to finish"}
+{"t":1795581757437,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":3,"status":"done","remark":"fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795581758080,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":4,"status":"done","remark":"fill: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795581759215,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":5,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795581761330,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":6,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795581768410,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":7,"status":"done","remark":"analyze: Checking whether the home page greeting for Amber Demo is present"}
+{"t":1795581768922,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":8,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795581770166,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":9,"status":"done","remark":"click: Clicking Kitchen renovation in the left projects navigation"}
+{"t":1795581771790,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":10,"status":"done","remark":"wait: Waiting for the plan to be queued"}
+{"t":1795581772534,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":11,"status":"done","remark":"fill: Type \"Paint samples {{global.amber_tag}}\" into \"Add a task…\""}
+{"t":1795581773331,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":12,"status":"done","remark":"click: Click \"Add\""}
+{"t":1795581781497,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":13,"status":"done","remark":"analyze: Checking whether the Paint samples task is present in the project task list"}
+{"t":1795581783279,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":14,"status":"done","remark":"assert: Paint samples {{global.amber_tag}} appears in the project task list."}
+{"t":1795581784913,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":15,"status":"done","remark":"refresh: Navigate refresh"}
+{"t":1795581789477,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":16,"status":"done","remark":"analyze: Checking whether the Paint samples task is present"}
+{"t":1795581789743,"type":"flow_step","flow":"j09-add-task","attempt":1,"n":17,"status":"done","remark":"assert: Paint samples {{global.amber_tag}} is still listed."}
+{"t":1795581799732,"type":"flow_done","flow":"j09-add-task","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":57818,"shot":"spike-replay-real-2026-11-25T04-42-18/j09-add-task/a1/shots/17.jpg"}

@@ -1,0 +1,7 @@
+
+Update available: 0.10.7 → 0.10.9 — run `npm install -g @testmuai/kane-cli@latest` to update
+
+Skill update available: not installed → 0.1.4 — run `kane-cli install skill`
+
+evidence: 1 status_disagrees advisory(ies) — self-explained by triaged failure record(s)
+evidence: view locally with `kane-cli evidence serve ~\.testmuai\kaneai\sessions\12e57159-cb44-4584-8210-5eab7d566df6\evidence\36fa0cb2-d787-4824-ae7e-0666f0528b4a.evidence`

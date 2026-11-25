@@ -9,11 +9,12 @@ const journeys = data.journeys;
 const events = data.events;
 $('total').textContent = journeys.length;
 
-// ---- layout: 5 x 3 tiles inside a 1000 x 520 block ---------------------------------------------------------
-const COLS = 5;
-const GX = 18;
-const GY = 36;
-const MX = 40;
+// ---- layout: 5 x 3 tiles inside a 1000 x 520 block (7 x 3 once there are more than 15 journeys) ----------------
+const WIDE = journeys.length > 15;
+const COLS = WIDE ? 7 : 5;
+const GX = WIDE ? 14 : 18;
+const GY = WIDE ? 40 : 36;
+const MX = WIDE ? 28 : 40;
 const TW = (1000 - 2 * MX - (COLS - 1) * GX) / COLS;
 const TH = TW / (wires.width / wires.height);
 const MY = (520 - (3 * TH + 2 * GY)) / 2 - 4;
@@ -109,8 +110,13 @@ journeys.forEach((j, i) => {
   el('path', { class: 'crack', d }, g);
   const seam = el('path', { class: 'seam', d }, g);
   const proof = el('path', { class: 'proof', d: proofPath(j.id) }, g);
-  const label = el('text', { class: 'label', x: 1, y: TH + 12 }, g);
+  const label = el('text', { class: 'label', x: 1, y: TH + 12, ...(WIDE ? { style: 'font-size: 6.2px' } : {}) }, g);
   label.textContent = `${j.id.slice(0, 3)} · ${j.title}`;
+  // a label longer than its tile is squeezed to the tile's width rather than running into the next one
+  if (label.getComputedTextLength() > TW - 2) {
+    label.setAttribute('textLength', (TW - 2).toFixed(1));
+    label.setAttribute('lengthAdjust', 'spacingAndGlyphs');
+  }
   tiles[j.id] = { g, seam, proof };
   g.addEventListener('click', () => openDrawer(j.id));
   g.addEventListener('keydown', (e) => (e.key === 'Enter' || e.key === ' ') && (e.preventDefault(), openDrawer(j.id)));

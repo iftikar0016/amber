@@ -1,0 +1,9 @@
+[
+  {
+    "ordinal": 16,
+    "message": "assertion_failed: @ step 7",
+    "url": "http://127.0.0.1:4790/tasks/8",
+    "rootCause": "The server rejected the request to create the new label as unsupported.",
+    "suggestedFix": "Implement or restore support for creating labels through the labels API, then verify that the new label is attached to the task and remains after a reload."
+  }
+]

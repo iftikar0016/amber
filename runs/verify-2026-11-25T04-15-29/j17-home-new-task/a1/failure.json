@@ -1,0 +1,9 @@
+[
+  {
+    "ordinal": 16,
+    "message": "assertion_failed: @ step 7",
+    "url": "http://127.0.0.1:4790/",
+    "rootCause": "The Overview page is not showing the newly created open task even though the task was created in the selected project.",
+    "suggestedFix": "Check why newly created open tasks from Kitchen renovation are omitted when the Overview page loads, and add coverage for the task appearing there and remaining after reload."
+  }
+]

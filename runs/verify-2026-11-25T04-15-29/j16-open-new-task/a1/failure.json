@@ -1,0 +1,9 @@
+[
+  {
+    "ordinal": 18,
+    "message": "assertion_failed: @ step 9",
+    "url": "http://127.0.0.1:4790/",
+    "rootCause": "The application cannot retrieve the new task at task ID 13, so the task page shows a 404 page rather than the task title.",
+    "suggestedFix": "Investigate why the task-detail request for a newly created task returns 404, and verify that a newly added task can be opened and still loads after refresh."
+  }
+]

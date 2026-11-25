@@ -1,0 +1,113 @@
+{
+  "flow": "j21-label-task",
+  "attempt": 1,
+  "mode": "replay",
+  "tag": "jrhyqb",
+  "args": [
+    "testmd",
+    "run",
+    "~\\hackathons\\kane\\amber\\.amber\\kane\\runs\\j21-label-task\\j21-label-task_test.md",
+    "--agent",
+    "--headless",
+    "--no-adaptive-heal"
+  ],
+  "startedAt": "2026-11-25T04:39:59.067Z",
+  "ms": 72632,
+  "exitCode": 1,
+  "killed": false,
+  "status": "failed",
+  "oneLiner": "The app could not create and attach the requested label, so the task did not show it.",
+  "summary": null,
+  "reason": "assertion_failed: @ step 7",
+  "resultCode": null,
+  "bug": {
+    "confirmed": false,
+    "title": "Creating a task label returns 501 and leaves it unattached",
+    "oneLiner": "The app could not create and attach the requested label, so the task did not show it.",
+    "category": "api_error",
+    "severity": "major",
+    "confidence": 0.99
+  },
+  "failedAssertions": [
+    "the task shows the label Urgent {{global.amber_tag}}"
+  ],
+  "finalState": null,
+  "credits": 0,
+  "steps": 16,
+  "failedSteps": [
+    {
+      "n": 16,
+      "remark": "assert: the task shows the label Urgent {{global.amber_tag}}"
+    }
+  ],
+  "testmdSummary": {
+    "type": "test_md_summary",
+    "overall_status": "failed",
+    "duration_s": 55,
+    "steps": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0,
+      "replay_decisions": 1,
+      "author_decisions": 0
+    },
+    "adaptive_heal": {
+      "triggered": false
+    },
+    "commit": {
+      "committed": false,
+      "reason": "run_failed"
+    },
+    "artifacts": {
+      "replaced": false
+    },
+    "upload": {
+      "performed": true,
+      "succeeded": true
+    },
+    "cancelled": false,
+    "v": 1,
+    "ts": "2026-11-25T04:41:08.943Z",
+    "kind": "typed",
+    "_rt": 1795581668943
+  },
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-25T04:39:59.067Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-25T04:41:11.984Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 1,
+  "kaneStatus": "failed",
+  "verdict": "FAIL",
+  "basis": "kane",
+  "reasons": [
+    "The app could not create and attach the requested label, so the task did not show it."
+  ],
+  "evidence": {
+    "steps": 16,
+    "finalShot": "shots/16.jpg",
+    "failures": [
+      {
+        "ordinal": 16,
+        "message": "assertion_failed: @ step 7",
+        "url": "http://127.0.0.1:4790/tasks/8",
+        "rootCause": "The server rejected the request to create the new label as unsupported.",
+        "suggestedFix": "Implement or restore support for creating labels through the labels API, then verify that the new label is attached to the task and remains after a reload."
+      }
+    ]
+  }
+}

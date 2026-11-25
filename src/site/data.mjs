@@ -76,7 +76,7 @@ export function siteData(o = {}) {
   return {
     app: spec.app,
     generatedAt: new Date().toISOString(),
-    journeys: spec.journeys.map((j) => ({ id: j.id, title: j.title, kind: j.kind, outcome: j.outcome, screen: screenOf(j.id) })),
+    journeys: spec.journeys.map((j) => ({ id: j.id, title: j.title, kind: j.kind, outcome: j.outcome, screen: j.screen ?? screenOf(j.id) })),
     events,
   };
 }

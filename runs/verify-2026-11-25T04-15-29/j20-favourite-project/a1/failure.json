@@ -1,0 +1,9 @@
+[
+  {
+    "ordinal": 12,
+    "message": "assertion_failed: @ step 4",
+    "url": "http://127.0.0.1:4790/",
+    "rootCause": "When the user marks the Reading list project as a favorite, the server does not support the requested change and rejects it. As a result, the project is not added to Favorites.",
+    "suggestedFix": "Implement or restore support for updating a project's favorite setting through the project update endpoint, then verify that the favorite appears immediately and remains after reload."
+  }
+]

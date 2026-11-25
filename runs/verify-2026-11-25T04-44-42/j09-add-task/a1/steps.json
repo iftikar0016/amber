@@ -1,0 +1,200 @@
+[
+  {
+    "ordinal": 1,
+    "id": "0-1",
+    "kind": "navigate",
+    "status": "passed",
+    "summary": "navigate: Navigate to http://127.0.0.1:4790/login",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 0,
+    "shot": "shots/1.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 2,
+    "id": "0-2",
+    "kind": "wait",
+    "status": "passed",
+    "summary": "wait: queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click ",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 5390,
+    "shot": "shots/2.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 3,
+    "id": "0-3",
+    "kind": "type",
+    "status": "passed",
+    "summary": "type: Type \"{{global.amber_user}}\" into \"Username Or Email Address\"",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 141,
+    "shot": "shots/3.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 4,
+    "id": "0-4",
+    "kind": "type",
+    "status": "passed",
+    "summary": "type: Type \"{{secrets.user.amber_password}}\" into \"Password\"",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 156,
+    "shot": "shots/4.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 5,
+    "id": "0-5",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Click \"Stay logged in\"",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 610,
+    "shot": "shots/5.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 6,
+    "id": "0-6",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Click \"LOGIN\"",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 640,
+    "shot": "shots/6.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 7,
+    "id": "0-7",
+    "kind": "wait",
+    "status": "passed",
+    "summary": "wait: PRIMARY: wait for the home page greeting 'Fresh start, Amber Demo' to be visible",
+    "url": "http://127.0.0.1:4790/",
+    "durationMs": 8704,
+    "shot": "shots/7.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 8,
+    "id": "0-8",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: the home page greets Amber Demo",
+    "url": "http://127.0.0.1:4790/",
+    "durationMs": 8141,
+    "shot": "shots/8.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 9,
+    "id": "0-9",
+    "kind": "assert",
+    "status": "passed",
+    "summary": "assert: the home page greets Amber Demo",
+    "url": "http://127.0.0.1:4790/",
+    "durationMs": 0,
+    "shot": "shots/9.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 10,
+    "id": "0-10",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Clicking the Kitchen renovation project link in Projects navigation",
+    "url": "http://127.0.0.1:4790/",
+    "durationMs": 6016,
+    "shot": "shots/10.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 11,
+    "id": "0-11",
+    "kind": "wait",
+    "status": "passed",
+    "summary": "wait: PRIMARY: wait for the Kitchen renovation task input to be visible",
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "durationMs": 8219,
+    "shot": "shots/11.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 12,
+    "id": "0-12",
+    "kind": "wait",
+    "status": "passed",
+    "summary": "wait: queued plan (2 steps): type \"Add a task…\"; click \"Add\"",
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "durationMs": 5969,
+    "shot": "shots/12.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 13,
+    "id": "0-13",
+    "kind": "type",
+    "status": "passed",
+    "summary": "type: Type \"Paint samples {{global.amber_tag}}\" into \"Add a task…\"",
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "durationMs": 156,
+    "shot": "shots/13.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 14,
+    "id": "0-14",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Click \"Add\"",
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "durationMs": 640,
+    "shot": "shots/14.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 15,
+    "id": "0-15",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: ANALYZE(textual_visual, 'Paint samples {{global.amber_tag}} appears in the proje",
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "durationMs": 11203,
+    "shot": "shots/15.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 16,
+    "id": "0-16",
+    "kind": "assert",
+    "status": "passed",
+    "summary": "assert: Paint samples {{global.amber_tag}} appears in the project task list",
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "durationMs": 0,
+    "shot": "shots/16.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 17,
+    "id": "0-17",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: Paint samples {{global.amber_tag}} is still listed",
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "durationMs": 11750,
+    "shot": "shots/17.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 18,
+    "id": "0-18",
+    "kind": "assert",
+    "status": "passed",
+    "summary": "assert: Paint samples {{global.amber_tag}} is still listed",
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "durationMs": 16,
+    "shot": "shots/18.jpg",
+    "annotated": null
+  }
+]

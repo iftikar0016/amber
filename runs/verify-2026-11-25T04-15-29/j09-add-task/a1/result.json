@@ -1,0 +1,113 @@
+{
+  "flow": "j09-add-task",
+  "attempt": 1,
+  "mode": "replay",
+  "tag": "jjccte",
+  "args": [
+    "testmd",
+    "run",
+    "~\\hackathons\\kane\\amber\\.amber\\kane\\runs\\j09-add-task\\j09-add-task_test.md",
+    "--agent",
+    "--headless",
+    "--no-adaptive-heal"
+  ],
+  "startedAt": "2026-11-25T04:23:23.640Z",
+  "ms": 44942,
+  "exitCode": 1,
+  "killed": false,
+  "status": "failed",
+  "oneLiner": "The home page visibly greets Amber Demo, but the recorded greeting check rejected the current greeting wording.",
+  "summary": null,
+  "reason": "assertion_failed: @ step 8",
+  "resultCode": null,
+  "bug": {
+    "confirmed": false,
+    "title": "Home greeting assertion no longer recognizes valid greeting",
+    "oneLiner": "The home page visibly greets Amber Demo, but the recorded greeting check rejected the current greeting wording.",
+    "category": "locator_rot",
+    "severity": "minor",
+    "confidence": 0.98
+  },
+  "failedAssertions": [
+    "the home page greets Amber Demo"
+  ],
+  "finalState": null,
+  "credits": 0,
+  "steps": 8,
+  "failedSteps": [
+    {
+      "n": 8,
+      "remark": "assert: the home page greets Amber Demo"
+    }
+  ],
+  "testmdSummary": {
+    "type": "test_md_summary",
+    "overall_status": "failed",
+    "duration_s": 30,
+    "steps": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0,
+      "replay_decisions": 1,
+      "author_decisions": 0
+    },
+    "adaptive_heal": {
+      "triggered": false
+    },
+    "commit": {
+      "committed": false,
+      "reason": "run_failed"
+    },
+    "artifacts": {
+      "replaced": false
+    },
+    "upload": {
+      "performed": true,
+      "succeeded": true
+    },
+    "cancelled": false,
+    "v": 1,
+    "ts": "2026-11-25T04:24:06.422Z",
+    "kind": "typed",
+    "_rt": 1795580646420
+  },
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-25T04:23:23.639Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-25T04:24:08.878Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "failed",
+  "verdict": "FAIL",
+  "basis": "kane",
+  "reasons": [
+    "The home page visibly greets Amber Demo, but the recorded greeting check rejected the current greeting wording."
+  ],
+  "evidence": {
+    "steps": 8,
+    "finalShot": "shots/8.jpg",
+    "failures": [
+      {
+        "ordinal": 8,
+        "message": "assertion_failed: @ step 8",
+        "url": "http://127.0.0.1:4790/",
+        "rootCause": "The recorded assertion appears tied to an older greeting format. The live page shows “Fresh start, Amber Demo,” which fulfills the objective but was not accepted by the check.",
+        "suggestedFix": "Update the assertion to accept or locate the greeting by the displayed user name, such as Amber Demo, rather than relying on a retired exact greeting phrase."
+      }
+    ]
+  }
+}

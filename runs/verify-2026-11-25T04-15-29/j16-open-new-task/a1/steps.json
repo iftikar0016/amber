@@ -1,0 +1,200 @@
+[
+  {
+    "ordinal": 1,
+    "id": "0-1",
+    "kind": "navigate",
+    "status": "passed",
+    "summary": "navigate: Navigate to http://127.0.0.1:4790/login",
+    "url": "https://kaneai-playground.lambdatest.io/",
+    "durationMs": 515,
+    "shot": "shots/1.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 2,
+    "id": "0-2",
+    "kind": "wait",
+    "status": "passed",
+    "summary": "wait: Waiting for the login form to load and queued steps to run",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 1406,
+    "shot": "shots/2.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 3,
+    "id": "0-3",
+    "kind": "fill",
+    "status": "passed",
+    "summary": "fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\"",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 500,
+    "shot": "shots/3.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 4,
+    "id": "0-4",
+    "kind": "fill",
+    "status": "passed",
+    "summary": "fill: Type \"{{secrets.user.amber_password}}\" into \"Password\"",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 593,
+    "shot": "shots/4.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 5,
+    "id": "0-5",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Click \"Stay logged in\"",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 1094,
+    "shot": "shots/5.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 6,
+    "id": "0-6",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Click \"LOGIN\"",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 1703,
+    "shot": "shots/6.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 7,
+    "id": "0-7",
+    "kind": "wait",
+    "status": "passed",
+    "summary": "wait: Waiting for the signed-in home page to load",
+    "url": "http://127.0.0.1:4790/",
+    "durationMs": 1094,
+    "shot": "shots/7.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 8,
+    "id": "0-8",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: Reading the home page greeting",
+    "url": "http://127.0.0.1:4790/",
+    "durationMs": 578,
+    "shot": "shots/8.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 9,
+    "id": "0-9",
+    "kind": "assert",
+    "status": "passed",
+    "summary": "assert: the home page greets Amber Demo",
+    "url": "http://127.0.0.1:4790/",
+    "durationMs": 469,
+    "shot": "shots/9.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 10,
+    "id": "1-1",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Clicking Kitchen renovation in the left sidebar project list",
+    "url": "http://127.0.0.1:4790/",
+    "durationMs": 1094,
+    "shot": "shots/10.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 11,
+    "id": "1-2",
+    "kind": "wait",
+    "status": "passed",
+    "summary": "wait: Waiting for the queued plan to complete",
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "durationMs": 1609,
+    "shot": "shots/11.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 12,
+    "id": "1-3",
+    "kind": "fill",
+    "status": "passed",
+    "summary": "fill: Type \"Order grout {{global.amber_tag}}\" into \"Add a task…\"",
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "durationMs": 719,
+    "shot": "shots/12.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 13,
+    "id": "1-4",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Click \"Add\"",
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "durationMs": 797,
+    "shot": "shots/13.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 14,
+    "id": "1-5",
+    "kind": "wait",
+    "status": "passed",
+    "summary": "wait: Waiting for the new task Order grout to appear in the project task list",
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "durationMs": 1938,
+    "shot": "shots/14.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 15,
+    "id": "1-6",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Clicking Open the task Order grout {{global.amber_tag}}",
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "durationMs": 5125,
+    "shot": "shots/15.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 16,
+    "id": "1-7",
+    "kind": "wait",
+    "status": "passed",
+    "summary": "wait: Waiting for the task page title Order grout to be visible",
+    "url": "http://127.0.0.1:4790/tasks/13",
+    "durationMs": 57000,
+    "shot": "shots/16.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 17,
+    "id": "1-8",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: Checking whether the task title is present",
+    "url": "http://127.0.0.1:4790/",
+    "durationMs": 1516,
+    "shot": "shots/17.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 18,
+    "id": "1-9",
+    "kind": "assert",
+    "status": "failed",
+    "summary": "assert: the task page shows the title Order grout {{global.amber_tag}}",
+    "url": "http://127.0.0.1:4790/",
+    "durationMs": 1500,
+    "shot": "shots/18.jpg",
+    "annotated": null
+  }
+]

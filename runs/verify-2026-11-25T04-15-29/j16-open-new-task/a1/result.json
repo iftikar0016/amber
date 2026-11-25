@@ -1,0 +1,113 @@
+{
+  "flow": "j16-open-new-task",
+  "attempt": 1,
+  "mode": "replay",
+  "tag": "uobjol",
+  "args": [
+    "testmd",
+    "run",
+    "~\\hackathons\\kane\\amber\\.amber\\kane\\runs\\j16-open-new-task\\j16-open-new-task_test.md",
+    "--agent",
+    "--headless",
+    "--no-adaptive-heal"
+  ],
+  "startedAt": "2026-11-25T04:33:50.344Z",
+  "ms": 114910,
+  "exitCode": 1,
+  "killed": false,
+  "status": "failed",
+  "oneLiner": "Opening the newly added task leads to a Not found page instead of its task details.",
+  "summary": null,
+  "reason": "assertion_failed: @ step 9",
+  "resultCode": null,
+  "bug": {
+    "confirmed": true,
+    "title": "New task detail endpoint returns 404",
+    "oneLiner": "Opening the newly added task leads to a Not found page instead of its task details.",
+    "category": "api_error",
+    "severity": "major",
+    "confidence": 0.96
+  },
+  "failedAssertions": [
+    "the task page shows the title Order grout {{global.amber_tag}}"
+  ],
+  "finalState": null,
+  "credits": 0,
+  "steps": 18,
+  "failedSteps": [
+    {
+      "n": 18,
+      "remark": "assert: the task page shows the title Order grout {{global.amber_tag}}"
+    }
+  ],
+  "testmdSummary": {
+    "type": "test_md_summary",
+    "overall_status": "failed",
+    "duration_s": 98,
+    "steps": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0,
+      "replay_decisions": 1,
+      "author_decisions": 0
+    },
+    "adaptive_heal": {
+      "triggered": false
+    },
+    "commit": {
+      "committed": false,
+      "reason": "run_failed"
+    },
+    "artifacts": {
+      "replaced": false
+    },
+    "upload": {
+      "performed": true,
+      "succeeded": true
+    },
+    "cancelled": false,
+    "v": 1,
+    "ts": "2026-11-25T04:35:43.083Z",
+    "kind": "typed",
+    "_rt": 1795581343082
+  },
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-25T04:33:50.344Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-25T04:35:45.552Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "failed",
+  "verdict": "FAIL",
+  "basis": "kane",
+  "reasons": [
+    "Opening the newly added task leads to a Not found page instead of its task details."
+  ],
+  "evidence": {
+    "steps": 18,
+    "finalShot": "shots/18.jpg",
+    "failures": [
+      {
+        "ordinal": 18,
+        "message": "assertion_failed: @ step 9",
+        "url": "http://127.0.0.1:4790/",
+        "rootCause": "The application cannot retrieve the new task at task ID 13, so the task page shows a 404 page rather than the task title.",
+        "suggestedFix": "Investigate why the task-detail request for a newly created task returns 404, and verify that a newly added task can be opened and still loads after refresh."
+      }
+    ]
+  }
+}

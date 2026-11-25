@@ -1,0 +1,9 @@
+[
+  {
+    "ordinal": 16,
+    "message": "action_failed: click @ step 8",
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "rootCause": "The application has no working server route for the task search request used by the top-bar search.",
+    "suggestedFix": "Restore or configure the task-search API route for the top-bar search, then verify that searching a newly created task returns it and opens its task page."
+  }
+]
