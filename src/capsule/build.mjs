@@ -24,6 +24,48 @@ function readNdjson(file) {
   return fs.readFileSync(file, 'utf8').split('\n').filter(Boolean).map((l) => JSON.parse(l));
 }
 
+const DAY = 86400000;
+const ISO = /^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d+)?(Z|[+-]\d\d:\d\d)$/;
+
+/**
+ * Move every due date in a captured JSON value by ms (Vikunja's "no date", 0001-01-01, stays).
+ * Only due dates: the seed created the tasks and comments once, and before each capture it re-aligns just the due
+ * dates to "noon UTC, n days from today" (src/seed.mjs alignDueDates). Moving created/updated too would put
+ * history in the future.
+ */
+export function alignDueDates(v, ms) {
+  if (!ms) return v;
+  if (Array.isArray(v)) return v.map((x) => alignDueDates(x, ms));
+  if (v && typeof v === 'object') {
+    return Object.fromEntries(
+      Object.entries(v).map(([k, x]) =>
+        k === 'due_date' && typeof x === 'string' && ISO.test(x) && !x.startsWith('0001-') ? [k, new Date(Date.parse(x) + ms).toISOString().replace('.000Z', 'Z')] : [k, alignDueDates(x, ms)],
+      ),
+    );
+  }
+  return v;
+}
+
+/**
+ * How far to move each journey's captured due dates so that every journey looks captured on the day of the latest
+ * one. Journeys were captured on different days (round 1 on 2026-11-23, round 2 on 2026-11-25), each after the due
+ * dates were aligned to that UTC day, so the offset is the difference in UTC days.
+ * @returns {{latest: number, offsets: Record<string, number>}} latest capture time, and ms to add per journey
+ */
+export function captureDayOffsets(captureDir, ids) {
+  const first = {};
+  let latest = 0;
+  for (const id of ids) {
+    const file = path.join(captureDir, 'journeys', `${id}.ndjson`);
+    if (!fs.existsSync(file)) continue;
+    const ts = readNdjson(file).map((x) => x.t);
+    first[id] = Math.min(...ts);
+    latest = Math.max(latest, ...ts);
+  }
+  const offsets = Object.fromEntries(Object.entries(first).map(([id, t]) => [id, (Math.floor(latest / DAY) - Math.floor(t / DAY)) * DAY]));
+  return { latest, offsets };
+}
+
 /** Journeys to build from: the frozen ones if flows are locked, else every captured journey. */
 function journeyIds(captureDir) {
   const lock = path.join(FLOWS_DIR, 'flows.lock.json');
@@ -77,15 +119,16 @@ export function build(o = {}) {
   /** @type {Record<string, any>} */
   const replay = {};
   const pristine = [];
-  let capturedAt = 0;
   let user = null;
   const used = journeyIds(captureDir);
+  // Every journey's due dates as if it was captured on the day of the latest one (see captureDayOffsets).
+  const { latest: capturedAt, offsets } = captureDayOffsets(captureDir, used);
   for (const id of used) {
     const file = path.join(captureDir, 'journeys', `${id}.ndjson`);
     if (!fs.existsSync(file)) continue;
     let changed = false;
-    for (const x of readNdjson(file)) {
-      capturedAt = Math.max(capturedAt, x.t);
+    for (const raw of readNdjson(file)) {
+      const x = offsets[id] && raw.resBody && typeof raw.resBody === 'object' ? { ...raw, resBody: alignDueDates(raw.resBody, offsets[id]) } : raw;
       if (x.method !== 'GET' && x.method !== 'HEAD' && x.method !== 'OPTIONS' && !NOT_A_WRITE.test(x.path)) changed = true;
       if (x.method !== 'GET' || changed || x.status >= 400) continue;
       if (x.path === '/api/v2/user' && !user && x.resBody?.id) user = { id: x.resBody.id, username: x.resBody.username, name: x.resBody.name };

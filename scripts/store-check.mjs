@@ -8,10 +8,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import { CAPSULE_DIR, CAPTURE_DIR } from '../src/config.mjs';
+import { alignDueDates, captureDayOffsets } from '../src/capsule/build.mjs';
 
 const ORIGIN = 'http://127.0.0.1:4790';
 const NOT_A_WRITE = /^\/api\/v2\/(login|register|user\/token\/refresh)$/;
 const [mode, id] = process.argv.slice(2);
+// The build moves each journey's due dates to the day of the latest capture; the server's answers are compared the same way.
+const journeysBuilt = JSON.parse(fs.readFileSync(path.join(CAPSULE_DIR, 'amber', 'seed.json'), 'utf8')).meta.journeys;
+const { offsets } = captureDayOffsets(CAPTURE_DIR, journeysBuilt);
 
 function capsule() {
   const ctx = {
@@ -98,7 +102,7 @@ async function pristine() {
       const r = await c.request('GET', x.path + x.query);
       if (r.entry?.outcome !== 'store') continue;
       answered++;
-      const expected = c.store().shiftDates(x.resBody, c.store().state.shiftMs);
+      const expected = c.store().shiftDates(alignDueDates(x.resBody, offsets[j] || 0), c.store().state.shiftMs);
       const d = r.status !== x.status ? [`status ${r.status} != ${x.status}`] : diff(r.body, expected);
       if (d.length) bad++;
       console.log(`${d.length ? 'DIFF' : 'same'}  ${k}  (${r.entry.handler})` + (d.length ? '\n      ' + d.join('\n      ') : ''));
@@ -122,7 +126,7 @@ async function journey(j) {
     const tag = `${x.method} ${x.path}${x.query.slice(0, 70)}`;
     if (x.method !== 'GET' && NOT_A_WRITE.test(x.path)) continue;
     let d = r.status !== x.status ? [`status ${r.status}, server ${x.status}`] : [];
-    if (!d.length && x.resBody && typeof x.resBody === 'object') d = diff(r.body, c.store().shiftDates(x.resBody, isWrite(x) ? 0 : c.store().state.shiftMs), '', [], loose);
+    if (!d.length && x.resBody && typeof x.resBody === 'object') d = diff(r.body, c.store().shiftDates(alignDueDates(x.resBody, offsets[j] || 0), c.store().state.shiftMs), '', [], loose);
     if (d.length && (outcome === 'store' || isWrite(x) || outcome === 'unanswered')) bad++;
     console.log(`${d.length ? 'DIFF' : 'same'}  [${outcome}${r.entry?.handler ? ':' + r.entry.handler : ''}] ${tag}` + (d.length ? '\n      ' + d.join('\n      ') : ''));
   }
