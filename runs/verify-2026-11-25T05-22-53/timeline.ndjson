@@ -1,0 +1,23 @@
+{"t":1795584174979,"type":"run_start","runId":"verify-2026-11-25T05-22-53","kind":"verify","mode":"replay","target":"capsule-server-off","commit":"55a9a82","label":null,"flows":["j21-label-task"],"serverOff":{"checkedAt":"2026-11-25T05:22:53.193Z","port":3456,"portOpen":false,"vikunjaProcesses":[],"off":true}}
+{"t":1795584175312,"type":"flow_start","flow":"j21-label-task","attempt":1,"mode":"replay","tag":"vlatox"}
+{"t":1795584188662,"type":"flow_step","flow":"j21-label-task","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795584190080,"type":"flow_step","flow":"j21-label-task","attempt":1,"n":2,"status":"done","remark":"wait: Waiting for login form steps to complete"}
+{"t":1795584190704,"type":"flow_step","flow":"j21-label-task","attempt":1,"n":3,"status":"done","remark":"fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795584191350,"type":"flow_step","flow":"j21-label-task","attempt":1,"n":4,"status":"done","remark":"fill: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795584192482,"type":"flow_step","flow":"j21-label-task","attempt":1,"n":5,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795584194355,"type":"flow_step","flow":"j21-label-task","attempt":1,"n":6,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795584195482,"type":"flow_step","flow":"j21-label-task","attempt":1,"n":7,"status":"done","remark":"wait: Waiting for the home page to load after signing in"}
+{"t":1795584196072,"type":"flow_step","flow":"j21-label-task","attempt":1,"n":8,"status":"done","remark":"analyze: Checking whether the home page greeting is present"}
+{"t":1795584196568,"type":"flow_step","flow":"j21-label-task","attempt":1,"n":9,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795584197793,"type":"flow_step","flow":"j21-label-task","attempt":1,"n":10,"status":"done","remark":"click: Clicking Kitchen renovation in the left sidebar project list"}
+{"t":1795584199084,"type":"flow_step","flow":"j21-label-task","attempt":1,"n":11,"status":"done","remark":"click: Clicking Order tiles in the Kitchen renovation task list"}
+{"t":1795584199904,"type":"flow_step","flow":"j21-label-task","attempt":1,"n":12,"status":"done","remark":"click: Clicking Add Labels in the organization sidebar"}
+{"t":1795584200598,"type":"flow_step","flow":"j21-label-task","attempt":1,"n":13,"status":"done","remark":"fill: Typing to add label in Labels section below due date"}
+{"t":1795584211496,"type":"flow_step","flow":"j21-label-task","attempt":1,"n":14,"status":"done","remark":"click: Clicking Urgent label option to add it to the task"}
+{"t":1795584216718,"type":"flow_step","flow":"j21-label-task","attempt":1,"n":15,"status":"done","remark":"analyze: Checking whether the task label is present"}
+{"t":1795584218660,"type":"flow_step","flow":"j21-label-task","attempt":1,"n":16,"status":"done","remark":"assert: the task shows the label Urgent {{global.amber_tag}}"}
+{"t":1795584219203,"type":"flow_step","flow":"j21-label-task","attempt":1,"n":17,"status":"done","remark":"refresh: Navigate refresh"}
+{"t":1795584226121,"type":"flow_step","flow":"j21-label-task","attempt":1,"n":18,"status":"done","remark":"analyze: Checking whether the task label is present"}
+{"t":1795584227776,"type":"flow_step","flow":"j21-label-task","attempt":1,"n":19,"status":"done","remark":"assert: the label Urgent {{global.amber_tag}} is still shown on the task"}
+{"t":1795584238650,"type":"flow_done","flow":"j21-label-task","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":62934,"shot":"verify-2026-11-25T05-22-53/j21-label-task/a1/shots/19.jpg"}
+{"t":1795584240627,"type":"run_done","runId":"verify-2026-11-25T05-22-53","spent":10.69,"tally":{"PASS":1},"regressions":[]}

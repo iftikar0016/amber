@@ -554,7 +554,61 @@
     return json(200, { $schema: schema(url, 'Project'), ...projectJson({ ...p, max_permission: null }) });
   }
 
+  /** GET /labels: every label the user can use, from the store (a search with `s` still falls through). */
+  function listLabels({ query, url, store }) {
+    const m = store.model;
+    if (!m.labels || (query.get('s') || '').trim()) return null;
+    const items = Object.values(m.labels).sort((a, b) => a.id - b.id);
+    return paginated(url, query, items, 'PaginatedLabelWithTaskID');
+  }
+
+  /** POST /labels: Vikunja's new label, by the signed-in user. */
+  async function createLabel({ body, store }) {
+    const m = store.model;
+    if (!m.labels) return null;
+    const title = body && typeof body === 'object' ? String(body.title || '').trim() : '';
+    if (!title) return problem(400, 'The label title cannot be empty.');
+    const now = nowIso();
+    const label = { id: m.next.label++, title, description: String(body.description || ''), hex_color: String(body.hex_color || ''), created_by: m.user, created: now, updated: now };
+    m.labels[label.id] = label;
+    await store.save();
+    // The create response carries the creator without profile details, as Vikunja's does.
+    return json(201, { ...label, created_by: { id: m.user.id, name: '', username: m.user.username, created: ZERO, updated: ZERO } });
+  }
+
+  /** POST /tasks/:id/labels: put an existing label on a task. */
+  async function addTaskLabel({ params, body, store }) {
+    const m = store.model;
+    const t = m.tasks && m.tasks[params.id];
+    if (!t) return m.deleted && m.deleted[params.id] ? problem(404, 'This task does not exist.') : null;
+    if (!m.labels) return null;
+    const label = m.labels[body && body.label_id];
+    if (!label) return problem(404, 'This label does not exist.');
+    if ((t.labels || []).some((l) => l.id === label.id)) return problem(400, 'This label already exists on the task.');
+    t.labels = [...(t.labels || []), label];
+    await store.save();
+    return json(201, { label_id: label.id, created: nowIso() });
+  }
+
   const routes = [
+    {
+      name: 'label-list',
+      method: 'GET',
+      path: /^\/api\/v2\/labels$/,
+      handle: listLabels,
+    },
+    {
+      name: 'label-create',
+      method: 'POST',
+      path: /^\/api\/v2\/labels$/,
+      handle: createLabel,
+    },
+    {
+      name: 'task-label-add',
+      method: 'POST',
+      path: /^\/api\/v2\/tasks\/(?<id>\d+)\/labels$/,
+      handle: addTaskLabel,
+    },
     {
       name: 'project-update',
       method: 'PATCH',

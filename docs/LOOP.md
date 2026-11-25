@@ -116,3 +116,10 @@ Found while checking for free, not repaired (no journey fails on it): round 1 wa
 - **Repair:** `PATCH /projects/:id` carries out `is_favorite` and answers with Vikunja's `Project` body (no permission, as the capture shows); any other field must be unchanged, or the change is still refused (501). The projects list, already answered from the store, then shows the flag, and the front end lists the project under favourites.
 - **Checked first (zero credits):** in the captured journey, the update's response and the projects list after it equal the real server's.
 - **Proof:** `verify-2026-11-25T05-20-52`, PASS, 1.98 credits.
+
+### j21-label-task: create a label and put it on a task
+
+- **Failure** (baseline): creating the label (`POST /api/v2/labels`) was refused with 501, so the task never showed it.
+- **Repair:** the model keeps the user's labels when the captured list is complete. `POST /labels` creates Vikunja's label (next label id; the create body carries the creator without profile details, as Vikunja's does), `GET /labels` is answered from the store (a search with `s` still falls through), and `POST /tasks/:id/labels` puts an existing label on the task; the task's own read and the list views, already answered from the store, then show it.
+- **Checked first (zero credits):** the store's answers to every journey's pristine label list equal the server's; in the captured journey, the create, both label lists, the attach and the task's read after it equal the real server's (only the date-shift noise differs).
+- **Proof:** `verify-2026-11-25T05-22-53`, PASS, 10.69 credits.

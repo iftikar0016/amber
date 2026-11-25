@@ -36,6 +36,9 @@ export function liftModel(pristine) {
   const comments = {};
   /** @type {Record<string, any[]>} kanban view id -> its buckets, as GET /projects/:p/views/:v/buckets lists them */
   const buckets = {};
+  /** @type {Record<string, any>} label id -> label (only when the captured label list was complete) */
+  const labels = {};
+  let labelsComplete = false;
   /** @type {any} */
   let user = null;
 
@@ -54,6 +57,13 @@ export function liftModel(pristine) {
     if (!b || typeof b !== 'object') continue;
     if (x.path === '/api/v2/projects' && Array.isArray(b.items)) {
       for (const p of b.items) if (!projects[p.id]) projects[p.id] = withoutSchema(p);
+      continue;
+    }
+    if (x.path === '/api/v2/labels' && Array.isArray(b.items) && !(new URLSearchParams(x.query).get('s') || '')) {
+      if (!labelsComplete && b.items.length === b.total) {
+        for (const l of b.items) labels[l.id] = withoutSchema(l);
+        labelsComplete = true;
+      }
       continue;
     }
     const cm = /^\/api\/v2\/tasks\/(\d+)\/comments$/.exec(x.path);
@@ -122,7 +132,9 @@ export function liftModel(pristine) {
     positions,
     comments,
     buckets,
+    ...(labelsComplete ? { labels } : {}),
     next: {
+      label: maxOf([...Object.keys(labels).map(Number), ...Object.values(tasks).flatMap((t) => (t.labels || []).map((l) => l.id))]) + 1,
       comment: Math.max(maxOf(commentIds), counted) + 1,
       task: maxOf(Object.keys(tasks).map(Number)) + 1,
       project: maxOf(realProjects.map((p) => p.id)) + 1,
