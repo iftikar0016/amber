@@ -1,0 +1,113 @@
+{
+  "flow": "j16-open-new-task",
+  "attempt": 1,
+  "mode": "replay",
+  "tag": "rsotgq",
+  "args": [
+    "testmd",
+    "run",
+    "~\\hackathons\\kane\\amber\\.amber\\kane\\runs\\j16-open-new-task\\j16-open-new-task_test.md",
+    "--agent",
+    "--headless",
+    "--no-adaptive-heal"
+  ],
+  "startedAt": "2026-11-25T04:51:16.656Z",
+  "ms": 118482,
+  "exitCode": 1,
+  "killed": false,
+  "status": "failed",
+  "oneLiner": "The test expected “Order grout dmkrhw,” but the opened task is titled “Order grout rsotgq.”",
+  "summary": null,
+  "reason": "assertion_failed: @ step 9",
+  "resultCode": null,
+  "bug": {
+    "confirmed": false,
+    "title": "Replay uses a mismatched amber tag for task-title assertion",
+    "oneLiner": "The test expected “Order grout dmkrhw,” but the opened task is titled “Order grout rsotgq.”",
+    "category": "config_issue",
+    "severity": "minor",
+    "confidence": 0.94
+  },
+  "failedAssertions": [
+    "the task page shows the title Order grout {{global.amber_tag}}"
+  ],
+  "finalState": null,
+  "credits": 0,
+  "steps": 18,
+  "failedSteps": [
+    {
+      "n": 18,
+      "remark": "assert: the task page shows the title Order grout {{global.amber_tag}}"
+    }
+  ],
+  "testmdSummary": {
+    "type": "test_md_summary",
+    "overall_status": "failed",
+    "duration_s": 103,
+    "steps": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0,
+      "replay_decisions": 1,
+      "author_decisions": 0
+    },
+    "adaptive_heal": {
+      "triggered": false
+    },
+    "commit": {
+      "committed": false,
+      "reason": "run_failed"
+    },
+    "artifacts": {
+      "replaced": false
+    },
+    "upload": {
+      "performed": true,
+      "succeeded": true
+    },
+    "cancelled": false,
+    "v": 1,
+    "ts": "2026-11-25T04:53:12.984Z",
+    "kind": "typed",
+    "_rt": 1795582392986
+  },
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-25T04:51:16.655Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-25T04:53:15.466Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "failed",
+  "verdict": "FAIL",
+  "basis": "kane",
+  "reasons": [
+    "The test expected “Order grout dmkrhw,” but the opened task is titled “Order grout rsotgq.”"
+  ],
+  "evidence": {
+    "steps": 18,
+    "finalShot": "shots/18.jpg",
+    "failures": [
+      {
+        "ordinal": 18,
+        "message": "assertion_failed: @ step 9",
+        "url": "http://127.0.0.1:4790/tasks/13",
+        "rootCause": "The replay compared the task against a different generated tag than the one on the task it opened.",
+        "suggestedFix": "Check how amber_tag is generated and propagated through the add-task and assertion steps. Ensure each replay uses one shared tag and targets the task created with that tag."
+      }
+    ]
+  }
+}

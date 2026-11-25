@@ -1,0 +1,22 @@
+{"t":1795582276297,"type":"run_start","runId":"verify-2026-11-25T04-51-13","kind":"verify","mode":"replay","target":"capsule-server-off","commit":"1d2fa74","label":null,"flows":["j16-open-new-task"],"serverOff":{"checkedAt":"2026-11-25T04:51:13.986Z","port":3456,"portOpen":false,"vikunjaProcesses":[],"off":true}}
+{"t":1795582276655,"type":"flow_start","flow":"j16-open-new-task","attempt":1,"mode":"replay","tag":"rsotgq"}
+{"t":1795582290072,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795582291546,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":2,"status":"done","remark":"wait: Waiting for the login form to load and queued steps to run"}
+{"t":1795582292118,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":3,"status":"done","remark":"fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795582292768,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":4,"status":"done","remark":"fill: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795582293924,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":5,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795582295618,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":6,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795582296740,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":7,"status":"done","remark":"wait: Waiting for the signed-in home page to load"}
+{"t":1795582297342,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":8,"status":"done","remark":"analyze: Reading the home page greeting"}
+{"t":1795582297818,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":9,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795582299021,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":10,"status":"done","remark":"click: Clicking Kitchen renovation in the left sidebar project list"}
+{"t":1795582300831,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":11,"status":"done","remark":"wait: Waiting for the queued plan to complete"}
+{"t":1795582301393,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":12,"status":"done","remark":"fill: Type \"Order grout {{global.amber_tag}}\" into \"Add a task…\""}
+{"t":1795582302237,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":13,"status":"done","remark":"click: Click \"Add\""}
+{"t":1795582304044,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":14,"status":"done","remark":"wait: Waiting for the new task Order grout to appear in the project task list"}
+{"t":1795582308908,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":15,"status":"done","remark":"click: Clicking Open the task Order grout {{global.amber_tag}}"}
+{"t":1795582372914,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":16,"status":"done","remark":"wait: Waiting for the task page title Order grout to be visible"}
+{"t":1795582374521,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":17,"status":"done","remark":"analyze: Checking whether the task title is present"}
+{"t":1795582376006,"type":"flow_step","flow":"j16-open-new-task","attempt":1,"n":18,"status":"failed","remark":"assert: the task page shows the title Order grout {{global.amber_tag}}"}
+{"t":1795582395565,"type":"flow_done","flow":"j16-open-new-task","attempt":1,"mode":"replay","verdict":"FAIL","basis":"kane","reasons":["The test expected “Order grout dmkrhw,” but the opened task is titled “Order grout rsotgq.”"],"credits":0,"ms":118482,"shot":"verify-2026-11-25T04-51-13/j16-open-new-task/a1/shots/18.jpg"}
+{"t":1795582397399,"type":"run_done","runId":"verify-2026-11-25T04-51-13","spent":6.59,"tally":{"FAIL":1},"regressions":[]}

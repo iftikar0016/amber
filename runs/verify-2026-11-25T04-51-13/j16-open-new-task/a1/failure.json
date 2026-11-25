@@ -1,0 +1,9 @@
+[
+  {
+    "ordinal": 18,
+    "message": "assertion_failed: @ step 9",
+    "url": "http://127.0.0.1:4790/tasks/13",
+    "rootCause": "The replay compared the task against a different generated tag than the one on the task it opened.",
+    "suggestedFix": "Check how amber_tag is generated and propagated through the add-task and assertion steps. Ensure each replay uses one shared tag and targets the task created with that tag."
+  }
+]

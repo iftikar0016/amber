@@ -79,3 +79,15 @@ To show that the Stop hook really gates the coding agent, a fresh Claude Code se
 5. **The hook fired again** when the session tried to stop (18:50:16 UTC): Kane replayed all 15 against the restored capsule, [`verify-2026-11-23T18-50-16`](../runs/verify-2026-11-23T18-50-16/summary.json), 15/15 PASS, 16 minutes, 148.56 credits. **The hook allowed the stop.**
 
 The demonstration cost 331.98 credits (each full hook check re-authors j10 and replays the write journeys at 4–9 credits each), about twice the estimate. AMBER's total after it: 1,942.64 of 2,500.
+
+## Round 2
+
+Six new journeys (j16–j21), frozen on the real server; baseline `verify-2026-11-25T04-15-29`, server off: all six fail. AMBER's total at the start of the round-2 loop: 2,521.42 of 3,700.
+
+Found while checking for free, not repaired (no journey fails on it): round 1 was captured on 2026-11-23 and round 2 on 2026-11-25, but the build moves every captured date by one offset (computed from the latest capture), so round-1 data, including the store's seeded tasks, now lands two days early (a task due "in 2 days" at capture shows as due today).
+
+### j16-open-new-task: first attempt fails on the recording, not the capsule
+
+- **Failure** (baseline): opening a task just added in the list showed "Not found": its own read (`GET /tasks/13?expand=…buckets`) fell through to a 404, because the store did not know a new task's kanban buckets.
+- **Repair tried:** the model lifts each kanban view's bucket list; a new task goes into each kanban view's default bucket and gets its creator's subscription (the capture shows Vikunja does both). The zero-credit check: the new task's read then equals the real server's, field for field.
+- **Kane** `verify-2026-11-25T04-51-13`: FAIL, "expected 'Order grout dmkrhw' but the opened task is titled 'Order grout rsotgq'". The store answered the read, and the screenshot shows the right page with this run's tag. The frozen recording hard-codes the capture's tag in its assertion (`'expected': 'Order grout dmkrhw'`) and the morning greeting in its variables, so as a replay it cannot pass with a fresh tag. j18's recording has the same defect (`'expected': 'Buy sealant fggucf'`). The lock is not the loop's to change; asked the session that owns it whether j16 and j18 should be verified by authored runs, like j09 and j10. The change is held, uncommitted, until it can be proved.
