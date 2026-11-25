@@ -1,8 +1,8 @@
 {
   "site": {
-    "events": 260
+    "events": 280
   },
-  "builtAt": "2026-11-25T05:24:38.231Z",
+  "builtAt": "2026-11-25T05:51:29.744Z",
   "seedId": "1ee1c320f1ca0aac",
   "journeys": [
     "j01-sign-in",
