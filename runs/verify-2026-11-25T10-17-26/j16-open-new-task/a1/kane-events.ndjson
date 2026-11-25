@@ -1,0 +1,45 @@
+{"type":"stream_start","cli_version":"0.10.7","surface":"run","pid":2156,"v":1,"ts":"2026-11-25T10:44:43.294Z","kind":"typed","_rt":1795603483297}
+{"type":"recording_state","enabled":true,"session_id":"ab6ad6dd-3534-410c-bcc2-b1eeb24eec56","persist":false,"v":1,"ts":"2026-11-25T10:44:43.344Z","kind":"typed","_rt":1795603483344}
+{"type":"update_available","current":"0.10.7","latest":"0.10.9","severity":"patch","v":1,"ts":"2026-11-25T10:44:49.167Z","kind":"typed","_rt":1795603489168}
+{"type":"skill_update_available","current":null,"latest":"0.1.4","install_cmd":"kane-cli install skill","v":1,"ts":"2026-11-25T10:44:49.173Z","kind":"typed","_rt":1795603489173}
+{"type":"bifurcation","flows":["Navigate to http://127.0.0.1:4790/login then Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo.","Open the project Kitchen renovation, add a new task titled Order grout {{global.amber_tag}}, then open the task Order grout {{global.amber_tag}} and verify its page shows the title Order grout {{global.amber_tag}}.\nReload the page, then verify the title Order grout {{global.amber_tag}} is still shown."],"count":2,"v":1,"ts":"2026-11-25T10:45:12.708Z","kind":"typed","_rt":1795603512709}
+{"step":2,"status":"running","remark":"Step 1","v":1,"ts":"2026-11-25T10:45:18.307Z","kind":"step","_rt":1795603518307}
+{"step":2,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login","v":1,"ts":"2026-11-25T10:45:18.330Z","kind":"step","_rt":1795603518330}
+{"step":3,"status":"running","remark":"Step 2","v":1,"ts":"2026-11-25T10:45:20.577Z","kind":"step","_rt":1795603520578}
+{"step":3,"status":"done","remark":"wait: queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click ","v":1,"ts":"2026-11-25T10:45:25.879Z","kind":"step","_rt":1795603525879}
+{"step":4,"status":"running","remark":"Step 3","v":1,"ts":"2026-11-25T10:45:26.807Z","kind":"step","_rt":1795603526808}
+{"step":4,"status":"done","remark":"type: Type \"{{global.amber_user}}\" into \"Username Or Email Address\"","v":1,"ts":"2026-11-25T10:45:27.439Z","kind":"step","_rt":1795603527439}
+{"step":5,"status":"running","remark":"Step 4","v":1,"ts":"2026-11-25T10:45:28.451Z","kind":"step","_rt":1795603528451}
+{"step":5,"status":"done","remark":"type: Type \"{{secrets.user.amber_password}}\" into \"Password\"","v":1,"ts":"2026-11-25T10:45:28.992Z","kind":"step","_rt":1795603528992}
+{"step":6,"status":"running","remark":"Step 5","v":1,"ts":"2026-11-25T10:45:30.073Z","kind":"step","_rt":1795603530073}
+{"step":6,"status":"done","remark":"click: Click \"Stay logged in\"","v":1,"ts":"2026-11-25T10:45:31.000Z","kind":"step","_rt":1795603531000}
+{"step":7,"status":"running","remark":"Step 6","v":1,"ts":"2026-11-25T10:45:33.273Z","kind":"step","_rt":1795603533274}
+{"step":7,"status":"done","remark":"click: Click \"LOGIN\"","v":1,"ts":"2026-11-25T10:45:34.207Z","kind":"step","_rt":1795603534207}
+{"step":8,"status":"running","remark":"Step 7","v":1,"ts":"2026-11-25T10:45:35.508Z","kind":"step","_rt":1795603535508}
+{"step":8,"status":"done","remark":"wait: PRIMARY: wait briefly after signing in for the home page to settle","v":1,"ts":"2026-11-25T10:45:42.411Z","kind":"step","_rt":1795603542412}
+{"step":9,"status":"running","remark":"Step 8","v":1,"ts":"2026-11-25T10:45:43.477Z","kind":"step","_rt":1795603543476}
+{"step":9,"status":"done","remark":"analyze: the home page greets Amber Demo","v":1,"ts":"2026-11-25T10:45:51.134Z","kind":"step","_rt":1795603551134}
+{"step":10,"status":"running","remark":"Step 9","v":1,"ts":"2026-11-25T10:45:52.696Z","kind":"step","_rt":1795603552696}
+{"step":10,"status":"done","remark":"assert: the home page greets Amber Demo","v":1,"ts":"2026-11-25T10:45:52.725Z","kind":"step","_rt":1795603552725}
+{"step":2,"status":"running","remark":"Step 1","v":1,"ts":"2026-11-25T10:46:03.600Z","kind":"step","_rt":1795603563600}
+{"step":2,"status":"done","remark":"click: Clicking Kitchen renovation link in Projects navigation","v":1,"ts":"2026-11-25T10:46:10.279Z","kind":"step","_rt":1795603570279}
+{"step":3,"status":"running","remark":"Step 2","v":1,"ts":"2026-11-25T10:46:11.540Z","kind":"step","_rt":1795603571539}
+{"step":3,"status":"done","remark":"type: Typing Order grout into the task title field","v":1,"ts":"2026-11-25T10:46:17.797Z","kind":"step","_rt":1795603577797}
+{"step":4,"status":"running","remark":"Step 3","v":1,"ts":"2026-11-25T10:46:18.752Z","kind":"step","_rt":1795603578753}
+{"step":4,"status":"done","remark":"click: Clicking Add to add a new task \"Order grout amber\"","v":1,"ts":"2026-11-25T10:46:24.786Z","kind":"step","_rt":1795603584786}
+{"step":5,"status":"running","remark":"Step 4","v":1,"ts":"2026-11-25T10:46:27.086Z","kind":"step","_rt":1795603587086}
+{"step":5,"status":"done","remark":"click: Clicking to open the task Order grout {{global.amber_tag}}","v":1,"ts":"2026-11-25T10:46:33.834Z","kind":"step","_rt":1795603593834}
+{"step":6,"status":"running","remark":"Step 5","v":1,"ts":"2026-11-25T10:46:36.213Z","kind":"step","_rt":1795603596213}
+{"step":6,"status":"done","remark":"wait: PRIMARY: wait for the task page to load","v":1,"ts":"2026-11-25T10:47:38.298Z","kind":"step","_rt":1795603658299}
+{"step":7,"status":"running","remark":"Step 6","v":1,"ts":"2026-11-25T10:47:40.736Z","kind":"step","_rt":1795603660737}
+{"step":7,"status":"done","remark":"analyze: ANALYZE(textual_visual, 'the task page shows the title Order grout {{global.ambe","v":1,"ts":"2026-11-25T10:47:48.844Z","kind":"step","_rt":1795603668845}
+{"step":8,"status":"running","remark":"Step 7","v":1,"ts":"2026-11-25T10:47:51.242Z","kind":"step","_rt":1795603671242}
+{"step":8,"status":"done","remark":"assert: the task page shows the title Order grout {{global.amber_tag}}","v":1,"ts":"2026-11-25T10:47:51.271Z","kind":"step","_rt":1795603671271}
+{"step":9,"status":"running","remark":"Step 8","v":1,"ts":"2026-11-25T10:47:53.736Z","kind":"step","_rt":1795603673737}
+{"step":9,"status":"done","remark":"wait: PRIMARY: Reload the page.","v":1,"ts":"2026-11-25T10:48:59.263Z","kind":"step","_rt":1795603739264}
+{"step":10,"status":"running","remark":"Step 9","v":1,"ts":"2026-11-25T10:49:01.126Z","kind":"step","_rt":1795603741127}
+{"step":10,"status":"done","remark":"analyze: the title Order grout {{global.amber_tag}} is still shown","v":1,"ts":"2026-11-25T10:49:07.309Z","kind":"step","_rt":1795603747310}
+{"step":11,"status":"running","remark":"Step 10","v":1,"ts":"2026-11-25T10:49:09.797Z","kind":"step","_rt":1795603749798}
+{"step":11,"status":"done","remark":"assert: the title Order grout {{global.amber_tag}} is still shown","v":1,"ts":"2026-11-25T10:49:09.853Z","kind":"step","_rt":1795603749855}
+{"type":"coverage","status":"skipped","reason":"not_assurance_project","pack":"~\\.testmuai\\kaneai\\sessions\\ab6ad6dd-3534-410c-bcc2-b1eeb24eec56\\evidence\\d33dac9c-11b0-4566-9d94-b7c1669f9a73.evidence","v":1,"ts":"2026-11-25T10:49:30.242Z","kind":"typed","_rt":1795603770240}
+{"type":"run_end","status":"passed","summary":"Created a new task in the Kitchen renovation project titled “Order grout opwgmi.”\nOpened the new task and confirmed its title was displayed.\nReloaded the task page; the task title remained visible after the reload.","one_liner":"created and reopened a task on Vikunja","final_state":{"url":"http://127.0.0.1:4790/tasks/13","task_title":"Order grout opwgmi","page_title":"Order grout opwgmi | Vikunja"},"reason":"Objective completed","duration":246.5,"bifurcated":true,"total_runs":2,"credits_consumed":32.858617499999994,"result_code":100,"reason_code":"success.complete","per_flow_metadata":[{"result_code":"100","reason_code":"success.complete","error_message":null,"summary":"Signed in using the provided Amber account credentials.\nSelected the option to stay logged in.\nReached the home page, which greeted the user as Amber Demo.","one_liner":"signed in to the home page on the local site","credits_consumed":9.302519999999998},{"result_code":"100","reason_code":"success.complete","error_message":null,"summary":"Created a new task in the Kitchen renovation project titled “Order grout opwgmi.”\nOpened the new task and confirmed its title was displayed.\nReloaded the task page; the task title remained visible after the reload.","one_liner":"created and reopened a task on Vikunja","credits_consumed":23.556097499999996}],"run_id":"run-0","coverage":{"status":"skipped"},"v":1,"ts":"2026-11-25T10:49:30.243Z","kind":"terminal","_rt":1795603770242}

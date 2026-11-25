@@ -1,0 +1,66 @@
+{
+  "flow": "j16-open-new-task",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "opwgmi",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Kitchen renovation, add a new task titled Order grout {{amber_tag}}, then open the task Order grout {{amber_tag}} and verify its page shows the title Order grout {{amber_tag}}. Reload the page, then verify the title Order grout {{amber_tag}} is still shown.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json"
+  ],
+  "startedAt": "2026-11-25T10:44:41.433Z",
+  "ms": 291521,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "created and reopened a task on Vikunja",
+  "summary": "Created a new task in the Kitchen renovation project titled “Order grout opwgmi.”\nOpened the new task and confirmed its title was displayed.\nReloaded the task page; the task title remained visible after the reload.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/tasks/13",
+    "task_title": "Order grout opwgmi",
+    "page_title": "Order grout opwgmi | Vikunja"
+  },
+  "credits": 32.858617499999994,
+  "steps": 19,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-25T10:44:41.432Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-25T10:49:33.739Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 19,
+    "finalShot": "shots/19.jpg",
+    "failures": []
+  }
+}

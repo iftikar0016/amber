@@ -1,0 +1,122 @@
+[
+  {
+    "step": 1,
+    "type": "navigate",
+    "intent": "Navigate to http://127.0.0.1:4790/login",
+    "instruction": "Navigate to http://127.0.0.1:4790/login"
+  },
+  {
+    "step": 2,
+    "type": "wait",
+    "intent": "queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click \"Stay logged in\"; click \"LOGIN\"",
+    "instruction": "Waiting for username field to be ready"
+  },
+  {
+    "step": 3,
+    "type": "fill",
+    "intent": "PRIMARY: Sign in with username {{global.amber_user}}; role=textbox; text=\"Username Or Email Address\" | HINTS: container=Login form",
+    "instruction": "Type \"{{global.amber_user}}\" into \"Username Or Email Address\""
+  },
+  {
+    "step": 4,
+    "type": "fill",
+    "intent": "PRIMARY: Sign in with password {{secrets.user.amber_password}}; role=textbox; text=\"Password\" | HINTS: container=Login form",
+    "instruction": "Type \"{{secrets.user.amber_password}}\" into \"Password\""
+  },
+  {
+    "step": 5,
+    "type": "click",
+    "intent": "PRIMARY: Stay logged in ticked; role=checkbox; text=\"Stay logged in\" | HINTS: container=Login form",
+    "instruction": "Click \"Stay logged in\""
+  },
+  {
+    "step": 6,
+    "type": "click",
+    "intent": "PRIMARY: Sign in; role=button; text=\"LOGIN\" | HINTS: container=Login form",
+    "instruction": "Click \"LOGIN\""
+  },
+  {
+    "step": 7,
+    "type": "wait",
+    "intent": "PRIMARY: wait briefly after signing in for the home page to settle",
+    "instruction": "Waiting briefly for the home page to fully load after signing in"
+  },
+  {
+    "step": 8,
+    "type": "analyze",
+    "intent": "whether the greeting Amber Demo in the home page main heading is present",
+    "instruction": "Checking whether the home page greeting is present"
+  },
+  {
+    "step": 9,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  },
+  {
+    "step": 1,
+    "type": "click",
+    "intent": "PRIMARY: Open the project Kitchen renovation; role=link; text=\"Kitchen renovation\" | HINTS: container=Projects navigation",
+    "instruction": "Clicking Kitchen renovation link in Projects navigation"
+  },
+  {
+    "step": 2,
+    "type": "fill",
+    "intent": "PRIMARY: add a new task titled Order grout {{global.amber_tag}}; role=textbox; text=\"Add a task…\" | HINTS: container=Kitchen renovation task list",
+    "instruction": "Typing Order grout into the task title field"
+  },
+  {
+    "step": 3,
+    "type": "click",
+    "intent": "PRIMARY: add a new task titled Order grout {{global.amber_tag}}; role=button; text=\"Add\" | HINTS: container=Kitchen renovation task list, beside task input",
+    "instruction": "Clicking Add to add a new task \"Order grout amber\""
+  },
+  {
+    "step": 4,
+    "type": "click",
+    "intent": "PRIMARY: Open the task Order grout {{global.amber_tag}}.",
+    "instruction": "Clicking to open the task Order grout {{global.amber_tag}}"
+  },
+  {
+    "step": 5,
+    "type": "wait",
+    "intent": "PRIMARY: wait for the task page to load",
+    "instruction": "Waiting for the task page to load"
+  },
+  {
+    "step": 6,
+    "type": "analyze",
+    "intent": "the task title in the page heading",
+    "instruction": "Reading the task title from the page heading"
+  },
+  {
+    "step": 7,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  },
+  {
+    "step": 8,
+    "type": "refresh",
+    "intent": "Navigate refresh",
+    "instruction": "Navigate refresh"
+  },
+  {
+    "step": 9,
+    "type": "wait",
+    "intent": "PRIMARY: Reload the page.",
+    "instruction": "Reloading the page"
+  },
+  {
+    "step": 10,
+    "type": "analyze",
+    "intent": "the title Order grout {{global.amber_tag}} is still shown",
+    "instruction": "Reading the current page title"
+  },
+  {
+    "step": 11,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  }
+]

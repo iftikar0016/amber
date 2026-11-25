@@ -1,0 +1,27 @@
+{"type":"stream_start","cli_version":"0.10.7","surface":"run","pid":20232,"v":1,"ts":"2026-11-25T10:17:32.281Z","kind":"typed","_rt":1795601852284}
+{"type":"recording_state","enabled":true,"session_id":"6a059b6c-aa56-4ce7-92f2-86cf64970b84","persist":false,"v":1,"ts":"2026-11-25T10:17:32.436Z","kind":"typed","_rt":1795601852436}
+{"type":"update_available","current":"0.10.7","latest":"0.10.9","severity":"patch","v":1,"ts":"2026-11-25T10:17:39.542Z","kind":"typed","_rt":1795601859542}
+{"type":"skill_update_available","current":null,"latest":"0.1.4","install_cmd":"kane-cli install skill","v":1,"ts":"2026-11-25T10:17:39.547Z","kind":"typed","_rt":1795601859547}
+{"type":"bifurcation","flows":["Navigate to http://127.0.0.1:4790/login then Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo.\nVerify the home page lists the task Order tiles among the current tasks."],"count":1,"v":1,"ts":"2026-11-25T10:18:38.732Z","kind":"typed","_rt":1795601918732}
+{"step":2,"status":"running","remark":"Step 1","v":1,"ts":"2026-11-25T10:18:43.439Z","kind":"step","_rt":1795601923439}
+{"step":2,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login","v":1,"ts":"2026-11-25T10:18:43.463Z","kind":"step","_rt":1795601923463}
+{"step":3,"status":"running","remark":"Step 2","v":1,"ts":"2026-11-25T10:18:47.700Z","kind":"step","_rt":1795601927701}
+{"step":3,"status":"done","remark":"wait: queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click ","v":1,"ts":"2026-11-25T10:18:58.577Z","kind":"step","_rt":1795601938580}
+{"step":4,"status":"running","remark":"Step 3","v":1,"ts":"2026-11-25T10:18:59.856Z","kind":"step","_rt":1795601939856}
+{"step":4,"status":"done","remark":"type: Type \"{{global.amber_user}}\" into \"Username Or Email Address\"","v":1,"ts":"2026-11-25T10:19:00.424Z","kind":"step","_rt":1795601940425}
+{"step":5,"status":"running","remark":"Step 4","v":1,"ts":"2026-11-25T10:19:01.416Z","kind":"step","_rt":1795601941416}
+{"step":5,"status":"done","remark":"type: Type \"{{secrets.user.amber_password}}\" into \"Password\"","v":1,"ts":"2026-11-25T10:19:01.842Z","kind":"step","_rt":1795601941842}
+{"step":6,"status":"running","remark":"Step 5","v":1,"ts":"2026-11-25T10:19:02.944Z","kind":"step","_rt":1795601942944}
+{"step":6,"status":"done","remark":"click: Click \"Stay logged in\"","v":1,"ts":"2026-11-25T10:19:03.843Z","kind":"step","_rt":1795601943843}
+{"step":7,"status":"running","remark":"Step 6","v":1,"ts":"2026-11-25T10:19:06.014Z","kind":"step","_rt":1795601946014}
+{"step":7,"status":"done","remark":"click: Click \"LOGIN\"","v":1,"ts":"2026-11-25T10:19:06.908Z","kind":"step","_rt":1795601946908}
+{"step":8,"status":"running","remark":"Step 7","v":1,"ts":"2026-11-25T10:19:08.263Z","kind":"step","_rt":1795601948263}
+{"step":8,"status":"done","remark":"wait: PRIMARY: wait for the home page greeting to load","v":1,"ts":"2026-11-25T10:19:17.566Z","kind":"step","_rt":1795601957566}
+{"step":9,"status":"running","remark":"Step 8","v":1,"ts":"2026-11-25T10:19:18.846Z","kind":"step","_rt":1795601958846}
+{"step":9,"status":"done","remark":"analyze: ANALYZE(textual_visual, 'the home page lists the task Order tiles among the curr","v":1,"ts":"2026-11-25T10:19:28.275Z","kind":"step","_rt":1795601968275}
+{"step":10,"status":"running","remark":"Step 9","v":1,"ts":"2026-11-25T10:19:29.617Z","kind":"step","_rt":1795601969617}
+{"step":10,"status":"done","remark":"assert: the home page greets Amber Demo","v":1,"ts":"2026-11-25T10:19:29.657Z","kind":"step","_rt":1795601969658}
+{"step":11,"status":"running","remark":"Step 10","v":1,"ts":"2026-11-25T10:19:31.085Z","kind":"step","_rt":1795601971085}
+{"step":11,"status":"done","remark":"assert: the home page lists the task Order tiles among the current tasks","v":1,"ts":"2026-11-25T10:19:31.108Z","kind":"step","_rt":1795601971109}
+{"type":"coverage","status":"skipped","reason":"not_assurance_project","pack":"~\\.testmuai\\kaneai\\sessions\\6a059b6c-aa56-4ce7-92f2-86cf64970b84\\evidence\\c789011a-f23e-425f-b551-131c5030efbc.evidence","v":1,"ts":"2026-11-25T10:19:50.771Z","kind":"typed","_rt":1795601990770}
+{"type":"run_end","status":"passed","summary":"Signed in with the provided Amber Demo account and kept the Stay logged in option selected.\nReached the home page, which greeted Amber Demo.\nConfirmed that “Order tiles” appeared in the Current Tasks list.","one_liner":"signed in to the home page on the local site","final_state":{"url":"http://127.0.0.1:4790/","amber_demo_greeting":"true","order_tiles_current_tasks":"true"},"reason":"Objective completed","duration":58.7,"bifurcated":false,"total_runs":1,"credits_consumed":18.386812499999998,"result_code":100,"reason_code":"success.complete","per_flow_metadata":[{"result_code":"100","reason_code":"success.complete","error_message":null,"summary":"Signed in with the provided Amber Demo account and kept the Stay logged in option selected.\nReached the home page, which greeted Amber Demo.\nConfirmed that “Order tiles” appeared in the Current Tasks list.","one_liner":"signed in to the home page on the local site","credits_consumed":18.386812499999998}],"run_id":"run-0","coverage":{"status":"skipped"},"v":1,"ts":"2026-11-25T10:19:50.771Z","kind":"terminal","_rt":1795601990771}

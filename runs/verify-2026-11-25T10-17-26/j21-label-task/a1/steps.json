@@ -1,0 +1,211 @@
+[
+  {
+    "ordinal": 1,
+    "id": "0-1",
+    "kind": "navigate",
+    "status": "passed",
+    "summary": "navigate: Navigate to http://127.0.0.1:4790/login",
+    "url": "https://kaneai-playground.lambdatest.io/",
+    "durationMs": 578,
+    "shot": "shots/1.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 2,
+    "id": "0-2",
+    "kind": "wait",
+    "status": "passed",
+    "summary": "wait: Waiting for login form steps to complete",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 1453,
+    "shot": "shots/2.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 3,
+    "id": "0-3",
+    "kind": "fill",
+    "status": "passed",
+    "summary": "fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\"",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 453,
+    "shot": "shots/3.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 4,
+    "id": "0-4",
+    "kind": "fill",
+    "status": "passed",
+    "summary": "fill: Type \"{{secrets.user.amber_password}}\" into \"Password\"",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 578,
+    "shot": "shots/4.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 5,
+    "id": "0-5",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Click \"Stay logged in\"",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 1078,
+    "shot": "shots/5.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 6,
+    "id": "0-6",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Click \"LOGIN\"",
+    "url": "http://127.0.0.1:4790/login",
+    "durationMs": 2125,
+    "shot": "shots/6.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 7,
+    "id": "0-7",
+    "kind": "wait",
+    "status": "passed",
+    "summary": "wait: Waiting for the home page to load after signing in",
+    "url": "http://127.0.0.1:4790/",
+    "durationMs": 1031,
+    "shot": "shots/7.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 8,
+    "id": "0-8",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: Checking whether the home page greeting is present",
+    "url": "http://127.0.0.1:4790/",
+    "durationMs": 6985,
+    "shot": "shots/8.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 9,
+    "id": "0-9",
+    "kind": "assert",
+    "status": "passed",
+    "summary": "assert: the home page greets Amber Demo",
+    "url": "http://127.0.0.1:4790/",
+    "durationMs": 453,
+    "shot": "shots/9.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 10,
+    "id": "1-1",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Clicking Kitchen renovation in the left sidebar project list",
+    "url": "http://127.0.0.1:4790/",
+    "durationMs": 1078,
+    "shot": "shots/10.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 11,
+    "id": "1-2",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Clicking Order tiles in the Kitchen renovation task list",
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "durationMs": 1203,
+    "shot": "shots/11.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 12,
+    "id": "1-3",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Clicking Add Labels in the organization sidebar",
+    "url": "http://127.0.0.1:4790/tasks/8",
+    "durationMs": 781,
+    "shot": "shots/12.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 13,
+    "id": "1-4",
+    "kind": "fill",
+    "status": "passed",
+    "summary": "fill: Typing to add label in Labels section below due date",
+    "url": "http://127.0.0.1:4790/tasks/8",
+    "durationMs": 609,
+    "shot": "shots/13.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 14,
+    "id": "1-5",
+    "kind": "click",
+    "status": "passed",
+    "summary": "click: Clicking Urgent label option to add it to the task",
+    "url": "http://127.0.0.1:4790/tasks/8",
+    "durationMs": 10938,
+    "shot": "shots/14.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 15,
+    "id": "1-6",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: Checking whether the task label is present",
+    "url": "http://127.0.0.1:4790/tasks/8",
+    "durationMs": 5969,
+    "shot": "shots/15.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 16,
+    "id": "1-7",
+    "kind": "assert",
+    "status": "passed",
+    "summary": "assert: the task shows the label Urgent {{global.amber_tag}}",
+    "url": "http://127.0.0.1:4790/tasks/8",
+    "durationMs": 1125,
+    "shot": "shots/16.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 17,
+    "id": "1-8",
+    "kind": "refresh",
+    "status": "passed",
+    "summary": "refresh: Navigate refresh",
+    "url": "http://127.0.0.1:4790/tasks/8",
+    "durationMs": 765,
+    "shot": "shots/17.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 18,
+    "id": "1-9",
+    "kind": "analyze",
+    "status": "passed",
+    "summary": "analyze: Checking whether the task label is present",
+    "url": "http://127.0.0.1:4790/tasks/8",
+    "durationMs": 6109,
+    "shot": "shots/18.jpg",
+    "annotated": null
+  },
+  {
+    "ordinal": 19,
+    "id": "1-10",
+    "kind": "assert",
+    "status": "passed",
+    "summary": "assert: the label Urgent {{global.amber_tag}} is still shown on the task",
+    "url": "http://127.0.0.1:4790/tasks/8",
+    "durationMs": 1485,
+    "shot": "shots/19.jpg",
+    "annotated": null
+  }
+]

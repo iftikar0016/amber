@@ -1,9 +1,9 @@
 {
   "flows": {
     "j01-sign-in": {
-      "verdict": "FAIL",
+      "verdict": "PASS",
       "everPassed": true,
-      "failStreak": 1,
+      "failStreak": 0,
       "history": [
         {
           "runId": "verify-2026-11-23T15-33-57",
@@ -141,6 +141,15 @@
           "record": "runs/verify-2026-11-25T06-01-37/j01-sign-in/a1",
           "commit": "fea6b4f",
           "at": "2026-11-25T06:02:49.312Z"
+        },
+        {
+          "runId": "verify-2026-11-25T10-17-26",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T10-17-26/j01-sign-in/a1",
+          "commit": "98c1cbd",
+          "at": "2026-11-25T10:19:54.380Z"
         }
       ],
       "needsHuman": false
@@ -284,6 +293,15 @@
           "record": "runs/verify-2026-11-25T06-01-37/j02-projects/a1",
           "commit": "fea6b4f",
           "at": "2026-11-25T06:03:55.719Z"
+        },
+        {
+          "runId": "verify-2026-11-25T10-17-26",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T10-17-26/j02-projects/a1",
+          "commit": "98c1cbd",
+          "at": "2026-11-25T10:21:06.499Z"
         }
       ],
       "needsHuman": false
@@ -427,6 +445,15 @@
           "record": "runs/verify-2026-11-25T06-01-37/j03-list-view/a1",
           "commit": "fea6b4f",
           "at": "2026-11-25T06:05:49.035Z"
+        },
+        {
+          "runId": "verify-2026-11-25T10-17-26",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T10-17-26/j03-list-view/a1",
+          "commit": "98c1cbd",
+          "at": "2026-11-25T10:22:57.670Z"
         }
       ],
       "needsHuman": false
@@ -570,6 +597,15 @@
           "record": "runs/verify-2026-11-25T06-01-37/j04-task-detail/a1",
           "commit": "fea6b4f",
           "at": "2026-11-25T06:06:52.228Z"
+        },
+        {
+          "runId": "verify-2026-11-25T10-17-26",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T10-17-26/j04-task-detail/a1",
+          "commit": "98c1cbd",
+          "at": "2026-11-25T10:24:01.075Z"
         }
       ],
       "needsHuman": false
@@ -713,6 +749,15 @@
           "record": "runs/verify-2026-11-25T06-01-37/j05-table-view/a1",
           "commit": "fea6b4f",
           "at": "2026-11-25T06:08:01.002Z"
+        },
+        {
+          "runId": "verify-2026-11-25T10-17-26",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T10-17-26/j05-table-view/a1",
+          "commit": "98c1cbd",
+          "at": "2026-11-25T10:25:06.665Z"
         }
       ],
       "needsHuman": false
@@ -856,6 +901,15 @@
           "record": "runs/verify-2026-11-25T06-01-37/j06-kanban/a1",
           "commit": "fea6b4f",
           "at": "2026-11-25T06:09:02.608Z"
+        },
+        {
+          "runId": "verify-2026-11-25T10-17-26",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T10-17-26/j06-kanban/a1",
+          "commit": "98c1cbd",
+          "at": "2026-11-25T10:26:07.359Z"
         }
       ],
       "needsHuman": false
@@ -999,6 +1053,15 @@
           "record": "runs/verify-2026-11-25T06-01-37/j07-upcoming/a1",
           "commit": "fea6b4f",
           "at": "2026-11-25T06:11:03.277Z"
+        },
+        {
+          "runId": "verify-2026-11-25T10-17-26",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T10-17-26/j07-upcoming/a1",
+          "commit": "98c1cbd",
+          "at": "2026-11-25T10:28:06.704Z"
         }
       ],
       "needsHuman": false
@@ -1142,6 +1205,15 @@
           "record": "runs/verify-2026-11-25T06-01-37/j08-search/a1",
           "commit": "fea6b4f",
           "at": "2026-11-25T06:12:16.914Z"
+        },
+        {
+          "runId": "verify-2026-11-25T10-17-26",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T10-17-26/j08-search/a1",
+          "commit": "98c1cbd",
+          "at": "2026-11-25T10:29:17.974Z"
         }
       ],
       "needsHuman": false
@@ -1298,6 +1370,15 @@
           "record": "runs/verify-2026-11-25T06-01-37/j09-add-task/a1",
           "commit": "fea6b4f",
           "at": "2026-11-25T06:14:59.664Z"
+        },
+        {
+          "runId": "verify-2026-11-25T10-17-26",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T10-17-26/j09-add-task/a1",
+          "commit": "98c1cbd",
+          "at": "2026-11-25T10:31:58.224Z"
         }
       ],
       "needsHuman": false
@@ -1409,6 +1490,15 @@
           "record": "runs/verify-2026-11-25T06-01-37/j10-mark-done/a1",
           "commit": "fea6b4f",
           "at": "2026-11-25T06:17:47.276Z"
+        },
+        {
+          "runId": "verify-2026-11-25T10-17-26",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T10-17-26/j10-mark-done/a1",
+          "commit": "98c1cbd",
+          "at": "2026-11-25T10:34:54.214Z"
         }
       ],
       "needsHuman": false
@@ -1545,6 +1635,15 @@
           "record": "runs/verify-2026-11-25T06-01-37/j11-rename/a1",
           "commit": "fea6b4f",
           "at": "2026-11-25T06:19:57.682Z"
+        },
+        {
+          "runId": "verify-2026-11-25T10-17-26",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T10-17-26/j11-rename/a1",
+          "commit": "98c1cbd",
+          "at": "2026-11-25T10:37:00.487Z"
         }
       ],
       "needsHuman": false
@@ -1672,6 +1771,15 @@
           "record": "runs/verify-2026-11-25T06-01-37/j12-description/a1",
           "commit": "fea6b4f",
           "at": "2026-11-25T06:22:17.057Z"
+        },
+        {
+          "runId": "verify-2026-11-25T10-17-26",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T10-17-26/j12-description/a1",
+          "commit": "98c1cbd",
+          "at": "2026-11-25T10:39:15.957Z"
         }
       ],
       "needsHuman": false
@@ -1790,6 +1898,15 @@
           "record": "runs/verify-2026-11-25T06-01-37/j13-delete/a1",
           "commit": "fea6b4f",
           "at": "2026-11-25T06:23:50.816Z"
+        },
+        {
+          "runId": "verify-2026-11-25T10-17-26",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T10-17-26/j13-delete/a1",
+          "commit": "98c1cbd",
+          "at": "2026-11-25T10:40:50.437Z"
         }
       ],
       "needsHuman": false
@@ -1899,6 +2016,15 @@
           "record": "runs/verify-2026-11-25T06-01-37/j14-new-project/a1",
           "commit": "fea6b4f",
           "at": "2026-11-25T06:26:06.732Z"
+        },
+        {
+          "runId": "verify-2026-11-25T10-17-26",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T10-17-26/j14-new-project/a1",
+          "commit": "98c1cbd",
+          "at": "2026-11-25T10:43:11.091Z"
         }
       ],
       "needsHuman": false
@@ -2011,6 +2137,15 @@
           "record": "runs/verify-2026-11-25T06-01-37/j15-comment/a1",
           "commit": "fea6b4f",
           "at": "2026-11-25T06:27:32.308Z"
+        },
+        {
+          "runId": "verify-2026-11-25T10-17-26",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T10-17-26/j15-comment/a1",
+          "commit": "98c1cbd",
+          "at": "2026-11-25T10:44:40.635Z"
         }
       ],
       "needsHuman": false
@@ -2059,6 +2194,15 @@
           "record": "runs/verify-2026-11-25T06-01-37/j16-open-new-task/a1",
           "commit": "fea6b4f",
           "at": "2026-11-25T06:31:33.485Z"
+        },
+        {
+          "runId": "verify-2026-11-25T10-17-26",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T10-17-26/j16-open-new-task/a1",
+          "commit": "98c1cbd",
+          "at": "2026-11-25T10:49:33.965Z"
         }
       ],
       "needsHuman": false
@@ -2105,6 +2249,15 @@
           "record": "runs/verify-2026-11-25T05-24-38/j17-home-new-task/a1",
           "commit": "c9b42e5",
           "at": "2026-11-25T05:46:37.235Z"
+        },
+        {
+          "runId": "verify-2026-11-25T10-17-26",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T10-17-26/j17-home-new-task/a1",
+          "commit": "98c1cbd",
+          "at": "2026-11-25T10:51:43.404Z"
         }
       ],
       "needsHuman": false
@@ -2133,6 +2286,15 @@
           "record": "runs/verify-2026-11-25T05-56-28/j18-search-new-task/a1",
           "commit": "f9edd0b",
           "at": "2026-11-25T06:00:26.861Z"
+        },
+        {
+          "runId": "verify-2026-11-25T10-17-26",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T10-17-26/j18-search-new-task/a1",
+          "commit": "98c1cbd",
+          "at": "2026-11-25T10:54:51.647Z"
         }
       ],
       "needsHuman": false
@@ -2170,6 +2332,15 @@
           "record": "runs/verify-2026-11-25T05-24-38/j19-done-kanban/a1",
           "commit": "c9b42e5",
           "at": "2026-11-25T05:47:37.621Z"
+        },
+        {
+          "runId": "verify-2026-11-25T10-17-26",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T10-17-26/j19-done-kanban/a1",
+          "commit": "98c1cbd",
+          "at": "2026-11-25T10:56:06.332Z"
         }
       ],
       "needsHuman": false
@@ -2207,6 +2378,15 @@
           "record": "runs/verify-2026-11-25T05-24-38/j20-favourite-project/a1",
           "commit": "c9b42e5",
           "at": "2026-11-25T05:48:40.679Z"
+        },
+        {
+          "runId": "verify-2026-11-25T10-17-26",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T10-17-26/j20-favourite-project/a1",
+          "commit": "98c1cbd",
+          "at": "2026-11-25T10:57:16.303Z"
         }
       ],
       "needsHuman": false
@@ -2244,6 +2424,15 @@
           "record": "runs/verify-2026-11-25T05-24-38/j21-label-task/a1",
           "commit": "c9b42e5",
           "at": "2026-11-25T05:49:51.470Z"
+        },
+        {
+          "runId": "verify-2026-11-25T10-17-26",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T10-17-26/j21-label-task/a1",
+          "commit": "98c1cbd",
+          "at": "2026-11-25T10:58:25.616Z"
         }
       ],
       "needsHuman": false

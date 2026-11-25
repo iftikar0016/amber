@@ -1,0 +1,92 @@
+[
+  {
+    "step": 1,
+    "type": "navigate",
+    "intent": "Navigate to http://127.0.0.1:4790/login",
+    "instruction": "Navigate to http://127.0.0.1:4790/login"
+  },
+  {
+    "step": 2,
+    "type": "wait",
+    "intent": "queued plan (4 steps): type \"Username Or Email Address\"; type \"Password\"; click \"Stay logged in\"; click \"LOGIN\"",
+    "instruction": "Waiting for the login page actions to complete"
+  },
+  {
+    "step": 3,
+    "type": "fill",
+    "intent": "PRIMARY: Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}} with Stay logged in ticked; role=textbox; text=\"Username Or Email Address\" | HINTS: container=Login form",
+    "instruction": "Type \"{{global.amber_user}}\" into \"Username Or Email Address\""
+  },
+  {
+    "step": 4,
+    "type": "fill",
+    "intent": "PRIMARY: Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}} with Stay logged in ticked; role=textbox; text=\"Password\" | HINTS: container=Login form",
+    "instruction": "Type \"{{secrets.user.amber_password}}\" into \"Password\""
+  },
+  {
+    "step": 5,
+    "type": "click",
+    "intent": "PRIMARY: Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}} with Stay logged in ticked; role=checkbox; text=\"Stay logged in\" | HINTS: container=Login form",
+    "instruction": "Click \"Stay logged in\""
+  },
+  {
+    "step": 6,
+    "type": "click",
+    "intent": "PRIMARY: Sign in with username {{global.amber_user}} and password {{secrets.user.amber_password}} with Stay logged in ticked; role=button; text=\"LOGIN\" | HINTS: container=Login form",
+    "instruction": "Click \"LOGIN\""
+  },
+  {
+    "step": 7,
+    "type": "analyze",
+    "intent": "whether a greeting for Amber Demo is present in the main page heading",
+    "instruction": "Checking whether the home page greeting is present"
+  },
+  {
+    "step": 8,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  },
+  {
+    "step": 1,
+    "type": "click",
+    "intent": "PRIMARY: Open the project Kitchen renovation; role=link; text=\"Kitchen renovation\" | HINTS: container=Projects navigation sidebar",
+    "instruction": "Clicking Kitchen renovation in the Projects sidebar"
+  },
+  {
+    "step": 2,
+    "type": "click",
+    "intent": "PRIMARY: mark the task Choose worktop as done with its checkbox; role=checkbox; text=\"Mark 'Choose worktop' as done\" | HINTS: container=Kitchen renovation task list",
+    "instruction": "Marking Choose worktop as done with its checkbox"
+  },
+  {
+    "step": 3,
+    "type": "press_key",
+    "intent": "PRIMARY: Reload the page",
+    "instruction": "Reloading the page with Ctrl+R"
+  },
+  {
+    "step": 4,
+    "type": "wait",
+    "intent": "PRIMARY: wait for the reloaded Kitchen renovation page to finish loading",
+    "instruction": "Waiting for the Kitchen renovation page to reload and finish loading"
+  },
+  {
+    "step": 5,
+    "type": "analyze",
+    "intent": "whether Choose worktop is present as an open task in the visible project task list",
+    "instruction": "Checking whether Choose worktop is present in the open task list"
+  },
+  {
+    "step": 6,
+    "type": "analyze",
+    "intent": "whether Order tiles is present as an open task in the visible project task list",
+    "instruction": "Checking whether Order tiles is present in the open task list"
+  },
+  {
+    "step": 7,
+    "type": "assert",
+    "intent": "",
+    "instruction": "Assertion check"
+  }
+]

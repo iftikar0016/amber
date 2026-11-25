@@ -1,0 +1,65 @@
+{
+  "flow": "j09-add-task",
+  "attempt": 1,
+  "mode": "author",
+  "tag": "bxmylj",
+  "args": [
+    "run",
+    "Go to http://127.0.0.1:4790/login. Sign in with username {{amber_user}} and password {{amber_password}} with Stay logged in ticked, then verify the home page greets Amber Demo. Open the project Kitchen renovation, add a new task titled Paint samples {{amber_tag}}, then verify Paint samples {{amber_tag}} appears in the project task list. Reload the page, then verify Paint samples {{amber_tag}} is still listed.",
+    "--agent",
+    "--headless",
+    "--timeout",
+    "300",
+    "--max-steps",
+    "30",
+    "--variables-file",
+    ".amber/kane-vars-run.json"
+  ],
+  "startedAt": "2026-11-25T10:29:18.749Z",
+  "ms": 158443,
+  "exitCode": 0,
+  "killed": false,
+  "status": "passed",
+  "oneLiner": "added a task to the Kitchen renovation project on the project page",
+  "summary": "Opened the Kitchen renovation project.\nAdded a new task named “Paint samples bxmylj.”\nReloaded the project page and confirmed that the new task was still listed.",
+  "reason": "Objective completed",
+  "resultCode": 100,
+  "bug": null,
+  "failedAssertions": [],
+  "finalState": {
+    "url": "http://127.0.0.1:4790/projects/3/13",
+    "Paint samples bxmylj task status": "Still listed after the page reload"
+  },
+  "credits": 41.4323875,
+  "steps": 17,
+  "failedSteps": [],
+  "testmdSummary": null,
+  "serverOff": {
+    "off": true,
+    "before": {
+      "checkedAt": "2026-11-25T10:29:18.748Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    },
+    "after": {
+      "checkedAt": "2026-11-25T10:31:58.013Z",
+      "port": 3456,
+      "portOpen": false,
+      "vikunjaProcesses": [],
+      "off": true
+    }
+  },
+  "leaks": 0,
+  "unansweredWrites": 0,
+  "kaneStatus": "passed",
+  "verdict": "PASS",
+  "basis": "kane",
+  "reasons": [],
+  "evidence": {
+    "steps": 17,
+    "finalShot": "shots/17.jpg",
+    "failures": []
+  }
+}
