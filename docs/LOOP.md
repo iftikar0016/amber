@@ -159,3 +159,8 @@ All six round-2 repairs are now proven, each in its own Kane run. As the user ch
 ### The final pass: the user's decision
 
 - With AMBER's real total at about 3,286, the final full pass over all 21 (about 300 credits) would pass the 3,450 line set for this loop. Asked in this session, the user first declined, then chose to run it after all. It runs as the Stop hook's pass when this session ends its turn.
+
+### Final check: all 21 journeys with the server off
+
+- `verify-2026-11-25T10-17-26` (AMBER's gate, run by the session that owns the budget after the user raised the cap to 4,000 and j01 moved to authored runs, 374ade5): **21 of 21 PASS**, Vikunja stopped, no refused change, no leak; j01, j09, j10, j16 and j18 by fresh authored runs, the rest as replays. 340.62 credits. It also covers the date fix (9d27428).
+- Round 2 in all: six repairs, each proven on its own (j16 on its second attempt, after the switch to authored runs; the rest first time); no regression caused by a repair. The only failure of a journey that had passed before was j01 on its recorded greeting. AMBER's total went from 2,521.42 to **3,627.11** of 4,000.
