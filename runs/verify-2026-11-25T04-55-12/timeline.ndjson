@@ -1,0 +1,23 @@
+{"t":1795582514243,"type":"run_start","runId":"verify-2026-11-25T04-55-12","kind":"verify","mode":"replay","target":"capsule-server-off","commit":"e843d1b","label":null,"flows":["j17-home-new-task"],"serverOff":{"checkedAt":"2026-11-25T04:55:12.506Z","port":3456,"portOpen":false,"vikunjaProcesses":[],"off":true}}
+{"t":1795582514580,"type":"flow_start","flow":"j17-home-new-task","attempt":1,"mode":"replay","tag":"wrzuaw"}
+{"t":1795582528467,"type":"flow_step","flow":"j17-home-new-task","attempt":1,"n":1,"status":"done","remark":"navigate: Navigate to http://127.0.0.1:4790/login"}
+{"t":1795582529979,"type":"flow_step","flow":"j17-home-new-task","attempt":1,"n":2,"status":"done","remark":"wait: Waiting for the login steps to complete"}
+{"t":1795582530596,"type":"flow_step","flow":"j17-home-new-task","attempt":1,"n":3,"status":"done","remark":"fill: Type \"{{global.amber_user}}\" into \"Username Or Email Address\""}
+{"t":1795582531333,"type":"flow_step","flow":"j17-home-new-task","attempt":1,"n":4,"status":"done","remark":"fill: Type \"{{secrets.user.amber_password}}\" into \"Password\""}
+{"t":1795582532460,"type":"flow_step","flow":"j17-home-new-task","attempt":1,"n":5,"status":"done","remark":"click: Click \"Stay logged in\""}
+{"t":1795582534598,"type":"flow_step","flow":"j17-home-new-task","attempt":1,"n":6,"status":"done","remark":"click: Click \"LOGIN\""}
+{"t":1795582540263,"type":"flow_step","flow":"j17-home-new-task","attempt":1,"n":7,"status":"done","remark":"wait: Waiting for the home page greeting to appear"}
+{"t":1795582540515,"type":"flow_step","flow":"j17-home-new-task","attempt":1,"n":8,"status":"done","remark":"analyze: Checking whether the home page greeting is present"}
+{"t":1795582541030,"type":"flow_step","flow":"j17-home-new-task","attempt":1,"n":9,"status":"done","remark":"assert: the home page greets Amber Demo"}
+{"t":1795582542220,"type":"flow_step","flow":"j17-home-new-task","attempt":1,"n":10,"status":"done","remark":"click: Clicking Kitchen renovation in the Projects navigation menu"}
+{"t":1795582543796,"type":"flow_step","flow":"j17-home-new-task","attempt":1,"n":11,"status":"done","remark":"wait: Waiting for the plan steps to complete"}
+{"t":1795582544552,"type":"flow_step","flow":"j17-home-new-task","attempt":1,"n":12,"status":"done","remark":"fill: Type \"Call plumber {{global.amber_tag}}\" into \"Add a task…\""}
+{"t":1795582545309,"type":"flow_step","flow":"j17-home-new-task","attempt":1,"n":13,"status":"done","remark":"click: Click \"Add\""}
+{"t":1795582547488,"type":"flow_step","flow":"j17-home-new-task","attempt":1,"n":14,"status":"done","remark":"click: Clicking Overview in the main navigation menu"}
+{"t":1795582553460,"type":"flow_step","flow":"j17-home-new-task","attempt":1,"n":15,"status":"done","remark":"analyze: Checking whether the Call plumber task is listed under Current Tasks"}
+{"t":1795582554519,"type":"flow_step","flow":"j17-home-new-task","attempt":1,"n":16,"status":"done","remark":"assert: Call plumber {{global.amber_tag}} is listed under Current Tasks."}
+{"t":1795582555166,"type":"flow_step","flow":"j17-home-new-task","attempt":1,"n":17,"status":"done","remark":"refresh: Navigate refresh"}
+{"t":1795582560769,"type":"flow_step","flow":"j17-home-new-task","attempt":1,"n":18,"status":"done","remark":"analyze: Checking whether the Call plumber task is present in Current Tasks"}
+{"t":1795582560999,"type":"flow_step","flow":"j17-home-new-task","attempt":1,"n":19,"status":"done","remark":"assert: Call plumber {{global.amber_tag}} is still listed under Current Tasks."}
+{"t":1795582572428,"type":"flow_done","flow":"j17-home-new-task","attempt":1,"mode":"replay","verdict":"PASS","basis":"kane","reasons":[],"credits":0,"ms":57452,"shot":"verify-2026-11-25T04-55-12/j17-home-new-task/a1/shots/19.jpg"}
+{"t":1795582574284,"type":"run_done","runId":"verify-2026-11-25T04-55-12","spent":9.52,"tally":{"PASS":1},"regressions":[]}

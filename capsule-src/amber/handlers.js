@@ -149,6 +149,31 @@
     return paginated(url, query, out, 'PaginatedTask');
   }
 
+  /**
+   * GET /tasks: every task the user can see, across projects (the home page's Current Tasks, and the
+   * "is there any task" probe with per_page=1). Answered for `done = …` filters and the sorts taskOrder knows;
+   * a search (q) or any other filter (Upcoming's due-date range) still falls through.
+   */
+  function listTasks({ query, url, store }) {
+    const m = store.model;
+    if (!m.tasks || (query.get('q') || '').trim() || (query.get('s') || '').trim()) return null;
+    const filter = parseFilter(query.get('filter'));
+    if (!filter) return null;
+    const visible = (t) => {
+      const p = m.projects && m.projects[t.project_id];
+      return Boolean(p && p.id > 0);
+    };
+    const items = Object.values(m.tasks).filter((t) => visible(t) && filter(t));
+    const sortBy = query.getAll('sort_by');
+    if (sortBy.includes('position')) return null; // a position belongs to a project view, not to this list
+    const order = taskOrder(sortBy, query.getAll('order_by'), {});
+    if (!order) return null;
+    items.sort(order);
+    const withCount = query.getAll('expand').includes('comment_count');
+    const out = items.map((t) => taskJson(t, { ...(withCount ? { comment_count: t.comment_count || 0 } : {}), position: 0 }));
+    return paginated(url, query, out, 'PaginatedTask');
+  }
+
   /** POST /projects/:p/tasks/bulk: Vikunja's task creation (the list view's "Add" sends it). */
   async function createTasks({ params, body, url, store }) {
     const m = store.model;
@@ -451,6 +476,12 @@
   }
 
   const routes = [
+    {
+      name: 'task-list',
+      method: 'GET',
+      path: /^\/api\/v2\/tasks$/,
+      handle: listTasks,
+    },
     {
       name: 'task-comments',
       method: 'GET',

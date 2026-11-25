@@ -35,3 +35,4 @@
 {"started":"2026-11-25T04:42:20.109Z","ended":"2026-11-25T04:43:21.436Z","what":"spike: replay j09-add-task against the real","estimate":15,"balanceBefore":7243.2492,"balanceAfter":7229.5351,"spent":13.71,"runId":"spike-replay-real-2026-11-25T04-42-18"}
 {"started":"2026-11-25T04:44:44.461Z","ended":"2026-11-25T04:47:06.015Z","what":"verify replay j09-add-task","estimate":7.5,"balanceBefore":7229.5351,"balanceAfter":7189.9902,"spent":39.54,"runId":"verify-2026-11-25T04-44-42"}
 {"started":"2026-11-25T04:51:16.252Z","ended":"2026-11-25T04:53:17.398Z","what":"verify replay j16-open-new-task","estimate":7.5,"balanceBefore":7189.9902,"balanceAfter":7183.3998,"spent":6.59,"runId":"verify-2026-11-25T04-51-13"}
+{"started":"2026-11-25T04:55:14.201Z","ended":"2026-11-25T04:56:14.283Z","what":"verify replay j17-home-new-task","estimate":7.5,"balanceBefore":7183.3998,"balanceAfter":7173.884,"spent":9.52,"runId":"verify-2026-11-25T04-55-12"}

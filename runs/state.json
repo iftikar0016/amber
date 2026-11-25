@@ -1639,9 +1639,9 @@
       "needsHuman": false
     },
     "j17-home-new-task": {
-      "verdict": "FAIL",
-      "everPassed": false,
-      "failStreak": 1,
+      "verdict": "PASS",
+      "everPassed": true,
+      "failStreak": 0,
       "history": [
         {
           "runId": "verify-2026-11-25T04-15-29",
@@ -1653,6 +1653,15 @@
           "record": "runs/verify-2026-11-25T04-15-29/j17-home-new-task/a1",
           "commit": "dd0d420",
           "at": "2026-11-25T04:36:49.382Z"
+        },
+        {
+          "runId": "verify-2026-11-25T04-55-12",
+          "mode": "replay",
+          "verdict": "PASS",
+          "reasons": [],
+          "record": "runs/verify-2026-11-25T04-55-12/j17-home-new-task/a1",
+          "commit": "0c31fc1",
+          "at": "2026-11-25T04:56:12.466Z"
         }
       ],
       "needsHuman": false
