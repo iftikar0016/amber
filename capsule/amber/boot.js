@@ -81,18 +81,56 @@
     }
   }
 
-  function fail(message) {
+  /** Instead of a blank app: what the capsule needs, and the recorded run, which needs no Service Worker. */
+  function fail(reason) {
+    if (window.__amberStarted) return;
+    const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+    document.title = 'AMBER: this browser could not start the capsule';
     document.getElementById('app').innerHTML =
-      '<p style="font:16px system-ui;max-width:32em;margin:4em auto;color:#333">' + message + '</p>';
+      '<div style="min-height:100vh;box-sizing:border-box;display:grid;place-items:center;background:#0a0806;color:#f3e6cf;font:17px/1.55 system-ui,sans-serif;padding:24px 16px">' +
+      '<div style="max-width:36em">' +
+      '<p style="font:600 13px/1.4 ui-monospace,monospace;letter-spacing:.16em;text-transform:uppercase;color:#b9a68a;margin:0 0 18px">AMBER · Vikunja with no server</p>' +
+      '<h1 style="font:400 30px/1.2 Georgia,serif;margin:0 0 16px">This browser could not start the capsule.</h1>' +
+      '<p>The capsule runs Vikunja without a server: a <b>Service Worker</b> in your browser answers every API call, and this browser did not let it start' +
+      (reason ? ' (<span style="color:#ff8a9a">' + esc(reason) + '</span>)' : '') +
+      '.</p><p>It needs a browser that allows Service Workers: a normal (not private) window of a current desktop browser, on https or localhost. Some in-app and embedded browser views do not allow them at all.</p>' +
+      '<p style="margin-top:28px"><a href="/amber/" style="color:#ffd36b;font-weight:600">Watch the recorded run instead →</a><br>' +
+      '<span style="color:#b9a68a;font-size:15px">The amber block replays every Kane run and shows Kane\'s evidence. It needs no Service Worker.</span></p>' +
+      '</div></div>';
   }
 
   if (!('serviceWorker' in navigator)) {
-    fail('This capsule runs the app without a server, using a Service Worker. This browser (or a private window) does not allow one.');
+    fail('Service Workers are not available here');
     return;
   }
   if (navigator.serviceWorker.controller) startApp();
   else navigator.serviceWorker.addEventListener('controllerchange', startApp, { once: true });
-  navigator.serviceWorker.register('/sw.js').catch((e) => fail('The capsule could not start its Service Worker: ' + e.message));
+  const RELOADED = 'amber-reloaded-once';
+  navigator.serviceWorker.register('/sw.js').then(
+    () =>
+      // A hard reload (Shift+Reload) bypasses an installed Service Worker for that one page load, and no
+      // controllerchange follows, so the app would wait forever. One ordinary reload brings the worker back.
+      setTimeout(() => {
+        if (window.__amberStarted || navigator.serviceWorker.controller) return;
+        let again = false;
+        try {
+          again = sessionStorage.getItem(RELOADED) === '1';
+          sessionStorage.setItem(RELOADED, '1');
+        } catch {
+          again = true;
+        }
+        if (again) fail('the Service Worker is installed but does not control this page');
+        else location.reload();
+      }, 2500),
+    (e) => fail(e.message),
+  );
+  navigator.serviceWorker.ready.then(() => {
+    try {
+      if (navigator.serviceWorker.controller) sessionStorage.removeItem(RELOADED);
+    } catch {
+      /* storage blocked */
+    }
+  });
 
   // A "Reset demo" hook for pages that embed the capsule: postMessage({type:'amber-reset'}) from the parent.
   window.addEventListener('message', (e) => {
