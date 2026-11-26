@@ -61,6 +61,9 @@ cap.server.on('request', (req, res) => {
 });
 await cap.listen();
 
+// Software rendering: the same pixels, and it does not stall when Windows holds back the GPU (a sleeping display
+// made every capture take over a second).
+process.env.CHROME_EXTRA_ARGS ??= '--disable-gpu';
 const c = await launch({ width: 1920, height: 1080, port: 9337 });
 const errors = [];
 c.on('Runtime.exceptionThrown', (p) => errors.push(p.exceptionDetails?.exception?.description || p.exceptionDetails?.text));
@@ -113,12 +116,19 @@ try {
     const n0 = Math.round(from * FPS);
     const n1 = Math.round(to * FPS);
     const began = Date.now();
+    let tSeek = 0;
+    let tShot = 0;
     for (let n = n0; n < n1; n++) {
+      const a = Date.now();
       await seek(n / FPS);
-      if (!ff.stdin.write(await shoot())) await once(ff.stdin, 'drain');
-      if ((n - n0) % (FPS * 10) === 0 && n > n0) {
+      const b = Date.now();
+      const img = await shoot();
+      tSeek += b - a;
+      tShot += Date.now() - b;
+      if (!ff.stdin.write(img)) await once(ff.stdin, 'drain');
+      if ((n - n0) % (process.env.AMBER_TIMING ? 15 : FPS * 10) === 0 && n > n0) {
         const rate = (n - n0) / ((Date.now() - began) / 1000);
-        console.log(`${(n / FPS).toFixed(1)} s · ${rate.toFixed(1)} frames/s · ${Math.round((n1 - n) / rate)} s left`);
+        console.log(`${(n / FPS).toFixed(1)} s · ${rate.toFixed(1)} frames/s · ${Math.round((n1 - n) / rate)} s left · per frame: seek ${Math.round(tSeek / (n - n0))} ms, capture ${Math.round(tShot / (n - n0))} ms`);
       }
     }
     ff.stdin.end();
