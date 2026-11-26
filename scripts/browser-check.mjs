@@ -69,6 +69,13 @@ try {
     await c.goto(`${ORIGIN}/amber/`, 500);
     return waitFor('document.getElementById("proven") && document.getElementById("proven").textContent === document.getElementById("total").textContent');
   });
+  await check('the live app on the back of the block takes the mouse', async () => {
+    const r = JSON.parse(await c.evaluate('JSON.stringify(document.getElementById("flip").getBoundingClientRect())'));
+    for (const type of ['mouseMoved', 'mousePressed', 'mouseReleased']) await c.send('Input.dispatchMouseEvent', { type, x: r.x + r.width / 2, y: r.y + r.height / 2, button: 'left', clickCount: 1 });
+    await c.sleep(2000);
+    const b = JSON.parse(await c.evaluate('JSON.stringify(document.getElementById("live").getBoundingClientRect())'));
+    return waitFor(`document.elementFromPoint(${b.x + b.width / 2}, ${b.y + b.height / 2}) === document.getElementById("live")`, 10000);
+  });
 } finally {
   await c.close();
 }
