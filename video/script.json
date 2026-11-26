@@ -40,13 +40,17 @@
       "narration": "Kane also guards the agent. A Claude Code Stop hook will not let the agent finish while a journey that passed before is failing. To prove it, we broke the comment repair on purpose. The hook had Kane replay all fifteen journeys. Kane was fooled by the draft again, AMBER was not, and the hook blocked the agent with the brief to read. Once Kane proved the fix, the hook let it go. Both decisions are on the record."
     },
     {
+      "id": "s09b-round2",
+      "narration": "Then a review found what a visitor hits within a minute: a task you can't open, a search that can't find it. So Kane walked six more journeys on the real server, the coding agent repaired each one, and Kane proved them. Twenty-one of twenty-one, with the server off."
+    },
+    {
       "id": "s10-live",
       "narration": "And this is the result. Vikunja, running with no server behind it. Add a task, reload, and it is still there, kept in the browser. Flip the amber block, and the same capsule runs inside it. Kane tests this page too, with four saved tests."
     },
     {
       "id": "s11-try",
-      "narration": "To try it, clone the repository and run node bin slash demo. No install, no Kane account, no credits. To be honest about it: this is one app, and AMBER is the agent workflow that produced its capsule, not a one-command tool for any site. Fifteen journeys are proven, and the README lists what is not. Build it with an agent. Prove it with Kane. Keep it in amber.",
-      "hold": 3.5
+      "narration": "To try it, open amber-capsule dot pages dot dev: nothing to install, no account, no credits. Or clone the repository and run node bin slash demo. To be honest about it: this is one app, and AMBER is the agent workflow that produced its capsule, not a one-command tool for any site. Twenty-one journeys are proven, and the README lists what is not. Build it with an agent. Prove it with Kane. Keep it in amber.",
+      "hold": 5
     }
   ]
 }

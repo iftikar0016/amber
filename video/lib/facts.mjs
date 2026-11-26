@@ -88,12 +88,16 @@ export function facts() {
   const r15 = readJson(`${base}/j15-comment/a1/result.json`);
   const off = r09.serverOff;
 
-  const commits = git('log', '--reverse', '--format=%h%x09%s', '--grep=^capsule:')
+  // the repairs that fixed a journey, by round (round 1 fixed j01-j15, round 2 j16-j21)
+  const repairs = git('log', '--reverse', '--format=%h%x09%s', '--grep=^capsule:')
     .split('\n')
     .map((l) => {
       const [sha, subject] = l.split('\t');
       return { sha, what: subject.replace(/^capsule:\s*/, '').replace(/\s*\(fixes.*$/, ''), flow: /fixes (j\d\d)/.exec(subject)?.[1] ?? '' };
-    });
+    })
+    .filter((c) => c.flow);
+  const commits = repairs.filter((c) => Number(c.flow.slice(1)) <= 15);
+  const commits2 = repairs.filter((c) => Number(c.flow.slice(1)) > 15);
 
   const hookCommand = readJson('.claude/settings.json').hooks.Stop[0].hooks[0].command.replace('"${CLAUDE_PROJECT_DIR}/', '').replace('"', '');
   const gate = ndjson('runs/gate.ndjson')
@@ -111,7 +115,10 @@ export function facts() {
   const hookBlocked = idx((e) => e.kind === 'run' && e.label === 'stop-hook regression check', finalProof);
   const hookFix = idx((e) => e.kind === 'run', hookBlocked + 1);
   const hookAllowed = idx((e) => e.kind === 'run', hookFix + 1);
-  const marks = { firstCapsuleRun, firstFix, finalProof, hookBlocked, hookFix, hookAllowed, end: events.length };
+  // round 1 ends with the verdicts of the Stop hook's allowed run; everything after it is round 2
+  const after = idx((e) => !(e.kind === 'verdict' && e.runId === events[hookAllowed].runId), hookAllowed + 1);
+  const round1End = after < 0 ? events.length : after;
+  const marks = { firstCapsuleRun, firstFix, finalProof, hookBlocked, hookFix, hookAllowed, round1End, end: events.length };
 
   const credits = ndjson('runs/credits.ndjson').reduce((a, e) => a + (e.spent || 0), 0);
   const runs = fs.readdirSync(path.join(ROOT, 'runs')).filter((d) => fs.statSync(path.join(ROOT, 'runs', d)).isDirectory()).length;
@@ -141,6 +148,8 @@ export function facts() {
       draft: { x: 395, y: 784, w: 964, h: 124 }, // the comment editor holding the unsent draft
     },
     commits,
+    commits2,
+    finalCheck: 'verify-2026-11-25T10-17-26',
     hookCommand,
     gate,
     suite,

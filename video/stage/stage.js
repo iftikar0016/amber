@@ -192,7 +192,7 @@ appFrame.src = '/projects/3';
 await Promise.all([loaded(amberFrame), loaded(appFrame)]);
 const AW = amberFrame.contentWindow;
 const AD = amberFrame.contentDocument;
-await until(() => AW.amberPlayback && AD.querySelectorAll('.tile').length === 15);
+await until(() => AW.amberPlayback && AD.querySelectorAll('.tile').length === F.journeys.length);
 {
   const st = AD.createElement('style');
   st.textContent = `html, body { background: transparent !important; }
@@ -324,7 +324,9 @@ function blockUpdate(t) {
   const k = K(t, BK);
   put(blockCam, { ...k, c: false });
   for (const [at, id] of FLIPS) once(`${id}@${at}`, t, at, () => AD.getElementById(id).click());
-  // the counter reads the page's own number
+  // the counter reads the page's own number; the round-1 story counts its 15 journeys, the rest counts all of them
+  const round1 = t >= scn('s04-baseline').start - 0.6 && t < scn('s09b-round2').start + 0.2;
+  $('counterTotal').textContent = round1 ? '15' : String(F.journeys.length);
   const n = Number(AD.getElementById('proven').textContent);
   if (n !== counterVal) {
     counterVal = n;
@@ -593,7 +595,7 @@ scene('s03-capture', ({ over, c, start, end }) => {
   const tw = words(title, '15 plain-English journeys, *walked* *by* *Kane*');
   const grid = mk(over, 'layer', null, { c: false });
   grid.style.inset = '0';
-  const cards = F.capture.map((cap, i) => {
+  const cards = F.capture.slice(0, 15).map((cap, i) => {
     const el = mk(grid, 'shot', `<img src="${cap.shot}"><div class="cap"><b>${cap.short}</b> · ${esc(cap.title)}</div><div class="ring"></div>`);
     return { el, ring: el.querySelector('.ring'), col: i % 5, row: Math.floor(i / 5) };
   });
@@ -621,7 +623,7 @@ scene('s03-capture', ({ over, c, start, end }) => {
   // the lock file
   const lockP = mk(over, 'log', '<div class="head"><b style="background:#ffd36b;box-shadow:0 0 14px #ffd36b"></b>flows/flows.lock.json · frozen by SHA-256</div><div class="rows"></div>');
   lockP.style.width = '860px';
-  const lockRows = F.lockRows.map((r, i) => {
+  const lockRows = F.lockRows.slice(0, 15).map((r, i) => {
     const el = mk(lockP.querySelector('.rows'), 'lock', `<span class="pad"><svg width="22" height="26" viewBox="0 0 22 26"><path class="sh" d="M6 12 V8 a5 5 0 0 1 10 0 V12" fill="none" stroke="#ffd36b" stroke-width="2.6"/><rect x="2" y="12" width="18" height="13" rx="3" fill="#ffd36b"/></svg></span><span>${esc(r.file)}</span><span class="sha">${r.sha}…</span>`, { c: false });
     return { el, sh: el.querySelector('.sh'), sha: el.querySelector('.sha'), real: r.sha };
   });
@@ -1018,7 +1020,7 @@ scene('s07-loop', ({ over, under, c, start, end }) => {
   const tA = c('seven repairs') - 0.35;
   const tB = ce('already passed') + 0.5;
   const fixes = [];
-  EV.forEach((e, i) => e.kind === 'fix' && fixes.push(i));
+  EV.forEach((e, i) => e.kind === 'fix' && i < F.marks.round1End && fixes.push(i));
   const slice = (tB - tA) / fixes.length;
   // each repair: the commit, then Kane proves it (a third of the way round), then the re-checks
   fixes.forEach((fi, k) => {
@@ -1128,7 +1130,7 @@ scene('s09-hook', ({ over, c, start, end }) => {
   const tx = term.querySelector('.tx');
   tx.style.whiteSpace = 'pre-wrap';
   tx.style.fontSize = '22px';
-  const dots = mk(term, 'dots', F.journeys.map((j) => `<div class="dot">${j.short.slice(1)}</div>`).join(''), { c: false });
+  const dots = mk(term, 'dots', F.journeys.slice(0, 15).map((j) => `<div class="dot">${j.short.slice(1)}</div>`).join(''), { c: false });
   const dotEls = [...dots.children];
   const banner = mk(term, 'bar-banner red', 'BLOCKED <small>the agent may not stop: j15 passed before, fails now</small>', { c: false });
   const msgEl = mk(term, 'tx', null, { c: false });
@@ -1152,7 +1154,7 @@ scene('s09-hook', ({ over, c, start, end }) => {
   // the hook's two runs, on the block in the corner and on the dots
   BSEG.push([c('the hook had kane'), c('kane was fooled') + 0.2, F.marks.hookBlocked, F.marks.hookFix - 1, E.lin]);
   BSEG.push([c('amber was not'), c('amber was not') + 0.3, F.marks.hookFix - 1, F.marks.hookFix, E.lin]);
-  BSEG.push([tFix, tGo - 0.1, F.marks.hookFix, F.marks.end, E.lin]);
+  BSEG.push([tFix, tGo - 0.1, F.marks.hookFix, F.marks.round1End, E.lin]);
   BK.push(
     ...chain([
       [start - 0.3, { x: 960, y: 520, s: 1.16, o: 1, b: 0 }],
@@ -1214,6 +1216,82 @@ scene('s09-hook', ({ over, c, start, end }) => {
     S.gold += 0.5 * bump(t, tGo, tRec, 0.2, 0.6);
     const rIn = P(t, tRec, 0.7, E.expo);
     put(record, { x: 960, y: 560 + 30 * (1 - rIn), o: rIn });
+  };
+});
+
+// == s09b: round 2: a review's gaps become six more journeys; failed, repaired, proven; 21 of 21 =================
+scene('s09b-round2', ({ over, c, start, end }) => {
+  const kick = mk(over, 'kicker', 'Round 2 · a review, six more journeys');
+  const gaps = [
+    ["a new task won't open", c("a task you can't open")],
+    ["search can't find it", c('a search that')],
+  ].map(([s, at]) => ({ el: mk(over, 'chip red', esc(s)), at }));
+  const NEW = F.journeys.slice(15);
+  const sha = Object.fromEntries(F.commits2.map((cm) => [cm.flow, cm.sha]));
+  const rows = NEW.map((j) => {
+    const el = mk(over, 'commit', `<span class="sha" style="width:56px">${j.short}</span><span class="what" style="width:500px">${esc(j.title)}</span><span class="st"></span>`, { c: false });
+    el.style.fontSize = '25px';
+    el.style.height = '54px';
+    return { j, el, st: el.querySelector('.st') };
+  });
+  // each new journey's verdicts on the capsule, in the order the page shows them
+  const hist = Object.fromEntries(NEW.map((j) => [j.id, []]));
+  EV.forEach((e, i) => e.kind === 'verdict' && e.target === 'capsule' && hist[e.flow] && hist[e.flow].push([i, e.verdict]));
+  const stateAt = (flow, idx) => {
+    let v = null;
+    for (const [i, verdict] of hist[flow]) if (i < idx) v = verdict;
+    return v;
+  };
+  const stamp = mk(over, 'stamp pass', `21 / 21<small>Kane CLI · capsule · server off · ${esc(F.finalCheck)}</small>`);
+  Object.assign(stamp.style, { color: '#ffd36b', borderColor: '#ffd36b', background: 'rgba(60,40,5,0.6)' });
+  stamp.querySelector('small').style.fontSize = '17px';
+  const tWalk = c('so kane walked');
+  const tSix = c('six more journeys');
+  const tProved = cueIn('s09b-round2', 'kane proved them', 0, true);
+  const t21 = c('twentyone of twentyone');
+  BSEG.push([start - 0.6, start - 0.6, F.marks.round1End, F.marks.round1End]);
+  BSEG.push([tSix, tProved + 0.4, F.marks.round1End, F.marks.end, E.sine]);
+  BK.push(
+    ...chain([
+      [start + 0.25, { x: 1350, y: 1300, s: 0.66, rx: 30, ry: 0, o: 0, b: 0 }],
+      [start + 0.26, { o: 1 }, E.lin],
+      [start + 1.2, { y: 440, rx: 0 }, E.expo],
+      [t21 - 0.3, { s: 0.68 }, E.sine],
+      [t21 + 0.7, { x: 960, y: 470, s: 1.04 }, E.inOut],
+      [end - 0.25, { s: 1.07 }, E.sine],
+      [end + 0.3, { o: 0, b: 6 }, E.inOut],
+    ]),
+  );
+  CK.push(
+    ...chain([
+      [start + 0.4, { x: 1350, y: 205, s: 0.75, o: 0 }],
+      [start + 1.2, { o: 1 }, E.out],
+      [t21 - 0.3, { o: 1 }],
+      [t21 + 0.7, { x: 960, y: 110, s: 1 }, E.inOut],
+      [end - 0.25, { o: 1 }],
+      [end + 0.3, { o: 0 }],
+    ]),
+  );
+  return (t) => {
+    const leave = P(t, t21 - 0.4, 0.7, E.inOut);
+    put(kick, { x: 470, y: 120, o: P(t, start + 0.3, 0.6) * (1 - leave) });
+    const gOut = P(t, tWalk - 0.2, 0.6, E.inOut);
+    gaps.forEach((g, i) => {
+      const p = P(t, g.at - 0.05, 0.45, E.back);
+      put(g.el, { x: 440, y: 330 + i * 95 - 40 * gOut, s: 0.6 + 0.4 * p, o: P(t, g.at - 0.05, 0.15) * (1 - gOut) });
+    });
+    S.red += 0.3 * bump(t, gaps[0].at, tWalk, 0.2, 0.6);
+    const idx = blockIndexAt(t);
+    rows.forEach((r, i) => {
+      const p = P(t, tSix + i * 0.12, 0.5, E.expo);
+      put(r.el, { x: 130 + 30 * (1 - p), y: 300 + i * 66, o: p * (1 - leave), c: false });
+      const v = stateAt(r.j.id, idx);
+      const want = v === 'PASS' ? `<span style="color:#ffd36b">✓ ${esc(sha[r.j.short] ?? '')}</span>` : v === 'FAIL' ? '<span style="color:#ff6b7d">✕ fails</span>' : '<span style="color:#7a6a54">on the real server ✓</span>';
+      if (r.st.innerHTML !== want) r.st.innerHTML = want;
+    });
+    const si = P(t, t21 + 0.5, 0.45, E.back);
+    put(stamp, { x: 1500, y: 860, r: -6, s: mix(2, 1, si), o: P(t, t21 + 0.5, 0.12) });
+    S.gold += 0.7 * bump(t, t21 + 0.4, end, 0.25, 0.6);
   };
 });
 
@@ -1333,17 +1411,22 @@ scene('s10-live', ({ over, c, start, end }) => {
 scene(
   's11-try',
   ({ over, c, start, end }) => {
-    const term = mk(over, 'term', `<div class="tb"><i></i><i></i><i></i><span style="margin-left:14px">a terminal, anywhere with Node</span></div><div class="tx"></div>`);
+    // the live link first: a browser's address bar, typed
+    const LIVE = 'amber-capsule.pages.dev';
+    const bar = mk(over, 'card', `<span style="color:#7ee08a;margin-right:18px">🔒</span><span class="addr"></span>`);
+    Object.assign(bar.style, { font: '500 44px var(--mono)', color: '#f3e6cf', padding: '22px 40px', borderRadius: '99px', whiteSpace: 'nowrap', boxShadow: '0 0 60px rgba(255,190,80,0.25)' });
+    const addr = bar.querySelector('.addr');
+    const chips = ['nothing to install', 'no account', 'no credits'].map((s) => mk(over, 'chip', esc(s)));
+    const term = mk(over, 'term', `<div class="tb"><i></i><i></i><i></i><span style="margin-left:14px">or locally, anywhere with Node</span></div><div class="tx"></div>`);
     term.style.width = '1300px';
     const tx = term.querySelector('.tx');
-    tx.style.minHeight = '300px';
-    const chips = ['no install', 'no Kane account', 'no credits'].map((s) => mk(over, 'chip', esc(s)));
+    tx.style.minHeight = '220px';
     const honest = mk(over, 'card', `<div class="label">Honestly</div><div class="quote" style="font-size:40px;line-height:1.35"></div>`);
     honest.style.width = '1240px';
     honest.style.textAlign = 'center';
     honest.style.padding = '34px 40px 40px';
     const hq = honest.querySelector('.quote');
-    const lines = ['One app: Vikunja v2.8.0.', 'AMBER is the agent workflow that produced its capsule,', 'not a one-command tool for any site.', '15 journeys are proven; the README lists what is not.'];
+    const lines = ['One app: Vikunja v2.8.0.', 'AMBER is the agent workflow that produced its capsule,', 'not a one-command tool for any site.', '21 journeys are proven; the README lists what is not.'];
     hq.innerHTML = lines.map((l) => `<div>${esc(l)}</div>`).join('');
     const hLines = [...hq.children];
     const beats = ['Build it with an agent.', 'Prove it with *Kane.*', 'Keep it in *amber.*'].map((s) => {
@@ -1353,7 +1436,7 @@ scene(
     });
     const mark = mk(over, 'wordmark plain', 'AMBER');
     mark.style.fontSize = '200px';
-    const url = mk(over, 'kicker', 'github.com/iftikar0016/amber');
+    const url = mk(over, 'kicker', `${LIVE}  ·  github.com/iftikar0016/amber`);
     url.style.fontSize = '26px';
     url.style.color = '#ffd36b';
     const T = [
@@ -1361,9 +1444,11 @@ scene(
       { at: c('run node') - 0.1, dur: 0.6, segs: [['p', '$ '], ['g', 'node bin/demo.mjs'], ['', '\n']] },
       { at: cueIn('s11-try', 'demo', 0, true) + 0.15, dur: 0.5, segs: [['', 'AMBER capsule: '], ['b', 'http://127.0.0.1:4790/'], ['p', '  (Vikunja with no server)'], ['', '\n'], ['', 'AMBER page:    '], ['b', 'http://127.0.0.1:4790/amber/'], ['p', '  (the amber block and the recorded run)']] },
     ];
-    const chipT = [c('no install'), c('no kane account'), c('no credits')];
+    const tOpen = c('open ambercapsule');
+    const chipT = [c('nothing to install'), c('no account'), c('no credits')];
+    const tClone = c('or clone');
     const tHon = c('to be honest');
-    const hT = [c('this is one app'), c('amber is the agent workflow'), c('not a onecommand tool'), c('fifteen journeys are proven')];
+    const hT = [c('this is one app'), c('amber is the agent workflow'), c('not a onecommand tool'), c('twentyone journeys are proven')];
     const bT = [c('build it with an agent'), c('prove it with kane'), c('keep it in amber')];
     const tMark = cueIn('s11-try', 'keep it in amber', 0, true) + 0.35;
     BK.push(
@@ -1374,16 +1459,22 @@ scene(
       ]),
     );
     return (t) => {
-      const ti = P(t, start - 0.1, 0.8, E.expo);
       const tOut = P(t, tHon - 0.3, 0.7, E.inOut);
-      put(term, { x: 960, y: 330 - 40 * tOut, s: 0.96 + 0.04 * ti, o: ti * (1 - tOut), b: 6 * tOut });
+      // the address bar drops in and the live address types itself as it is said
+      const bi = P(t, start - 0.1, 0.8, E.expo);
+      put(bar, { x: 960, y: 200 - 30 * tOut, s: 0.92 + 0.08 * bi, o: bi * (1 - tOut), b: 6 * tOut });
+      addr.textContent = LIVE.slice(0, Math.round(clamp((t - tOpen) / 1.4) * LIVE.length)) + (t < tOpen + 1.6 && Math.floor(t * 2.2) % 2 === 0 ? '▍' : '');
+      bar.style.boxShadow = `0 0 ${(40 + 50 * bump(t, tOpen + 1.3, tOpen + 2.2, 0.2, 0.6)).toFixed(1)}px rgba(255,190,80,${(0.25 + 0.35 * bump(t, tOpen + 1.3, tOpen + 2.2, 0.2, 0.6)).toFixed(2)})`;
+      chips.forEach((el, i) => {
+        const p = P(t, chipT[i] - 0.05, 0.45, E.back);
+        put(el, { x: 960 + (i - 1) * 400, y: 330 - 30 * tOut, s: 0.5 + 0.5 * p, o: P(t, chipT[i] - 0.05, 0.15) * (1 - tOut) });
+      });
+      // or locally
+      const ti = P(t, tClone - 0.2, 0.8, E.expo);
+      put(term, { x: 960, y: 640 + 40 * (1 - ti) - 40 * tOut, s: 0.96 + 0.04 * ti, o: ti * (1 - tOut), b: 6 * tOut });
       let html = '';
       for (const l of T) if (t >= l.at) html += typed(l.segs, Math.round(clamp((t - l.at) / l.dur) * segLen(l.segs)), false);
       tx.innerHTML = html + (Math.floor(t * 2.2) % 2 ? '' : '<span class="g">▍</span>');
-      chips.forEach((el, i) => {
-        const p = P(t, chipT[i] - 0.05, 0.45, E.back);
-        put(el, { x: 960 + (i - 1) * 380, y: 660, s: 0.5 + 0.5 * p, o: P(t, chipT[i] - 0.05, 0.15) * (1 - tOut) });
-      });
       const hIn = P(t, tHon, 0.8, E.expo);
       const hOut = P(t, bT[0] - 0.4, 0.6, E.inOut);
       put(honest, { x: 960, y: 470, s: 0.96 + 0.04 * hIn, o: hIn * (1 - hOut) });
@@ -1415,10 +1506,18 @@ BSEG.sort((a, b) => a[0] - b[0]);
 const capLines = [];
 {
   const all = SCENES.flatMap((s) => s.words.map((w) => ({ ...w })));
-  for (let i = 0; i + 3 < all.length; i++) {
-    if (all.slice(i, i + 4).map((w) => norm(w.w)).join(' ') === 'node bin slash demo') {
-      const tail = all[i + 3].w.replace(/^demo/i, '');
-      all.splice(i, 4, { w: `node bin/demo.mjs${tail}`, s: all[i].s, e: all[i + 3].e });
+  // what is spoken as words is shown as written
+  const WRITTEN = [
+    ['node bin slash demo', 'node bin/demo.mjs'],
+    ['ambercapsule dot pages dot dev', 'amber-capsule.pages.dev'],
+  ];
+  for (const [spoken, written] of WRITTEN) {
+    const n = spoken.split(' ').length;
+    for (let i = 0; i + n <= all.length; i++) {
+      if (all.slice(i, i + n).map((w) => norm(w.w)).join(' ') === spoken) {
+        const tail = all[i + n - 1].w.match(/[.,:;!?]*$/)[0];
+        all.splice(i, n, { w: `${written}${tail}`, s: all[i].s, e: all[i + n - 1].e });
+      }
     }
   }
   let line = [];
